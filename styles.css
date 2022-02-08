@@ -1,3 +1,6 @@
+<!-- Styles.css is a CSS styling sheet for index.html and changes the background color,
+text styling and coloring for p and h1 -->
+
 body {
   background-color: powderblue;
 }
@@ -7,9 +10,11 @@ h1 {
   text-decoration: wavy;
 
   color: green;
-  background-color: #F30808;
+  background-color: orange;
+} 
+  
 }
 p {
   font-size:small;
-  color: purple;
+  color: red;
 }
