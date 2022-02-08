@@ -2,9 +2,14 @@ body {
   background-color: powderblue;
 }
 h1 {
-  color: blue;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration: wavy;
+
+  color: green;
+  background-color: #F30808;
 }
 p {
-  font-size:xx-small;
-  color: red;
+  font-size:small;
+  color: purple;
 }
