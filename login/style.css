@@ -16,9 +16,6 @@ font-family: 'Times New Roman', Times, serif;
 font-weight: bold;
 font-size: large;
 text-align: center;
-
-
-
 }
 
 html { 
@@ -26,7 +23,7 @@ html {
   background-image: url("https://arlcyber.me/logos/florida.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-attachment: fixed;
   
 
@@ -48,8 +45,8 @@ Login Box element
   */
 .loginBox {
   z-index: -100;
-  width: 75%;
-  height: 75%;            
+  width: 100%;
+  height: 100%;            
   position: absolute;
   top: 0%;
   left: 0%;
