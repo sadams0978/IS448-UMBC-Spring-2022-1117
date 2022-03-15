@@ -62,8 +62,15 @@ Login Box element
 
 }
 
+
+.loginBox:hover {
+    opacity: 30%;  
+    
+  
+}
+
 a {
-  color: red;
+  color: blue;
 }
 
 
