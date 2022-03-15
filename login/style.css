@@ -33,11 +33,11 @@ html {
 }
 
 input {
-  width: 75%;
-  height: 75% !important;
+  width: 25%;
+  height: 25%;
 
 
-  font-size: larger;
+  font-size: large;
   text-align: center;
   padding: 5%;
 }
@@ -61,13 +61,6 @@ Login Box element
   border-radius: 25px;
   background-color: whitesmoke;
 
-}
-
-
-.loginBox:hover {
-    opacity: 30%;  
-    
-  
 }
 
 a {
