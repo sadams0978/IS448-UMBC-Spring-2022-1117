@@ -1,70 +1,104 @@
-  /*
-Actual Login Box
-  */
-.login {
-  z-index: 1;
-  width: 50%;
-  height: 50%;            
-  position: relative;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  top: 25%;
-  left: 25%;
-  opacity: 100%;  
+.Login_Box {
+    /*Centers our login box*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /*Changes BG Color and makes the box readable*/
+    background-color: whitesmoke;
+    z-index: -100;
+    opacity: 80%;
+    padding: 5%;
+    padding-top: 10px;
 
-font-family: 'Times New Roman', Times, serif;
-font-weight: bold;
-font-size: large;
-text-align: center;
-}
 
-html { 
-  min-height: 100%;
-  background-image: url("https://arlcyber.me/logos/florida.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+    /* Border around the login box */
+    border: 10px solid black;
+    border-radius: 25px;
+  }
+
+
+  @media screen and (max-width: 600px) {
+    
+        .Login_Box {
+            /*Centers our login box*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 95%;
+            height: 95%;
+            transform: translate(-50%, -50%);
+            
+            /*Changes BG Color and makes the box readable*/
+            background-color: whitesmoke;
+            z-index: -100;
+            opacity: 80%;
+
+        
+        
+            /* Border around the login box */
+            border: 10px solid black;
+            border-radius: 25px;
+    }
   
 
+
 }
 
-input {
-  width: 50%;
-  height: 5%;
+  input {
+    /* Modifies the login fields */
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: large;
+  }
+
+  input:focus {
+      /* Improves visability when clicked by adding border around box */
+    border: 5px solid black;
+    
+  }
+
+  #submit_button {
+      /*Makes Submit button Pop Out */
+      background-color: green;
+      font-size: large;
+      
+  }
+
+  #submit_button:hover {
+    opacity:100% !important ;
+  }
 
 
-  font-size: large;
-  text-align: center;
+  h3 {
+      /*Reduces font size for bottom text */
+    font-size: medium;
+
+  }
+
+
+
+  body { 
+
+    /*Background for the page */
+    min-height: 100%;
+    background-image: url("https://arlcyber.me/logos/florida.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+
+    /*General font for the page, will be overriden by anything else */
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: large;
+    
+    /*Larger Z-index means that Background will be behind the other elements */
+    z-index: 1;
   
-}
-
-
-  /*
-Login Box element
-  */
-.loginBox {
-  z-index: -100;
-  width: 100%;
-  height: 100%;            
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  opacity: 75%;  
-
-
-
-  border: 10px solid black;
-  border-radius: 25px;
-  background-color: whitesmoke;
-
-}
-
-a {
-  color: blue;
-}
-
-
-
-
-
+  }
