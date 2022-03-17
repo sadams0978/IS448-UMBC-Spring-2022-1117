@@ -56,9 +56,12 @@
   }
 
 
-#checkbox {
- font-size: smaller;
-    float:left;
+label {
+ padding:10px;
+ margin:0 0 10px;
+ display:block; 
+
+    
 }
 
 
