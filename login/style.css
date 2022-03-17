@@ -57,15 +57,11 @@
 
 
 label {
- padding:0px;
- margin:0px;
- display:inline;   
+display:inline-block;margin-right:10px;  
 }
 
 #checkbox {
-    display:inline;
-    padding:0px;
-    margin:0px;
+display:inline-block;
 }
 
 
