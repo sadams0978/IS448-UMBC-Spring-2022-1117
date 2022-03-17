@@ -64,6 +64,8 @@ label {
 
 #checkbox {
     display:inline;
+    padding:10px;
+    margin:0 0 10px;
 }
 
 
