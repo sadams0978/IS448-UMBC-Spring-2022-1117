@@ -59,9 +59,11 @@
 label {
  padding:10px;
  margin:0 0 10px;
- display:block; 
+ display:block;   
+}
 
-    
+#checkbox {
+    float:right;
 }
 
 
