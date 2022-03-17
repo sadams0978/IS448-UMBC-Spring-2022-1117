@@ -55,6 +55,13 @@
     font-size: large;
   }
 
+
+#checkbox {
+ font-size: smaller;
+    float:left;
+}
+
+
   input:focus {
       /* Improves visability when clicked by adding border around box */
     border: 5px solid black;
