@@ -63,7 +63,7 @@ clear: right;
 }
 
 #checkbox {
-    float: right;
+    clear: left;
     display: inline-block;
 }
 
