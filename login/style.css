@@ -57,13 +57,12 @@
 
 
 label {
-display:inline-block;margin-right:10px;  
+clear: right;
  font-size:small;
 }
 
 #checkbox {
-display:inline-block;
-    margin-right: 0px;
+float: right;
 }
 
 
