@@ -1,0 +1,39 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+.search{
+	float:right;
+	padding: 15px 10px;
+}
+
+.login{
+	float:right;
+	border: 4px #C2E9E9 solid;
+	margin: auto;
+	padding: 5px;
+}
+.spacer{
+	clear:right;
+}
