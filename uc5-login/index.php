@@ -7,11 +7,17 @@
   <link rel="stylesheet" href="style.css" >
   <meta charset="UTF-8">
   <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
-
-
 </head>
 
 <body>
+
+  <?php
+	// Includes our menu bar, instead of copying and pasting through the pages
+	include('../menu.html');
+	?>
+	
+  
+  
     <div class="Login_Box">
 
     <h1> Sign In: </h1>
