@@ -5,8 +5,10 @@
     Login
   </title>
   <link rel="stylesheet" href="style.css" >
+	<link rel="stylesheet" href="../root.css" >
   <meta charset="UTF-8">
   <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
+	
 </head>
 
 <body>
