@@ -1,53 +1,5 @@
-.login {
-	
-	float:right;
-	border: 4px;
-	margin: auto;
-	padding: 5px;
-	
-}
-
-.zone {
-		
-	clear:right;
-	
-}
-
-.searchbar {
-	
-	float:right;
-	border: 4px;
-	margin-right: -15%;
-	padding: 15px 10px;
-	
-}
-
-.appfilters {
-
+.favoriteCardsContainer {
 	float: left;
-	width: 10%;
-	padding: 10px;
-	
-}
-
-.filters {
-
-	margin-left: 2%;
-	margin-right: 3%;
-	object-fit: cover;
-	background-color: white;
-	
-}
-
-.favoritecards {
-	
-	float: left;
-	width: 16.67%;
-	
-}
-
-.favcarddetail {
-	
 	margin-top: 4.5%;
 	text-align: justify;
 	border: 4px #6796EB solid;
@@ -57,22 +9,25 @@
 	
 }
 
-.individualcards {
-	
-	margin-left: 2%;
-	margin-right: 2%;
-	object-fit: cover;
+.cardsContainer {
+	float: left;
+	margin-top: 4.5%;
+	text-align: justify;
+	border: 4px #6796EB solid;
+	border-radius: 5px 30px;
+	padding: 8px;
 	background-color: white;
+}
 
+li {
+	margin-top: 2px;
+	margin-bottom: 2px;
+	
 }
 
 .footer{
-	
 	background-color: #333;
 	padding: 20px;
 	clear: both;
-	color: pink;
-	width: 10%;
-	text-align: justify;
-	
+	color: aliceblue;
 }
