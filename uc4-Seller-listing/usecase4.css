@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+.left {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+
+}
+
+.right{
+  float: left;
+  width: 600px;
+}
+  
+.cardDetailsContainer{
+  margin-top: 4.5%;
+  /*text-align: justify;*/
+  border: 4px #6796EB solid;
+  border-radius: 5px 30px;
+  padding: 8px;
+  background-color: white;
+
+/*
+  justify-content: space-evenly;*/
+
+
+}
+.card{
+  margin-left: 2%;
+  margin-right: 3%;
+  object-fit: cover;
+  background-color: white;
+}
+
+.pricing{
+  float: right;
+}
+.priceandquantity{
+  border: 2px #6796EB solid;
+  background-color: white;
+}
+
+textarea{ 
+  resize: none; /* disable default resize option for all textareas */ 
+  cursor:  text;
+}
+
+select{
+  cursor: pointer;
+}
