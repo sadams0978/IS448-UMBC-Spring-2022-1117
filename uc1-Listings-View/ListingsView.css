@@ -13,7 +13,13 @@ li {
 	margin-bottom: 2px;
 	
 }
-.cards{
+body ul{
 	float:left;
 	margin-bottom: 8px;
+	background-color: antiquewhite;
+}
+
+.cards{
+	float: left;
+	margin-bottom;
 }
