@@ -33,7 +33,7 @@
             transform: translate(-50%, -50%);
             
             /*Changes BG Color and makes the box readable*/
-            background-color: whitesmoke;
+            background-color: antiquewhite;
             z-index: -100;
             opacity: 80%;
 
@@ -72,7 +72,7 @@ clear: right;
 
   input:focus {
       /* Improves visability when clicked by adding border around box */
-    border: 5px solid black;
+    border: 5px solid blue;
     
   }
 
