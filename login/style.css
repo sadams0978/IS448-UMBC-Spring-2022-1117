@@ -12,10 +12,12 @@
     padding: 5%;
     padding-top: 10px;
 
+    
+    box-shadow: 0 0 3rem 3rem blue;
 
     /* Border around the login box */
-    border: 10px solid #6796EB;
-    border-radius: 25px;
+    /*border: 10px solid #6796EB; */
+    /*border-radius: 25px; */
   }
 
 
