@@ -118,6 +118,17 @@ clear: right;
   
   }
 
+.Site_Link:link {
+    color:#6796EB;
+}
+
+
+.Site_Link:visited {
+    color:green;
+}
+
+
+
 
 .fa-facebook {
     color: #3b5998;
