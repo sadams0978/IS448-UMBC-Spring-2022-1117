@@ -27,7 +27,7 @@
 	
 <!-- seller enters picture for card listing--> 
 <div class="left">
-	<p class="card"><img src="https://jenkins-build.arlcyber.me/uc2-favorites/blank-card.jpg" alt="Playing Card image"  width = "300" height = "400"/></p>
+	<p class="card"><img src="../uc2-favorites/blank-card.jpg" alt="Playing Card image"  width = "300" height = "400"/></p>
 	<form action="">
   		<input type="file" id="myFile" name="filename">
 	</form>
