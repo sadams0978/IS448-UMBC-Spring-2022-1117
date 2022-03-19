@@ -20,7 +20,7 @@ include('../menu.html');
 	
 	
 <div class="left">
-	<p class="card"><img src="" alt="Playing Card"  width = "300" height = "400"/></p>
+	<p class="card"><img src="../uc2-favorites/blank-card.jpg" alt="Playing Card"  width = "300" height = "400"/></p>
 </div>	
 
 <div class="right">
