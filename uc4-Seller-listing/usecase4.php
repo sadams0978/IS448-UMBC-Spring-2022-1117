@@ -8,31 +8,34 @@
 <link rel="stylesheet" type="text/css" href="Andrew-part3.css"/>
 --> 
 
-<link rel="stylesheet" type="text/css" href="../root.css"/>
+<link rel="stylesheet" type="text/css" href="root.css"/>
 <link rel="stylesheet" type="text/css" href="usecase4.css"/>
-<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
 	
 <title>Card Description</title>
 <!--get name of card from sql -->
 </head>
 <body>
-
 	
-<?php
-// Includes our menu bar, instead of copying and pasting through the pages
-include('../menu.html');
-?>
-
+	<p class="login">you are signed in as XYZ <a href=""><img src="" alt="shopping cart" /></a></p>
+<!--link to shopping cart page and username stuff-->
+	
+	
+	<p class="spacer"></p>
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">Favorites/Tracked Cards</a></li>
+  			<div class="search"><li><input type="text" name="Search" /> <button type="submit">Search</button></li></div>
+		</ul>
 	
 <!-- seller enters picture for card listing--> 
 <div class="left">
-	<p class="card"><img src="" alt="Playing Card"  width = "300" height = "400"/></p>
+	<p class="card"><img src="" alt="Playing Card image"  width = "300" height = "400"/></p>
 	<form action="">
   		<input type="file" id="myFile" name="filename">
 	</form>
 </div>	
 
-<div class="right" >
+<div class="right">
 	
 
 	<!-- Upper box containing text boxes and dropdowns for card infomrmation--> 
@@ -88,11 +91,7 @@ include('../menu.html');
 		<form action=" "> <!--php stuff--> 
 			<label for ="year"> Year </label>
 			<input type="text" name="year" id= "year" size ="4" placeholder="Year" minlength="4" maxlength ="4" > <!--ensures that a year in four digit form e.g. 1999 is entered--> 
-		</form>
-		
-
-			
-
+		</form>	
 
 	</div>
 	
@@ -107,30 +106,29 @@ include('../menu.html');
 	</div>
 
 
+
+		
+	<div class="pricing">
+		<!--pricing information-->
+		<form action =""> 
+			<label for ="sellerprice"> Price per unit:</label>
+			<input type="text" id="sellerprice" class ="priceandquantity" size ="7">
+		</form>
+
+		<!--quantity information--> 
+		<form action =""> 
+			<label for ="sellerquantity"> Quantity:</label>
+			<input type="text" id="sellerquantity" class ="priceandquantity" size ="7" maxlength ="4">
+		</form>
+
+		<!-- button for seller to post listing --> 
+		<p><button type="submit">Post listing</button><!--input into cart table to sql--></p>
+
+	</div>
+
 </div>
 
 
-
-<!--pricinginformation-->	
-<div class="pricing">
-
-	<form action =""> 
-		<label for ="sellerprice"> Price:</label>
-		<input type="text" id="sellerprice" class ="priceandquantity" size ="7"></input>
-	</form>
-	<br/>
-</div>
-
-<div class="pricing"> 
-	<form action =""> 
-		<label for ="sellerquantity"> Quantity:</label>
-		<input type="text" id="sellerquantity" class ="priceandquantity" size ="7" maxlength ="3"></input> 
-	</form>
-	<br/> 
-
-</div> 
-
-	
 <div class="footer">
 
 	<p> 

@@ -8,7 +8,7 @@
 }
 
 .right{
-  float: left;
+  float: right;
   width: 600px;
 }
   
@@ -20,8 +20,6 @@
   padding: 8px;
   background-color: white;
 
-/*
-  justify-content: space-evenly;*/
 
 
 }
@@ -34,6 +32,7 @@
 
 .pricing{
   float: right;
+  
 }
 .priceandquantity{
   border: 2px #6796EB solid;
