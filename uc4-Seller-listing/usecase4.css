@@ -47,3 +47,7 @@ textarea{
 select{
   cursor: pointer;
 }
+
+#description {
+ max-width: 25%; 
+}
