@@ -43,7 +43,7 @@
 		<!-- cards section -->
 		<div class = "cardsContainer">
 			<ul>
-					<li ><i class="fa-solid fa-heart"></i><img src = "" alt = "favorite card"/>
+					<li ><i class="fa-solid fa-heart"></i><img src = "blank-card.jpg" alt = "favorite card"/>
 					<br>Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">Add to Cart</button></li>
 		
 			</ul>
@@ -51,7 +51,7 @@
 			</br>
 			
 			<ul>
-					<li ><i class="fa-solid fa-heart"></i><img src = "" alt = "favorite card"/>
+					<li ><i class="fa-solid fa-heart"></i><img src = "blank-card2.jpg" alt = "favorite card"/>
 					<br>Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">Add to Cart</button></li>
 		
 			</ul>
