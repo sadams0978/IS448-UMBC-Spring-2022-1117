@@ -10,22 +10,20 @@
 
 <link rel="stylesheet" type="text/css" href="root.css"/>
 <link rel="stylesheet" type="text/css" href="usecase4.css"/>
+<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
+
 	
 <title>Card Description</title>
 <!--get name of card from sql -->
 </head>
 <body>
-	
-	<p class="login">you are signed in as XYZ <a href=""><img src="" alt="shopping cart" /></a></p>
-<!--link to shopping cart page and username stuff-->
+
 	
 	
-	<p class="spacer"></p>
-		<ul>
-			<li><a href="">Home</a></li>
-			<li><a href="">Favorites/Tracked Cards</a></li>
-  			<div class="search"><li><input type="text" name="Search" /> <button type="submit">Search</button></li></div>
-		</ul>
+		<?php
+		// Includes our menu bar, instead of copying and pasting through the pages
+		include('../menu.html');
+		?>
 	
 <!-- seller enters picture for card listing--> 
 <div class="left">
