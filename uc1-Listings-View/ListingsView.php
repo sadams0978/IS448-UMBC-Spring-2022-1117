@@ -10,9 +10,10 @@
 </head>
 <body>
 
+	<!--
 	<p class="login">you are signed in as XYZ <a href=""><img src="" 
 alt="shopping cart" /></a></p>
-	<!--link to shopping cart and sign in pages-->
+	link to shopping cart and sign in pages
 
 
 	<p class="spacer"></p>
@@ -22,7 +23,13 @@ alt="shopping cart" /></a></p>
   			<div class="search"><li><input type="text" 
 name="Search" /> <button type="submit">Search</button></li></div>
 		</ul>
-
+-->
+	
+		<?php
+		// Includes our menu bar, instead of copying and pasting through the pages
+		include('../menu.html');
+		?>
+	
 	<p class="spacer"></p>
 
 	<div class ="cardDetailsContainer"> 
