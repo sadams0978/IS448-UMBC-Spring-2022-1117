@@ -48,9 +48,11 @@
 		
 			</ul>
 			
+			</br>
+			
 			<ul>
 					<li ><i class="fa-solid fa-heart"></i><img src = "" alt = "favorite card"/>
-					<br>Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">Add to Cart</button></li>
+					<br>Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">Add to Cart</button></li>
 		
 			</ul>
 		</div>
