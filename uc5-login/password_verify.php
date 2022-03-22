@@ -2,7 +2,7 @@
 
       $password = $_POST['password'];
       $password_verify = $_POST['password_verify'];
-      $passwords_match = false;
+      $passwords_match = true;
       $homepage = "login.php";
       $min_length = false;
 
@@ -21,8 +21,8 @@
 
 
     //Verifies that the verified password and passwords match and tells the user
-    if ($password === $password_verify) {
-      $passwords_match = true;
+    if ($password !=== $password_verify) {
+      $passwords_match = false;
       echo ("Your Password Don't Match, Please Try Entering them Again");
       die;
     }
