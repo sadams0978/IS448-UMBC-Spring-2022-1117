@@ -6,34 +6,24 @@
 //Variables 
  $emailinvalid = "This e-mail entry is invalid, please try again. ";
  $passwordinvalid = "This e-mail entry is invalid, please try again. ";
- $email_info = "Here is the e-mail address you typed in:";
- $password_info = "Here is the password that you typed in";
+ $email = $_POST['email'];
+ $password = $_POST['password'];
  $homepage = "https://swe.umbc.edu/~samuela3/login";
 
 
- //Checking to see if the password is empty and exiting
-
-    if(empty($_POST['email'])){
+ //Checking to see if the e-mail or password is empty and exiting
+    if(empty ($email || $password)){
         header('Location: '.$homepage);
-        die;
-        
-    }
-
-    if(empty($_POST['password'])){
-        header('Location: '.$homepage);
-        die;
-
- 
+        die;   
     }
 
 
-    //Prints out the username and password
-    
-    print "<h1>" . $email_info. "<br>" .  $_POST['email'] . "</h1>";
-    print "<h1>" . $password_info . "<br>" . $_POST['password'] . "</h1>";
-
-
-
+  session_start ();
+  
+  $_SESSION['email'] = ('Welcome, ' . $email); 
+  
+  
+  echo $_SESSION['email'];
  ?>
 
 
