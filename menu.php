@@ -2,9 +2,10 @@
 <!--Please update any menu bar entries here, as this will be included on all pages through PHP -->
 <?php 
 //PHP that verifies that a session is open, otherwise redirects them to the sign in page
-if (empty($_SESSION[])) {
-	header('Location: /uc5-login/');
-}
+$msg = "Current Session Status: ";
+$stat = session_status();
+echo ($msg . $stat);
+	//header('Location: /uc5-login/');
 ?>
 
 
