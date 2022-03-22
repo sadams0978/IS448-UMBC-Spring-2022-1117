@@ -3,13 +3,14 @@
 <?php 
 //PHP that verifies that a session is open, otherwise redirects them to the sign in page
 if (session_status() === PHP_SESSION_NONE) {
+	session_start();
 	header('Location: /uc5-login/');
 }
 ?>
 
 
 <div class="titlebar" >  
-<p class="login"> <?php echo ($_SESSION['email']) ?> <a href="../uc4-Seller-listing/usecase4.php"> <i class="fa-solid fa-cart-shopping"></i> </a> </p>
+<p class="login"> <?php session_start(); echo ($_SESSION['email']) ?> <a href="../uc4-Seller-listing/usecase4.php"> <i class="fa-solid fa-cart-shopping"></i> </a> </p>
 	<!--link to shopping cart and sign in pages-->
 	<p class="spacer"></p>
 		<ul class="header">
