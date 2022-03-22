@@ -13,7 +13,7 @@
 	
 		<?php
 		// Includes our menu bar, instead of copying and pasting through the pages
-		include('../menu.html');
+		include('../menu.php');
 		?>
 	
 	<p class="spacer"></p>
