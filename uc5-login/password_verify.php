@@ -9,11 +9,11 @@
 
   //Conditions
  
-  $contains_uppercase = preg_match('/[A-Z]/', $password);
+  $contains_uppercase = preg_match("/[A-Z]+/", $password);
   
-  $contains_special_chars = preg_match('/\W/', $password);
+  $contains_special_chars = preg_match("/\W+/", $password);
   
-  $contains_digit = preg_match('/\d/', $password);
+  $contains_digit = preg_match("/\d+/", $password);
   
     if (strlen($password) > 8 ) {
     $min_length = true;
