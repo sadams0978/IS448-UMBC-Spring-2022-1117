@@ -1,10 +1,10 @@
 	
 <!--Please update any menu bar entries here, as this will be included on all pages through PHP -->
 <?php 
-if (empty($_SESSION['email'])) {
-	header('Location: /uc5-login/');
-        die; 
-}
+//if (empty($_SESSION['email'])) {
+//	header('Location: /uc5-login/');
+ //       die; 
+//}
 
 ?>
 
