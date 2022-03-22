@@ -7,7 +7,7 @@
 	if(!isset ($_SESSION['email'])){
 		header('Location: '. $login); 
 	}
-	echo ($_SESSION['email']); 
+	echo ("Welcome, " . $_SESSION['email']); 
 	?> 
 	<a href="../uc4-Seller-listing/usecase4.php"> <i class="fa-solid fa-cart-shopping"></i> </a> </p>
 	<!--link to shopping cart and sign in pages-->
