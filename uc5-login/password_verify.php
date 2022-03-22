@@ -40,6 +40,9 @@
 
     if(!$min_lenth || !$contains_uppercase || !$contains_digit || !$contains_special_chars) {
     echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
+    echo ($contains_uppercase);
+    echo ($contains_special_chars);
+    echo ($contains_digit);
     die;
 } else{
     echo 'Your password meets the criteria';
