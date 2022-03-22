@@ -6,7 +6,7 @@ session_start();
 
 if (!isset($_SESSION['email']) {
 	header('Location: /uc5-login/');
-	die;
+	die();
 }
     
 ?>
