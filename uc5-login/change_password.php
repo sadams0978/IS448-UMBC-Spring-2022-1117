@@ -25,7 +25,7 @@
     <input id="submit_button" type="submit" value="Submit">        
      
       
-    <h3> <a href="create.html" class = "Site_Link"> Create An Account</a> </h3>
+    <h3> <a href="create.php" class = "Site_Link"> Create An Account</a> </h3>
     <h3> <a href="index.php" class = "Site_Link"> Log In</a> </h3>
     <h3> Need Help? </h3>
     <h3> Contact IT at x1033 or by e-mailing samuela3@umbc.edu</h3>
