@@ -4,9 +4,7 @@
 //PHP that verifies that a session is open, otherwise redirects them to the sign in page
 session_start();
 
-if (isset($_SESSION['email']) {
-	continue;
-} else {
+if (!isset($_SESSION['email']) {
 	header('Location: /uc5-login/');
 	die;
 }
