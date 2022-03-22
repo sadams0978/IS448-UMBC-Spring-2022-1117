@@ -6,7 +6,7 @@ session_start();
 if (!isset($_SESSION['email']) {
 	echo ("login");
 } else {
-	echo("You are logged in")
+	echo("You are logged in");
 		}
     
 ?>
