@@ -3,6 +3,7 @@
 
 
  <?php 
+ session_start();
 //Variables 
  $emailinvalid = "This e-mail entry is invalid, please try again. ";
  $passwordinvalid = "This e-mail entry is invalid, please try again. ";
@@ -18,11 +19,9 @@
 
 
   //Starts up a session with the E-Mail address and redirects back to homepage
-  session_start ();
-  $_SESSION["email"] = $email; 
-  header('Location: '.$homepage);
-        die;   
   
+  $_SESSION['email'] = "This is a test!"; 
+  header('Location: '.$homepage);
  ?>
 
 
