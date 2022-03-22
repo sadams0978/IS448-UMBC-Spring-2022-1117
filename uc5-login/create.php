@@ -11,7 +11,7 @@
     <h1> Create a new Account: </h1>
 
 
-  <form action="login.php" target="_blank" method="post">
+  <form action="create.php" method="post">
     
     <input type="text" name="First_Name" placeholder="First Name" required >
 
@@ -38,5 +38,9 @@
       
      </form>
   </div> 
+  
+  <?php
+  include('password_verify.php');
+?>
 </body>
 </html>
