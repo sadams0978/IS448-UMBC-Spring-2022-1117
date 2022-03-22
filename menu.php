@@ -2,10 +2,14 @@
 <!--Please update any menu bar entries here, as this will be included on all pages through PHP -->
 <?php 
 //PHP that verifies that a session is open, otherwise redirects them to the sign in page
-if (session_status() === PHP_SESSION_NONE) {
-	session_start();
+session_start();
+
+if (isset($_SESSION['email']) {
+	continue;
+} else {
 	header('Location: /uc5-login/');
 }
+    
 ?>
 
 
