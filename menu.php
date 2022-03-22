@@ -1,5 +1,14 @@
 	
 <!--Please update any menu bar entries here, as this will be included on all pages through PHP -->
+<?php 
+if (empty($_SESSION['email'])) {
+	header('Location: /uc5-login/'. );
+        die; 
+}
+
+?>
+
+
 <div class="titlebar" >  
 <p class="login"> <?php session_start(); echo ($_SESSION['email']) ?> <a href="../uc4-Seller-listing/usecase4.php"> <i class="fa-solid fa-cart-shopping"></i> </a> </p>
 	<!--link to shopping cart and sign in pages-->
