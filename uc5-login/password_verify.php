@@ -3,7 +3,7 @@
       $password = $_POST['password'];
       $password_verify = $_POST['password_verify'];
       $passwords_match = false;
-      $homepage = "login.php";
+      $homepage = "index.php";
       $min_length = false;
 
 
