@@ -1,19 +1,17 @@
 	
 <!--Please update any menu bar entries here, as this will be included on all pages through PHP -->
 <?php 
-//if (empty($_SESSION['email'])) {
-//	header('Location: /uc5-login/');
- //       die; 
-//}
-
+//PHP that verifies that a session is open, otherwise redirects them to the sign in page
+if (empty($_SESSION['email'])) {
+	header('Location: /uc5-login/');
+       die; 
+}
 ?>
 
 
 <div class="titlebar" >  
 <p class="login"> <?php session_start(); echo ($_SESSION['email']) ?> <a href="../uc4-Seller-listing/usecase4.php"> <i class="fa-solid fa-cart-shopping"></i> </a> </p>
 	<!--link to shopping cart and sign in pages-->
-	
-	
 	<p class="spacer"></p>
 		<ul class="header">
 			<li><a href="../index.html">Home</a></li>
@@ -22,5 +20,4 @@
 			<li><a href="../uc5-login/index.php">Login</a></li>
   			<div class="search"><li><input type="text" name="Search" /> <button type="submit">Search</button></li></div>
 		</ul>
-
 	</div>
