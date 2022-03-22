@@ -6,6 +6,10 @@ echo session_status();
 if (session_status() != 1) {
 	header('Location: /uc5-login/');
 }
+
+if ($_SESSION['email'] == '') {
+	header('Location: /uc5-login/');
+}
 ?>
 
 
