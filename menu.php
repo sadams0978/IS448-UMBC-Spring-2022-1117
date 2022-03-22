@@ -2,6 +2,7 @@
 <!--Please update any menu bar entries here, as this will be included on all pages through PHP -->
 <?php 
 //PHP that verifies that a session is open, otherwise redirects them to the sign in page
+echo session_status();
 if (session_status() != 1) {
 	header('Location: /uc5-login/');
 }
