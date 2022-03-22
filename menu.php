@@ -8,6 +8,7 @@ if (isset($_SESSION['email']) {
 	continue;
 } else {
 	header('Location: /uc5-login/');
+	die;
 }
     
 ?>
