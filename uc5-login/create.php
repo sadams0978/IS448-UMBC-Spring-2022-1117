@@ -21,9 +21,9 @@
 
     <input type="email" name="email" placeholder="email-address" required >
     
-    <input type="password" name="password" placeholder="Password" required minlength="8" maxlength="16"  >
+    <input type="password" name="password" placeholder="Password" required >
     
-    <input type="password" name="password_repeat" placeholder="Confirm your Password" required minlength="8" maxlength="16"  >
+    <input type="password" name="password_verify" placeholder="Confirm your Password" required  >
     <p> </p>
     
     <input type="checkbox" id="checkbox" name="checkbox" required >
