@@ -21,7 +21,7 @@
     <div class="Login_Box">
 
     <h1> Sign In: </h1>
-    <form action="login.php" target="_blank" method="post">
+    <form action="login.php" method="post">
     
     <input type="email" name="email" placeholder="email-address" required autofocus >
     
