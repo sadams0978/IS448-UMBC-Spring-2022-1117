@@ -20,7 +20,7 @@
 
   //Starts up a session with the E-Mail address and redirects back to homepage
   
-  $_SESSION['email'] = "This is a test!"; 
+  $_SESSION['email'] = ("Welcome, " . $email); 
   header('Location: '.$homepage);
  ?>
 
