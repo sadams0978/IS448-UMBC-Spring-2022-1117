@@ -31,8 +31,8 @@
       
        </form>
 
-      <h3> <a href="create.html" class = "Site_Link"> Create An Account</a> </h3>
-      <h3> <a href="change_password.html" class = "Site_Link"> Change Your Password</a> </h3>
+      <h3> <a href="create.php" class = "Site_Link"> Create An Account</a> </h3>
+      <h3> <a href="change_password.php" class = "Site_Link"> Change Your Password</a> </h3>
       <h3> Need Help? </h3>
       <h3> Contact IT at x1033 or by e-mailing samuela3@umbc.edu</h3>
       <h3> <strong> Unauthorized Access is Prohibited </strong> </h3>
