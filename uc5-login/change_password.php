@@ -16,11 +16,11 @@
     
     <input type="email" name="email" placeholder="email-address" required autofocus >
     
-    <input type="password" name="password" placeholder="Existing Password:" required minlength="8" maxlength="16"  >
+    <input type="password" name="password" placeholder="Existing Password:" required>
     
-    <input type="password" name="password" placeholder="New Password:" required minlength="8" maxlength="16"  >
+    <input type="password" name="password" placeholder="New Password:" required>
     
-    <input type="password" name="password" placeholder="Verify your New Password:" required minlength="8" maxlength="16"  >
+    <input type="password" name="password_verify" placeholder="Verify your New Password:" required >
 
     <input id="submit_button" type="submit" value="Submit">        
      
