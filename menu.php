@@ -1,7 +1,21 @@
 	
 <!--Please update any menu bar entries here, as this will be included on all pages through PHP -->
 <div class="titlebar" >  
-<p class="login"> <?php session_start(); echo ($_SESSION['email']) ?> <a href="../uc4-Seller-listing/usecase4.php"> <i class="fa-solid fa-cart-shopping"></i> </a> </p>
+<p class="login"> <?php 
+	$login = "/uc5-login/index.php";
+	session_start(); 
+	if(!isset ($_SESSION['email'])){
+		header('Location: '. $login); 
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	echo ($_SESSION['email']) ?> <a href="../uc4-Seller-listing/usecase4.php"> <i class="fa-solid fa-cart-shopping"></i> </a> </p>
 	<!--link to shopping cart and sign in pages-->
 	<p class="spacer"></p>
 		<ul class="header">
