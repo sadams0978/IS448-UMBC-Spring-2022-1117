@@ -20,7 +20,7 @@
 $servername = "192.168.254.2";
 $username = "IS448";
 $password = "IS448password";
-$authenticated = false;
+$authenticated = true;
 //$sql = 'SELECT User_id, First_name, Last_name, Email_address, Password FROM User';
 
 // Create connection
@@ -50,10 +50,10 @@ $conn->close();
   
 
   //Starts up a session with the E-Mail address and redirects back to homepage
-  //if ($authenticated) {
-  //$_SESSION['email'] = $email; 
-  //header('Location: '.$homepage);
-  //} else echo("You are not authenticated");
+  if ($authenticated) {
+  $_SESSION['email'] = $email; 
+  header('Location: '.$homepage);
+  } else echo("You are not authenticated");
  ?>
 
 
