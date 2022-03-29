@@ -38,7 +38,7 @@ if ($conn->connect_error) {
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "$row["User_id"]. $row["First_name"]. $row["First_name"]. $row["Last_name"]. $row["Email_address"]. $row["Password"] <br>";
+    echo $row["User_id"];
   }
 } else {
   echo "0 results";
