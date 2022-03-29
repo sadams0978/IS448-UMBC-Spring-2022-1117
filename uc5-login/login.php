@@ -21,6 +21,8 @@ $servername = "192.168.254.2";
 $username = "IS448";
 $password = "IS448password";
 $authenticated = false;
+$sql = 'SELECT User_id, First_name, Last_name, Email_address, Password FROM User';
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -31,6 +33,12 @@ if ($conn->connect_error) {
 }
   
   
+   mysql_select_db('IS448');
+   $retval = mysql_query( $sql, $conn );
+  
+  
+  
+  echo ($retval);
   
   
 
