@@ -17,11 +17,30 @@
         die;   
     }
 
+$servername = "192.168.254.2";
+$username = "IS448";
+$password = "IS448password";
+$authenticated = false;
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Checks connection to DB Server
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+  
+  
+  
+  
 
   //Starts up a session with the E-Mail address and redirects back to homepage
-  
+  if ($authenticated) {
   $_SESSION['email'] = $email; 
   header('Location: '.$homepage);
+   
+   
+  } else echo("You are not authenticated");
  ?>
 
 
