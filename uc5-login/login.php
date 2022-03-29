@@ -1,7 +1,5 @@
 <html>
  <body>
-
-
  <?php 
  session_start();
 //Variables 
@@ -21,7 +19,7 @@ $servername = "192.168.254.2";
 $username = "IS448";
 $password = "IS448password";
 $authenticated = true;
-//$sql = 'SELECT User_id, First_name, Last_name, Email_address, Password FROM User';
+//$sql = 'SELECT User_id, First_name, Last_name, Email_address, Password FROM User;';
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -32,21 +30,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
   
- $sql = "SELECT * FROM User;";
- $result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo $row["User_id"];
-  }
-} else {
-  echo "0 results";
-}
-  
 $conn->close();
-   
-   mysqli_close($conn);
   
 
   //Starts up a session with the E-Mail address and redirects back to homepage
