@@ -38,7 +38,14 @@ if ($conn->connect_error) {
   
   
   
-  echo ($retval);
+   while($row = mysql_fetch_assoc($retval)) {
+      echo "User ID :{$row['User_id']}  <br> ".
+         "First NAME : {$row['First_name']} <br> ".
+         "Last Name : {$row['Last_name']} <br> ".
+       "E-Mail Address : {$row['Email_address']} <br> ".
+       "Password : {$row['Password']} <br> ";
+   }
+   
   
   
 
