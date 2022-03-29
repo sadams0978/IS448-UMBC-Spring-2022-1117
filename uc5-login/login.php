@@ -29,6 +29,7 @@ $conn = new mysqli($servername, $username, $password);
 
 // Checks connection to DB Server
 if ($conn->connect_error) {
+ echo ("Cannot Connect to DB");
   die("Connection failed: " . $conn->connect_error);
 }
   
@@ -46,16 +47,14 @@ if ($conn->connect_error) {
        "Password : {$row['Password']} <br> ";
    }
    
-  
+   mysqli_close($conn);
   
 
   //Starts up a session with the E-Mail address and redirects back to homepage
-  if ($authenticated) {
-  $_SESSION['email'] = $email; 
-  header('Location: '.$homepage);
-   
-   
-  } else echo("You are not authenticated");
+  //if ($authenticated) {
+  //$_SESSION['email'] = $email; 
+  //header('Location: '.$homepage);
+  //} else echo("You are not authenticated");
  ?>
 
 
