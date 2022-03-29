@@ -22,7 +22,6 @@ $username = "IS448";
 $password = "IS448password";
 $authenticated = false;
 //$sql = 'SELECT User_id, First_name, Last_name, Email_address, Password FROM User';
-$sql = "SELECT * FROM User";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -33,18 +32,18 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
   
-  
-   mysql_select_db('IS448');
-   $retval = mysql_query( $sql, $conn );
-  
-    
-   while($row = mysql_fetch_assoc($retval)) {
-      echo "User ID :".
-         "First NAME :".
-         "Last Name :".
-       "E-Mail Address :".
-       "Password :";
-   }
+ $sql = "SELECT * FROM Users";
+ $result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+$conn->close();
    
    mysqli_close($conn);
   
