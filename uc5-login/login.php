@@ -32,7 +32,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
   
- $sql = "SELECT * FROM User";
+ $sql = "SELECT * FROM User;";
  $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
