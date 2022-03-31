@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>
-    Login
+    Logout
   </title>
   <link rel="stylesheet" href="style.css" >
   <meta charset="UTF-8">
@@ -11,9 +11,7 @@
 </head>
 
 <body>
-
   <?php
-	session_unset();
 	session_destroy();
 	?>
 	
