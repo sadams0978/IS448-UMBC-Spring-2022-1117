@@ -38,10 +38,12 @@
       <h3> <strong> Unauthorized Access is Prohibited </strong> </h3>
       <h3> <strong> <a href="https://www.umbc.edu/policies/pdfs/UMBC%20X1.00.06%20UMBC%20Policy%20on%20Web%20Site%20Privacy%20Statement.pdf#:~:text=It%20is%20university%20policy%20that,sites%20not%20affiliated%20with%20UMBC." class = "Site_Link"> Privacy Policy</a> </strong> </h3>
 
-
-             <i class="fa-brands fa-instagram fa-xl"></i>
-             <i class="fa-brands fa-facebook fa-xl"></i>
-             <i class="fa-brands fa-twitter fa-xl"></i>
+	    
+	    <p>
+	    <a href="https://instagram.com/umbclife"> <i class="fa-brands fa-instagram fa-xl"></i> </a>
+	    <a href="https://facebook.com/umbcpage"> <i class="fa-brands fa-facebook fa-xl"></i> </a>
+	    <a href="https://twitter.com/UMBC"> <i class="fa-brands fa-twitter fa-xl"></i> </a>
+	    </p>
 
 </div>
   
