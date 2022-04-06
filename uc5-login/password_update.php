@@ -1,6 +1,6 @@
       <?php
       $email = $_POST['email'];
-      $oldpassword = $_POST['old_password'];
+      $old_password = $_POST['old_password'];
       $password = $_POST['password'];
       $password_verify = $_POST['password_verify'];
       $passwords_match = false;
@@ -57,14 +57,7 @@
   //Checks the matching row's password and e-mail address against the user's input
   while($row = mysqli_fetch_assoc($result)) {
   if  ( (($row['email_address']) == $email) && (($row['password']) == $oldpassword) ){
-    
-  if (mysqli_query($db, $update)) {
-  echo "Record updated successfully";
-} else {
-  echo "Error updating record: " . mysqli_error($conn);
-}
-        
-        
+    echo ("You are signed in.");
    
   } else header('Location: '. $login);
   
