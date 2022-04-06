@@ -55,7 +55,6 @@
        mysqli_close($db);   
        
        echo ("Your password has been updated, go back and try to sign in again. ");  
-       echo ("<a href="index.php"> Go Back here. </a>");
        die;
 
 }
