@@ -29,7 +29,9 @@
            while($row = mysqli_fetch_assoc($result)) {
              //Comparing our row value vs the user value
              if ($row["password"] == $password) {
-              $authenticated = true;    
+              $authenticated = true;
+              header($homepage);
+              die();
                    
              } else {
               echo ("Incorrect Password Given, please try again");     
