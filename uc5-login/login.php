@@ -28,13 +28,12 @@
        if (mysqli_num_rows($result) == 1) {
            while($row = mysqli_fetch_assoc($result)) {
              //Comparing our row value vs the user value
-             if ($row["password"] == $password) {
+             if ($row['password'] == $password) {
               echo ("You are signed into the Website");
                    
              } else {
               echo ("Incorrect Password Given, please try again");     
              }
-       }
       } else {
   echo ("We didn't find a matching e-mail address");
 }
