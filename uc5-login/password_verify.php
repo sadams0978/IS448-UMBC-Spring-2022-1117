@@ -54,10 +54,8 @@
        mysqli_query ($db,$update);
        mysqli_close($db);   
           
-       echo ("Your password has been updated, redirecting back to sign in page in 5 seconds. ");
-        sleep(5);
-        header('Location: '.$homepage);
-        die;
+       echo ("Your password has been updated, go back and try to sign in again. ");
+       die;
 
 }
 
