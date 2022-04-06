@@ -19,30 +19,17 @@
        
        if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
        
-       $select = "select email_address, password from login where email_address = '$email'";
+       $select = "select email_address from login where email_address = '$email'";
        
-  
-       $result = mysqli_query ($db,$select);
-       
-      //if we have one row, then check the password, else give an error with a non-matching e-mail
-       if (mysqli_num_rows($result) == 1) {
-           while($row = mysqli_fetch_assoc($result)) {
-             //Comparing our row value vs the user value
-             if ($row['password'] == $password) {
-              echo ("You are signed into the Website");
-                   
-             } else {
-              echo ("Incorrect Password Given, please try again");     
-             }
-      } else {
-  echo ("We didn't find a matching e-mail address");
+// Perform query
+if ($result = mysqli_query($db, $select)) {
+  echo "Returned rows are: " . mysqli_num_rows($result);
+  // Free result set
+  mysqli_free_result($result);
 }
-          
-          
-       mysqli_close($db);      
  
-  
-  
+  mysqli_close($db);
+ 
   
   ?>
 
