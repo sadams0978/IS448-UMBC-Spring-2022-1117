@@ -22,6 +22,10 @@
 //Selecting the email_address and password from DB
      $select = "select email_address, password from login where email_address = '$email'";  
      $result = mysqli_query($db, $select);
+if (mysqli_num_rows($result) == 0) {
+ header('Location: '. $homepage);
+}
+
   
   //Checks the matching row's password and e-mail address against the user's input
   while($row = mysqli_fetch_assoc($result)) {
@@ -33,7 +37,6 @@
    
   } else header('Location: '. $login);
   
-   else header('Location: '. $login);
   }
   
   mysqli_close($db);
