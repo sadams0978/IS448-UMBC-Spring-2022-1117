@@ -19,16 +19,14 @@
        
        if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
        
-       $select = "select email_address from login where email_address = '$email'";
+       $select = "select * from login where email_address = '$email'";
        
      $result = mysqli_query($db, $select);
   
   //Keep on creating new rows in our table from our result
   while($row = mysqli_fetch_assoc($result)) {
-  if ($email == $row['email_address'] {
-   echo ("The E-Mail address Matches");
+  echo ($row['email_address']); 
    
-  }
   }
 
   
