@@ -49,24 +49,23 @@
        
        if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
        
+
 //Selecting the email_address and password from DB
      $select = "select email_address, password from login where email_address = '$email'";  
-     $update = "UPDATE login SET password='$password'";
-      $result = mysqli_query($db, $select);
-  
+     $result = mysqli_query($db, $select);
+
   //Checks the matching row's password and e-mail address against the user's input
   while($row = mysqli_fetch_assoc($result)) {
-  if  ( (($row['email_address']) == $email) && (($row['password']) == $oldpassword) ){
-    echo ("You are signed in.");
-   
-  } else header('Location: '. $login);
-  
+  if  ( (($row['email_address']) == $email) && (($row['password']) == $old_password) ) {
+        echo ("You are logged in. " );
+        
+  }  else echo ("You are not logged in. ");
    
   }
-  
+
+
+
   mysqli_close($db);
   die();
-
-}
 
 ?>
