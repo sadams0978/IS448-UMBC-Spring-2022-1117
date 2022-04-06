@@ -33,7 +33,7 @@
    
   } else header('Location: '. $login);
   
-   
+   else header('Location: '. $login);
   }
   
   mysqli_close($db);
