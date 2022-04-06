@@ -15,30 +15,37 @@
         die;   
     }
 
-$servername = "192.168.254.2";
-$username = "IS448";
-$password = "IS448password";
-$authenticated = true;
-//$sql = 'SELECT User_id, First_name, Last_name, Email_address, Password FROM User;';
-
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Checks connection to DB Server
-if ($conn->connect_error) {
- echo ("Cannot Connect to DB");
-  die("Connection failed: " . $conn->connect_error);
+    $db = mysqli_connect ("192.168.254.2", "IS448", "IS448password", "samuela3");
+       
+       if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
+       
+       $select = "select email_address, password from login where email_address = '$email'";
+       
+  
+       $result = mysqli_query ($db,$select);
+       
+      //if we have one row, then check the password, else give an error with a non-matching e-mail
+       if (mysqli_num_rows($result) == 1) {
+           while($row = mysqli_fetch_assoc($result)) {
+             //Comparing our row value vs the user value
+             if ($row["password"] = $password) {
+              $authenticated = true;    
+                   
+             } else {
+              echo ("Incorrect Password Given, please try again");     
+             }
+       }
+      } else {
+  echo ("We didn't find a matching e-mail address");
 }
+          
+          
+       mysqli_close($db);      
+ 
   
-$conn->close();
   
-
-  //Starts up a session with the E-Mail address and redirects back to homepage
-  if ($authenticated) {
-  $_SESSION['email'] = $email; 
-  header('Location: '.$homepage);
-  } else echo("You are not authenticated");
- ?>
+  
+  ?>
 
 
 </body>
