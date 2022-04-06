@@ -46,8 +46,7 @@
 
       //Connect to DB to verify old password
     $db = mysqli_connect ("192.168.254.2", "IS448", "IS448password", "samuela3");
-       
-       if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
+    if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
        
 
 //Selecting the email_address and password from DB
@@ -55,14 +54,16 @@
      $update = "update login set password = '$password' where email_address = '$email'";
       $result = mysqli_query($db, $select);
 
+
   //Checks the matching row's password and e-mail address against the user's input
   while($row = mysqli_fetch_assoc($result)) {
   if  ( (($row['email_address']) == $email) && (($row['password']) == $old_password) ) {
-       
+
+        //Updates Password after verifiying the old password is right
       if (mysqli_query($db, $update)) {
-      echo "Record updated successfully";
+      echo "We changed your password.";
       } else {
-  echo "Error updating record: " . mysqli_error($db);
+  echo "We were unable to change your password. " . mysqli_error($db);
 }   
         
         
