@@ -49,9 +49,25 @@
        if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
        
        $select = "select email_address, password from login where email_address = '$email'";
-       $update = "update login set password = '$password' where email_address = '$email'";
-       
-       mysqli_query ($db,$update);
+       $result = mysqli_query ($db,$update);
+        
+          
+       if (mysqli_num_rows($result) == 1) {
+           while($row = mysqli_fetch_assoc($result)) {
+             //Comparing our row value vs the user value
+             if ($row["password"] == $password) {
+              $authenticated = true;    
+                   
+             } else {
+              echo ("Incorrect Password Given, please try again);     
+             }
+                 $row["password"]
+       }
+      } else {
+  echo "Please try again, we didn't find a matching value. ";
+}
+          
+          
        mysqli_close($db);   
        
        echo ("Your password has been updated, go back and try to sign in again. ");  
