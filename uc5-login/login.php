@@ -21,10 +21,18 @@
        
        $select = "select email_address from login where email_address = '$email'";
        
-// Perform query
-if ($result = mysqli_query($db, $select)) {
-  echo (mysqli_free_result($result));
-}
+     $result = mysqli_query($db, $select);
+  
+  //Keep on creating new rows in our table from our result
+  while($row = mysqli_fetch_assoc($result)) {
+  if ($email == $row['email_address'] {
+   echo ("The E-Mail address Matches");
+   
+  }
+  }
+
+  
+  
  
   mysqli_close($db);
  
