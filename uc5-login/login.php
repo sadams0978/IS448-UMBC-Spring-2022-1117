@@ -25,8 +25,13 @@
   
   //Keep on creating new rows in our table from our result
   while($row = mysqli_fetch_assoc($result)) {
-  echo ($row['email_address']); 
-  echo ($row['password']);
+  if  ( (($row['email_address']) == $email) && (($row['password']) == $password) ){
+   echo ("Your E-Mail and Password is Correct!");
+   
+   
+   
+  }
+  echo ("Your E-Mail Address or password is invalid, please try again.");
   }
 
   
