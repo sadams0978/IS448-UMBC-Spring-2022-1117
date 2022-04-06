@@ -1,5 +1,3 @@
-<html>
- <body>
  <?php 
  session_start();
 //Variables 
@@ -15,31 +13,30 @@
         die;   
     }
 
+    
+//Connect to DB
     $db = mysqli_connect ("192.168.254.2", "IS448", "IS448password", "samuela3");
        
        if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
        
-       $select = "select email_address, password from login where email_address = '$email'";
-       
+//Selecting the email_address and password from DB
+     $select = "select email_address, password from login where email_address = '$email'";  
      $result = mysqli_query($db, $select);
   
-  //Keep on creating new rows in our table from our result
+  //Checks the matching row's password and e-mail address against the user's input
   while($row = mysqli_fetch_assoc($result)) {
   if  ( (($row['email_address']) == $email) && (($row['password']) == $password) ){
-   echo ("Your E-Mail and Password is Correct!");
    
-   
+   //Sets session variable
+   $_SESSION['email'] = $email;
+   header('Location: '. $homepage);
    
   } else header('Location: '. $login);
   
+   
   }
   
-  
   mysqli_close($db);
- 
+  die();
   
   ?>
-
-
-</body>
- </html> 
