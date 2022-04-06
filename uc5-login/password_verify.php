@@ -52,7 +52,12 @@
        $update = "update login set password = '$password' where email_address = '$email'";
        
        mysqli_query ($db,$update);
-       mysqli_close($db);         
+       mysqli_close($db);   
+          
+       echo ("Your password has been updated, redirecting back to sign in page in 5 seconds. ");
+        sleep(5);
+        header('Location: '.$homepage);
+        die;
 
 }
 
