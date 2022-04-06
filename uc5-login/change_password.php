@@ -12,11 +12,11 @@
     <div class="Login_Box">
 
     <h1> Change Your Password: </h1>
-    <form action="password_verify.php" target="_blank" method="post">
+    <form action="password_update.php" target="_blank" method="post">
     
     <input type="email" name="email" placeholder="email-address" required autofocus >
     
-    <input type="password" name="password" placeholder="Existing Password:" required>
+    <input type="old_password" name="old_password" placeholder="Existing Password:" required>
     
     <input type="password" name="password" placeholder="New Password:" required>
     
