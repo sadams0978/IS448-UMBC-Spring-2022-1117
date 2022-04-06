@@ -52,12 +52,21 @@
 
 //Selecting the email_address and password from DB
      $select = "select email_address, password from login where email_address = '$email'";  
-     $result = mysqli_query($db, $select);
+     $update = "UPDATE login SET password = '$password', WHERE condition email_address = '$email'";
+      $result = mysqli_query($db, $select);
 
   //Checks the matching row's password and e-mail address against the user's input
   while($row = mysqli_fetch_assoc($result)) {
   if  ( (($row['email_address']) == $email) && (($row['password']) == $old_password) ) {
-        echo ("You are logged in. " );
+       
+      if (mysqli_query($db, $update)) {
+      echo "Record updated successfully";
+      } else {
+  echo "Error updating record: " . mysqli_error($db);
+}   
+        
+        
+        
         
   }  else echo ("You are not logged in. ");
    
