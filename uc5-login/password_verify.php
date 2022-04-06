@@ -53,8 +53,10 @@
        
        mysqli_query ($db,$update);
        mysqli_close($db);   
-          
-       echo ("Your password has been updated, go back and try to sign in again. ");
+       
+       echo ("Your password has been updated, go back and try to sign in again. ");  
+        sleep(5);
+        header('Location: '.$homepage);
        die;
 
 }
