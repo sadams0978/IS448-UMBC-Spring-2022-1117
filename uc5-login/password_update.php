@@ -52,7 +52,7 @@
 
 //Selecting the email_address and password from DB
      $select = "select email_address, password from login where email_address = '$email'";  
-     $update = "UPDATE login SET password = '$password', WHERE condition email_address = '$email'";
+     $update = "update login set password = '$password' where email_address = '$email'";
       $result = mysqli_query($db, $select);
 
   //Checks the matching row's password and e-mail address against the user's input
