@@ -23,9 +23,7 @@
        
 // Perform query
 if ($result = mysqli_query($db, $select)) {
-  echo "Returned rows are: " . mysqli_num_rows($result);
-  // Free result set
-  mysqli_free_result($result);
+  echo (mysqli_free_result($result));
 }
  
   mysqli_close($db);
