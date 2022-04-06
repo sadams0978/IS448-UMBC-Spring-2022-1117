@@ -57,9 +57,14 @@
   //Checks the matching row's password and e-mail address against the user's input
   while($row = mysqli_fetch_assoc($result)) {
   if  ( (($row['email_address']) == $email) && (($row['password']) == $oldpassword) ){
-    //Updates the user password
-    mysqli_query($db, $update); 
-    echo ("Your Password has been updated successfully.");
+    
+  if (mysqli_query($db, $update)) {
+  echo "Record updated successfully";
+} else {
+  echo "Error updating record: " . mysqli_error($conn);
+}
+        
+        
    
   } else header('Location: '. $login);
   
