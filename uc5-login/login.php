@@ -30,13 +30,11 @@
    
    
    
+  } else header('Location: '. $login);
+  
   }
-  echo ("Your E-Mail Address or password is invalid, please try again.");
-  }
-
   
   
- 
   mysqli_close($db);
  
   
