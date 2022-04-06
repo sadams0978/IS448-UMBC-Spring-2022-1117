@@ -1,5 +1,6 @@
       <?php
       $email = $_POST['email'];
+      $oldpassword = $_POST['old_password'];
       $password = $_POST['password'];
       $password_verify = $_POST['password_verify'];
       $passwords_match = false;
@@ -21,7 +22,7 @@
 
 
     //Verifies that the verified password and passwords match and tells the user
-    if ($password === $password_verify) {
+    if ($password == $password_verify) {
       $passwords_match = true;
       
     } else {
@@ -40,38 +41,33 @@
 
     if(!$min_length || !$contains_uppercase || !$contains_digit || !$contains_special_char) {
     echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
- 
-} else{
-       
-       //Connect to DB and Update Password
-       $db = mysqli_connect ("192.168.254.2", "IS448", "IS448password", "samuela3");
+    }
+
+
+      //Connect to DB to verify old password
+    $db = mysqli_connect ("192.168.254.2", "IS448", "IS448password", "samuela3");
        
        if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
        
-       $select = "select email_address, password from login where email_address = '$email'";
-       $result = mysqli_query ($db,$update);
-        
-          
-       if (mysqli_num_rows($result) == 1) {
-           while($row = mysqli_fetch_assoc($result)) {
-             //Comparing our row value vs the user value
-             if ($row["password"] == $password) {
-              $authenticated = true;    
-                   
-             } else {
-              echo ("Incorrect Password Given, please try again);     
-             }
-                 $row["password"]
-       }
-      } else {
-  echo "Please try again, we didn't find a matching value. ";
-}
-          
-          
-       mysqli_close($db);   
-       
-       echo ("Your password has been updated, go back and try to sign in again. ");  
-       die;
+//Selecting the email_address and password from DB
+     $select = "select email_address, password from login where email_address = '$email'";  
+     $update = "UPDATE login SET password='$password'";
+      $result = mysqli_query($db, $select);
+  
+  //Checks the matching row's password and e-mail address against the user's input
+  while($row = mysqli_fetch_assoc($result)) {
+  if  ( (($row['email_address']) == $email) && (($row['password']) == $old_password) ){
+    //Updates the user password
+    mysqli_query($db, $update); 
+    echo ("Your Password has been updated successfully.");
+   
+  } else header('Location: '. $login);
+  
+   
+  }
+  
+  mysqli_close($db);
+  die();
 
 }
 
