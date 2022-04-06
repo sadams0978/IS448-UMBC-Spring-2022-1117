@@ -48,8 +48,8 @@
        
        if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
        
-       
-       $update = "UPDATE login SET password = '$password', WHERE email_address = '$email'";
+       $select = "select email_address, password from login where email_address = '$email'";
+       $update = "update login set password = '$password' where email_address = '$email'";
        
        mysqli_query ($db,$update);
        mysqli_close($db);         
