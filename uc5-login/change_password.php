@@ -16,7 +16,7 @@
     
     <input type="email" name="email" placeholder="email-address" required autofocus >
     
-    <input type="old_password" name="old_password" placeholder="Existing Password:" required>
+    <input type="password" name="old_password" placeholder="Existing Password:" required>
     
     <input type="password" name="password" placeholder="New Password:" required>
     
