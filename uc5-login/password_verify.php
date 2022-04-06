@@ -1,5 +1,5 @@
       <?php
-
+      $email = $_POST['email'];
       $password = $_POST['password'];
       $password_verify = $_POST['password_verify'];
       $passwords_match = false;
@@ -42,8 +42,18 @@
     echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
  
 } else{
-    echo 'Your password meets the criteria';
-     die;
+       
+       //Connect to DB and Update Password
+       $db = mysqli_connect ("192.168.254.2", "IS448", "IS448password", "samuela3");
+       
+       if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
+       
+       
+       $update = "UPDATE login SET password = '$password', WHERE email_address = '$email'";
+       
+       mysqli_query ($db,$update);
+       mysqli_close($db);         
+
 }
 
 ?>
