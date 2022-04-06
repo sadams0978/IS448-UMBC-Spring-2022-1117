@@ -1,6 +1,14 @@
 <?php
-$db = mysqli_connect ("studentdb-maria.gl.umbc.edu", "samuela3", "samuela3", "samuela3");
-        if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
+$servername = "studentdb-maria.gl.umbc.edu";
+$username = "samuela3";
+$password = "samuela3";
 
+// Create connection
+$conn = new mysqli($servername, $username, $password);
 
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
 ?>
