@@ -1,7 +1,7 @@
 <?php
   
   // Plaintext password entered by the user
-  $plaintext_password = "Password123!";
+  $plaintext_password = "password";
   
 $hash = password_hash($plaintext_password, 
           PASSWORD_DEFAULT);
