@@ -1,7 +1,7 @@
 <?php
   
   // The plain text password to be hashed
-  $plaintext_password = "Password@123";
+  $plaintext_password = "password";
   
   // The hash of the password that
   // can be stored in the database
