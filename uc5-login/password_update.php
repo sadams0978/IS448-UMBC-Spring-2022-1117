@@ -66,7 +66,7 @@
         //Gets old password hash from DB and verifies the old password hash
         $oldpassword_hash = $row['password'];
    
-  if  ( (($row['email_address']) == $email) && (password_verify($old_password, $oldpassword_hash)) {
+  if  ( (($row['email_address']) == $email) && ($row['password'] == $old_password) {
 
        //Updates Password after verifiying the old password is right
       if (mysqli_query($db, $update)) {
