@@ -16,6 +16,7 @@
   
   $contains_digit = preg_match("/\d+/", $password);
   
+//Minimum length of 8 chars
     if (strlen($password) > 8 ) {
     $min_length = true;
   }
@@ -38,7 +39,7 @@
     }
 
 
-
+//If it's not meeting minimum requirements, alert the user of the requirements
     if(!$min_length || !$contains_uppercase || !$contains_digit || !$contains_special_char) {
     echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
      die;
@@ -50,24 +51,30 @@
     if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
        
 
-//Selecting the email_address and password from DB
-     $select = "select email_address, password from login where email_address = '$email'";  
-     $update = "update login set password = '$password' where email_address = '$email'";
+     //Hashing our new password
+      $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+      //Selecting the email_address and password from DB
+      $select = "select email_address, password from login where email_address = '$email'";  
+     $update = "update login set password = '$hashed_password' where email_address = '$email'";
       $result = mysqli_query($db, $select);
+      
 
 
   //Checks the matching row's password and e-mail address against the user's input
   while($row = mysqli_fetch_assoc($result)) {
-  if  ( (($row['email_address']) == $email) && (($row['password']) == $old_password) ) {
+        //Gets old password hash from DB and verifies the old password hash
+        $oldpassword_hash = $row['password'];
+   
+  if  ( (($row['email_address']) == $email) && (password_verify($old_password, $oldpassword_hash)) {
 
-        //Updates Password after verifiying the old password is right
+       //Updates Password after verifiying the old password is right
       if (mysqli_query($db, $update)) {
       echo "We changed your password.";
       } else {
   echo "We were unable to change your password. " . mysqli_error($db);
 }   
-        
-        
+             
         
         
   }  else echo ("You are not logged in. ");
