@@ -1,15 +1,12 @@
 <?php
   
-  // The plain text password to be hashed
-  $plaintext_password = "password";
+  // Plaintext password entered by the user
+  $plaintext_password = "Password@123";
   
-  // The hash of the password that
-  // can be stored in the database
-  $hash = ("$2y$10$YBfhBfC.F7bK7pMA1QX0EOUM9zBmnNv2KGFAEn1T95oxHNtye0bbW");
-  // Print the generated hash
-
-
-
+  // The hashed password retrieved from database
+  $hash = 
+"$2y$10$8sA2N5Sx/1zMQv2yrTDAaOFlbGWECrrgB68axL.hBb78NhQdyAqWm";
+  
   // Verify the hash against the password entered
   $verify = password_verify($plaintext_password, $hash);
   
