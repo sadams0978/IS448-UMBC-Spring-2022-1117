@@ -11,7 +11,7 @@
     <h1> Create a new Account: </h1>
 
 
-  <form action="create.php" method="post">
+  <form action="create_user.php" method="post">
     
     <input type="text" name="first_name" placeholder="First Name" required >
 
