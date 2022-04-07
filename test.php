@@ -1,5 +1,8 @@
 <?php
-echo (password_hash("password", PASSWORD_DEFAULT);
+$password_hash = (password_hash("password", PASSWORD_DEFAULT);
+echo ($password_hash);
+var_dump($password_hash);
+
 
 
 ?>
