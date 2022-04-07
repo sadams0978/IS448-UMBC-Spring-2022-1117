@@ -1,10 +1,13 @@
-      <?php   
-ini_set('display_errors', 1);
-
-$passw01 = "password";
-
-
-
-$hashp04 = password_hash($passw01, PASSWORD_BCRYPT;
-die();
+<?php
+  
+  // The plain text password to be hashed
+  $plaintext_password = "Password@123";
+  
+  // The hash of the password that
+  // can be stored in the database
+  $hash = password_hash($plaintext_password, 
+          PASSWORD_DEFAULT);
+  
+  // Print the generated hash
+  echo "Generated hash: ".$hash;
 ?>
