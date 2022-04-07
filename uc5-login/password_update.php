@@ -52,11 +52,13 @@
        
 
      //Hashing our new password
-      $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+      $hash = password_hash($password, PASSWORD_DEFAULT);
+
+
 
       //Selecting the email_address and password from DB
       $select = "select email_address, password from login where email_address = '$email'";  
-     $update = "update login set password = '$hashed_password' where email_address = '$email'";
+      $update = "update login set password = '$hash' where email_address = '$email'";
       $result = mysqli_query($db, $select);
       
 
@@ -64,9 +66,10 @@
   //Checks the matching row's password and e-mail address against the user's input
   while($row = mysqli_fetch_assoc($result)) {
         //Gets old password hash from DB and verifies the old password hash
-        $oldpassword_hash = $row['password'];
-   
-  if  ( (($row['email_address']) == $email) && ($row['password'] == $old_password) {
+        $hash = $row['password'];
+        $db_email = $row['email_address'];
+
+  if  ( ($db_email == $email) && (password_verify($old_password, $hash)) ){
 
        //Updates Password after verifiying the old password is right
       if (mysqli_query($db, $update)) {
