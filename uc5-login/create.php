@@ -26,8 +26,11 @@
     <input type="password" name="password_verify" placeholder="Confirm your Password" required  >
     <p> </p>
     
+
+      <div id="terms">
+    <label for="checkbox" id="terms_text"> I agree to the Terms and Conditions </label>
     <input type="checkbox" id="checkbox" name="checkbox" required >
-    <label for="checkbox" > I agree to the Terms and Conditions </label>
+    </div>
 
     <input id="submit_button" type="submit" value="Submit">
 
