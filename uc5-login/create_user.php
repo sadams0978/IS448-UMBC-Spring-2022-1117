@@ -44,7 +44,7 @@
 
 //If it's not meeting minimum requirements, alert the user of the requirements
     if(!$min_length || !$contains_uppercase || !$contains_digit || !$contains_special_char) {
-    echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
+    echo ('Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.');
      die;
     }
   
@@ -56,7 +56,7 @@
       $hash = password_hash($password, PASSWORD_DEFAULT);
 
 	//Querying our DB to see if someone already has that e-mail address	
-	$email_verification = ("SELECT email_address FROM login WHERE email-address = '$email'");
+	$email_verification = ("SELECT email_address FROM login WHERE email_address = '$email'");
 	$email_result = mysqli_query($db,$email_verification);
 	$email_rows=mysqli_num_rows($email_result);
 	if($email_rows !== 0) {
