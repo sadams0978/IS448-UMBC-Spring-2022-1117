@@ -69,8 +69,14 @@ clear: right;
 #checkbox {
     clear: left;
     display: inline-block;
+    padding:20px
 }
 
+#terms_text {
+ clear: left;
+    padding:20px
+    
+}
 
   input:focus {
       /* Improves visability when clicked by adding border around box */
