@@ -55,7 +55,15 @@
      //Hashing our new password
       $hash = password_hash($password, PASSWORD_DEFAULT);
 
-
+	//Querying our DB to see if someone already has that e-mail address	
+	$email_verification = ("SELECT email_address FROM login WHERE email-address = '$email'");
+	$email_result = mysqli_query($db,$email_verification);
+	$email_rows=mysqli_num_rows($email_result);
+	if($email_rows !== 0) {
+    	echo ("We already have a user with the e-mail address " . $email . ", please try again later.");
+        die;
+	
+	}
 
       //Insert user data to DB
       $insert = "INSERT INTO login (email_address, first_name, last_name, date_of_birth, password) VALUES ('$email', '$first_name', '$last_name', '$dob', '$hash')";
