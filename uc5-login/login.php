@@ -14,11 +14,9 @@
     }
 
     
-//Connect to DB
-    $db = mysqli_connect ("192.168.254.2", "IS448", "IS448password", "samuela3");
-       
-       if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
-       
+		// Includes our Database Connection Details
+		include('../db_connection.php');
+
 //Selecting the email_address and password from DB
      $select = "select email_address, password from login where email_address = '$email'";  
      $result = mysqli_query($db, $select);
