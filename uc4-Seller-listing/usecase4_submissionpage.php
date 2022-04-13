@@ -13,6 +13,8 @@
 <!--get name of card from sql -->
 </head>
 <body>
+
+	<p> Test</p> 
 	<?php
 		// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
