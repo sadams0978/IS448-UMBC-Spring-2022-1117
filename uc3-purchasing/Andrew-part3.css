@@ -4,7 +4,6 @@
   float: left;
   width: 33.33%;
   padding: 10px;
-text-align: center;
 
 }
 
@@ -34,4 +33,8 @@ text-align: center;
 .price{
 	border: 2px #6796EB solid;
 	background-color: white;
+}
+
+.titles{
+	font font-weight: bold;
 }
