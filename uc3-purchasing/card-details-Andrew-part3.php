@@ -1,3 +1,34 @@
+<?php
+$c_id = $_GET['id'];
+$db = mysqli_connect("studentdb-maria.gl.umbc.edu","samuela3","samuela3","samuela3");
+
+if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
+
+$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_id'";
+
+$result = mysqli_query($db, $constructed_query);
+
+if(!$result){
+	$error = mysqli_error($db);
+	exit;
+}
+
+$card = mysqli_fetch_array($result);
+
+$name = $card['C_NAME'];
+$description = $card['C_DESC'];
+$quantity = $card['C_QUANTITY'];
+$categ = $card['C_CATEG'];
+$condition = $card['C_CONDITION'];
+$finish = $card['C_FINISH'];
+$comp = $card['C_COMP'];
+$price = $card['PRICE'];
+
+?>
+
+
+
+
 <!doctype html>
 <html>
 <head>
@@ -6,7 +37,7 @@
 <link rel="stylesheet" type="text/css" href="Andrew-part3.css"/>
 <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
 	
-<title>Card Description</title>
+<title><?php echo "$name Description"; ?></title>
 <!--get name of card from sql -->
 </head>
 <body>
@@ -17,35 +48,39 @@ include('../menu.php');
 ?>
 	
 
-	
-	
 <div class="left">
 	<p class="card"><img src="../uc2-favorites/blank-card.jpg" alt="Playing Card"  width = "300" height = "400"/></p>
 </div>	
 
 <div class="right">
-	<p class="cardDetails">Card category details here<br /> <!-- card details from sql-->
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	<p class="cardDetails"><span class= "titles">Card Information</span><br />
+		<?php
+			echo "Card Category: $categ <br />
+			Card Condition: $condition <br />
+			Card Finish: $finish <br />
+			Card Composition: $comp";
+		?>
 	</p>
 	
 	
-	<p class="cardDetails">Card description here <br /><!--card description from sql-->
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	<p class="cardDetails"><span class="titles">Card Description</span><br /><!--card description from sql-->
+		<?php echo $description ?>
 	</p>
 	
 	<div class="cart">
-	<p class="price">Price: <!--from sql & php-->
+	<p class="price">Price: <?php $price?><!--from sql & php-->
 	</p>
 	<p class="price">Quantity:<!--from sql & php-->
 		<select name= "addToCart"> <!-- with php depending on how many are in stock you can choose to add to inventory -->
-			<option value=”1”>1</option>
-			<option value=”2”>2</option>
-			<option value=”3”>3</option>
-			<option value=”4”>4</option>
+			<?php
+			for ($i = 1; $i <= $quantity; $i++){
+				echo "<option value=”$i”>$i</option>";
+			}
+			?>
 		</select>
 	</p>
 		
-	<p><button type="submit">Add to cart</button><!--input into cart table to sql--></p>
+	<p><button type="submit" onclick="alert('Card Added to Shopping Card')">Add to cart</button><!--input into cart table to sql--></p>
 	</div>
 	
 </div>
