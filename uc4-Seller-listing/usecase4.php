@@ -18,7 +18,7 @@
 </head>
 <body>
 
-	//test1224
+	
 	
 		<?php
 		// Includes our menu bar, instead of copying and pasting through the pages
