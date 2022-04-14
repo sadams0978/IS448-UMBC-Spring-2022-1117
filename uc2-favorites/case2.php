@@ -1,30 +1,4 @@
 
-<?php
-	$c_id = $_GET['id'];
-	include('../db_connection.php');
-
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_id'";
-
-	$result = mysqli_query($db, $constructed_query);
-
-		if(!$result){
-			$error = mysqli_error($db);
-			exit;
-		}
-
-	$card = mysqli_fetch_array($result);
-
-	$name = $card['C_NAME'];
-	$description = $card['C_DESC'];
-	$quantity = $card['C_QUANTITY'];
-	$categ = $card['C_CATEG'];
-	$condition = $card['C_CONDITION'];
-	$finish = $card['C_FINISH'];
-	$comp = $card['C_COMP'];
-	$year = $card['C_YEAR'];
-	$price = $card['PRICE'];
-
-?>
 
 <!doctype html>
 <html>
