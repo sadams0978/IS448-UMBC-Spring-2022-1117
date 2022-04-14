@@ -17,6 +17,7 @@
 		?>
 		
 		<!-- favorites section -->
+		<p class="spacer"></p>
 		<div class = "favoriteCardsContainer">
 			<h2> Filters: </h2>
 			<form action = "case-two.php" method = "POST" name = "Filters">
