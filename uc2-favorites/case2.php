@@ -92,7 +92,7 @@
 		
 			</ul>
 
-			</br>
+			
 			
 			<ul>
 					<li ><img src = "blank-card.jpg" alt = "favorite card"/>
