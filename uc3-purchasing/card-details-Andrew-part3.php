@@ -1,6 +1,6 @@
 <?php
 $c_id = $_GET['id'];
-$db = mysqli_connect("studentdb-maria.gl.umbc.edu","samuela3","samuela3","samuela3");
+$db = mysqli_connect("studentdb-maria.gl.umbc.edu","samuela3","samuela3","STOCK");
 
 if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
 
