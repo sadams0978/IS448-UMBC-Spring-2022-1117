@@ -1,11 +1,11 @@
        <?php
       
-      $first_name = $_POST['first_name'];
-      $last_name = $_POST['last_name'];
-      $dob = $_POST['dob'];
-      $email = $_POST['email'];
-      $password = $_POST['password'];
-      $password_verify = $_POST['password_verify'];
+      $first_name = htmlspecialchars($_POST['first_name']);
+      $last_name = htmlspecialchars($_POST['last_name']);
+      $dob = htmlspecialchars($_POST['dob']);
+      $email = htmlspecialchars($_POST['email']);
+      $password = htmlspecialchars($_POST['password']);
+      $password_verify = htmlspecialchars($_POST['password_verify']);
       $passwords_match = false;
       $homepage = "index.php";
       $min_length = false;
