@@ -36,7 +36,7 @@ include('../menu.php');
 
     <!--Enter card name text box--> 
     
-    <label for ="card_name"> Card Name </label>
+    <label for ="card_name"> Card Name: </label>
         <input type="text" name="card_name" id= "card_name" size ="16" placeholder="Card Name" > 
       
 
