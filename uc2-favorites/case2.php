@@ -111,6 +111,23 @@
 		
 		</div>
 
+		<!-- cards section -->
+		<div class = "cardsContainer">
+			<ul>
+					<li ><img src = "blank-card.jpg" alt = "favorite card"/>
+					<br><button class="fa-solid fa-heart" style="color:red"></button> Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">Add to Cart</button></li>
+		
+			</ul>
+
+			</br>
+			
+			<ul>
+					<li ><img src = "blank-card.jpg" alt = "favorite card"/>
+					<br><button class="fa-solid fa-heart" style="color:red"></button> Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">Add to Cart</button></li>
+		
+			</ul>
+		</div>
+
 		<!-- new cards section -->
 		<div class = "cardsContainer">
 			<?php
@@ -129,23 +146,8 @@
 			
 			?>
 		</div>
-		
-		<!-- cards section -->
-		<div class = "cardsContainer">
-			<ul>
-					<li ><img src = "blank-card.jpg" alt = "favorite card"/>
-					<br><button class="fa-solid fa-heart" style="color:red"></button> Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">Add to Cart</button></li>
-		
-			</ul>
 
-			</br>
-			
-			<ul>
-					<li ><img src = "blank-card.jpg" alt = "favorite card"/>
-					<br><button class="fa-solid fa-heart" style="color:red"></button> Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">Add to Cart</button></li>
-		
-			</ul>
-		</div>
+		</br>
 		
 		</br>
 		
