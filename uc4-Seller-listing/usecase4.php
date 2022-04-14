@@ -104,8 +104,8 @@ include('../menu.php');
     <div class="pricing">
       <!--pricing information-->
       
-        <label for ="sellerprice"> Price per unit:</label>
-        <input type="text" id="sellerprice" class ="priceandquantity" size ="7">
+        <label for ="unitprice"> Price per unit:</label>
+        <input type="text" id="unitprice" class ="priceandquantity" size ="7">
       
 
       <!--quantity information--> 
