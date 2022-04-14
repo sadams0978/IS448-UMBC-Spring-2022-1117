@@ -3,8 +3,8 @@
 //Variables 
  $emailinvalid = "This e-mail entry is invalid, please try again. ";
  $passwordinvalid = "This e-mail entry is invalid, please try again. ";
- $email = $_POST['email'];
- $password = $_POST['password'];
+ $email = htmlspecialchars($_POST['email']);
+ $password = htmlspecialchars($_POST['password']);
  $login = "index.php";
  $homepage = "../uc1-Listings-View/ListingsView.php";
  //Checking to see if the e-mail or password is empty and exiting
