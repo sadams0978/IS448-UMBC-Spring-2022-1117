@@ -71,7 +71,7 @@
 
 
 		//insert into database with sql 
-		$constructed_query = " INSERT INTO STOCK(C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE)   
+		$constructed_query = " INSERT INTO STOCK (C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE)   
 		VALUES ('$cardname', '$description', '$sellerquantity', '$category', '$condition', '$finish' , '$composition' , '$year', '$unitprice')";
 						  
 
@@ -94,11 +94,16 @@
 		//message to user to go back and entery information in all fields 
 	?>
 
-	<div class = "cardDetailsContainer"> 
+     <p>
+			It looks like your listing is missing some information. Please go <a href="https://jenkins-build.arlcyber.me/uc4-Seller-listing/usecase4.php">back</a> and enter information into all of the fields. </br> 
+		</p>
+
+		
+	<!--div class = "cardDetailsContainer"> 
 		<p class = "center">
 			It looks like your listing is missing some information. Please go <a href="https://jenkins-build.arlcyber.me/uc4-Seller-listing/usecase4.php">back</a> and enter information into all of the fields. </br> 
 		</p>
-	</div>
+	</div-->
 
 	<?php
 		}//end of else
