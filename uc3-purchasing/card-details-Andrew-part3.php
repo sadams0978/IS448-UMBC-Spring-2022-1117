@@ -20,6 +20,7 @@ $categ = $card['C_CATEG'];
 $condition = $card['C_CONDITION'];
 $finish = $card['C_FINISH'];
 $comp = $card['C_COMP'];
+$year = $card['C_YEAR'];
 $price = $card['PRICE'];
 
 ?>
@@ -56,7 +57,8 @@ include('../menu.php');
 			echo "Card Category: $categ <br />
 			Card Condition: $condition <br />
 			Card Finish: $finish <br />
-			Card Composition: $comp";
+			Card Composition: $comp <br />
+			Card Year: $year";
 		?>
 	</p>
 	
