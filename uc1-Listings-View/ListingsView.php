@@ -20,6 +20,7 @@
 
 	<div class ="cardDetailsContainer"> 
 	<h2> Filters </h2>
+        <form action="ListingsView.php" method="POST" name="Filter">
 		<!--Enter card category --> 
 		<label for="category"> Category:</label> 
         <!--from sql & php-->
@@ -73,6 +74,8 @@
 				<option value="5">other</option>
 
 			</select>
+            <input type="submit" value="Submit"/>
+        </form>
 	</div>
 	<div class="cards">
 	<ul>
