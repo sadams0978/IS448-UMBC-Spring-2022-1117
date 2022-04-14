@@ -9,8 +9,8 @@
 <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
 
 	
-<title>Card Description</title>
-<!--get name of card from sql -->
+<title>Submission</title>
+
 </head>
 <body>
 
@@ -53,13 +53,13 @@
 			(isset($_POST["category"]) && (!empty($_POST["category"]))) &&
 			(isset($_POST["condition"]) && (!empty($_POST["condition"]))) &&
 			(isset($_POST["finish"]) && (!empty($_POST["finish"]))) &&
-			(isset($_POST["composition"]) && (!empty($_POST["composition"])) &&
-			(isset($_POST["year"]) && (!empty($_POST["year"])) &&
-			(isset($_POST["composition"]) && (!empty($_POST["composition"])) &&
-			(isset($_POST["year"]) && (!empty($_POST["year"])) &&
-			(isset($_POST["description"]) && (!empty($_POST["description"])) &&
-			(isset($_POST["sellerprice"]) && (!empty($_POST["sellerprice"])) &&
-			(isset($_POST["quantity"]) && (!empty($_POST["quantity"])) /* &&
+			(isset($_POST["composition"]) && (!empty($_POST["composition"]))) &&
+			(isset($_POST["year"]) && (!empty($_POST["year"]))) &&
+			(isset($_POST["composition"]) && (!empty($_POST["composition"]))) &&
+			(isset($_POST["year"]) && (!empty($_POST["year"]))) &&
+			(isset($_POST["description"]) && (!empty($_POST["description"]))) &&
+			(isset($_POST["sellerprice"]) && (!empty($_POST["sellerprice"]))) &&
+			(isset($_POST["quantity"]) && (!empty($_POST["quantity"]))) /* &&
 
 			check for image. implement later
 

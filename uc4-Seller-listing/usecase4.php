@@ -9,8 +9,8 @@
 <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
 
 	
-<title>Card Description</title>
-<!--get name of card from sql -->
+<title>Post Listing</title>
+
 </head>
 <body>
 
