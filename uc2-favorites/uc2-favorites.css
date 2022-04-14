@@ -14,11 +14,6 @@ li {
 }
 
 .cardsContainer {
-	float: right;
-	margin-top: 4.5%;
-	text-align: justify;
-	border: 4px #6796EB solid;
-	border-radius: 5px 30px;
-	padding: 8px;
-	background-color: white;
+	float:left;
+	margin-bottom: 8px;
 }
