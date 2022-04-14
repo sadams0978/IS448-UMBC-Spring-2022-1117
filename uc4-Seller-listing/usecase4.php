@@ -40,7 +40,6 @@ include('../menu.php');
         <input type="text" name="card_name" id= "card_name" size ="16" placeholder="Card Name" > 
       
 
-    
       <!--Enter card category dropdown --> 
       <label for="category"> Category:</label> <!--from sql & php-->
         <select name= "category" id="category"> 
