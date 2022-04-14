@@ -74,6 +74,26 @@
 				<option value="5">other</option>
 
 			</select>
+
+            </br>
+
+        <!-- Enter card Year--> 
+		<label for="year"> Year:</label> 
+        <!--from sql & php-->
+			<select name= "year" id="year"> 
+				<option value="" disabled selected>Select Year</option>
+				<option>Select Year</option>
+            <?php
+                for($year = 1980; $year <=2022; $year++){
+                echo "<option value=".$year.">".$year."</option>";
+            }
+
+            ?>
+
+			</select>
+
+            </br>
+
             <input type="submit" value="Submit"/>
         </form>
 	</div>
