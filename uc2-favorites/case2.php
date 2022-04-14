@@ -20,7 +20,7 @@
 		<p class="spacer"></p>
 		<div class = "favoriteCardsContainer">
 			<h2> Filters: </h2>
-			<form action = "case-two.php" method = "POST" name = "Filters">
+			<form action = "case-two.php" method = "POST" name = "Filter">
 				<label for = "category"> Category: </label>
 					<select name = "category" id = "category">
 						<option value="" disabled selected>Select your option</option>
