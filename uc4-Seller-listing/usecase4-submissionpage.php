@@ -18,7 +18,17 @@
 	<?php
 		// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
+	?>
 
+	<?php
+
+	#connect to mysql database
+	$db = mysqli_connect("studentdb-maria.gl.umbc.edu","samuela3","samuela3","samuela3");
+
+	if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
+
+	#get the parameter from the HTML form that this PHP program is connected to
+	#since data from the form is sent by the HTTP POST action, use the $_POST array here
 		//assign input in form to php variables
 		/* card image, implement later
 
@@ -27,13 +37,13 @@
 		*/
 
 		$category = $_POST["category"]; 
-		$condition = $_POST["condition"];
+		$condition = $_POST[:condition];
 		$finish = $_POST["finish"];
 		$composition = $_POST["composition"];
 		$year = $_POST["year"];
 		$description = $_POST["description"];
-		$sellerprice = $_POST["sellerprice"];
-		$quantity = $_POST["quantity"];
+		$unitprice = $_POST["unitprice"];
+		$sellerquantity = $_POST["sellerquantity"];
 
 		/* idea: iterate through $post array using foreach loop. 
 		foreach ($_POST as $field => $cardattributevalue)
@@ -43,6 +53,10 @@
 		}
 
 		*/
+
+		$constructed_query = " INSERT INTO stock(C_category, C_condition, C_finish, C_composition, C_year, C_description, C_unitprice, C_sellerquantity)  
+		VALUES ('$category', '$condition', '$finish', '$compisition', '$year', '$description' , '$unitprice' , '$sellerquantity')";
+						  
 
 
 
@@ -56,7 +70,7 @@
 			(isset($_POST["composition"]) && (!empty($_POST["composition"]))) &&
 			(isset($_POST["year"]) && (!empty($_POST["year"]))) &&
 			(isset($_POST["description"]) && (!empty($_POST["description"]))) &&
-			(isset($_POST["sellerprice"]) && (!empty($_POST["sellerprice"]))) &&
+			(isset($_POST["unitprice"]) && (!empty($_POST["unitprice"]))) &&
 			(isset($_POST["quantity"]) && (!empty($_POST["quantity"]))) /* &&
 
 			check for image. implement later
