@@ -1,4 +1,29 @@
+<?php
+	session_start();
+	include('../db_connection.php');
 
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_id'";
+
+	$result = mysqli_query($db, $constructed_query);
+
+	if(!$result){
+		$error = mysqli_error($db);
+		exit;
+	}
+
+	$card = mysqli_fetch_array($result);
+
+	$name = $card['C_NAME'];
+	$description = $card['C_DESC'];
+	$quantity = $card['C_QUANTITY'];
+	$categ = $card['C_CATEG'];
+	$condition = $card['C_CONDITION'];
+	$finish = $card['C_FINISH'];
+	$comp = $card['C_COMP'];
+	$year = $card['C_YEAR'];
+	$price = $card['PRICE'];
+
+?>
 
 <!doctype html>
 <html>
@@ -84,6 +109,25 @@
 				<input type="submit" value="Submit"/>
 			</form>
 		
+		</div>
+
+		<!-- new cards section -->
+		<div class = "cardsContainer">
+			<?php
+			//declare session array
+			$_SESSION['cardImage'] = array();
+			array_push($_SESSION['cardImage'],'$name'); // Items added to cart
+				
+					
+						while (list ($val) = each ($_SESSION['cart'])) { 
+							echo "$val <br>"; 
+							echo "<i class = fa-solid fa-heart></i>";
+						}
+						
+					
+				
+			
+			?>
 		</div>
 		
 		<!-- cards section -->
