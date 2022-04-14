@@ -1,3 +1,8 @@
+<?php
+    $db = mysqli_connect("studentdb-maria.gl.umbc.edu","samuela3","samuela3","samuela3");
+
+
+?>
 <!doctype html>
 <html lang ="en">
 <head>
@@ -16,12 +21,13 @@
 	include('../menu.php');
 	?>
 	
+    <!--FILTER Section--> 
 	<p class="spacer"></p>
-
 	<div class ="cardDetailsContainer"> 
 	<h2> Filters </h2>
         <form action="ListingsView.php" method="POST" name="Filter">
-		<!--Enter card category --> 
+		
+        <!--Enter card category --> 
 		<label for="category"> Category:</label> 
         <!--from sql & php-->
 			<select name= "category" id="category"> 
@@ -33,7 +39,6 @@
 				<option value="4">Football</option>
 				<option value="5">Other</option>
 			</select>
-
 		<br/>
 
 		<!--Enter card condition--> 
@@ -46,7 +51,6 @@
 				<option value="3">Great</option>
 				<option value="4">Mint</option>
 			</select>
-
 		<br/> 
 
 		<!--Enter card finish--> 
@@ -59,7 +63,6 @@
 				<option value="3">Gloss</option>
 				<option value="4">Other</option>
 			</select>
-
 		<br/>
 
 		<!-- Enter card composition--> 
@@ -72,9 +75,7 @@
 				<option value="3">plastic</option>
 				<option value="4">metal</option>
 				<option value="5">other</option>
-
 			</select>
-
             </br>
 
         <!-- Enter card Year--> 
@@ -87,16 +88,16 @@
                 for($year = 1980; $year <=2022; $year++){
                 echo "<option value=".$year.">".$year."</option>";
             }
-
             ?>
-
 			</select>
-
             </br>
 
             <input type="submit" value="Submit"/>
         </form>
 	</div>
+    <!--FILTER Section Over--> 
+    
+    <!--CARD DISPLAY Section--> 
 	<div class="cards">
 	<ul>
 		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
@@ -139,13 +140,12 @@ type="button" onclick="alert('Card Added to Shopping Card')">Add this
 Card</button></li>
 	</ul>
 	</div>
+    <!--CARD DISPLAY Section Over--> 
+
 
     <!-- Work Credits -->
-
     <p class="spacer"></p>
-
     <div class="footer">
-
 	    <p> 
 		Gavin Phillips wrote this file
 	    </p>
