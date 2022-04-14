@@ -2,7 +2,7 @@
 $c_id = $_GET['id'];
 include('../db_connection.php');
 
-$constructed_query = "SELECT * FROM STOCK WHERE C_ID='2'";
+$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_id'";
 
 $result = mysqli_query($db, $constructed_query);
 
