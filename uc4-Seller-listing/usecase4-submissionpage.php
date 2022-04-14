@@ -14,10 +14,11 @@
 </head>
 <body>
 
-
-
-
-	<?php
+<?php
+        print "point 1 print"; 
+        echo "<p> point 1 E</p>"; 
+        // Includes our menu bar, instead of copying and pasting through the pages
+    include('../menu.php');
 
 	#connect to mysql database
 	$db = mysqli_connect("studentdb-maria.gl.umbc.edu","sr9","sr9","sr9");
