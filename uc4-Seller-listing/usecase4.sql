@@ -11,4 +11,4 @@ CREATE TABLE stock (C_ID INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
                     C_sellerquantity INTEGER);   
 
 INSERT INTO stock(C_category, C_condition, C_finish, C_composition, C_year, C_description, C_unitprice, C_sellerquantity)   
-VALUES ('test1', 'test1', 'test1', 'test1', 'test1' , 'test1' , 'test1', 'test1');
+VALUES ('test1', 'test1', 'test1', 'test1', 2021 , 'test1' , 1.00, 1);
