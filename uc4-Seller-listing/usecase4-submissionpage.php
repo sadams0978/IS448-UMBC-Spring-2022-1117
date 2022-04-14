@@ -14,8 +14,10 @@
 </head>
 <body>
 
-	
+
 	<?php
+		print "point 1 print"; 
+		echo "<p> point 1 E</p>"; 
 		// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
 	?>
@@ -28,6 +30,9 @@
 	if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
 
 	
+
+	print "point 2 print"; 
+	echo "<p> point 2 E</p>"; 
 
 
 
@@ -47,6 +52,8 @@
 			(isset($_POST["cardimage"]) && (!empty($_POST["cardimage"])) */
 		)
 		{
+			print "point 3 print"; 
+			echo "<p> point 3 E</p>"; 
 
 			#get the parameter from the HTML form that this PHP program is connected to
 			#since data from the form is sent by the HTTP POST action, use the $_POST array here
@@ -68,11 +75,15 @@
 			$unitprice = $_POST["unitprice"];
 			$sellerquantity = $_POST["sellerquantity"];
 
+			print "point 4 print"; 
+			echo "<p> point 4 E</p>"; 
+
 			//insert into database with sql 
 			$constructed_query = " INSERT INTO STOCK (C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE)   
 			VALUES ('$cardname', '$description', '$sellerquantity', '$category', '$condition', '$finish' , '$composition' , '$year', '$unitprice')";
 							
-
+			print "point 5 print"; 
+			echo "<p> point 5 E</p>"; 
 
 			//Thank user message and offer to return to shopping or make another listing
 	?> 
@@ -86,6 +97,8 @@
 	</div>
 
 	<?php
+		print "point 6 print"; 
+		echo "<p> point 6 E</p>"; 
 
 		}else{
 
@@ -101,6 +114,8 @@
 	<?php
 		}//end of else
 
+		print "point 7 print"; 
+		echo "<p> point 7 E</p>"; 
 	?> 
 
 <div class="footer">
