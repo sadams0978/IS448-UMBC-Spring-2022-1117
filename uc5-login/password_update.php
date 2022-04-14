@@ -1,8 +1,8 @@
       <?php
-      $email = $_POST['email'];
-      $old_password = $_POST['old_password'];
-      $password = $_POST['password'];
-      $password_verify = $_POST['password_verify'];
+      $email = htmlspecialchars($_POST['email']);
+      $old_password = htmlspecialchars($_POST['old_password']);
+      $password = htmlspecialchars($_POST['password']);
+      $password_verify = htmlspecialchars($_POST['password_verify']);
       $passwords_match = false;
       $homepage = "index.php";
       $min_length = false;
