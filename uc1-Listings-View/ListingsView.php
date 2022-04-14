@@ -1,15 +1,10 @@
 <!doctype html>
 <html lang ="en">
 <head>
-	<?php
-    $db = mysqli_connect("studentdb-maria.gl.umbc.edu","samuela3","samuela3","");
-?>
-    
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../root.css"/>
     <link rel="stylesheet" type="text/css" href="ListingsView.css"/>
     <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
-
     <title>Card Listings</title>
 </head>
 <body>
