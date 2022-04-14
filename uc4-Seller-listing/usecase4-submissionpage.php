@@ -24,12 +24,10 @@
 	$db = mysqli_connect("studentdb-maria.gl.umbc.edu","sr9","sr9","sr9");
 
 	if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
-	
+
 	print "point 2B print"; 
 	echo "<p> point 2B E</p>"; 
-	?> 
-
-	<?php
+	
 
 	print "point 2C print"; 
 	echo "<p> point 2C E</p>"; 
