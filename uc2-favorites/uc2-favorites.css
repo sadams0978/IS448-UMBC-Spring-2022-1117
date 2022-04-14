@@ -14,7 +14,7 @@ li {
 }
 
 .cardsContainer {
-	float: left;
+	float: right;
 	margin-top: 4.5%;
 	text-align: justify;
 	border: 4px #6796EB solid;
