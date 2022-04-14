@@ -36,8 +36,9 @@
 
 		*/
 
+		$cardname = $_POST["card_name"];
 		$category = $_POST["category"]; 
-		$condition = $_POST[:condition];
+		$condition = $_POST["condition"];
 		$finish = $_POST["finish"];
 		$composition = $_POST["composition"];
 		$year = $_POST["year"];
@@ -54,14 +55,15 @@
 
 		*/
 
-		$constructed_query = " INSERT INTO stock(C_category, C_condition, C_finish, C_composition, C_year, C_description, C_unitprice, C_sellerquantity)  
-		VALUES ('$category', '$condition', '$finish', '$compisition', '$year', '$description' , '$unitprice' , '$sellerquantity')";
+		$constructed_query = " INSERT INTO STOCK(C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE)   
+		VALUES ('$cardname', '$description', '$sellerquantity', '$category', '$condition', '$finish' , '$composition' , '$year', '$unitprice')";
 						  
 
 
 
 
 		if(
+			(isset($_POST["card_name"]) && (!empty($_POST["card_name"]))) &&
 			(isset($_POST["category"]) && (!empty($_POST["category"]))) &&
 			(isset($_POST["condition"]) && (!empty($_POST["condition"]))) &&
 			(isset($_POST["finish"]) && (!empty($_POST["finish"]))) &&
