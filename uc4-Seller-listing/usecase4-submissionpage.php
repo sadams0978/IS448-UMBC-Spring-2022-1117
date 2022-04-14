@@ -14,7 +14,7 @@
 </head>
 <body>
 
-	<p> Test</p> 
+	
 	<?php
 		// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
@@ -46,19 +46,9 @@
 		$unitprice = $_POST["unitprice"];
 		$sellerquantity = $_POST["sellerquantity"];
 
-		/* idea: iterate through $post array using foreach loop. 
-		foreach ($_POST as $field => $cardattributevalue)
-		{
-			(isset($_POST["category"]) && (!empty($_POST["category"]))) 
+	
 
-		}
-
-		*/
-
-		$constructed_query = " INSERT INTO STOCK(C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE)   
-		VALUES ('$cardname', '$description', '$sellerquantity', '$category', '$condition', '$finish' , '$composition' , '$year', '$unitprice')";
-						  
-
+	
 
 
 
@@ -69,13 +59,11 @@
 			(isset($_POST["finish"]) && (!empty($_POST["finish"]))) &&
 			(isset($_POST["composition"]) && (!empty($_POST["composition"]))) &&
 			(isset($_POST["year"]) && (!empty($_POST["year"]))) &&
-			(isset($_POST["composition"]) && (!empty($_POST["composition"]))) &&
-			(isset($_POST["year"]) && (!empty($_POST["year"]))) &&
 			(isset($_POST["description"]) && (!empty($_POST["description"]))) &&
 			(isset($_POST["unitprice"]) && (!empty($_POST["unitprice"]))) &&
-			(isset($_POST["quantity"]) && (!empty($_POST["quantity"]))) /* &&
-
-			check for image. implement later
+			(isset($_POST["sellerquantity"]) && (!empty($_POST["sellerquantity"]))) /*&&
+			 
+			check for image upload. implement later if needed 
 
 			(isset($_POST["cardimage"]) && (!empty($_POST["cardimage"])) */
 		)
@@ -83,6 +71,9 @@
 
 
 		//insert into database with sql 
+		$constructed_query = " INSERT INTO STOCK(C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE)   
+		VALUES ('$cardname', '$description', '$sellerquantity', '$category', '$condition', '$finish' , '$composition' , '$year', '$unitprice')";
+						  
 
 
 		//Thank user message and offer to return to shopping or make another listing
@@ -98,11 +89,6 @@
 
 	<?php
 
-	
-
-
-
-
 		}else{
 
 		//message to user to go back and entery information in all fields 
@@ -117,13 +103,7 @@
 	<?php
 		}//end of else
 
-		//test
-
 	?> 
-
-
-
-
 
 <div class="footer">
 	<p> 
