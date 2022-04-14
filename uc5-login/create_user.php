@@ -47,10 +47,8 @@
     echo ('Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.');
      die;
     }
-  
-		// Includes our Database Connection Details
-    	$db = mysqli_connect ("192.168.254.2", "IS448", "IS448password", "samuela3");
-   	if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
+
+	include('../db_connection.php');
 
      //Hashing our new password
       $hash = password_hash($password, PASSWORD_DEFAULT);
