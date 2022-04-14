@@ -25,7 +25,7 @@
 	<?php
 
 	#connect to mysql database
-	$db = mysqli_connect("studentdb-maria.gl.umbc.edu","samuela3","samuela3","samuela3");
+	$db = mysqli_connect("studentdb-maria.gl.umbc.edu","sr9","sr9","sr9");
 
 	print "point 2A print"; 
 	echo "<p> point 2A E</p>"; 
