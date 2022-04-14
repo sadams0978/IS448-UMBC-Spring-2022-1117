@@ -18,9 +18,7 @@
 	<?php
 		// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
-	?>
 
-	<?php
 		//assign input in form to php variables
 		/* card image, implement later
 
@@ -29,7 +27,7 @@
 		*/
 
 		$category = $_POST["category"]; 
-		$condition = $_POST[:condition];
+		$condition = $_POST["condition"];
 		$finish = $_POST["finish"];
 		$composition = $_POST["composition"];
 		$year = $_POST["year"];
