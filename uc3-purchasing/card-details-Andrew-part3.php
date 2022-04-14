@@ -1,8 +1,6 @@
 <?php
 $c_id = $_GET['id'];
-$db = mysqli_connect("studentdb-maria.gl.umbc.edu","samuela3","samuela3","samuela3");
-
-if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
+include('../db_connection.php');
 
 $constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_id'";
 
