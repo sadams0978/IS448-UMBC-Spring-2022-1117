@@ -18,12 +18,8 @@
         print "point 1 print"; 
         echo "<p> point 1 E</p>"; 
         // Includes our menu bar, instead of copying and pasting through the pages
-    include('../menu.php');
-
-	#connect to mysql database
-	$db = mysqli_connect("studentdb-maria.gl.umbc.edu","sr9","sr9","sr9");
-
-	//if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
+	include('../menu.php');
+	include('../db_connection.php');
 
 	print "point 2B print"; 
 	echo "<p> point 2B E</p>"; 
