@@ -27,27 +27,6 @@
 
 	if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
 
-	#get the parameter from the HTML form that this PHP program is connected to
-	#since data from the form is sent by the HTTP POST action, use the $_POST array here
-		//assign input in form to php variables
-		/* card image, implement later
-
-		$cardimage = $_POST["cardimage"]; 
-
-		*/
-
-		$cardname = $_POST["card_name"];
-		$category = $_POST["category"]; 
-		$condition = $_POST["condition"];
-		$finish = $_POST["finish"];
-		$composition = $_POST["composition"];
-		$year = $_POST["year"];
-		$description = $_POST["description"];
-		$unitprice = $_POST["unitprice"];
-		$sellerquantity = $_POST["sellerquantity"];
-
-	
-
 	
 
 
@@ -69,14 +48,33 @@
 		)
 		{
 
+			#get the parameter from the HTML form that this PHP program is connected to
+			#since data from the form is sent by the HTTP POST action, use the $_POST array here
+			//assign input in form to php variables
+		
+			/* card image, implement later if needed 
 
-		//insert into database with sql 
-		$constructed_query = " INSERT INTO STOCK (C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE)   
-		VALUES ('$cardname', '$description', '$sellerquantity', '$category', '$condition', '$finish' , '$composition' , '$year', '$unitprice')";
-						  
+			$cardimage = $_POST["cardimage"]; 
+
+			*/
+
+			$cardname = $_POST["card_name"];
+			$category = $_POST["category"]; 
+			$condition = $_POST["condition"];
+			$finish = $_POST["finish"];
+			$composition = $_POST["composition"];
+			$year = $_POST["year"];
+			$description = $_POST["description"];
+			$unitprice = $_POST["unitprice"];
+			$sellerquantity = $_POST["sellerquantity"];
+
+			//insert into database with sql 
+			$constructed_query = " INSERT INTO STOCK (C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE)   
+			VALUES ('$cardname', '$description', '$sellerquantity', '$category', '$condition', '$finish' , '$composition' , '$year', '$unitprice')";
+							
 
 
-		//Thank user message and offer to return to shopping or make another listing
+			//Thank user message and offer to return to shopping or make another listing
 	?> 
 
 	<div class = "cardDetailsContainer"> 
@@ -94,16 +92,11 @@
 		//message to user to go back and entery information in all fields 
 	?>
 
-     <p>
-			It looks like your listing is missing some information. Please go <a href="https://jenkins-build.arlcyber.me/uc4-Seller-listing/usecase4.php">back</a> and enter information into all of the fields. </br> 
-		</p>
-
-		
-	<!--div class = "cardDetailsContainer"> 
+	<div class = "cardDetailsContainer"> 
 		<p class = "center">
 			It looks like your listing is missing some information. Please go <a href="https://jenkins-build.arlcyber.me/uc4-Seller-listing/usecase4.php">back</a> and enter information into all of the fields. </br> 
 		</p>
-	</div-->
+	</div>
 
 	<?php
 		}//end of else
