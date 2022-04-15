@@ -1,28 +1,15 @@
 <?php
 	session_start();
 	include('../db_connection.php');
-	//select card name from DB
-	//$select = "SELECT C_NAME FROM STOCK WHERE C_ID = '$c_id'";
-	//$result = mysqli_query($db, $select);
-	//$_SESSION['favID'] = $c_id;
-	//for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
-	//	
-	//}
-	//if ($_GET['favID'] == 'C_ID'){
-	//	$favoriteCard = $_POST['C_NAME'];
-    //
-	//}	
-	
-	//$row = mysql_query("SELECT C_NAME FROM STOCK WHERE C_ID = {$_SESSION['c_id']} LIMIT 1");
-	//if(isset($row['C_NAME'])){
-	//	$SESSION['C_NAME'] = $row['C_NAME'];
-	//}
 	
 	$constructed_query = "SELECT * FROM STOCK";
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
 	
+	//need to implement session to receive liked cards from home page and display on favorites page
+	
+	//need to implement code to remove(unset) card(session variable) from favorites page
 ?>
 
 
@@ -134,7 +121,7 @@
 				?>
 				<br>
 				<!-- button to remove card from favorites -->
-				<button href = "ListingsView.php" class = "fa-solid fa-heart" style = "color:red"></button>
+				<button href = "../ListingsView.php" class = "fa-solid fa-heart" style = "color:red"></button>
 				
 				<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card[$i]['C_NAME']) . '\n' . 'Card Description: ' . ($card[$i]['C_DESC']) . '\n' . 'Card Quantity: ' . ($card[$i]['C_QUANTITY']) . 
 				'\n' . 'Card Category: ' . ($card[$i]['C_CATEG']) . '\n' . 'Card Condition: ' . ($card[$i]['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card[$i]['C_FINISH']) . 
