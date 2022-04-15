@@ -15,10 +15,11 @@
 
 	$name = $card['C_NAME'];
 	$price = $card['PRICE'];
-
-	//will include queries for the rest of the categories later
+	
+	//willl include queries for the rest of the categories later
 
 ?>
+
 
 <!doctype html>
 <html>
@@ -102,11 +103,25 @@
 				</br>
 				
 				<input type="submit" value="Submit"/>
+				</br>
+				
+				<?php
+					echo "<a href = case-two-display.php> Display Items </a></br>";
+				
+					echo "<a href = case-two-remove.php> Unfavorite Cards </a></br>";
+					
+					//include remove individual cards
+					//echo "<a href = case-two-remove1.php> Unfavorite Card </a></br>";
+				?>
+				
+				</br>
+
+				<!-- add sections to display cards and remove all cards -->
 			</form>
 		
 		</div>
-
-		<!-- cards section -->
+		
+		<!-- Temporary card display portion -->
 		<div class = "cardsContainer">
 			<ul>
 					<li ><img src = "blank-card.jpg" alt = "favorite card"/>
@@ -122,27 +137,6 @@
 		
 			</ul>
 		</div>
-
-		<!-- Temporary card display portion -->
-		<div class = "cardsContainer">
-			<?php
-			//declare session array
-			$_SESSION['cardImage'] = array();
-			array_push($_SESSION['cardImage'],'$name'); // Items added to cart
-				
-					
-						while (list ($val) = each ($_SESSION['cardImage'])) { 
-							echo "$val <br>"; 
-							echo "<i class = fa-solid fa-heart></i>";
-						}
-						
-					
-				
-			
-			?>
-		</div>
-
-		</br>
 		
 		</br>
 		
