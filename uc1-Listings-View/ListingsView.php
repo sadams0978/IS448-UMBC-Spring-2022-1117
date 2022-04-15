@@ -113,7 +113,7 @@
 		<?php
 		echo ($card[$i]['C_NAME']);
 		?>
-		<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card[$i]['C_NAME']) . '\n' . ($card[$i]['C_DESC']) . ($card[$i]['C_QUANTITY']) . ($card[$i]['C_CATEG']) . ($card[$i]['C_CONDITION']) . ($card[$i]['C_FINISH']) . ($card[$i]['C_COMP']) . ($card[$i]['C_YEAR']) . ($card[$i]['C_PRICE'])?>')">Card Details</button>
+				<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card[$i]['C_NAME']) . '\n' . 'Card Description: ' . ($card[$i]['C_DESC']) . '\n' . 'Card Quantity: ' . ($card[$i]['C_QUANTITY']) . '\n' . 'Card Category: ' . ($card[$i]['C_CATEG']) . '\n' . 'Card Condition: ' . ($card[$i]['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card[$i]['C_FINISH']) . '\n' . 'Card Composition: ' .($card[$i]['C_COMP']) . '\n' . 'Card Year: ' .($card[$i]['C_YEAR']) . '\n' . 'Card Price: ' . ($card[$i]['C_PRICE'])?>')">Card Details</button>
 		</li>
 		<?php
 		}
