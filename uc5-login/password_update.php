@@ -52,6 +52,11 @@
 
 
 
+	//Prevents Against SQL Injection
+	$email =  mysqli_real_escape_string($db, $email);
+    	$password =  mysqli_real_escape_string($db, $password);
+
+
       //Selecting the email_address and password from DB
       $select = "select email_address, password from login where email_address = '$email'";  
       $update = "update login set password = '$password' where email_address = '$email'";
