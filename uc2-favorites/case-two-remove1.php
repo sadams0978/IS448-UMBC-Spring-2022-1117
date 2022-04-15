@@ -18,7 +18,7 @@
 			<?Php
 				@$item=$_POST['item'];
 				while (list ($val1) = @each ($item)) {
-					unset($_SESSION['cart'][$val1]);
+					unset($_SESSION['cardImage1'][$val1]);
 				}
 
 
