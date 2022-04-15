@@ -102,7 +102,7 @@
 	<ul>
 		<?php
 	for ($card = array (); $row = $result->fetch_assoc(); $card[array_shift($row)] = $row){
-		print_r($card);
+		print_r($card[1]['C_NAME']);
 	}
 	?>
 		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
