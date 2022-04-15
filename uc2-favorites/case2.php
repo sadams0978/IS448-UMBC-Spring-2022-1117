@@ -102,19 +102,6 @@
 				
 				<input type="submit" value="Submit"/>
 				</br>
-				
-				<?php
-					echo "<a href = case-two-display.php> Display Items </a></br>";
-				
-					echo "<a href = case-two-remove.php> Unfavorite Cards </a></br>";
-					
-					//include remove individual cards
-					//echo "<a href = case-two-remove1.php> Unfavorite Card </a></br>";
-				?>
-				
-				</br>
-
-				<!-- add sections to display cards and remove all cards -->
 			</form>
 		
 		</div>
@@ -128,7 +115,7 @@
 							unset($_SESSION['favorite'][$name]);
 						}
 						echo "<input type = radio name = remove value = ""> Unfavorite <br />";
-							
+						echo "<input type=submit value=Remove></form>";	
 					?>
 				</li>
 			</ul>
