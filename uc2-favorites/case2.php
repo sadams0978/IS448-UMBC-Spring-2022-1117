@@ -125,9 +125,9 @@
 				<!-- button to remove card from favorites -->
 				<button href = "../index.html" class = "fa-solid fa-heart" style = "color:red"></button>
 				
-				<button type= "button" onclick="alert('<?php echo 'Card Name: ' . $C_NAME . '\n' . 'Card Description: ' . $C_DESC . '\n' . 'Card Quantity: ' . $C_QUANTITY . 
-				'\n' . 'Card Category: ' . $C_CATEG . '\n' . 'Card Condition: ' . $C_CONDITION . '\n' . 'Card Finish: ' . $C_FINISH . 
-				'\n' . 'Card Composition: ' . $C_COMP . '\n' . 'Card Year: ' $C_YEAR . '\n' . 'Card Price: ' . $PRICE ?>')">Card Details</button>
+				<button type= "button" onclick="alert('<?php echo 'Card Name: ' $C_NAME '\n' 'Card Description: ' $C_DESC '\n' 'Card Quantity: ' $C_QUANTITY
+				'\n' 'Card Category: ' $C_CATEG '\n' 'Card Condition: ' $C_CONDITION '\n' 'Card Finish: ' $C_FINISH 
+				'\n' 'Card Composition: ' $C_COMP '\n' 'Card Year: ' $C_YEAR '\n' 'Card Price: ' $PRICE ?>')">Card Details</button>
 				</li>
 				
 			</ul>
