@@ -3,9 +3,7 @@
     $constructed_query = "SELECT * FROM STOCK";
     $result = mysqli_query($db, $constructed_query);
 
-    while($card[] = mysqli_fetch_assoc($result)){
-        
-    }
+
 ?>
 <!doctype html>
 <html lang ="en">
@@ -151,6 +149,17 @@ Card</button></li>
     <p class="spacer"></p>
     <div class="footer">
 	    <p> 
+        <?php
+    while($cards = mysqli_fetch_array($result)) {
+        
+        echo("
+        $cards[C_ID] 
+        $cards[C_NAME] 
+        $cards[C_DESC] 
+        $cards[C_Quantity]
+        ");
+    }
+        ?>
 		Gavin Phillips wrote this file
 	    </p>
     </div>
