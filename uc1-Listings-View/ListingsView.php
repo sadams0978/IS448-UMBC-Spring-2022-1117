@@ -1,10 +1,9 @@
 <?php
     include('../db_connection.php');
     $constructed_query = "SELECT * FROM STOCK";
-	$results = mysqli_query($db, $constructed_query);
-	while ($card = mysqli_fetch_assoc($results)){
-		printf ("%s (%s)\n", $card["C_ID"], $card["C_NAME"]);
-	}
+$results = mysqli_query($db, $constructed_query);
+$card = mysqli_fetch_assoc($results);
+printf ("%s (%s)\n", $card["C_ID"], $card["C_NAME"]);
 ?>
 <!doctype html>
 <html lang ="en">
