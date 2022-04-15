@@ -150,14 +150,15 @@ Card</button></li>
     <div class="footer">
 	    <p> 
         <?php
+        echo "HELLO TESTINg";
     while($cards = mysqli_fetch_array($result)) {
         
-        echo("
+        echo"
         $cards[C_ID] 
         $cards[C_NAME] 
         $cards[C_DESC] 
         $cards[C_Quantity]
-        ");
+        ";
     }
         ?>
 		Gavin Phillips wrote this file
