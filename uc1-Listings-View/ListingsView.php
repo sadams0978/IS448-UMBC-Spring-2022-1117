@@ -143,9 +143,6 @@ Card</button></li>
 type="button" onclick="alert('Card Added to Shopping Card')">Add this 
 Card</button></li>
 	</ul>
-		<?php
-	echo $card['C_NAME'];
-		?>
 	</div>
     <!--CARD DISPLAY Section Over--> 
 
