@@ -14,14 +14,9 @@
 	$card = mysqli_fetch_array($result);
 
 	$name = $card['C_NAME'];
-	$description = $card['C_DESC'];
-	$quantity = $card['C_QUANTITY'];
-	$categ = $card['C_CATEG'];
-	$condition = $card['C_CONDITION'];
-	$finish = $card['C_FINISH'];
-	$comp = $card['C_COMP'];
-	$year = $card['C_YEAR'];
 	$price = $card['PRICE'];
+
+	//will include queries for the rest of the categories later
 
 ?>
 
@@ -128,7 +123,7 @@
 			</ul>
 		</div>
 
-		<!-- new cards section -->
+		<!-- Temporary card display portion -->
 		<div class = "cardsContainer">
 			<?php
 			//declare session array
