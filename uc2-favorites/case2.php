@@ -7,10 +7,12 @@
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
 	
-	$card_price = $_GET['PRICE'];
-	$card_name = $_GET['C_NAME'];
-	$_SESSION['fav_name'] = $card_name;
-	$C_NAME = $_SESSION['fav_name'];
+	//$card_price = $_GET['PRICE'];
+	//$card_name = $_GET['C_NAME'];
+	//$_SESSION['fav_name'] = $card_name;
+	//$C_NAME = $_SESSION['fav_name'];
+	$card_favorite = $_GET['card'];
+	$_SESSION['card_fav'] = $card_favorite;
 	//need to implement session to receive liked cards from home page and display on favorites page
 	
 	//need to implement code to remove(unset) card(session variable) from favorites page
@@ -111,6 +113,7 @@
 				
 				<li>
 				<?php
+				$card = $_SESSION['card_fav'];
 				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
 				?>
 				<br>
