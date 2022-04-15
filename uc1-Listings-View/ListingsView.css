@@ -8,7 +8,7 @@
 
 }
 
-body ul{
+ul.cardDisplay{
 	float:left;
 	margin-bottom: 8px;
 	background-color: antiquewhite;
