@@ -51,7 +51,7 @@
 	include('../db_connection.php');
 
      //Hashing our new password
-      $hash = password_hash($password, PASSWORD_DEFAULT);
+     // $hash = password_hash($password, PASSWORD_DEFAULT);
 
 	//Querying our DB to see if someone already has that e-mail address	
 	$email_verification = ("SELECT email_address FROM login WHERE email_address = '$email'");
@@ -64,7 +64,7 @@
 	}
 
       //Insert user data to DB
-      $insert = "INSERT INTO login (email_address, first_name, last_name, date_of_birth, password) VALUES ('$email', '$first_name', '$last_name', '$dob', '$hash')";
+      $insert = "INSERT INTO login (email_address, first_name, last_name, date_of_birth, password) VALUES ('$email', '$first_name', '$last_name', '$dob', '$password')";
 
           
      if (mysqli_query($db, $insert)) {
