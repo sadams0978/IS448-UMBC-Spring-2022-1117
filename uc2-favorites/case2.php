@@ -3,17 +3,16 @@
 	include('../db_connection.php');
 	//select card name from DB
 	$select = "SELECT C_NAME FROM STOCK WHERE C_ID = '$c_id'";
-	$name = $_GET['C_NAME'];
-	//$price = $_GET['PRICE'];
-	//$result = mysql_query($sql) or die(mysql_error());
-	if ($row = mysql_fetch_assoc($result)) {
-		$_SESSION['favorite'] = $row['C_NAME'];
+	$result = mysqli_query($select);
+	$_SESSION['name'] = $result;
+	if ($_GET['name'] == $result) {
+		$favorite = $_GET['name'];
 	}
 	
-	$_SESSION["name"] = $name;
-	$_SESSION["price"] = $price;
-	$_SESSION["favorite"] = $name;
-	$_SESSION["favoriteID"] = $c_id;
+	//$_SESSION["name"] = $name;
+	//$_SESSION["price"] = $price;
+	//$_SESSION["favorite"] = $name;
+	//$_SESSION["favoriteID"] = $c_id;
 	
 	
 
