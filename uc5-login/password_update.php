@@ -33,7 +33,7 @@
           
 
     //If Passwords are empty, redirects them back to the sign in page
-     if(empty($password or $password_verify)){
+     if(empty ($password) or ($password_verify)){
         header('Location: '.$homepage);
         die;
     }
@@ -48,13 +48,13 @@
 	include('../db_connection.php');
 
      //Hashing our new password
-      $hash = password_hash($password, PASSWORD_DEFAULT);
+     // $hash = password_hash($password, PASSWORD_DEFAULT);
 
 
 
       //Selecting the email_address and password from DB
       $select = "select email_address, password from login where email_address = '$email'";  
-      $update = "update login set password = '$hash' where email_address = '$email'";
+      $update = "update login set password = '$password' where email_address = '$email'";
       $result = mysqli_query($db, $select);
       
 
@@ -62,10 +62,10 @@
   //Checks the matching row's password and e-mail address against the user's input
   while($row = mysqli_fetch_assoc($result)) {
         //Gets old password hash from DB and verifies the old password hash
-        $hash = $row['password'];
+        $db_password = $row['password'];
         $db_email = $row['email_address'];
 
-  if  ( ($db_email == $email) && (password_verify($old_password, $hash)) ){
+  if  ( ($db_email == $email) && ($db_password == $password) ){
 
        //Updates Password after verifiying the old password is right
       if (mysqli_query($db, $update)) {
