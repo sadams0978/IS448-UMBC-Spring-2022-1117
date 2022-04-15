@@ -102,63 +102,23 @@
 				
 				<input type="submit" value="Submit"/>
 				</br>
-				
-				<?php
-					echo "<a href = case-two-display.php> Display Items </a></br>";
-				
-					echo "<a href = case-two-remove.php> Unfavorite Cards </a></br>";
-					
-					//include remove individual cards
-					//echo "<a href = case-two-remove1.php> Unfavorite Card </a></br>";
-				?>
-				
-				</br>
 
-				<!-- add sections to display cards and remove all cards -->
 			</form>
 		
 		</div>
 	
 		<p class = "cardsContainer">
-			<ul>
-				<li>
 					<?php
 						@$item=$_POST['item'];
 						while (list ($name) = @each ($item)) {
 							unset($_SESSION['favorite'][$name]);
 						}
 						echo "<input type = radio name = remove value = ""> Unfavorite <br />";
-							
+						echo "<input type=submit value=Remove />";
 					?>
-				</li>
-			</ul>
 		</p>
 		
 		<br />
-		
-		<!-- Temporary card display portion -->
-		<p class="spacer"></p>
-		<div class = "cardsContainer">
-				<ul>
-						<li ><img src = "blank-card.jpg" alt = "favorite card"/>
-						<br><input type = "radio" name "remove" value = "" />Remove <input type="submit" value="Submit"/><br/>
-						Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
-						Add to Cart</button></li>
-			
-				</ul>
-
-				</br>
-				
-				<ul>
-						<li ><img src = "blank-card.jpg" alt = "favorite card"/>
-						<br><input type = "radio" name "remove" value = "" />Remove <input type="submit" value="Submit"/><br/>
-						Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
-						Add to Cart</button></li>
-			
-				</ul>
-		</div>
-		
-		</br>
 		
 		<div class = "footer">
 			Made By: Dylan De Leon
