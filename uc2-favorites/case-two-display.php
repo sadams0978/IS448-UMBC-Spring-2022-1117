@@ -18,7 +18,7 @@
 		<p class = "cardsContainer">
 			<?php
 				$_SESSION['cardImage']=array(); // Declaring session array
-				array_push($_SESSION['cart'],'C_NAME');
+				array_push($_SESSION['cardImage'],'C_NAME');
 				
 				if(isset($_SESSION[cardImage])){
 					while (list ($val) = each ($_SESSION['cardImage'])) { 
