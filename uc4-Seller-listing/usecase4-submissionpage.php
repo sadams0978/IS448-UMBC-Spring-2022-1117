@@ -36,8 +36,8 @@
 			(isset($_POST["condition"]) && (!empty($_POST["condition"]))) &&
 			(isset($_POST["finish"]) && (!empty($_POST["finish"]))) &&
 			(isset($_POST["composition"]) && (!empty($_POST["composition"]))) &&
-			(isset($_POST["year"]) && (!empty($_POST["year"]))) &&
-			(isset($_POST["description"]) && (!empty($_POST["description"])))/* &&
+			(isset($_POST["year"]) && (!empty($_POST["year"]))) /*&&
+			(isset($_POST["description"]) && (!empty($_POST["description"]))) &&
 			(isset($_POST["unitprice"]) && (!empty($_POST["unitprice"]))) &&
 			(isset($_POST["sellerquantity"]) && (!empty($_POST["sellerquantity"]))) 
 			
