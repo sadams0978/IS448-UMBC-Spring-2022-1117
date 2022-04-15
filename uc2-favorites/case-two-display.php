@@ -33,9 +33,12 @@
 					//echo "<a href = case-two-remove1.php> Unfavorite Card </a>";
 				}
 			
-				require 'case2.php';
+				//require 'case2.php';
 			?>
 		</p>
+		<?php
+			require 'case2.php';
+		?>
 	</body>
 	
 </html>
