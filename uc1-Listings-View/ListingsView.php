@@ -2,7 +2,7 @@
     include('../db_connection.php');
     $constructed_query = "SELECT * FROM STOCK";
 	$result = mysqli_query($db, $constructed_query);
-	for ($card = array (); $row = $result->fetch_assoc(); $card[array_shift($row)] = $row){
+	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
 ?>
 <!doctype html>
@@ -103,7 +103,7 @@
 	<div class="cards">
 	<ul>
 		<?php
-		for($i = 1; $i <= count($card) + 1; $i++){
+		for($i = 0; $i <= count($card); $i++){
 		echo ($card[$i]['C_NAME']);
 		print_r($card);
 		}
