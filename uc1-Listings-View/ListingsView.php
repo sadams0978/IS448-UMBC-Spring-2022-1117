@@ -101,12 +101,12 @@
     
     <!--CARD DISPLAY Section--> 
 	<div class="cards">
-				<?php
+		<?php
 		for($i = 0; $i < count($card); $i++){
 		echo ("<img src='blankcard.jpg'/>");
 		echo ($card[$i]['C_NAME']);
 		?>
-		<button type= "button" onclick="alert(<?php echo ($card[$i]['C_NAME']); ?>)">Card Details</button>
+		<button type= "button" onclick="alert('<?php echo ($card[$i]['C_NAME']) ?>')">Card Details</button>
 		<?php
 		}
 		?>
