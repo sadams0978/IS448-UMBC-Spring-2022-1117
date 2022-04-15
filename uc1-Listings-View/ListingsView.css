@@ -8,6 +8,12 @@
 
 }
 
+body ul{
+	float:left;
+	margin-bottom: 8px;
+	background-color: antiquewhite;
+}
+
 li {
 	margin-top: 2px;
 	margin-bottom: 2px;
