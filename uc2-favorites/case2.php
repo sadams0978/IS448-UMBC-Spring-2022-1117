@@ -1,19 +1,21 @@
 <?php
 	session_start();
 	include('../db_connection.php');
-	$_SESSION["name"] = $name;
-	$_SESSION["price"] = $price;
-	$_SESSION["favorite"] = $name;
-	$_SESSION["favoriteID"] = $c_id;
-
 	//select card name from DB
+	$select = "SELECT C_NAME FROM STOCK WHERE C_ID = '$c_id'";
 	$name = $_GET['C_NAME'];
 	//$price = $_GET['PRICE'];
-	$select = "SELECT C_NAME FROM STOCK WHERE C_ID = '$c_id'";
 	//$result = mysql_query($sql) or die(mysql_error());
 	if ($row = mysql_fetch_assoc($result)) {
 		$_SESSION['favorite'] = $row['C_NAME'];
 	}
+	
+	$_SESSION["name"] = $name;
+	$_SESSION["price"] = $price;
+	$_SESSION["favorite"] = $name;
+	$_SESSION["favoriteID"] = $c_id;
+	
+	
 
 ?>
 
