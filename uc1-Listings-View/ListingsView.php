@@ -2,9 +2,9 @@
     include('../db_connection.php');
     $constructed_query = "SELECT * FROM STOCK";
 	$result = mysqli_query($db, $constructed_query);
-	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+	for ($card = array (); $row = $result->fetch_assoc(); $card[array_shift($row)] = $row){){
 	}
-	print_r ($card[0]);
+	print_r ($card[1]);
 ?>
 <!doctype html>
 <html lang ="en">
