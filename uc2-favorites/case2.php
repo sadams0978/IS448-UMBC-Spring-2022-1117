@@ -106,7 +106,7 @@
 		</div>
 	
 		<div class = "cardsContainer">
-		<form action = "case2.php" method = "GET">
+		<!-- <form action = "case2.php" method = "GET"> -->
 			<ul class = "cards">
 				
 				<li>
@@ -131,7 +131,7 @@
 				</li>
 				
 			</ul>
-		</form>
+		<!-- </form> -->
 		</div>
 		
 		<br />
