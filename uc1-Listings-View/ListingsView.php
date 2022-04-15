@@ -1,9 +1,8 @@
 <?php
     include('../db_connection.php');
-    $constructed_query = "SELECT * FROM STOCK";
-    $result = mysqli_query($db, $constructed_query);
-
-
+    $constructed_query = "INSERT INTO 
+    'STOCK'('C_NAME', 'C_DESC', 'C_QUANTITY', 'C_CATEG', 'C_CONDITION', 'C_FINISH', 'C_COMP', 'C_YEAR', 'PRICE') VALUES
+     ([Charizard Y],[Special AditionCharizard Y],[7],[Pokemon],[Mint],[Gloss],[Plastic],[2021],[1.99])";
 ?>
 <!doctype html>
 <html lang ="en">
@@ -149,18 +148,6 @@ Card</button></li>
     <p class="spacer"></p>
     <div class="footer">
 	    <p> 
-        <?php
-        echo "HELLO TESTINg";
-    while($cards = mysqli_fetch_array($result)) {
-        
-        echo"
-        $cards[C_ID] 
-        $cards[C_NAME] 
-        $cards[C_DESC] 
-        $cards[C_Quantity]
-        ";
-    }
-        ?>
 		Gavin Phillips wrote this file
 	    </p>
     </div>
