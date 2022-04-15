@@ -8,7 +8,7 @@
  $login = "index.php";
  $homepage = "../uc1-Listings-View/ListingsView.php";
  //Checking to see if the e-mail or password is empty and exiting
-    if(empty ($email || $password)){
+    if(empty ($email) || ($password)){
         header('Location: '. $login);
         die;   
     }
