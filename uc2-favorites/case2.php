@@ -126,7 +126,7 @@
 		<div class = "cardsContainer">
 			<ul>
 				<li ><img src = "blank-card.jpg" alt = "favorite card"/>
-				<br><input type = "radio" name "remove" value = "" />Remove<br/>
+				<br><input type = "radio" name "remove" value = "" />Remove <input type="submit" value="Submit"/><br/>
 				Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
 				Add to Cart</button></li>
 			
