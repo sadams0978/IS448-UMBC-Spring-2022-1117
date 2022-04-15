@@ -2,24 +2,22 @@
 	session_start();
 	include('../db_connection.php');
 	//select card name from DB
-	$select = "SELECT C_NAME FROM STOCK WHERE C_ID = '$c_id'";
-	$result = mysqli_query($select);
-	$_SESSION['favID'] = $c_id;
-	if ($_GET['favID'] == 'C_ID'){
-		$favoriteCard = $_POST['C_NAME'];
-
-	}	
-	
-	//$result = mysqli_query($select);
-	//$_SESSION['name'] = $result;
-	//if ($_GET['name'] == $result) {
-	//	$favorite = $_GET['name'];
+	//$select = "SELECT C_NAME FROM STOCK WHERE C_ID = '$c_id'";
+	//$result = mysqli_query($db, $select);
+	//$_SESSION['favID'] = $c_id;
+	//for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+	//	
 	//}
+	//if ($_GET['favID'] == 'C_ID'){
+	//	$favoriteCard = $_POST['C_NAME'];
+    	//
+	//}	
 	
-	//$_SESSION["name"] = $name;
-	//$_SESSION["price"] = $price;
-	//$_SESSION["favorite"] = $name;
-	//$_SESSION["favoriteID"] = $c_id;
+	$row = mysql_query("SELECT C_NAME FROM STOCK WHERE C_ID = {$_SESSION['c_id']} LIMIT 1");
+	if(isset($row['C_NAME'])){
+		$SESSION['C_NAME'] = $row['C_NAME'];
+	}
+	
 
 ?>
 
