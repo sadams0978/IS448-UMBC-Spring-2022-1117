@@ -2,7 +2,7 @@
     include('../db_connection.php');
     $constructed_query = "SELECT * FROM STOCK";
 	$results = mysqli_query($db, $constructed_query);
-	for ($card = array (); $row = $result->fetch_assoc(); $set[] = $row){
+	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	print_r($card);
 	}
 ?>
