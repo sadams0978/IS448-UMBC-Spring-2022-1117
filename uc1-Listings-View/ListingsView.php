@@ -1,7 +1,8 @@
 <?php
-    include('../db_connection.php');
-    $constructed_query = "SELECT * FROM STOCK ORDER BY C_ID";
-    $results = mysqli_query($db, $constructed_query);
+    	include('../db_connection.php');
+    	constructed_query = "SELECT * FROM STOCK";
+   	$results = mysqli_query($db, $constructed_query);
+	$card = mysqli_fetch_array($result);
 ?>
 <!doctype html>
 <html lang ="en">
