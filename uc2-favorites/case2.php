@@ -2,21 +2,19 @@
 	session_start();
 	include('../db_connection.php');
 
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_id'";
-
-	$result = mysqli_query($db, $constructed_query);
-
-	if(!$result){
-		$error = mysqli_error($db);
-		exit;
+	//select card name from DB
+	$name = $_GET['C_NAME'];
+	//$price = $_GET['PRICE'];
+	$select = "SELECT C_NAME FROM STOCK WHERE C_ID = '$c_id'";
+	$result = mysql_query($sql) or die(mysql_error());
+	if ($row = mysql_fetch_assoc($result)) {
+		$_SESSION['favorite'] = $row['C_NAME'];
 	}
-
-	$card = mysqli_fetch_array($result);
-
-	$name = $card['C_NAME'];
-	$price = $card['PRICE'];
 	
-	//willl include queries for the rest of the categories later
+	//$_SESSION["name"] = $name;
+	//$_SESSION["price"] = $price;
+	//$_SESSION["favorite"] = $name;
+	//$_SESSION["favoriteID"] = $c_id;
 
 ?>
 
@@ -120,28 +118,44 @@
 			</form>
 		
 		</div>
+	
+		<p class = "cardsContainer">
+			<ul>
+				<li>
+					<?php
+						@$item=$_POST['item'];
+						while (list ($name) = @each ($item)) {
+							unset($_SESSION['favorite'][$name]);
+						}
+						echo "<input type = radio name = remove value = ""> Unfavorite <br />";
+							
+					?>
+				</li>
+			</ul>
+		</p>
+		
+		<br />
 		
 		<!-- Temporary card display portion -->
 		<p class="spacer"></p>
 		<div class = "cardsContainer">
-			<ul>
-				<li ><img src = "blank-card.jpg" alt = "favorite card"/>
-				<br><input type = "radio" name "remove" value = "" />Remove <input type="submit" value="Submit"/><br/>
-				Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
-				Add to Cart</button></li>
+				<ul>
+						<li ><img src = "blank-card.jpg" alt = "favorite card"/>
+						<br><input type = "radio" name "remove" value = "" />Remove <input type="submit" value="Submit"/><br/>
+						Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
+						Add to Cart</button></li>
 			
-			</ul>
+				</ul>
 
-			</br>
+				</br>
 				
-			<ul>
-				<li ><img src = "blank-card.jpg" alt = "favorite card"/>
-				<br><!--<button class="fa-solid fa-heart" style="color:red"></button> -->
-				<a href = case-two-remove1.php> Unfavorite</a>
-				Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
-				Add to Cart</button></li>
+				<ul>
+						<li ><img src = "blank-card.jpg" alt = "favorite card"/>
+						<br><input type = "radio" name "remove" value = "" />Remove <input type="submit" value="Submit"/><br/>
+						Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
+						Add to Cart</button></li>
 			
-			</ul>
+				</ul>
 		</div>
 		
 		</br>
