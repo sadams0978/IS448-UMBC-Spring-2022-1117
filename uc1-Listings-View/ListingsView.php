@@ -103,6 +103,8 @@
 	<div class="cards">
 	<ul>
 		<?php
+		echo count($card);
+		echo sizeof($card);
 		echo ($card[1]['C_NAME']);
 		?>
 		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
