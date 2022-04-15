@@ -10,9 +10,8 @@
 
 ul.cardDisplay{
 	float:left;
-	margin-bottom: 8px;
+	margin: 8px;
 	background-color: antiquewhite;
-	padding-left: 4px;
 }
 
 li {
