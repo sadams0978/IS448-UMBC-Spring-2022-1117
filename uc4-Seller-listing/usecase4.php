@@ -99,7 +99,7 @@ include('../menu.php');
 
     <div class ="cardDetailsContainer"> 
 
-        <textarea name = "description" id="description" rows="15" cols = "79" required>
+        <textarea name = "description" id="description" rows="15" cols = "79">
         </textarea>
       
     </div>
