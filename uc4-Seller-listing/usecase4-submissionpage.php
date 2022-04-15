@@ -31,7 +31,7 @@
 
 
 		if(
-			(isset($_POST["card_name"]) && (!empty($_POST["card_name"]))) &&
+			(isset($_POST["card_name"]) && (!empty($_POST["card_name"]))) /*&&
 			(isset($_POST["category"]) && (!empty($_POST["category"]))) &&
 			(isset($_POST["condition"]) && (!empty($_POST["condition"]))) &&
 			(isset($_POST["finish"]) && (!empty($_POST["finish"]))) &&
@@ -39,7 +39,9 @@
 			(isset($_POST["year"]) && (!empty($_POST["year"]))) &&
 			(isset($_POST["description"]) && (!empty($_POST["description"]))) &&
 			(isset($_POST["unitprice"]) && (!empty($_POST["unitprice"]))) &&
-			(isset($_POST["sellerquantity"]) && (!empty($_POST["sellerquantity"]))) /*&&
+			(isset($_POST["sellerquantity"]) && (!empty($_POST["sellerquantity"]))) 
+			
+			&&
 			 
 			check for image upload. implement later if needed 
 
