@@ -55,6 +55,14 @@ if (empty($password_verify) or empty($password)) {
      //Hashing our new password
      // $hash = password_hash($password, PASSWORD_DEFAULT);
 
+	//Prevents Against SQL Injection
+	$email =  mysqli_real_escape_string($db, $email);
+    	$password =  mysqli_real_escape_string($db, $password);
+	$dob =  mysqli_real_escape_string($db, $dob);
+    	$first_name =  mysqli_real_escape_string($db, $first_name);
+	$last_name =  mysqli_real_escape_string($db, $last_name);
+
+
 	//Querying our DB to see if someone already has that e-mail address	
 	$email_verification = ("SELECT email_address FROM login WHERE email_address = '$email'");
 	$email_result = mysqli_query($db,$email_verification);
