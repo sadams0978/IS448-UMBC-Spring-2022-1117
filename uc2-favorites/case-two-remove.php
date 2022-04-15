@@ -14,12 +14,14 @@
 	</head>
 	
 	<body>
-		<?php
-			while (list ($val) = each ($_SESSION['cardImage'])) { 
-				echo "$val <br>"; 
-				unset($_SESSION['cardImage']);
-			}
-			require 'case2.php';
-		?>	
+		<p class = "cardsContainer">
+			<?php
+				while (list ($val) = each ($_SESSION['cardImage'])) { 
+					echo "$val <br>"; 
+					unset($_SESSION['cardImage']);
+				}
+				require 'case2.php';
+			?>	
+		</p>
 	</body>
 </html>
