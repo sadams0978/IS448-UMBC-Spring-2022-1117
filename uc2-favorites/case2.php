@@ -7,6 +7,10 @@
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
 	
+	$card_price = $_GET['PRICE'];
+	$card_name = $_GET['C_NAME'];
+	$_SESSION['fav_name'] = $card_name;
+	$C_NAME = $_SESSION['fav_name'];
 	//need to implement session to receive liked cards from home page and display on favorites page
 	
 	//need to implement code to remove(unset) card(session variable) from favorites page
@@ -104,32 +108,28 @@
 		<div class = "cardsContainer">
 		<!-- <form action = "ListingsView.php" method = "POST" name = "Filter"> -->
 			<ul class = "cards">
-				<?php
-				for($i = 0; $i < count($card); $i++){
-				?>
+				
 				<li>
 				<?php
 				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
 				?>
 				<br>
 				<?php
-				echo ($card[$i]['C_NAME']);
+				echo $C_NAME;
 				?>
 				<br>
 				<?php
-				echo  'Price: ' . ($card[$i]['PRICE']);
+				echo  'Price: ' . $card_price;
 				?>
 				<br>
 				<!-- button to remove card from favorites -->
-				<button class = "fa-solid fa-heart" style = "color:red"></button>
+				<button href = "../index.html" class = "fa-solid fa-heart" style = "color:red"></button>
 				
 				<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card[$i]['C_NAME']) . '\n' . 'Card Description: ' . ($card[$i]['C_DESC']) . '\n' . 'Card Quantity: ' . ($card[$i]['C_QUANTITY']) . 
 				'\n' . 'Card Category: ' . ($card[$i]['C_CATEG']) . '\n' . 'Card Condition: ' . ($card[$i]['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card[$i]['C_FINISH']) . 
 				'\n' . 'Card Composition: ' .($card[$i]['C_COMP']) . '\n' . 'Card Year: ' .($card[$i]['C_YEAR']) . '\n' . 'Card Price: ' . ($card[$i]['PRICE'])?>')">Card Details</button>
 				</li>
-				<?php
-				}
-				?>
+				
 			</ul>
 		</form>
 		</div>
