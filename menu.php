@@ -2,7 +2,7 @@
 <!--Please update any menu bar entries here, as this will be included on all pages through PHP -->
 <div class="titlebar" >  
 <p class="login"> <?php 
-	$login = "/uc5-login/index.php";
+	$login = "../uc5-login/index.php";
 	session_start(); 
 	if(!isset ($_SESSION['email'])){
 		header('Location: '. $login); 
