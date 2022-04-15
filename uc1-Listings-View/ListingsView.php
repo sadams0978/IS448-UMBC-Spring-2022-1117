@@ -3,7 +3,7 @@
     	$constructed_query = "SELECT * FROM STOCK";
    	$results = mysqli_query($db, $constructed_query);
 	$card = mysqli_fetch_array($results);
-
+	printf ("%s (%s)\n", $card[0]);
 ?>
 <!doctype html>
 <html lang ="en">
