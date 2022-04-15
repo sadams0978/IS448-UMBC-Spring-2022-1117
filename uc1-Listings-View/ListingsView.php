@@ -2,7 +2,7 @@
     include('../db_connection.php');
     $constructed_query = "SELECT * FROM STOCK ORDER BY C_ID";
     $results = mysqli_query($db, $constructed_query);
-	$card = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	$card = mysqli_fetch_array($result);
 ?>
 <!doctype html>
 <html lang ="en">
