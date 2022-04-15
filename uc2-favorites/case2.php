@@ -117,10 +117,6 @@
 				?>
 				<br>
 				<?php
-				echo $_SESSSION['card'];
-				?>
-				<br>
-				<?php
 				echo ($card['C_NAME']);
 				?>
 				<br>
