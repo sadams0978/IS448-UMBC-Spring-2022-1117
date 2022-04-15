@@ -103,9 +103,9 @@
 	<div class="cards">
 	<ul>
 		<?php
-		echo count($card);
-		echo sizeof($card);
-		echo ($card[1]['C_NAME']);
+		for($i = 1; $i <= count($card); $i++){
+		echo ("<li> $card[$i]['C_NAME'] <br> $card[$i]['C_PRICE'] <br> </li>");
+		}
 		?>
 		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
 type="button" onclick="alert('Card Added to Shopping Card')">Add this 
