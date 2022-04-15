@@ -106,7 +106,7 @@
 		</div>
 	
 		<div class = "cardsContainer">
-		<!-- <form action = "ListingsView.php" method = "POST" name = "Filter"> -->
+		<form action = "case2.php" method = "GET">
 			<ul class = "cards">
 				
 				<li>
