@@ -37,9 +37,9 @@
 			(isset($_POST["finish"]) && (!empty($_POST["finish"]))) &&
 			(isset($_POST["composition"]) && (!empty($_POST["composition"]))) &&
 			(isset($_POST["year"]) && (!empty($_POST["year"]))) &&
-			//(isset($_POST["description"]) && (!empty($_POST["description"]))) &&		not working atm. play with later if the descirption info is at least posting to db
+			/*(isset($_POST["description"]) && (!empty($_POST["description"]))) &&		not working atm. play with later if the descirption info is at least posting to db
 			(isset($_POST["unitprice"]) && (!empty($_POST["unitprice"]))) &&
-			(isset($_POST["sellerquantity"]) && (!empty($_POST["sellerquantity"]))) /*&&
+			(isset($_POST["sellerquantity"]) && (!empty($_POST["sellerquantity"]))) &&
 			 
 			check for image upload. implement later if needed 
 
