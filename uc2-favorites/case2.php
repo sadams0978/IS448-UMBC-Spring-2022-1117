@@ -10,11 +10,11 @@
 
 	}	
 	
-	$result = mysqli_query($select);
-	$_SESSION['name'] = $result;
-	if ($_GET['name'] == $result) {
-		$favorite = $_GET['name'];
-	}
+	//$result = mysqli_query($select);
+	//$_SESSION['name'] = $result;
+	//if ($_GET['name'] == $result) {
+	//	$favorite = $_GET['name'];
+	//}
 	
 	//$_SESSION["name"] = $name;
 	//$_SESSION["price"] = $price;
@@ -114,9 +114,10 @@
 	
 		<p class = "cardsContainer">
 					<?php
+						echo $favoriteCard;
 						@$item=$_POST['item'];
 						while (list ($c_id) = @each ($item)) {
-							unset($_SESSION['favoriteCard'][$c_id]);
+							unset($_SESSION['favID'][$c_id]);
 						}
 						echo "<input type = radio name = remove value = ""> Unfavorite <br />";
 						echo "<input type=submit value=Remove />";
