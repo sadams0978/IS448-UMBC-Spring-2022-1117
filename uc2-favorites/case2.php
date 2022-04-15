@@ -131,7 +131,7 @@
 			array_push($_SESSION['cardImage'],'$name'); // Items added to cart
 				
 					
-						while (list ($val) = each ($_SESSION['cart'])) { 
+						while (list ($val) = each ($_SESSION['cardImage'])) { 
 							echo "$val <br>"; 
 							echo "<i class = fa-solid fa-heart></i>";
 						}
