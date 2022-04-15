@@ -105,7 +105,6 @@
 		<?php
 		for($i = 0; $i <= count($card); $i++){
 		echo ($card[$i]['C_NAME']);
-		print_r($card);
 		}
 		?>
 		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
