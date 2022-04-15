@@ -15,6 +15,13 @@ if (empty($email) or empty($password)) {
 
 	include('../db_connection.php');
 
+
+	//Prevents Against SQL Injection
+	$email =  mysqli_real_escape_string($db, $email);
+    	$password =  mysqli_real_escape_string($db, $password);
+    
+
+
 //Selecting the email_address and password from DB
      $select = "select email_address, password from login where email_address = '$email'";  
      $result = mysqli_query($db, $select);
