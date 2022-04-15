@@ -101,52 +101,15 @@
     
     <!--CARD DISPLAY Section--> 
 	<div class="cards">
-	<ul>
 		<?php
 		for($i = 0; $i <= count($card); $i++){
 		echo ("<img src='blankcard.jpg'/>");
 		echo ($card[$i]['C_NAME']);
+		echo ("<button 
+		type= 'button' onclick='alert('Card Added to Shopping Card')'>Add this 
+		Card</button>");
 		}
 		?>
-		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
-type="button" onclick="alert('Card Added to Shopping Card')">Add this 
-Card</button></li>
-		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
-type="button" onclick="alert('Card Added to Shopping Card')">Add this 
-Card</button></li>
-		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
-type="button" onclick="alert('Card Added to Shopping Card')">Add this 
-Card</button></li>
-		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
-type="button" onclick="alert('Card Added to Shopping Card')">Add this 
-Card</button></li>
-		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
-type="button" onclick="alert('Card Added to Shopping Card')">Add this 
-Card</button></li>
-		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
-type="button" onclick="alert('Card Added to Shopping Card')">Add this 
-Card</button></li>
-	</ul>
-	<ul>
-		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
-type="button" onclick="alert('Card Added to Shopping Card')">Add this 
-Card</button></li>
-		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
-type="button" onclick="alert('Card Added to Shopping Card')">Add this 
-Card</button></li>
-		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
-type="button" onclick="alert('Card Added to Shopping Card')">Add this 
-Card</button></li>
-		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
-type="button" onclick="alert('Card Added to Shopping Card')">Add this 
-Card</button></li>
-		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
-type="button" onclick="alert('Card Added to Shopping Card')">Add this 
-Card</button></li>
-		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
-type="button" onclick="alert('Card Added to Shopping Card')">Add this 
-Card</button></li>
-	</ul>
 	</div>
     <!--CARD DISPLAY Section Over--> 
 
