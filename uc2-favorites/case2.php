@@ -124,17 +124,23 @@
 		<!-- Temporary card display portion -->
 		<div class = "cardsContainer">
 			<ul>
-					<li ><img src = "blank-card.jpg" alt = "favorite card"/>
-					<br><button class="fa-solid fa-heart" style="color:red"></button> Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">Add to Cart</button></li>
-		
+				<li ><img src = "blank-card.jpg" alt = "favorite card"/>
+				<br><!--<button class="fa-solid fa-heart" style="color:red"></button> -->
+				<a href = case-two-remove.php> Unfavorite Cards </a>
+				Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
+				Add to Cart</button></li>
+			
 			</ul>
 
 			</br>
-			
+				
 			<ul>
-					<li ><img src = "blank-card.jpg" alt = "favorite card"/>
-					<br><button class="fa-solid fa-heart" style="color:red"></button> Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">Add to Cart</button></li>
-		
+				<li ><img src = "blank-card.jpg" alt = "favorite card"/>
+				<br><!--<button class="fa-solid fa-heart" style="color:red"></button> -->
+				<a href = case-two-remove.php> Unfavorite Cards </a>
+				Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
+				Add to Cart</button></li>
+			
 			</ul>
 		</div>
 		
