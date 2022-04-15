@@ -25,7 +25,7 @@
 					echo "$val <br>"; 
 					unset($_SESSION['cardImage']);
 				}
-				require 'case2.php';
+				//require 'case2.php';
 			?>	
 		</p>
 		<?php
