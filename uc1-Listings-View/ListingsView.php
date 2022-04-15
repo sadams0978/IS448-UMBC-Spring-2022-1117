@@ -3,8 +3,8 @@
     $constructed_query = "SELECT * FROM STOCK";
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
-	print_r($card);
 	}
+	print_r ($card[0]);
 ?>
 <!doctype html>
 <html lang ="en">
