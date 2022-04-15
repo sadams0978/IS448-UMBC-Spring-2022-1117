@@ -11,10 +11,10 @@
 		$_SESSION['favorite'] = $row['C_NAME'];
 	}
 	
-	//$_SESSION["name"] = $name;
-	//$_SESSION["price"] = $price;
-	//$_SESSION["favorite"] = $name;
-	//$_SESSION["favoriteID"] = $c_id;
+	$_SESSION["name"] = $name;
+	$_SESSION["price"] = $price;
+	$_SESSION["favorite"] = $name;
+	$_SESSION["favoriteID"] = $c_id;
 
 ?>
 
@@ -27,7 +27,7 @@
 		<link rel = "stylesheet" type = "text/css" href = "uc2-favorites.css"/>
 		<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
 		
-		<title> Favtorites </title>
+		<title> Favorites </title>
 	</head>
 	
 	<body>
@@ -102,6 +102,19 @@
 				
 				<input type="submit" value="Submit"/>
 				</br>
+				
+				<?php
+					echo "<a href = case-two-display.php> Display Items </a></br>";
+				
+					echo "<a href = case-two-remove.php> Unfavorite Cards </a></br>";
+					
+					//include remove individual cards
+					//echo "<a href = case-two-remove1.php> Unfavorite Card </a></br>";
+				?>
+				
+				</br>
+
+				<!-- add sections to display cards and remove all cards -->
 			</form>
 		
 		</div>
@@ -115,13 +128,37 @@
 							unset($_SESSION['favorite'][$name]);
 						}
 						echo "<input type = radio name = remove value = ""> Unfavorite <br />";
-						echo "<input type=submit value=Remove></form>";	
+							
 					?>
 				</li>
 			</ul>
 		</p>
 		
 		<br />
+		
+		<!-- Temporary card display portion -->
+		<p class="spacer"></p>
+		<div class = "cardsContainer">
+				<ul>
+						<li ><img src = "blank-card.jpg" alt = "favorite card"/>
+						<br><input type = "radio" name "remove" value = "" />Remove <input type="submit" value="Submit"/><br/>
+						Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
+						Add to Cart</button></li>
+			
+				</ul>
+
+				</br>
+				
+				<ul>
+						<li ><img src = "blank-card.jpg" alt = "favorite card"/>
+						<br><input type = "radio" name "remove" value = "" />Remove <input type="submit" value="Submit"/><br/>
+						Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
+						Add to Cart</button></li>
+			
+				</ul>
+		</div>
+		
+		</br>
 		
 		<div class = "footer">
 			Made By: Dylan De Leon
