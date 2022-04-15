@@ -127,7 +127,7 @@
 			<ul>
 				<li ><img src = "blank-card.jpg" alt = "favorite card"/>
 				<br><!--<button class="fa-solid fa-heart" style="color:red"></button> -->
-				<a href = case-two-remove.php> Unfavorite Cards </a>
+				<a href = case-two-remove1.php> Unfavorite</a>
 				Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
 				Add to Cart</button></li>
 			
@@ -138,7 +138,7 @@
 			<ul>
 				<li ><img src = "blank-card.jpg" alt = "favorite card"/>
 				<br><!--<button class="fa-solid fa-heart" style="color:red"></button> -->
-				<a href = case-two-remove.php> Unfavorite Cards </a>
+				<a href = case-two-remove1.php> Unfavorite</a>
 				Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
 				Add to Cart</button></li>
 			
