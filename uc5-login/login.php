@@ -25,10 +25,10 @@ if (mysqli_num_rows($result) == 0) {
   
   //Checks the matching row's password and e-mail address against the user's input
   while($row = mysqli_fetch_assoc($result)) {
-   $hash = $row['password'];
+   $db_password = $row['password'];
    $db_email = $row['email_address'];
    
-  if  ( ($db_email == $email) && (password_verify($password, $hash)) ){
+  if  ( ($db_email == $email) && ($db_password == $password) ){
    
    //Sets session variable
    $_SESSION['email'] = $email;
