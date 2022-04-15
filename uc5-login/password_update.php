@@ -65,7 +65,7 @@
         $db_password = $row['password'];
         $db_email = $row['email_address'];
 
-  if  ( ($db_email == $email) && ($db_password == $password) ){
+  if  ( ($db_email == $email) && ($db_password == $old_password) ){
 
        //Updates Password after verifiying the old password is right
       if (mysqli_query($db, $update)) {
