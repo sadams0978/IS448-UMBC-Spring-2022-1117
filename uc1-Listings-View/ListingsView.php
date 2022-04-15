@@ -102,7 +102,7 @@
     <!--CARD DISPLAY Section--> 
 	<div class="cards">
 		<?php
-		for($i = 0; $i <= count($card); $i++){
+		for($i = 0; $i < count($card); $i++){
 		echo ("<img src='blankcard.jpg'/>");
 		echo ($card[$i]['C_NAME']);
 		echo ("<button 
