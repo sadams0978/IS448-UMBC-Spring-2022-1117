@@ -103,7 +103,7 @@
 	<div class="cards">
 	<ul>
 		<?php
-		for($i = 1; $i = count($card) + 1; $i++){
+		for($i = 1; $i <= count($card) + 1; $i++){
 		echo ($card[$i]['C_NAME']);
 		}
 		}
