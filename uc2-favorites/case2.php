@@ -122,7 +122,7 @@
 				?>
 				<li>
 				<?php
-				echo ("<img src='blank-card.jpg'/>");
+				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
 				?>
 				<br>
 				<?php
@@ -134,7 +134,7 @@
 				?>
 				<br>
 				<!-- button to remove card from favorites -->
-				<button class = "fa-solid fa-heart" style = "color:red"></button>
+				<button class = "fa-solid fa-heart" style = "color:red" href = "ListingsView.php"></button>
 				
 				<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card[$i]['C_NAME']) . '\n' . 'Card Description: ' . ($card[$i]['C_DESC']) . '\n' . 'Card Quantity: ' . ($card[$i]['C_QUANTITY']) . 
 				'\n' . 'Card Category: ' . ($card[$i]['C_CATEG']) . '\n' . 'Card Condition: ' . ($card[$i]['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card[$i]['C_FINISH']) . 
