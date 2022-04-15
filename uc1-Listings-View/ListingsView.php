@@ -105,6 +105,7 @@
 		<?php
 		for($i = 1; $i <= count($card); $i++){
 		echo ("<li> $card[$i]['C_NAME'] <br> $card[$i]['C_PRICE'] <br> </li>");
+		echo ($card[1]['C_NAME']);
 		}
 		?>
 		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
