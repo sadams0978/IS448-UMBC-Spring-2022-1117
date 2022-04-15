@@ -4,6 +4,13 @@
 	//select card name from DB
 	$select = "SELECT C_NAME FROM STOCK WHERE C_ID = '$c_id'";
 	$result = mysqli_query($select);
+	$_SESSION['favID'] = $c_id;
+	if ($_GET['favID'] == 'C_ID'){
+		$favoriteCard = $_POST['C_NAME'];
+
+	}	
+	
+	$result = mysqli_query($select);
 	$_SESSION['name'] = $result;
 	if ($_GET['name'] == $result) {
 		$favorite = $_GET['name'];
@@ -13,8 +20,6 @@
 	//$_SESSION["price"] = $price;
 	//$_SESSION["favorite"] = $name;
 	//$_SESSION["favoriteID"] = $c_id;
-	
-	
 
 ?>
 
@@ -110,8 +115,8 @@
 		<p class = "cardsContainer">
 					<?php
 						@$item=$_POST['item'];
-						while (list ($name) = @each ($item)) {
-							unset($_SESSION['favorite'][$name]);
+						while (list ($c_id) = @each ($item)) {
+							unset($_SESSION['favoriteCard'][$c_id]);
 						}
 						echo "<input type = radio name = remove value = ""> Unfavorite <br />";
 						echo "<input type=submit value=Remove />";
