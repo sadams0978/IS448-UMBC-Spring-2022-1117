@@ -4,7 +4,7 @@
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){){
 	}
-	print_r ($card[1]);
+	print_r ($card[0]);
 ?>
 <!doctype html>
 <html lang ="en">
