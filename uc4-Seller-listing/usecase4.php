@@ -98,8 +98,8 @@ include('../menu.php');
     <!-- lower box containing a big text box for user to provide more specific/writtn outdetails about the card --> 
 
     <div class ="cardDetailsContainer"> 
-      
-        <textarea id="description" rows="15" cols = "79" required>
+
+        <textarea name = "description" id="description" rows="15" cols = "79" required>
         </textarea>
       
     </div>
