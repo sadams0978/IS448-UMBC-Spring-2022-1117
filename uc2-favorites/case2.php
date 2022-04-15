@@ -126,8 +126,7 @@
 		<div class = "cardsContainer">
 			<ul>
 				<li ><img src = "blank-card.jpg" alt = "favorite card"/>
-				<br><!--<button class="fa-solid fa-heart" style="color:red"></button> -->
-				<a href = case-two-remove1.php> Unfavorite</a>
+				<br><input type = "radio" name "remove" value = "" />Remove<br/>
 				Current Price: $ <button type="button" onclick="alert('Card Added to Shopping Card')">
 				Add to Cart</button></li>
 			
