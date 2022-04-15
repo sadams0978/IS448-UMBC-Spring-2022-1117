@@ -35,11 +35,13 @@
     }
           
 
-    //If Passwords are empty, redirects them back to the sign in page
-     if(empty($password or $password_verify)){
-        header('Location: '.$homepage);
+	
+
+//If Passwords are blank, redirect to login page
+if (empty($password_verify) or empty($password)) {
+       header('Location: '. $login);
         die;
-    }
+}
 
 
 //If it's not meeting minimum requirements, alert the user of the requirements
