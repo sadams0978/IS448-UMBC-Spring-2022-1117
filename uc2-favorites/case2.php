@@ -10,15 +10,19 @@
 	//}
 	//if ($_GET['favID'] == 'C_ID'){
 	//	$favoriteCard = $_POST['C_NAME'];
-    	//
+    //
 	//}	
 	
-	$row = mysql_query("SELECT C_NAME FROM STOCK WHERE C_ID = {$_SESSION['c_id']} LIMIT 1");
-	if(isset($row['C_NAME'])){
-		$SESSION['C_NAME'] = $row['C_NAME'];
+	//$row = mysql_query("SELECT C_NAME FROM STOCK WHERE C_ID = {$_SESSION['c_id']} LIMIT 1");
+	//if(isset($row['C_NAME'])){
+	//	$SESSION['C_NAME'] = $row['C_NAME'];
+	//}
+	
+	$constructed_query = "SELECT * FROM STOCK";
+	$result = mysqli_query($db, $constructed_query);
+	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
 	
-
 ?>
 
 
@@ -110,17 +114,38 @@
 		
 		</div>
 	
-		<p class = "cardsContainer">
-					<?php
-						echo $favoriteCard;
-						@$item=$_POST['item'];
-						while (list ($c_id) = @each ($item)) {
-							unset($_SESSION['favID'][$c_id]);
-						}
-						echo "<input type = radio name = remove value = ""> Unfavorite <br />";
-						echo "<input type=submit value=Remove />";
-					?>
-		</p>
+		<div class = "cardsContainer">
+		<form action = "case-two.php" method = "POST" name = "Filter">
+			<ul class = "cards">
+				<?php
+				for($i = 0; $i < count($card); $i++){
+				?>
+				<li>
+				<?php
+				echo ("<img src='blank-card.jpg'/>");
+				?>
+				<br>
+				<?php
+				echo ($card[$i]['C_NAME']);
+				?>
+				<br>
+				<?php
+				echo  'Price: ' . ($card[$i]['PRICE']);
+				?>
+				<br>
+				<!-- button to remove card from favorites -->
+				<button class = "fa-solid fa-heart" style = "color:red"></button>
+				
+				<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card[$i]['C_NAME']) . '\n' . 'Card Description: ' . ($card[$i]['C_DESC']) . '\n' . 'Card Quantity: ' . ($card[$i]['C_QUANTITY']) . 
+				'\n' . 'Card Category: ' . ($card[$i]['C_CATEG']) . '\n' . 'Card Condition: ' . ($card[$i]['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card[$i]['C_FINISH']) . 
+				'\n' . 'Card Composition: ' .($card[$i]['C_COMP']) . '\n' . 'Card Year: ' .($card[$i]['C_YEAR']) . '\n' . 'Card Price: ' . ($card[$i]['PRICE'])?>')">Card Details</button>
+				</li>
+				<?php
+				}
+				?>
+			</ul>
+		</form>
+		</div>
 		
 		<br />
 		
