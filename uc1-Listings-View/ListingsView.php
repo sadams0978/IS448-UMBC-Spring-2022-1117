@@ -101,6 +101,7 @@
     
     <!--CARD DISPLAY Section--> 
 	<div class="cards">
+		<ul>
 		<?php
 		for($i = 0; $i < count($card); $i++){
 		?>
@@ -114,6 +115,7 @@
 		<?php
 		}
 		?>
+		</ul>
 	</div>
     <!--CARD DISPLAY Section Over--> 
 
