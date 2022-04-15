@@ -106,7 +106,6 @@
 		for($i = 0; $i <= count($card); $i++){
 		echo ("<li> ($card[$i][C_NAME]) <br> </li>");
 		}
-		}
 		?>
 		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
 type="button" onclick="alert('Card Added to Shopping Card')">Add this 
