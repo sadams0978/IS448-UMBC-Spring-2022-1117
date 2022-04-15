@@ -102,7 +102,7 @@
 		</div>
 	
 		<div class = "cardsContainer">
-		<form action = "ListingsView.php" method = "POST" name = "Filter">
+		<!-- <form action = "ListingsView.php" method = "POST" name = "Filter"> -->
 			<ul class = "cards">
 				<?php
 				for($i = 0; $i < count($card); $i++){
