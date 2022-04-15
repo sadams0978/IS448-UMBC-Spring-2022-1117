@@ -122,6 +122,7 @@
 		</div>
 		
 		<!-- Temporary card display portion -->
+		<p class="spacer"></p>
 		<div class = "cardsContainer">
 			<ul>
 				<li ><img src = "blank-card.jpg" alt = "favorite card"/>
