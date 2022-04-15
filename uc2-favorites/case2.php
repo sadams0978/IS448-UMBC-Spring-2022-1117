@@ -1,6 +1,10 @@
 <?php
 	session_start();
 	include('../db_connection.php');
+	$_SESSION["name"] = $name;
+	$_SESSION["price"] = $price;
+	$_SESSION["favorite"] = $name;
+	$_SESSION["favoriteID"] = $c_id;
 
 	//select card name from DB
 	$name = $_GET['C_NAME'];
@@ -10,11 +14,6 @@
 	if ($row = mysql_fetch_assoc($result)) {
 		$_SESSION['favorite'] = $row['C_NAME'];
 	}
-	
-	$_SESSION["name"] = $name;
-	$_SESSION["price"] = $price;
-	$_SESSION["favorite"] = $name;
-	$_SESSION["favoriteID"] = $c_id;
 
 ?>
 
