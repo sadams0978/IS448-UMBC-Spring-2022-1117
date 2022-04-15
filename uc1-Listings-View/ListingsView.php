@@ -1,5 +1,12 @@
 <?php
     include('../db_connection.php');
+    $constructed_query = "SELECT * FROM STOCK";
+    $result = mysqli_query($db, $constructed_query);
+
+    while($card[] = mysqli_fetch_assoc($result)){
+        echo $card['C_NAME'];
+    }
+
 ?>
 <!doctype html>
 <html lang ="en">
@@ -31,11 +38,11 @@
 			<select name= "category" id="category"> 
 				<option value="" disabled selected>Select Category</option> 
         <!-- acts as place holder prior to user interacting with element--> 
-				<option value="1">Pokémon</option>
-				<option value="2">Yu Gi Oh</option>
-				<option value="3">Baseball</option>
-				<option value="4">Football</option>
-				<option value="5">Other</option>
+				<option value="Pokemon">Pokemon</option>
+				<option value="Yu Gi Oh">Yu Gi Oh</option>
+				<option value="Baseball">Baseball</option>
+				<option value="Football">Football</option>
+				<option value="Other">Other</option>
 			</select>
 		<br/>
 
@@ -44,10 +51,10 @@
         <!--from sql & php-->
 			<select name= "condition" id="condition"> 
 				<option value="" disabled selected>Select Condition</option>
-				<option value="1">Poor</option>
-				<option value="2">Average</option>
-				<option value="3">Great</option>
-				<option value="4">Mint</option>
+				<option value="Poor">Poor</option>
+				<option value="Average">Average</option>
+				<option value="Great">Great</option>
+				<option value="Mint">Mint</option>
 			</select>
 		<br/> 
 
@@ -56,10 +63,10 @@
         <!--from sql & php-->
 			<select name= "finish" id="finish"> 
 				<option value="" disabled selected>Select Finish</option>
-				<option value="1">Matte</option>
-				<option value="2">Satin</option>
-				<option value="3">Gloss</option>
-				<option value="4">Other</option>
+				<option value="Matte">Matte</option>
+				<option value="Satin">Satin</option>
+				<option value="Gloss">Gloss</option>
+				<option value="Other">Other</option>
 			</select>
 		<br/>
 
@@ -68,11 +75,11 @@
         <!--from sql & php-->
 			<select name= "composition" id="composition"> 
 				<option value="" disabled selected>Select Composition</option>
-				<option value="1">paperboard</option>
-				<option value="2">thick paper</option>
-				<option value="3">plastic</option>
-				<option value="4">metal</option>
-				<option value="5">other</option>
+				<option value="Paper Board">Paper Board</option>
+				<option value="Thick Paper">Thick Paper</option>
+				<option value="Plastic">Plastic</option>
+				<option value="Metal">Metal</option>
+				<option value="Other">Other</option>
 			</select>
             </br>
 
