@@ -106,7 +106,7 @@
 		echo ("<img src='blankcard.jpg'/>");
 		echo ($card[$i]['C_NAME']);
 		?>
-		<button type= "button" onclick="alert('<?php echo ($card[$i]['C_NAME']) ?>')">Card Details</button>
+		<button type= "button" onclick="alert('<?php echo ($card[$i]['C_NAME']) . ($card[$i]['C_DESC']) . ($card[$i]['C_QUANTITY']) . ($card[$i]['C_CATEG']) . ($card[$i]['C_CONDITION']) . ($card[$i]['C_FINISH']) . ($card[$i]['C_COMP']) . ($card[$i]['C_YEAR']) . ($card[$i]['C_PRICE'])?>')">Card Details</button>
 		<?php
 		}
 		?>
