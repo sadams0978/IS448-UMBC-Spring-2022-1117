@@ -103,7 +103,7 @@
 	<div class="cards">
 	<ul>
 		<?php
-		for($i = 1; $i = count($card); $i++){
+		for($i = 1; $i <= count($card); $i++){
 		echo ("<li> $card[$i]['C_NAME'] <br> $card[$i]['C_PRICE'] <br> </li>");
 		echo ($card[$i]['C_NAME']);
 		}
