@@ -105,9 +105,9 @@
 		for($i = 0; $i < count($card); $i++){
 		echo ("<img src='blankcard.jpg'/>");
 		echo ($card[$i]['C_NAME']);
-		echo ("<button 
-		type= 'button' onclick='alert('Card Added to Shopping Card')'>Add this 
-		Card</button>");
+		?>
+		<button type= "button" onclick="alert('Card Added to Shopping Card')">Add this Card</button>
+		<?php
 		}
 		?>
 	</div>
