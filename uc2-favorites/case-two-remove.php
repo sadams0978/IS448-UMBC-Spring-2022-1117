@@ -28,5 +28,8 @@
 				require 'case2.php';
 			?>	
 		</p>
+		<?php
+			require 'case2.php';
+		?>
 	</body>
 </html>
