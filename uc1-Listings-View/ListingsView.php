@@ -1,9 +1,9 @@
 <?php
     include('../db_connection.php');
-    $constructed_query = "INSERT INTO 
-    STOCK(C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE) VALUES
-     ('Charizard Y', 'Special AditionCharizard Y', '7', 'Pokemon', 'Mint', 'Gloss', 'Plastic', '2021', '1.99')";
-	mysqli_query($db, $constructed_query);
+   // $constructed_query = "INSERT INTO 
+   // STOCK(C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE) VALUES
+    // ('Charizard Y', 'Special AditionCharizard Y', '7', 'Pokemon', 'Mint', 'Gloss', 'Plastic', '2021', '1.99')";//
+	//mysqli_query($db, $constructed_query);
 ?>
 <!doctype html>
 <html lang ="en">
