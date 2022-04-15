@@ -11,8 +11,8 @@
 	//$card_name = $_GET['C_NAME'];
 	//$_SESSION['fav_name'] = $card_name;
 	//$C_NAME = $_SESSION['fav_name'];
-	$card_favorite = $_GET['card'];
-	$_SESSION['card_fav'] = $card_favorite;
+	$card_favorite = $_GET['card[]'];
+	$_SESSION['card_fav[]'] = $card_favorite;
 	//need to implement session to receive liked cards from home page and display on favorites page
 	
 	//need to implement code to remove(unset) card(session variable) from favorites page
@@ -113,12 +113,12 @@
 				
 				<li>
 				<?php
-				$card = $_SESSION['card_fav'];
+				$card[] = $_SESSION['card_fav'];
 				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
 				?>
 				<br>
 				<?php
-				echo $card;
+				echo ($card['C_NAME']);
 				?>
 				<br>
 				<?php
@@ -128,9 +128,9 @@
 				<!-- button to remove card from favorites -->
 				<button href = "../index.html" class = "fa-solid fa-heart" style = "color:red"></button>
 				
-				<button type= "button" onclick="alert('<?php echo 'Card Name: ' ($card['C_NAME']) '\n' 'Card Description: ' ($card['C_DESC']) '\n' 'Card Quantity: ' ($card['C_QUANTITY'])
-				'\n' 'Card Category: ' ($card['C_CATEG']) '\n' 'Card Condition: ' ($card['C_CONDITION']) '\n' 'Card Finish: ' ($card['C_FINISH']) 
-				'\n' 'Card Composition: ' ($card['C_COMP']) '\n' 'Card Year: ' ($card['C_YEAR']) '\n' 'Card Price: ' ($card['PRICE']) ?>')">Card Details</button>
+				<button type= "button" onclick="alert('<?php echo 'Card Name: ' ($card[]['C_NAME']) '\n' 'Card Description: ' ($card[]['C_DESC']) '\n' 'Card Quantity: ' ($card[]['C_QUANTITY'])
+				'\n' 'Card Category: ' ($card[]['C_CATEG']) '\n' 'Card Condition: ' ($card[]['C_CONDITION']) '\n' 'Card Finish: ' ($card[]['C_FINISH']) 
+				'\n' 'Card Composition: ' ($card[]['C_COMP']) '\n' 'Card Year: ' ($card[]['C_YEAR']) '\n' 'Card Price: ' ($card[]['PRICE']) ?>')">Card Details</button>
 				</li>
 				
 			</ul>
