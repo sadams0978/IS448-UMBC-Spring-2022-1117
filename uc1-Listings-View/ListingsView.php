@@ -2,6 +2,8 @@
     include('../db_connection.php');
     $constructed_query = "SELECT * FROM STOCK";
 	$result = mysqli_query($db, $constructed_query);
+	for ($card = array (); $row = $result->fetch_assoc(); $card[array_shift($row)] = $row){
+	}
 ?>
 <!doctype html>
 <html lang ="en">
@@ -101,10 +103,8 @@
 	<div class="cards">
 	<ul>
 		<?php
-	for ($card = array (); $row = $result->fetch_assoc(); $card[array_shift($row)] = $row){
-		print_r($card[1]['C_NAME']);
-	}
-	?>
+		echo ($card[1]['C_NAME']);
+		?>
 		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
 type="button" onclick="alert('Card Added to Shopping Card')">Add this 
 Card</button></li>
