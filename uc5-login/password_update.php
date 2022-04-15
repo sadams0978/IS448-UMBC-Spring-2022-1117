@@ -33,7 +33,7 @@
           
 
     //If Passwords are empty, redirects them back to the sign in page
-     if(empty ($password) or ($password_verify)){
+     if(empty ($password or $password_verify)){
         header('Location: '.$homepage);
         die;
     }
