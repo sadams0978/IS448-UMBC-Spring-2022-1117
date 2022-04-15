@@ -104,13 +104,8 @@
 	<ul>
 		<?php
 		for($i = 0; $i <= count($card); $i++){
-		?>
-		<li> <img src="blankcard.jpg"/>
-		<?php
+		echo ("<img src='blankcard.jpg'/>");
 		echo ($card[$i]['C_NAME']);
-		?>
-		<br></li>
-		<?php
 		}
 		?>
 		<li ><img src="blankcard.jpg"/><br>Price: $$ <button 
