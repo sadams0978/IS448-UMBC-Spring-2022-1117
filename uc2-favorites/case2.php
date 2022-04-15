@@ -2,10 +2,10 @@
 	session_start();
 	include('../db_connection.php');
 	
-	$constructed_query = "SELECT * FROM STOCK";
-	$result = mysqli_query($db, $constructed_query);
-	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
-	}
+	//$constructed_query = "SELECT * FROM STOCK";
+	//$result = mysqli_query($db, $constructed_query);
+	//for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+	//}
 	
 	//$card_price = $_GET['PRICE'];
 	//$card_name = $_GET['C_NAME'];
