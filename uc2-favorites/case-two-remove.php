@@ -14,6 +14,11 @@
 	</head>
 	
 	<body>
+		<?php
+		// Includes our menu bar, instead of copying and pasting through the pages
+		include('../menu.php');
+		?>
+		
 		<p class = "cardsContainer">
 			<?php
 				while (list ($val) = each ($_SESSION['cardImage'])) { 
