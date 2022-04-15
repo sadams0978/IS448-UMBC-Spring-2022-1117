@@ -39,6 +39,7 @@
 				<option value="Yu Gi Oh">Yu Gi Oh</option>
 				<option value="Baseball">Baseball</option>
 				<option value="Football">Football</option>
+				<option value="Hockey">Hockey</option>
 				<option value="Other">Other</option>
 			</select>
 		<br/>
