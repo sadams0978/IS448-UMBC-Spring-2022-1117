@@ -15,7 +15,7 @@
 	</head>
 	
 	<body>
-		<p class = "cardsContainer"
+		<p class = "cardsContainer">
 			<?php
 				$_SESSION['cardImage']=array(); // Declaring session array
 				array_push($_SESSION['cart'],'C_NAME');
