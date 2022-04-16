@@ -13,9 +13,9 @@
 	//$_SESSION['fav_name'] = $card_name;
 	//$C_NAME = $_SESSION['fav_name'];
 	
-	if (isset($_SESSION['card'])) {
-  		$_SESSION['card'] = $card;
-		}
+	//if (isset($_SESSION['card'])) {
+  	//	$_SESSION['card'] = $card;
+	//	}
 	
 	//need to implement session to receive liked cards from home page and display on favorites page
 	
