@@ -1,5 +1,7 @@
 <?php
-$c_id = $_GET['id'];
+# $c_id = $_GET['id']; <- from html code to pull the specific card the customer wants to look at
+$c_id = 1;
+
 include('../db_connection.php');
 
 $constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_id'";
