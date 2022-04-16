@@ -1,5 +1,6 @@
 <?php
-	session_start();
+	// Includes our menu bar, instead of copying and pasting through the pages
+	include('../menu.php');
 	include('../db_connection.php');
 	
 	//$constructed_query = "SELECT * FROM STOCK";
@@ -31,11 +32,6 @@
 	</head>
 	
 	<body>
-	
-		<?php
-		// Includes our menu bar, instead of copying and pasting through the pages
-		include('../menu.php');
-		?>
 		
 		<!-- favorites section -->
 		<p class="spacer"></p>
