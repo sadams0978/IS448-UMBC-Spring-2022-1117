@@ -18,13 +18,10 @@
         
         // Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
-	/* includes connection to php, instead of copying and pasting through the pages
+	// includes connection to php, instead of copying and pasting through the pages
 	include('../db_connection.php');
-	*/
+	
 
-	$db = mysqli_connect("studentdb-maria.gl.umbc.edu","sr9","sr9","sr9");
-
-	if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
 
 		if(
 			(isset($_POST["card_name"]) && (!empty($_POST["card_name"]))) &&
