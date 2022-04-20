@@ -76,6 +76,8 @@ include('../menu.php');
           <option value=”4”>Other</option>
         </select>
 
+        <br/>
+
       <!-- Enter card composition dropdown--> 
         <label for="composition"> Composition:</label> <!--from sql & php-->
         <select name= "composition" id="composition"> 
@@ -87,7 +89,7 @@ include('../menu.php');
           <option value=”5”>other</option>
 
         </select>
-        <br/>
+        
 
       <!--Enter card year text box--> 
     
