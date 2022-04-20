@@ -50,7 +50,7 @@ include('../menu.php');
           <option value=”4”>Football</option>
           <option value=”4”>Other</option>
         </select>
-        
+
         <br/> 
       
       <!--Enter card condition dropdown--> 
@@ -63,7 +63,7 @@ include('../menu.php');
           <option value=”4”>Mint</option>
         </select>
 
-      <br/> 
+      
       
 
       <!--Enter card finish dropdown--> 
