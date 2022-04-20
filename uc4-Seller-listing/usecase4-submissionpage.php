@@ -18,6 +18,7 @@
         
         // Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
+	// includes connection to php, instead of copying and pasting through the pages
 	include('../db_connection.php');
 
 
@@ -49,16 +50,26 @@
 
 			*/
 
-			$card_name = $_POST["card_name"];
+			//assign php variables the user input. html and SQL sanitize the fields user type input
+			$card_name = htmlspecialchars($_POST["card_name"]);
+			$card_name = mysqli_real_escape_string($db, $card_name);
+
 			$category = $_POST["category"]; 
 			$condition = $_POST["condition"];
 			$finish = $_POST["finish"];
 			$composition = $_POST["composition"];
-			$year = $_POST["year"];
-			$description = $_POST["description"];
-			$unit_price = $_POST["unit_price"];
-			$seller_quantity = $_POST["seller_quantity"];
 
+			$year = htmlspecialchars($_POST["year"]);
+			$year = mysqli_real_escape_string($db, $year);
+
+			$description = htmlspecialchars($_POST["description"]);
+			$description = mysqli_real_escape_string($db, $description);
+
+			$unit_price = htmlspecialchars($_POST["unit_price"]);
+			$unit_price = mysqli_real_escape_string($db, $unit_price);
+
+			$seller_quantity = htmlspecialchars($_POST["seller_quantity"]);
+			$seller_quantity = mysqli_real_escape_string($db, $seller_quantity);
 
 			//insert into database with sql 
 			$constructed_query = " INSERT INTO STOCK (C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE)   
