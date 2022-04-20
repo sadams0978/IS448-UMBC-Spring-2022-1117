@@ -30,8 +30,8 @@
 			(isset($_POST["composition"]) && (!empty($_POST["composition"]))) &&
 			(isset($_POST["year"]) && (!empty($_POST["year"]))) &&
 			(isset($_POST["description"]) && (!empty($_POST["description"]))) &&	
-			(isset($_POST["unitprice"]) && (!empty($_POST["unitprice"]))) /*&&   		
-			(isset($_POST["sellerquantity"]) && (!empty($_POST["sellerquantity"]))) && 
+			(isset($_POST["unit_price"]) && (!empty($_POST["unit_price"]))) &&   		
+			(isset($_POST["seller_quantity"]) && (!empty($_POST["seller_quantity"]))) /*&& 
 			 
 			check for image upload. implement later if needed 
 
@@ -49,20 +49,20 @@
 
 			*/
 
-			$cardname = $_POST["card_name"];
+			$card_name = $_POST["card_name"];
 			$category = $_POST["category"]; 
 			$condition = $_POST["condition"];
 			$finish = $_POST["finish"];
 			$composition = $_POST["composition"];
 			$year = $_POST["year"];
 			$description = $_POST["description"];
-			$unitprice = $_POST["unitprice"];
-			$sellerquantity = $_POST["sellerquantity"];
+			$unit_price = $_POST["unit_price"];
+			$seller_quantity = $_POST["seller_quantity"];
 
 
 			//insert into database with sql 
 			$constructed_query = " INSERT INTO STOCK (C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE)   
-			VALUES ('$cardname', '$description', '$sellerquantity', '$category', '$condition', '$finish' , '$composition' , '$year', '$unitprice')";
+			VALUES ('$card_name', '$description', '$seller_quantity', '$category', '$condition', '$finish' , '$composition' , '$year', '$unit_price')";
 							
 		
 
