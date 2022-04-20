@@ -24,15 +24,15 @@
 
 
 		if(
-			(isset($_POST["card_name"]) && (!empty($_POST["card_name"]))) &&
-			(isset($_POST["category"]) && (!empty($_POST["category"]))) &&
-			(isset($_POST["condition"]) && (!empty($_POST["condition"]))) &&
-			(isset($_POST["finish"]) && (!empty($_POST["finish"]))) &&
-			(isset($_POST["composition"]) && (!empty($_POST["composition"]))) &&
-			(isset($_POST["year"]) && (!empty($_POST["year"]))) &&
-			(isset($_POST["description"]) && (!empty($_POST["description"]))) &&	
-			(isset($_POST["unit_price"]) && (!empty($_POST["unit_price"]))) &&   		
-			(isset($_POST["seller_quantity"]) && (!empty($_POST["seller_quantity"]))) /*&& 
+			(isset($_POST['card_name']) && (!empty($_POST['card_name']))) &&
+			(isset($_POST['category']) && (!empty($_POST['category']))) &&
+			(isset($_POST['condition']) && (!empty($_POST['condition']))) &&
+			(isset($_POST['finish']) && (!empty($_POST['finish']))) &&
+			(isset($_POST['composition']) && (!empty($_POST['composition']))) &&
+			(isset($_POST['year']) && (!empty($_POST['year']))) &&
+			(isset($_POST['description']) && (!empty($_POST['description']))) &&	
+			(isset($_POST['unit_price']) && (!empty($_POST['unit_price']))) &&   		
+			(isset($_POST['seller_quantity']) && (!empty($_POST['seller_quantity']))) /*&& 
 			 
 			check for image upload. implement later if needed 
 
@@ -51,24 +51,24 @@
 			*/
 
 			//assign php variables the user input. html and SQL sanitize the fields user type input
-			$card_name = htmlspecialchars($_POST["card_name"]);
+			$card_name = htmlspecialchars($_POST['card_name']);
 			$card_name = mysqli_real_escape_string($db, $card_name);
 
-			$category = $_POST["category"]; 
-			$condition = $_POST["condition"];
-			$finish = $_POST["finish"];
-			$composition = $_POST["composition"];
+			$category = $_POST['category']; 
+			$condition = $_POST['condition'];
+			$finish = $_POST['finish';
+			$composition = $_POST['composition'];
 
-			$year = htmlspecialchars($_POST["year"]);
+			$year = htmlspecialchars($_POST['year']);
 			$year = mysqli_real_escape_string($db, $year);
 
-			$description = htmlspecialchars($_POST["description"]);
+			$description = htmlspecialchars($_POST['description']);
 			$description = mysqli_real_escape_string($db, $description);
 
-			$unit_price = htmlspecialchars($_POST["unit_price"]);
+			$unit_price = htmlspecialchars($_POST['unit_price']);
 			$unit_price = mysqli_real_escape_string($db, $unit_price);
 
-			$seller_quantity = htmlspecialchars($_POST["seller_quantity"]);
+			$seller_quantity = htmlspecialchars($_POST['seller_quantity']);
 			$seller_quantity = mysqli_real_escape_string($db, $seller_quantity);
 
 			//insert into database with sql 
