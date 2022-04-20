@@ -80,15 +80,15 @@
 
 		
 		#Execute query
-		#$result = mysqli_query($db, $constructed_query);
+		$result = mysqli_query($db, $constructed_query);
 		
-		#if(!$result){
-		#	print("Error- query could not be executed ");
-	#		$error = mysqli_error($db); 
-	#		print "<p> . $error. </p>"; 
-	#		exit; 
+		if(!$result){
+			print("Error- query could not be executed ");
+			$error = mysqli_error($db); 
+			print "<p> . $error. </p>"; 
+			exit; 
 
-	#	}
+		}
 		
 		
 
