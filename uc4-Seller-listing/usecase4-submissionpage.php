@@ -18,9 +18,12 @@
         
         // Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
-	// includes connection to php, instead of copying and pasting through the pages
+	/* includes connection to php, instead of copying and pasting through the pages
 	include('../db_connection.php');
+	*/
 
+	$db = mysqli_connect ("192.168.254.2", "IS448", "IS448password", "samuela3");
+   	if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
 
 
 		if(
