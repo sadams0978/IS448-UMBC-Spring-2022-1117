@@ -56,7 +56,7 @@
 
 			$category = $_POST['category']; 
 			$condition = $_POST['condition'];
-			$finish = $_POST['finish';
+			$finish = $_POST['finish'];
 			$composition = $_POST['composition'];
 
 			$year = htmlspecialchars($_POST['year']);
