@@ -50,6 +50,8 @@ include('../menu.php');
           <option value=”4”>Football</option>
           <option value=”4”>Other</option>
         </select>
+        
+        <br/> 
       
       <!--Enter card condition dropdown--> 
       <label for="condition"> Condition:</label> <!--from sql & php-->
