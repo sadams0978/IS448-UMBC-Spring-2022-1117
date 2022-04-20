@@ -75,9 +75,24 @@
 			$seller_quantity = mysqli_real_escape_string($db, $seller_quantity);
 
 			//insert into database with sql 
-			$constructed_query = " INSERT INTO STOCK (C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE)   
+			$constructed_query = "INSERT INTO STOCK (C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE)   
 			VALUES ('$card_name', '$description', '$seller_quantity', '$category', '$condition', '$finish' , '$composition' , '$year', '$unit_price')";
-							
+			
+		#sanity check: print query to see if constructued query is correct
+		print("<h3>Sanity check print statement:</h3> The query is: $constructed_query</br>");
+
+		
+		#Execute query
+		$result = mysqli_query($db, $constructed_query);
+		
+		if(!$result){
+			print("Error- query could not be executed ");
+			$error = mysqli_error($db); 
+			print "<p> . $error. </p>"; 
+			exit; 
+
+		}
+		
 		
 
 			//Thank user message and offer to return to shopping or make another listing
