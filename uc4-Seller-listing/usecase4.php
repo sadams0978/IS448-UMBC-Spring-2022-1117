@@ -111,16 +111,16 @@ include('../menu.php');
 
       
     <div class="pricing">
-      <!--pricing information-->
+     <!--pricing information-->
       
-        <label for ="unitprice"> Price per unit:</label>
-        <input type="text" id="unitprice" class ="priceandquantity" size ="7">
+        <label for ="unit_price"> Price per unit:</label>
+        <input type="text" id="unit_price" name ="unit_price" class ="priceandquantity" size ="7">
       
 
       <!--quantity information--> 
       
-        <label for ="sellerquantity"> Quantity:</label>
-        <input type="text" id="sellerquantity" class ="priceandquantity" size ="7" maxlength ="4">
+        <label for ="seller_quantity"> Quantity:</label>
+        <input type="text" id="seller_quantity" name = "seller_quantity" class ="priceandquantity" size ="7" maxlength ="4">
       
 
       
