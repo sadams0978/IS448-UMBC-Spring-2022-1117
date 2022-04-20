@@ -93,7 +93,7 @@ include('../menu.php');
 
     <div class ="cardDetailsContainer"> 
       
-        <textarea id="description" rows="15" cols = "79" required>
+        <textarea id="description" name = "description" rows="15" cols = "79" >
         </textarea>
       
     </div>
@@ -105,13 +105,13 @@ include('../menu.php');
       <!--pricing information-->
       
         <label for ="sellerprice"> Price per unit:</label>
-        <input type="text" id="sellerprice" class ="priceandquantity" size ="7">
+        <input type="text" id="sellerprice" name ="sellerprice" class ="priceandquantity" size ="7">
       
 
       <!--quantity information--> 
       
         <label for ="sellerquantity"> Quantity:</label>
-        <input type="text" id="sellerquantity" class ="priceandquantity" size ="7" maxlength ="4">
+        <input type="text" id="sellerquantity" name = "sellerquantity" class ="priceandquantity" size ="7" maxlength ="4">
       
 
       
