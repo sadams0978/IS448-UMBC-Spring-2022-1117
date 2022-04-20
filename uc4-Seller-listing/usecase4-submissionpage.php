@@ -22,9 +22,9 @@
 	include('../db_connection.php');
 	*/
 
-	$db = mysqli_connect ("192.168.254.2", "IS448", "IS448password", "samuela3");
-   	if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
+	$db = mysqli_connect("studentdb-maria.gl.umbc.edu","sr9","sr9","sr9");
 
+	if (mysqli_connect_errno())	exit("Error - could not connect to MySQL");
 
 		if(
 			(isset($_POST["card_name"]) && (!empty($_POST["card_name"]))) &&
