@@ -10,4 +10,8 @@ $result = mysqli_query($db, $select);
         echo($row['email_address']);
         echo($row['first_name']);
 	echo($row['last_name']);
+	}
+
+  	mysqli_close($db);
+  	die();
 ?>
