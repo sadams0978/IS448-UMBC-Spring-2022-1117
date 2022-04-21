@@ -53,30 +53,44 @@
 			//assign php variables the user input. html and SQL sanitize the fields user type input
 			$card_name = htmlspecialchars($_POST['card_name']);
 			$card_name = mysqli_real_escape_string($db, $card_name);
-
-			$category = $_POST['category']; 
-			$condition = $_POST['condition'];
-			$finish = $_POST['finish'];
-			$composition = $_POST['composition'];
-
-			$year = htmlspecialchars($_POST['year']);
-			$year = mysqli_real_escape_string($db, $year);
-
+			
 			$description = htmlspecialchars($_POST['description']);
 			$description = mysqli_real_escape_string($db, $description);
+			
+			
+			$seller_quantity = htmlspecialchars($_POST['seller_quantity']);
+			$seller_quantity = mysqli_real_escape_string($db, $seller_quantity);
+			
+
+			$category = htmlspecialchars($_POST['category']);
+			$category = mysqli_real_escape_string($db, $category);
+			
+			
+			$condition = htmlspecialchars($_POST['condition']);
+			$condition = mysqli_real_escape_string($db, $condition);
+			
+		
+			$finish = htmlspecialchars($_POST['finish']);
+			$finish = mysqli_real_escape_string($db, $finish);
+			
+			$composition = htmlspecialchars($_POST['composition']);
+			$composition = mysqli_real_escape_string($db, $composition);
+			
+			$year = htmlspecialchars($_POST['year']);
+			$year = mysqli_real_escape_string($db, $year);
 
 			$unit_price = htmlspecialchars($_POST['unit_price']);
 			$unit_price = mysqli_real_escape_string($db, $unit_price);
 
-			$seller_quantity = htmlspecialchars($_POST['seller_quantity']);
-			$seller_quantity = mysqli_real_escape_string($db, $seller_quantity);
+
 
 			//insert into database with sql 
 			$constructed_query = "INSERT INTO STOCK (C_NAME, C_DESC, C_QUANTITY, C_CATEG, C_CONDITION, C_FINISH, C_COMP, C_YEAR, PRICE)   
 			VALUES ('$card_name', '$description', '$seller_quantity', '$category', '$condition', '$finish' , '$composition' , '$year', '$unit_price')";
 			
 		#sanity check: print query to see if constructued query is correct
-		print("<h3>Sanity check print statement:</h3> The query is: $constructed_query</br>");
+		print("This is what is going to be executed in MySQL");
+		echo ($constructed_query);
 
 		
 		#Execute query
