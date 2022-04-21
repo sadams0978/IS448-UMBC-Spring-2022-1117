@@ -1,6 +1,7 @@
 <?php
-include (../menu.php);
-include('../db_connection.php');
+	include ('../menu.php');
+	include('../db_connection.php');
+
 	$constructed_query = "SELECT email_address, first_name, last_name FROM login;";
 	$result = mysqli_query($db, $constructed_query);
 
