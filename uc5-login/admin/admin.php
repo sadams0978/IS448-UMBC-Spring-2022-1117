@@ -30,9 +30,9 @@ $result = mysqli_query($db, $constructed_query);
         <?php
 	  while($db_row = mysqli_fetch_array($result)) {
 		print("<tr>");
-		print("<td> $db_row[email_address] </td>	
-			<td>$db_row[first_name]</td>
-			<td>$db_row[last_name]</td> ");
+		print("<td> $db_row['email_address'] </td>	
+			<td>$db_row['first_name']</td>
+			<td>$db_row['last_name']</td> ");
 		print("</tr>");
 	}		
 		mysqli_close($db);
