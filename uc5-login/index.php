@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>
-    Login
-  </title>
-  <link rel="stylesheet" href="style.css" >
-  <meta charset="UTF-8">
-  <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
-	
+  <title> Login </title>
+	<link rel="stylesheet" href="style.css" >
+	<link rel="icon" type="image/x-icon" href="../favicon.png">
+	<meta charset="UTF-8">
+	<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-
-  <?php
-	//For Future use, Checking Password Length etc. 
-	?>
 	
-  
-  
+<body>  
     <div class="Login_Box">
-
     <h1> Sign In: </h1>
+	    
+	<!-- JavaScript will be used to validate user input on this site and provide feedback to the form -->   
     <form action="login.php" method="post">
     
     <input type="email" name="email" placeholder="email-address" required autofocus >
