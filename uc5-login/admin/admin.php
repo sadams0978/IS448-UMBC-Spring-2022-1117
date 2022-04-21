@@ -5,12 +5,10 @@ $constructed_query = "select email_address, first_name, last_name FROM login;";
 echo ($constructed_query);
 $result = mysqli_query($db, $constructed_query);
 
-//	if(! $result){
-//			print("There are no users, please check the MySQL Connection");
-//			$error = mysqli_error($db);
-//			print "<p> . $error . </p>";
-//			die;
-//		}
+	if(! $result){
+			print("There are no users, please check the MySQL Connection");
+			die;
+		}
 ?>
 
 	<h3> Users </h3>
