@@ -3,7 +3,7 @@ include('../menu.php');
 include('../db_connection.php');
 
     //Selecting the email_address and password from DB
-      $select = "select email_address, first_name, last_name from login";
+      $select = "select * from login";
       $result = mysqli_query($db, $select);
       
 
