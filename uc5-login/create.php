@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title> New User </title>
+  <title> Create a New User </title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css" >
   <link rel="icon" type="image/x-icon" href="../favicon.png">
