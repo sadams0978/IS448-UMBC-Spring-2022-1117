@@ -1,5 +1,4 @@
 <?php
-include('../../menu.php');
 include('../../db_connection.php');
 $constructed_query = "SELECT email_address, first_name, last_name, FROM login";
 
