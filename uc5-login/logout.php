@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>
-    Logout
-  </title>
-  <link rel="stylesheet" href="style.css" >
-  <meta charset="UTF-8">
-  <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
-	
+	<title> Logout </title>
+	<link rel="stylesheet" href="style.css" >
+	<link rel="icon" type="image/x-icon" href="../favicon.png">
+	<meta charset="UTF-8">
+	<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>	
 </head>
 
 <body>
   <?php
-session_start();
+	session_start();
 	session_destroy();
 	?>
 	
