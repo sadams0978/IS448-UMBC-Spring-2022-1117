@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>
-    Change Your Password
-  </title>
+  <title> Change Your Password</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.png">
   <link rel="stylesheet" href="style.css" >
   <meta charset="UTF-8">
 </head>
