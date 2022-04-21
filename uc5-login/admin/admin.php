@@ -23,14 +23,13 @@ include('../../db_connection.php');
 	</tr>
 
         <?php
-	//  while($db_row = mysqli_fetch_array($result)) {
-	//	print("<tr>");
-	//	print("<td> $db_row[email_address] </td>	
-	//		<td>$db_row[first_name]</td>
-	//		<td>$db_row[last_name]</td> ");
-	//	print("</tr>");
-	//}
-		echo ("We have made it to the end!");
+	  while($db_row = mysqli_fetch_array($result)) {
+		print("<tr>");
+		print("<td> $db_row[email_address] </td>	
+			<td>$db_row[first_name]</td>
+			<td>$db_row[last_name]</td> ");
+		print("</tr>");
+	}
 		mysqli_close($db);
 		die;
 		?>
