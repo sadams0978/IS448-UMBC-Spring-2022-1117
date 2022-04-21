@@ -1,5 +1,4 @@
  <?php
-include('../menu.php');
 include('../db_connection.php');
 
     //Selecting the email_address and password from DB
