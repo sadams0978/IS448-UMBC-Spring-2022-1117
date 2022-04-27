@@ -40,7 +40,7 @@
 		print("<td> $db_row[email_address] </td>	
 			<td>$db_row[first_name]</td>
 			<td>$db_row[last_name]</td> 
-			<td><button>Delete</button></td>
+			<td><button id= '$db_row[email_address]'>Delete</button></td>
 			");
 		      
 
