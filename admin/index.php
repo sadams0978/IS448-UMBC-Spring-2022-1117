@@ -31,6 +31,7 @@
 	<th> E-Mail Address </th>
 	<th> First Name </th>
         <th> Last Name </th>
+	<th> Delete User </th>
 	</tr>
 
      <?php
@@ -39,6 +40,7 @@
 		print("<td> $db_row[email_address] </td>	
 			<td>$db_row[first_name]</td>
 			<td>$db_row[last_name]</td> ");
+		  echo "<td><a href='delete.php?email={$db_row[email_address]}'>Delete</a></td>";
 		print("</tr>");
 	}
 		mysqli_close($db);
