@@ -41,10 +41,12 @@
 			<td>$db_row[first_name]</td>
 			<td>$db_row[last_name]</td> 
 			");
-			
+			?>
 
-			echo ("<td> <a href="delete.php"> Delete </a> </td>");
-			
+			<td> <a href="<?php echo $db_row[email_address];?>"> Delete </a> </td>
+		
+		
+		<?php	
 			
 		print("</tr>");
 	}
