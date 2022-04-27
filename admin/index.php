@@ -40,8 +40,13 @@
 		print("<td> $db_row[email_address] </td>	
 			<td>$db_row[first_name]</td>
 			<td>$db_row[last_name]</td> 
-			<td> <a href="delete.php"> Delete </a> </td>
 			");
+			?>
+
+			<td> <a href="delete.php"> Delete </a> </td>
+			
+			<?php
+			
 		print("</tr>");
 	}
 		mysqli_close($db);
