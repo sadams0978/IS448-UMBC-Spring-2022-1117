@@ -36,19 +36,16 @@
 
      <?php
 	  while($db_row = mysqli_fetch_array($result)) {
+		 $db_email = $db_row[email_address];
+	
 		print("<tr>");
 		print("<td> $db_row[email_address] </td>	
 			<td>$db_row[first_name]</td>
 			<td>$db_row[last_name]</td> 
+			<td> <button id = $db_email > Delete</button> </td>
 			");
-			?>
-
-			<td> <a href="<?php echo $db_row[email_address];?>"> Delete </a> </td>
 		
-		
-		<?php	
-			
-		print("</tr>");
+		  print("</tr>");
 	}
 		mysqli_close($db);
 		die;
