@@ -40,7 +40,7 @@
 		print("<td> $db_row[email_address] </td>	
 			<td>$db_row[first_name]</td>
 			<td>$db_row[last_name]</td> 
-			<td> <a href="delete.php?email=" . $db_row[email_address] > Delete </a> </td>
+			<td> <a href="delete.php"> Delete </a> </td>
 			");
 		print("</tr>");
 	}
