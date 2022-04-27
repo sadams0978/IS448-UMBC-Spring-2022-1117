@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../root.css"/>
     <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
-
+	<script src="delete.js"></script>
     <title>Admin</title>
 </head>
 <body>
@@ -40,7 +40,7 @@
 		print("<td> $db_row[email_address] </td>	
 			<td>$db_row[first_name]</td>
 			<td>$db_row[last_name]</td> 
-			<td><button id= '$db_row[email_address]'>Delete</button></td>
+			<td><button id= '$db_row[email_address]' onclick='buttonPressed()' >Delete</button></td>
 			");
 		      
 
