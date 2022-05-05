@@ -1,4 +1,6 @@
 <?php
-echo ("You have made it to the PHP");
+$userEmail = $_POST['userEmail'];
+
+echo ($userEmail);
 
 ?>
