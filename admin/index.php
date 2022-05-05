@@ -55,7 +55,7 @@
 		
 		
 		
-		<form method="post" action="delete.php">
+		<form method="post" action="delete.php" id="submitForm">
 		<input type="hidden" name="userEmail" id="userEmail" value="Test">
 		</form>
 
