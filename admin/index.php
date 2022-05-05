@@ -35,10 +35,7 @@
 	<th> Delete User </th>
 	</tr>
 
-			
-		<form method="post" action="delete.php" id="submitForm">
-		<input type="hidden" name="userEmail" id="userEmail" value="Test">
-		</form>
+
 		
      <?php
 	  while($db_row = mysqli_fetch_array($result)) {
@@ -55,7 +52,7 @@
 	}
 		
 		mysqli_close($db);
-		die;
+	
 		?>
 		
 		
@@ -64,4 +61,10 @@
 
 		</table>
 
+				
+		<form method="post" action="delete.php" id="submitForm">
+		<input type="hidden" name="userEmail" id="userEmail" value="Test">
+		</form>
+	
+	
 	</body>
