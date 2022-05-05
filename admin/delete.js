@@ -1,3 +1,7 @@
    function buttonPressed (emailButton) {
-      alert("You have deleted user " + emailButton.id);
+      var emailID = emailButton.id;
+      alert("You have deleted user " + emailID);
+      document.getElementByID('userEmail').value = emailID;
+      document.getElementById('userEmail').submit();
+
     }
