@@ -51,6 +51,13 @@
 		mysqli_close($db);
 		die;
 		?>
+		
+		
+		
+		<form method="post" action="delete.php">
+		<input type="hidden" name="userEmail" id="userEmail">
+		</form>
+
 
 		</table>
 	</body>
