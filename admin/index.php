@@ -15,8 +15,7 @@
 	session_start(); 
 	
 	if ($_SESSION['email'] !== "sam@arlcyber.me") {
-	http_response_code(404);
-	include(https://my.umbc.edu/404);
+	header("HTTP/1.0 404 Not Found");
 	die();
 	}
 		
