@@ -12,8 +12,8 @@
 <body>
 
 <?php
-	session_start(); 
-	
+	//Only Authorized Users can access this admin page
+	include('../menu.php');
 	if ($_SESSION['email'] !== "sam@arlcyber.me") {
 	header("HTTP/1.0 404 Not Found");
 	include ("../404.html");
@@ -21,8 +21,10 @@
 	}
 		
 		
-		
+	
+	//Once Authorized, Start Connection to DB
 	include('../db_connection.php');
+
 
 
 	
