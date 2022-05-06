@@ -18,9 +18,8 @@
 	session_start(); 
 	
 	if ($_SESSION['email'] !== "sam@arlcyber.me") {
-	header("HTTP/1.0 404 Not Found");
 	header('Location: '. $404); 
-	die();
+	exit();
 	}
 		
 	
