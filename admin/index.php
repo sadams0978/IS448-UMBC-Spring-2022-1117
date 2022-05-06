@@ -18,7 +18,7 @@
 	
 	if ($_SESSION['email'] !== "sam@arlcyber.me") {
 	    header("HTTP/1.1 401 Unauthorized");
-		die;
+		exit;
 	}
 	
 
