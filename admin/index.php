@@ -23,7 +23,9 @@
   padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(even){background-color: honeydew;}
+#customers tr:nth-child(off){background-color: white;}
+
 
 #customers tr:hover {background-color: #ddd;}
 
