@@ -17,8 +17,9 @@
 	
 	
 	if ($_SESSION['email'] !== "sam@arlcyber.me") {
-	    header("HTTP/1.1 401 Unauthorized");
-		exit;
+	header('HTTP/1.0 403 Forbidden');
+    	die('You are not allowed to access this file.'); 
+	
 	}
 	
 
