@@ -43,7 +43,7 @@
 
 	<h3> Users </h3>
 	
-	<table border="2" style="color:blue; width: 100%; " > <tr>
+	<table border="2" style="color:blue; width: 100%; margin-left:15%; margin-right:15%; " > <tr>
 	<th> E-Mail Address </th>
 	<th> First Name </th>
         <th> Last Name </th>
