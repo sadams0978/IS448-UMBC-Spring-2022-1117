@@ -16,6 +16,7 @@
 	
 	if ($_SESSION['email'] !== "sam@arlcyber.me") {
 	header("HTTP/1.0 404 Not Found");
+	include ("../404.html");
 	die();
 	}
 		
