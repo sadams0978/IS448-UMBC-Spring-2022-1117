@@ -30,7 +30,7 @@
 
 	
 
-	$constructed_query = "SELECT email_address, first_name, last_name FROM login;";
+	$constructed_query = "SELECT email_address, first_name, last_name, date_of_birth FROM login;";
 	$result = mysqli_query($db, $constructed_query);
 
 	$num_rows = mysqli_num_rows($result);
@@ -47,6 +47,7 @@
 	<th> E-Mail Address </th>
 	<th> First Name </th>
         <th> Last Name </th>
+	<th> Date of Birth </th>
 	<th> Delete User </th>
 	</tr>
 
@@ -58,6 +59,7 @@
 		print("<td> $db_row[email_address] </td>	
 			<td>$db_row[first_name]</td>
 			<td>$db_row[last_name]</td> 
+			<td>$db_row[date_of_birth]</td> 
 			<td><button id= '$db_row[email_address]' onclick='buttonPressed(this)'>Delete</button></td>
 			");
 		      
