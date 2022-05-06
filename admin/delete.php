@@ -6,10 +6,9 @@ $admin = "index.php";
 $delete = “DELETE FROM login WHERE email_address = ‘$userEmail’”;
 
 
-if (mysqli_query($db, $delete)) {
-       header('Location: '. $admin);
-
-} else echo ("We couldn't make the change, please try again. ");
+mysqli_query($db, $delete));
+header('Location: '. $admin);
+mysqli_close($db);
 
 
 ?>
