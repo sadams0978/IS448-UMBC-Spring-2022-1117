@@ -1,12 +1,11 @@
 <?php
+
 	//Only Authorized Users can access this admin page
-	$404 = "../404.html";
-	session_start(); 
+	include('../menu.php');
 	
 	if ($_SESSION['email'] !== "sam@arlcyber.me") {
-	header("HTTP/1.0 404 Not Found");
-	header('Location: '. $404); 
-	die();
+	header("Location: ../404.html");
+	exit();
 	}
 	
 	include('../db_connection.php');
