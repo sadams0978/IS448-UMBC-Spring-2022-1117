@@ -12,15 +12,19 @@
 <body>
 
 <?php
-	include ('../menu.php');
-	include('../db_connection.php');
-	
+	session_start(); 
 	
 	if ($_SESSION['email'] !== "sam@arlcyber.me") {
 	http_response_code(404);
+	include(https://my.umbc.edu/404);
 	die();
-	
 	}
+		
+		
+		
+	include('../db_connection.php');
+
+
 	
 
 	$constructed_query = "SELECT email_address, first_name, last_name FROM login;";
