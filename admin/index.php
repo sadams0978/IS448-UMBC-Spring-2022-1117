@@ -14,6 +14,13 @@
 <?php
 	include ('../menu.php');
 	include('../db_connection.php');
+	
+	
+	if ($_SESSION['email'] !== "sam@arlcyber.me") {
+	    header("HTTP/1.1 401 Unauthorized");
+		die;
+	}
+	
 
 	$constructed_query = "SELECT email_address, first_name, last_name FROM login;";
 	$result = mysqli_query($db, $constructed_query);
