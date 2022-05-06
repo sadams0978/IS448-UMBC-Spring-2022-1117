@@ -2,10 +2,16 @@
 
 
 	//Only Authorized Users can access this admin page
-	include('../menu.php');
+	$login = "../uc5-login/index.php";
+	$404 = "../404.html";
+	session_start(); 
+	if(!isset ($_SESSION['email'])){
+		header('Location: '. $login); 
+	}
+	
 	if ($_SESSION['email'] !== "sam@arlcyber.me") {
 	header("HTTP/1.0 404 Not Found");
-	include ("../404.html");
+	header('Location: '. $404); 
 	die();
 	}
 
