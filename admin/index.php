@@ -23,8 +23,10 @@
   padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: honeydew;}
-#customers tr:nth-child(off){background-color: white;}
+#customers tr
+	{
+		background-color: honeydew;
+	}
 
 
 #customers tr:hover {background-color: #ddd;}
