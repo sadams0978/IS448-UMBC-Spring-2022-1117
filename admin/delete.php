@@ -1,3 +1,5 @@
+    <link rel="stylesheet" type="text/css" href="../root.css"/>
+
 <?php
 
 	if ($_SESSION['email'] !== "sam@arlcyber.me") {
