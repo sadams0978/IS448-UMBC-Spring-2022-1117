@@ -14,8 +14,10 @@ function checkPassword () {
   if (result1 && result2 && result3) {
     
    document.getElementById('password').style.color="green"; 
+   return true;
+
     
-  }
+  } else return false;
   
  
   
