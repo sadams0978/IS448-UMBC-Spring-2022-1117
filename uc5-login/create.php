@@ -22,9 +22,9 @@
 
     <input type="email" name="email" placeholder="email-address" required >
     
-    <input type="password" name="password" placeholder="Password" required >
+    <input type="password" name="password" id="password" placeholder="Password" required >
     
-    <input type="password" name="password_verify" placeholder="Confirm your Password" required  >
+    <input type="password" name="password_verify" id="password_verify" placeholder="Confirm your Password" required  >
     <p> </p>
     
 
