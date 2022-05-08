@@ -18,7 +18,7 @@
 
     <input type="text" name="last_name" placeholder="Last Name" required >
 
-    <input type="date" name="dob" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="(this.type='text')" required >
+    <input type="date" name="dob" placeholder="Date of Birth" required >
 
     <input type="email" name="email" placeholder="email-address" required >
     
