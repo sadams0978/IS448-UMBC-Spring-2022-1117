@@ -23,7 +23,7 @@
 
     <input type="email" name="email" placeholder="email-address" required >
     
-    <input type="password" name="password" id="password" placeholder="Password" onChange='checkPassword()' required >
+    <input type="password" name="password" id="password" placeholder="Password" >
     
     <input type="password" name="password_verify" id="password_verify" placeholder="Confirm your Password" required  >
     <p> </p>
