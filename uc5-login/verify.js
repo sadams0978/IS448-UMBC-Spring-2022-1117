@@ -13,7 +13,7 @@ function checkPassword () {
   
   if (result1 && result2 && result3) {
     
-   password.style.color="green"; 
+   document.getElementById('password').style.color="green"; 
     
   }
   
