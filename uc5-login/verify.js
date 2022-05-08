@@ -1,3 +1,12 @@
+window.onload = pageLoad;
+
+function pageLoad(){
+	document.getElementById("password").onchange = checkPassword;
+}
+
+
+
+
 function checkPassword () {
  var contains_uppercase = /[A-Z]+/; 
  var contains_special_char = /\W+/;
