@@ -4,7 +4,6 @@
   <title> Create a New User </title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css" >
-  <script src="verify.js"></script>
   <link rel="icon" type="image/x-icon" href="../favicon.png">
 </head>
 
@@ -42,6 +41,9 @@
     <h3> <strong> <a href="https://www.umbc.edu/policies/pdfs/UMBC%20X1.00.06%20UMBC%20Policy%20on%20Web%20Site%20Privacy%20Statement.pdf#:~:text=It%20is%20university%20policy%20that,sites%20not%20affiliated%20with%20UMBC." class = "Site_Link"> Privacy Policy</a> </strong> </h3>
       
      </form>
-  </div>  
+  </div>
+  
+    <script src="verify.js"></script>
+
 </body>
 </html>
