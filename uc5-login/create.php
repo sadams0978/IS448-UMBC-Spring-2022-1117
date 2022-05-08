@@ -4,6 +4,7 @@
   <title> Create a New User </title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css" >
+  <script src="verify.js"></script>
   <link rel="icon" type="image/x-icon" href="../favicon.png">
 </head>
 
