@@ -90,7 +90,7 @@
 			<td>$db_row[first_name]</td>
 			<td>$db_row[last_name]</td> 
 			<td>$db_row[date_of_birth]</td> 
-			<td><button id= '$db_row[email_address]' onclick='buttonPressed(this)'>Delete</button></td>
+			<td><button id= '$db_row[email_address]' onclick='buttonPressed(this)'><i class="fa-solid fa-delete-left"></i> Delete </button></td>
 			");
 		      
 
