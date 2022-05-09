@@ -16,9 +16,9 @@
 	<!-- JavaScript will be used to validate user input on this site and provide feedback to the form -->   
     <form action="login.php" method="post">
     
-    <input type="email" name="email" placeholder="email-address" required autofocus >
+    <input type="email" name="email" placeholder="Enter Your E-Mail Address Here:" required autofocus >
     
-    <input type="password" name="password" placeholder="password" required width=75%  > <i class="fa-solid fa-eye-slash"></i>
+    <input type="password" name="password" placeholder="Enter Your Password Here:" required width=75%  > <i class="fa-solid fa-eye-slash"></i>
 
     <input type="submit" id="submit_button" value="Submit">
       
