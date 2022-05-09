@@ -1,12 +1,10 @@
 function visibility(passwordField, buttonField) {
   if (passwordField.type === "password") {
  	  passwordField.type = "text";
-    buttonField.classList.remove ("fa-eye");
-    buttonField.classList.add("fa-eye-slash");
+    buttonField.value = "Hide";
   } else {
     passwordField.type = "password";
-    buttonField.classList.remove("fa-eye-slash");
-    buttonField.classList.add ("fa-eye");
+    buttonField.value = "Unhide";
   }
 }
 
