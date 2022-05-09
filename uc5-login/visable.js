@@ -1,10 +1,10 @@
 function visibility(passwordField, buttonField) {
   if (passwordField.type === "password") {
  	  passwordField.type = "text";
-    buttonField.value = "Hide";
+    buttonField.textContent = "Hide";
   } else {
     passwordField.type = "password";
-    buttonField.value = "Unhide";
+    buttonField.textContent = "Unhide";
   }
 }
 
