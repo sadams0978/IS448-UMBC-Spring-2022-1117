@@ -16,11 +16,11 @@
 	<!-- JavaScript will be used to validate user input on this site and provide feedback to the form -->   
     <form action="login.php" method="post">
     
-    <input type="email" name="email" placeholder="Enter Your E-Mail Here" required autofocus >
+    <input type="email" name="email" placeholder="Enter Your E-Mail Here" required > <i class="fa-solid fa-trash"></i>
     
     <input type="password" name="password" placeholder="Enter Your Password Here" required > <i class="fa-solid fa-eye-slash"></i>
 
-    <input type="submit" id="submit_button" value="Submit">
+    <input type="submit" id="submit_button" value="Submit"> <i class="fa-solid fa-arrow-right"></i>
       
        </form>
 
