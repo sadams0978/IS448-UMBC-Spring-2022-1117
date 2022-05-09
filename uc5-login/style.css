@@ -24,6 +24,7 @@
 
 
 .password_requirements {
+    visibility: none;
     position: absolute;
     top: 25%;
     right: 10%;
