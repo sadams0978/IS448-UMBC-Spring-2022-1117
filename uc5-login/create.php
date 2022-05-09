@@ -13,7 +13,7 @@
 <body>
 		<div class="password_requirements" >
 	
-	<h2> The Password Requirements are as follows: </h2>
+	<h3> Password Requirements: </h3>
 		<p id="char_req" > 8 or more characters </p>
 		<p id="upper_req" > 1 Uppercase letter </p>
 		<p id="digit_req" > 1 Digit </p>
