@@ -17,7 +17,7 @@ var userPassword = pagePassword.value;
 	var result1 = contains_uppercase.test(userPassword);
 	var result2 = contains_special_char.test(userPassword);
 	var result3 = contains_digit.test(userPassword);
-	var passworLength = userPassword.length;
+	var passwordLength = userPassword.length;
 	
 	
 	
