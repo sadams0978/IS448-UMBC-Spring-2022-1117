@@ -37,8 +37,9 @@
     
 
       <div id="terms">
+	 <input type="checkbox" id="checkbox" name="checkbox" required >
     <label for="checkbox" id="terms_text"> I agree to the Terms and Conditions </label>
-    <input type="checkbox" id="checkbox" name="checkbox" required >
+    
     </div>
 
 	    <button type="submit" id="submit_button" > <i class="fa-solid fa-arrow-right"></i> Submit </button>
