@@ -7,7 +7,7 @@
   <link rel="icon" type="image/x-icon" href="../favicon.png">
   <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
 	<script src="visable.js"></script>
-	<script src="visable.js"></script>
+	<script src="verify.js"></script>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
     <input type="email" name="email" id="email" placeholder="email-address" required >
     	<button type="button" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
     
-    <input type="password" name="password" id="password" placeholder="Password" >
+    <input type="password" name="password" id="password" placeholder="Password" onfocus="checkPassword()">
     	<button type="button" onclick="visibility(password)"> <i class="fa-solid fa-eye"></i> </button>
 
     <input type="password" name="password_verify" id="password_verify" placeholder="Confirm your Password" required  >
