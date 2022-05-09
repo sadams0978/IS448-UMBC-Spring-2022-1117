@@ -10,7 +10,15 @@
 </head>
 
 	
-<body>  
+<body> 
+	
+	<div class="password_requirements" >
+	
+	<h2> The Password Requirements are as follows: </h2>
+	<p> 8 Characters, In which 1 is Uppercase </p>
+	<p> 1 Special Character and 1 Digit </p>
+		
+	</div>
 		
     <div class="Login_Box">
     <h1> Sign In: </h1>
