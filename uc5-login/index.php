@@ -21,7 +21,8 @@
     
     <input type="password" name="password" id="password" placeholder="Enter Your Password Here" required > 
 	    
-	     <button type="text"onclick="changePassword() > <i class="fa-solid fa-eye-slash"></i> Visable </button>
+	      <input type="text" id="fname" name="fname" onclick="changePassword()>
+
 	    
 
 	    <br> 
