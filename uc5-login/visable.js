@@ -8,4 +8,11 @@ function visibility() {
 }
 
 
+function clear () {
+  
+ var y = document.getElementByID("email");
+ y.value = ""; 
+  
+}
+
 
