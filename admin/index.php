@@ -74,11 +74,11 @@
 	<h3> Users </h3>
 	
 	<table id="customers"> <tr>
-	<th> E-Mail Address </th>
+	<th> <i class="fa-solid fa-inbox"></i>  E-Mail Address </th>
 	<th> First Name </th>
         <th> Last Name </th>
 	<th> Date of Birth </th>
-	<th> Delete User <i class="fa-solid fa-delete-left"></i> </th>
+	<th> <i class="fa-solid fa-delete-left"></i> Delete User </th>
 	</tr>
 
 
