@@ -44,11 +44,16 @@ var userPassword = pagePassword.value;
 		document.getElementById("char_req").style.color="red"; 	
 	}
 	
-	  
+}
+
+
+function visable () {
+	document.getElementById("password_requirements").style.visibility = "visable";
+	
+}
+
+function hide () {
+	document.getElementById("password_requirements").style.visibility = "hidden";
 	
 	
-	  
-  
- 
-  
 }
