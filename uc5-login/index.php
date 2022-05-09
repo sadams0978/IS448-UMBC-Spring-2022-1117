@@ -18,7 +18,7 @@
     
     <input type="email" name="email" placeholder="email-address" required autofocus >
     
-    <input type="password" name="password" placeholder="password" required minlength="8" maxlength="16"  >
+    <input type="password" name="password" placeholder="password" required minlength="8" maxlength="16"  > <i class="fa-solid fa-eye-slash"></i>
 
     <input type="submit" id="submit_button" value="Submit">
       
