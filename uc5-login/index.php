@@ -20,7 +20,7 @@
     
     <input type="password" name="password" placeholder="Enter Your Password Here" required > <i class="fa-solid fa-eye-slash"></i>
 
-    <input type="submit" id="submit_button" value="Submit"> <i class="fa-solid fa-arrow-right"></i>
+    <input type="submit" id="submit_button" value="Submit" <i class="fa-solid fa-arrow-right"></i> > 
       
        </form>
 
