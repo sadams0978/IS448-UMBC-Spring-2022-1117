@@ -78,7 +78,7 @@
 	<th> First Name </th>
         <th> Last Name </th>
 	<th> Date of Birth </th>
-	<th> Delete User </th>
+	<th> Delete User <i class="fa-solid fa-delete-left"></i> </th>
 	</tr>
 
 
