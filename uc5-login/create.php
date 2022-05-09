@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css" >
   <link rel="icon" type="image/x-icon" href="../favicon.png">
+  <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
+	<script src="visable.js"></script>
 </head>
 
 <body>
@@ -20,11 +22,17 @@
 
     <input type="date" name="dob" placeholder="Date of Birth" required >
 
-    <input type="email" name="email" placeholder="email-address" required >
+    <input type="email" name="email" id="email" placeholder="email-address" required >
+    <button type="button" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
+
     
     <input type="password" name="password" id="password" placeholder="Password" >
+    	<button type="button" onclick="visibility(password)"> <i class="fa-solid fa-eye"></i> </button>
+
     
     <input type="password" name="password_verify" id="password_verify" placeholder="Confirm your Password" required  >
+    	<button type="button" onclick="visibility(password_verify)"> <i class="fa-solid fa-eye"></i> </button>
+
     <p> </p>
     
 
@@ -33,8 +41,9 @@
     <input type="checkbox" id="checkbox" name="checkbox" required >
     </div>
 
-    <input id="submit_button" type="submit" value="Submit">
-
+	    <button type="submit" id="submit_button" > <i class="fa-solid fa-arrow-right"></i> Submit </button>
+    
+    
     <h3> <a href="index.php" class = "Site_Link" > Have An Account?</a> </h3>
     <h3> <a href="change_password.php" class = "Site_Link"> Need to change your password?</a> </h3>
     <h3> <Strong> Unauthorized Access is Prohibited </strong> </h3>
