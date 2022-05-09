@@ -20,8 +20,7 @@
     
     <input type="password" name="password" placeholder="Enter Your Password Here" required > <i class="fa-solid fa-eye-slash"></i>
 
-    <input type="submit" id="submit_button" value="Submit" <i class="fa-solid fa-arrow-right"></i> > 
-      
+	    <button type="submit" id="submit_button" > <i class="fa-solid fa-arrow-right"></i> Submit </button>
        </form>
 
       <h3> <a href="create.php" class = "Site_Link"> Create An Account</a> </h3>
