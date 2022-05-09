@@ -9,8 +9,8 @@ function visibility() {
 
 
 function clearField () {
-  
- var y = document.getElementByID("email");
+ 
+ var y = document.getElementById("email");
  y.value = ''; 
   
 }
