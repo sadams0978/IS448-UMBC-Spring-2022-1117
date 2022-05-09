@@ -26,10 +26,9 @@
     <input type="password" name="password" id="userPassword" placeholder="Enter Your Password Here" required > 
 	    
 	<button type="button" onclick="visibility(userPassword)"> <i class="fa-solid fa-eye"></i> </button>
-
 	    
-
-	    <br> 
+	    <br> <br>
+	    
 	    <button type="submit" id="submit_button" > <i class="fa-solid fa-arrow-right"></i> Submit </button>
        </form>
 
