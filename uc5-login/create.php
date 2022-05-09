@@ -33,6 +33,21 @@
     <input type="password" name="password_verify" id="password_verify" placeholder="Confirm your Password" required  >
     	<button type="button" onclick="visibility(password_verify)"> <i class="fa-solid fa-eye"></i> </button>
 
+	  
+	  
+	      <style>
+      input[type=checkbox],
+      input[type=radio] {
+        vertical-align: middle;
+        position: relative;
+        bottom: 1px;
+      }
+      input[type=radio] {
+        bottom: 2px;
+      }
+    </style>
+	  
+	  
 	 <input type="checkbox" id="terms" name="checkbox" required >
     <label for="terms" id="terms_text"> I agree to the Terms and Conditions </label>
 
