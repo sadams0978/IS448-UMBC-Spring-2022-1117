@@ -11,7 +11,7 @@
 </head>
 
 <body>
-		<div class="password_requirements" id="password_requirements" >
+	<div class="password_requirements" id="password_requirements" >
 	
 	<h3> Password Requirements: </h3>
 		<p id="char_req" > 8 or more characters </p>
@@ -34,7 +34,7 @@
     <input type="email" name="email" id="email" placeholder="email-address" required >
     	<button type="button" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
     
-    <input type="password" name="password" id="password" placeholder="Password" onfocus="visable()" onblue="hide()" onchange="checkPassword()">
+    <input type="password" name="password" id="password" placeholder="Password" onfocus="visable()" onblur="hide()" onchange="checkPassword()">
     	<button type="button" onclick="visibility(password)"> <i class="fa-solid fa-eye"></i> </button>
 
     <input type="password" name="password_verify" id="password_verify" placeholder="Confirm your Password" required  >
