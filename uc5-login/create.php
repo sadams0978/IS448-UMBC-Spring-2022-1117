@@ -33,10 +33,10 @@
     <input type="password" name="password_verify" id="password_verify" placeholder="Confirm your Password" required  >
     	<button type="button" onclick="visibility(password_verify)"> <i class="fa-solid fa-eye"></i> </button>
 
-    <p> </p>
 	 <input type="checkbox" id="terms" name="checkbox" required >
     <label for="terms" id="terms_text"> I agree to the Terms and Conditions </label>
 
+	  <br>
 	    <button type="submit" id="submit_button" > <i class="fa-solid fa-arrow-right"></i> Submit </button>
     
     
