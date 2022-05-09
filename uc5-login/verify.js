@@ -1,4 +1,4 @@
-document.getElementById("password").onFocus = function() {checkPassword()};
+document.getElementById("password").onkeyup = function() {checkPassword()};
 
 
 function checkPassword () {
