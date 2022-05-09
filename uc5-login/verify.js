@@ -21,19 +21,27 @@ var userPassword = pagePassword.value;
 	
 	if (result1) {
 	document.getElementById("upper_req").style.color="green"; 
-	} 
-	
+	} else {
+		document.getElementById("upper_req").style.color="red"; 	
+	}
+		
+		
 	if (result2) {
 	document.getElementById("special_req").style.color="green"; 	
+	} else {
+		document.getElementById("special_req").style.color="red"; 	
 	}
 	
 	if (result3) {	
 	document.getElementById("digit_req").style.color="green"; 	
+	} else {
+		document.getElementById("digit_req").style.color="red"; 	
 	}
 	
 	if (passwordLength >= 8) {
 	document.getElementById("char_req").style.color="green"; 	
-			
+	} else {
+		document.getElementById("char_req").style.color="red"; 	
 	}
 	
 	  
