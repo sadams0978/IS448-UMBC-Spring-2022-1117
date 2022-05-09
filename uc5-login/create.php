@@ -34,13 +34,8 @@
     	<button type="button" onclick="visibility(password_verify)"> <i class="fa-solid fa-eye"></i> </button>
 
     <p> </p>
-    
-
-      <div id="terms">
-	 <input type="checkbox" id="checkbox" name="checkbox" required >
-    <label for="checkbox" id="terms_text"> I agree to the Terms and Conditions </label>
-    
-    </div>
+	 <input type="checkbox" id="terms" name="checkbox" required >
+    <label for="terms" id="terms_text"> I agree to the Terms and Conditions </label>
 
 	    <button type="submit" id="submit_button" > <i class="fa-solid fa-arrow-right"></i> Submit </button>
     
