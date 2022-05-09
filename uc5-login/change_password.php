@@ -5,6 +5,8 @@
   <link rel="icon" type="image/x-icon" href="../favicon.png">
   <link rel="stylesheet" href="style.css" >
   <meta charset="UTF-8">
+  <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
+	<script src="visable.js"></script>
 </head>
 
 <body>
@@ -13,15 +15,29 @@
     <h1> Change Your Password: </h1>
     <form action="password_update.php" target="_blank" method="post">
     
-    <input type="email" name="email" placeholder="email-address" required autofocus >
-    
-    <input type="password" name="old_password" placeholder="Existing Password:" required>
-    
-    <input type="password" name="password" placeholder="New Password:" required>
-    
-    <input type="password" name="password_verify" placeholder="Verify your New Password:" required >
+    <input type="email" name="email" id="email" placeholder="email-address" required>
+     
+     <button type="button" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
 
-    <input id="submit_button" type="submit" value="Submit">        
+    
+    <input type="password" name="old_password" id="old_password" placeholder="Existing Password:" required>
+      
+    <button type="button" onclick="visibility(old_password)"> <i class="fa-solid fa-eye"></i> </button>
+
+    
+    <input type="password" name="password" id="password" placeholder="New Password:" required>
+      
+    <button type="button" onclick="visibility(password)"> <i class="fa-solid fa-eye"></i> </button>
+
+    
+    <input type="password" name="password_verify" id = "password_verify" placeholder="Verify your New Password:" required >
+      
+     <button type="button" onclick="visibility(password_verify)"> <i class="fa-solid fa-eye"></i> </button>
+    
+      
+      
+	    <br> 
+	    <button type="submit" id="submit_button" > <i class="fa-solid fa-arrow-right"></i> Submit </button>
      
       
     <h3> <a href="create.php" class = "Site_Link"> Create An Account</a> </h3>
