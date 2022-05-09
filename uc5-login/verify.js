@@ -53,7 +53,7 @@ function visable () {
 }
 
 function hide () {
-	document.getElementById("password_requirements").style.visibility = "hidden";
+	document.getElementById("password_requirements").style.visibility = "none";
 	
 	
 }
