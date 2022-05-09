@@ -15,8 +15,10 @@
 	<div class="password_requirements" >
 	
 	<h2> The Password Requirements are as follows: </h2>
-	<p> 8 Characters, In which 1 is Uppercase </p>
-	<p> 1 Special Character and 1 Digit </p>
+		<p> 8 or more characters </p>
+		<p> 1 Uppercase letter </p>
+		<p> 1 Digit </p>
+		<p> 1 Special Character </p>
 		
 	</div>
 		
