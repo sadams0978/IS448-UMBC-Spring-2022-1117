@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="style.css" >
 	<link rel="icon" type="image/x-icon" href="../favicon.png">
 	<meta charset="UTF-8">
+	<script src="visibility.js"></script>
 	<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
 </head>
 
