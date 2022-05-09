@@ -6,23 +6,12 @@
 	<link rel="icon" type="image/x-icon" href="../favicon.png">
 	<meta charset="UTF-8">
 	<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
+	<script src="visable.js"></script>
 </head>
 
 	
 <body>  
-	
-<script>
-function visibility() {
-  var x = document.getElementById("userPassword");
-  if (x.type === "password") {
- 	  x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
-</script>
-	
-	
+		
     <div class="Login_Box">
     <h1> Sign In: </h1>
 	    
