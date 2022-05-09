@@ -19,7 +19,10 @@
     
     <input type="email" name="email" placeholder="Enter Your E-Mail Here" required > <i class="fa-solid fa-trash"></i>
     
-    <input type="password" name="password" id="password" placeholder="Enter Your Password Here" required > <i class="fa-solid fa-eye-slash" onclick="changePassword()></i>
+    <input type="password" name="password" id="password" placeholder="Enter Your Password Here" required > 
+	    
+	     <button type="text"onclick="changePassword() > <i class="fa-solid fa-eye-slash"></i> Visable </button>
+	    
 
 	    <br> 
 	    <button type="submit" id="submit_button" > <i class="fa-solid fa-arrow-right"></i> Submit </button>
