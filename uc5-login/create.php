@@ -33,7 +33,7 @@
     <input type="password" name="password_verify" id="password_verify" placeholder="Confirm your Password" required  >
     	<button type="button" onclick="visibility(password_verify)"> <i class="fa-solid fa-eye"></i> </button>
 	  
-	  <h3> By Continuing you agree to our Terms and Conditions and Privacy Policy </h3> 
+	  <p> By Continuing you agree to our Terms and Conditions and Privacy Policy </p> 
 
 	  <br>
 	    <button type="submit" id="submit_button" > <i class="fa-solid fa-arrow-right"></i> Submit </button>
