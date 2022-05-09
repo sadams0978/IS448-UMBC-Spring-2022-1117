@@ -1,11 +1,8 @@
-//document.getElementById("password").onkeyup = function() {checkPassword()};
-
-
 function checkPassword () {
 
-
+	
+	//Variables
 var pagePassword = document.getElementById("password");
-
 var userPassword = pagePassword.value;
  var contains_uppercase = /[A-Z]+/; 
  var contains_special_char = /\W+/;
