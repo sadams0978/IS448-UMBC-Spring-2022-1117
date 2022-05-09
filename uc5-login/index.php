@@ -21,7 +21,7 @@
     
     <input type="password" name="password" id="password" placeholder="Enter Your Password Here" required > 
 	    
-	      <input type="text" id="fname" name="fname" onclick="changePassword()>
+	<button onclick="myFunction()">Click me</button>
 
 	    
 
