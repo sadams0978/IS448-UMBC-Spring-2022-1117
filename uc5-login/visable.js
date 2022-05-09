@@ -8,10 +8,10 @@ function visibility() {
 }
 
 
-function clear () {
+function clearField () {
   
  var y = document.getElementByID("email");
- y.value = ""; 
+ y.value = ''; 
   
 }
 
