@@ -5,12 +5,24 @@
 	<link rel="stylesheet" href="style.css" >
 	<link rel="icon" type="image/x-icon" href="../favicon.png">
 	<meta charset="UTF-8">
-	<script src="visibility.js"></script>
 	<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
 </head>
 
 	
 <body>  
+	
+<script>
+function visibility() {
+  var x = document.getElementById("userPassword");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+	
+	
     <div class="Login_Box">
     <h1> Sign In: </h1>
 	    
@@ -19,9 +31,9 @@
     
     <input type="email" name="email" placeholder="Enter Your E-Mail Here" required > <i class="fa-solid fa-trash"></i>
     
-    <input type="password" name="password" id="password" placeholder="Enter Your Password Here" required > 
+    <input type="password" name="password" id="userPassword" placeholder="Enter Your Password Here" required > 
 	    
-	<button type="button" onclick="changepassword()">Unhide</button>
+	<button type="button" onclick="visibility()">Unhide</button>
 
 	    
 
