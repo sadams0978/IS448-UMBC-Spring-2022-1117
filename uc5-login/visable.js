@@ -1,10 +1,10 @@
 function visibility(passwordField, buttonField) {
   if (passwordField.type === "password") {
  	  passwordField.type = "text";
-    buttonField.className = "fa-solid fa-eye-slash";
+    buttonField.classList.toggle("fa-solid fa-eye-slash");
   } else {
     passwordField.type = "password";
-    buttonField.className = "fa-solid fa-eye";
+    buttonField.classList.toggle ("fa-solid fa-eye");
   }
 }
 
