@@ -18,7 +18,7 @@
 	<!-- JavaScript will be used to validate user input on this site and provide feedback to the form -->   
     <form action="login.php" method="post">
     
-    <input type="email" name="email" placeholder="Enter Your E-Mail Here" required > <i class="fa-solid fa-trash"></i>
+    <input type="email" name="email" id="email" placeholder="Enter Your E-Mail Here" required > <i class="fa-solid fa-trash"></i>
     
     <input type="password" name="password" id="userPassword" placeholder="Enter Your Password Here" required > 
 	    
