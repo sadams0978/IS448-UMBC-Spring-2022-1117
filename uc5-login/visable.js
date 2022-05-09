@@ -1,15 +1,13 @@
-function visibility() {
-  var x = document.getElementById("userPassword");
-  if (x.type === "password") {
- 	  x.type = "text";
+function visibility(passwordField) {
+  if (passwordField.type === "password") {
+ 	  passwordField.type = "text";
   } else {
-    x.type = "password";
+    passwordField.type = "password";
   }
 }
 
 
 function clearField () {
- 
  var y = document.getElementById("email");
  y.value = ''; 
   
