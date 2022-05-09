@@ -1,12 +1,4 @@
-document.getElementById("password").onchange = function() {checkPassword()};
-
-function myFunction() {
-  var x = document.getElementById("fname");
-  x.value = x.value.toUpperCase();
-}
-
-
-
+document.getElementById("password").oninput = function() {checkPassword()};
 
 
 function checkPassword () {
