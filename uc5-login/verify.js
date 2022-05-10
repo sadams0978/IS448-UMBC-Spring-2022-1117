@@ -65,11 +65,10 @@ function secondVerify () {
 	
 	
 	if (initial == second) {
-		
-	second.style.color="green";
+	second.style.color="green"; 	
 		
 	} else {
-	second.style.color="red";	
+	second.style.color="red"; 	
 			
 	}
 	
