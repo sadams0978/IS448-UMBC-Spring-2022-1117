@@ -40,7 +40,7 @@
     <button type="button" onclick="visibility(password)"> <i class="fa-solid fa-eye"></i> </button>
 
     
-    <input type="password" name="password_verify" id = "password_verify" placeholder="Verify your New Password:" >
+    <input type="password" name="password_verify" id = "password_verify" placeholder="Verify your New Password:" onchange= "secondVerify()">
       
      <button type="button" onclick="visibility(password_verify)"> <i class="fa-solid fa-eye"></i> </button>
     
