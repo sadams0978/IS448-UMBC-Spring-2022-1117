@@ -2,11 +2,11 @@ function checkPassword () {
 
 	
 	//Variables
-var pagePassword = document.getElementById("password");
-var userPassword = pagePassword.value;
- var contains_uppercase = /[A-Z]+/; 
- var contains_special_char = /\W+/;
- var contains_digit = /\d+/;
+	var pagePassword = document.getElementById("password");
+	var userPassword = pagePassword.value;
+ 	var contains_uppercase = /[A-Z]+/; 
+ 	var contains_special_char = /\W+/;
+ 	var contains_digit = /\d+/;
  
 
   	//Result Checking for conditions
@@ -55,5 +55,22 @@ function visible () {
 function hide () {
 	document.getElementById("password_requirements").style.visibility = "hidden";
 	
+	
+}
+
+
+function secondVerify () {
+		var initial = document.getElementById("password").value;
+		var second =  document.getElementById("password_verify").value;
+	
+	
+	if (initial == second) {
+		
+	second.style.color="green";
+		
+	} else {
+	second.style.color="red";	
+			
+	}
 	
 }
