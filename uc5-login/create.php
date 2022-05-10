@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<div class="password_requirements" id="password_requirements" style="display: none;" >
+	<div class="password_requirements" id="password_requirements" style="visibility: hidden;" >
 	
 	<h3> Password Requirements: </h3>
 		<p id="char_req" > 8 or more characters </p>
