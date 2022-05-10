@@ -47,8 +47,8 @@ var userPassword = pagePassword.value;
 }
 
 
-function visable () {
-	document.getElementById("password_requirements").style.visibility = "visable";
+function visible () {
+	document.getElementById("password_requirements").style.visibility = "visible";
 	
 }
 
