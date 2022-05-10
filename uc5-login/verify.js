@@ -65,10 +65,10 @@ function secondVerify () {
 	
 	
 	if (initial == second) {
-	second.style.color="green"; 	
+	document.getElementById("password_verify").style.color = "green";
 		
 	} else {
-	second.style.color="red"; 	
+	document.getElementById("password_verify").style.color = "red";
 			
 	}
 	
