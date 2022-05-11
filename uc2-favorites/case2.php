@@ -1,25 +1,10 @@
 <?php
+	session_start();
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
 	include('../db_connection.php');
 	
-	//$constructed_query = "SELECT * FROM STOCK";
-	//$result = mysqli_query($db, $constructed_query);
-	//for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
-	//}
-	
-	//$card_price = $_GET['PRICE'];
-	//$card_name = $_GET['C_NAME'];
-	//$_SESSION['fav_name'] = $card_name;
-	//$C_NAME = $_SESSION['fav_name'];
-	
-	//if (isset($_SESSION['card'])) {
-  	//	$_SESSION['card'] = $card;
-	//	}
-	
-	//need to implement session to receive liked cards from home page and display on favorites page
-	
-	//need to implement code to remove(unset) card(session variable) from favorites page
+
 ?>
 
 
@@ -129,6 +114,11 @@
 				<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card['C_NAME']) . '\n' . 'Card Description: ' . ($card['C_DESC']) . '\n' . 'Card Quantity: ' . ($card['C_QUANTITY']) .
 				'\n' . 'Card Category: ' . ($card['C_CATEG']) . '\n' . 'Card Condition: ' . ($card['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card['C_FINISH']) . 
 				'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
+				
+				<?php
+				$text=$_POST['text'];
+				echo $text;
+				?>
 				</li>
 				
 			</ul>
