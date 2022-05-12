@@ -114,7 +114,7 @@
 			<td><button id='$db_row[email_address]' onclick='buttonPressed(this)' > Delete </button></td>
 			
 			<td> 
-			<select>
+			<select id='$db_row[email_address]' onChange='changeGroup(this)'>
 			
 			<option value='$group' selected > $group </option>
            		<option value='$second' > $second</option>
