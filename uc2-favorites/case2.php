@@ -156,11 +156,11 @@
 			</ul>
 		<!-- </form> -->
 		</div>
-		
-		<br />
-		
+
 		<div class = "footer">
+			<p>
 			Made By: Dylan De Leon
+			</p>
 		</div>
 	
 	</body>
