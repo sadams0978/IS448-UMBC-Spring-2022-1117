@@ -7,6 +7,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../root.css"/>
 	<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
 	<script src="delete.js"></script>
 
     <title>Admin</title>
