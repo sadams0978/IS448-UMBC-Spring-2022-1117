@@ -95,7 +95,7 @@
 		
 	  while($db_row = mysqli_fetch_array($result)) {
 		
-		$group = $db_row[Member];
+		$group = $db_row['Member'];
 		  
 		switch ($group) {
   		case  'user':
