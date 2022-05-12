@@ -91,12 +91,10 @@
 		
 	  while($db_row = mysqli_fetch_array($result)) {
 		
-		  echo ($db_row[Member]);
-		  	 
-		  
-		 $role = user;
-		 $second = viewer;
-		 $third = admin;
+
+		  $group = "user";
+		  $second = "viewer";
+		  $third = "admin";
 		  
 		  
 		  print("<tr>");
@@ -109,9 +107,9 @@
 			<td> 
 			<select>
 			
-			<option value=$role selected > $role </option>
-           		<option value=$second > $second</option>
-            		<option value=$third > $third </option>
+			<option value="$group" selected > $group </option>
+           		<option value="$second" > $second</option>
+            		<option value="$third" > $third </option>
       			
 			</select>
   			</td>");
