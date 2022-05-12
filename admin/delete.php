@@ -3,15 +3,15 @@
 	//Only Authorized Users can access this admin page
 	include('../menu.php');
 		
-	$adminPage = "index.php"	
+	$login = "../uc5-login/index.php"	
 
 
 	if(!isset ($_SESSION['group'])){
-	header('Location: '. $adminPage);
+	header('Location: '. $login);
 	die;		
 	}
 
-	if ($_SESSION['group'] != 'admin') {	
+	if ($_SESSION['group'] !== 'admin') {	
 	echo ("Unauthorized, only admin users can delete users!");
 	die;	
 	}
