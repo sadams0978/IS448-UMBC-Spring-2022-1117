@@ -1,12 +1,24 @@
+<!doctype html>
+<html lang ="en">
+	
+	
+<head>
+	
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../root.css"/>
+    	<title>Delete a User</title>
+</head>
+<body>
+
+
 <?php
 
 	//Only Authorized Users can access this admin page
-	
+	include('../menu.php');
 	$login = "../uc5-login/index.php";	
 	
-	include('../menu.php');
 
-	//If User Group isn't set redirect to sign in page
+	//If Group isn't set redirect to sign in page
 	if(!isset ($_SESSION['group'])){
 	header('Location: '. $login);
 	}
