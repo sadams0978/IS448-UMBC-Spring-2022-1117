@@ -102,9 +102,6 @@
     
     <!--CARD DISPLAY Section--> 
 	<div class="cards">
-	<!-- Test forms code by Dylan -->
-	<form method = "post" action = "case2.php">
-		
 		<ul class="cardDisplay">
 		<?php
 		for($i = 0; $i < count($card); $i++){
@@ -124,10 +121,9 @@
 		<br>
 		<!-- button to add card as a favorite "dylan"-->
 		<!--<button href = "case2.php?card = 'cardInfo'">Favorite</button>-->
-		
-		<!-- favorites submit button test -->
-		<input type = "hidden" name = "i">
-		<button type="submit">Favorite</button>
+		<?php
+		echo '<button href = "case2.php?C_ID='.$card[$i]['C_ID'].'">Favorite</button>';	
+		?>
 			
 		<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card[$i]['C_NAME']) . '\n' . 'Card Description: ' . ($card[$i]['C_DESC']) . '\n' . 'Card Quantity: ' . ($card[$i]['C_QUANTITY']) . '\n' . 'Card Category: ' . ($card[$i]['C_CATEG']) . '\n' . 'Card Condition: ' . ($card[$i]['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card[$i]['C_FINISH']) . '\n' . 'Card Composition: ' .($card[$i]['C_COMP']) . '\n' . 'Card Year: ' .($card[$i]['C_YEAR']) . '\n' . 'Card Price: ' . ($card[$i]['PRICE'])?>')">Card Details</button>
 		</li>
@@ -135,8 +131,6 @@
 		}
 		?>
 		</ul>
-	</form>
-        <!-- end form -->
 	</div>
     <!--CARD DISPLAY Section Over--> 
 
