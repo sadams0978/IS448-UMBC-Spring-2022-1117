@@ -6,15 +6,20 @@
 	$login = "../uc5-login/index.php"	
 
 
+	//If User Group isn't set redirect to sign in page
 	if(!isset ($_SESSION['group'])){
 	header('Location: '. $login);
-	die;		
 	}
 
-	if ($_SESSION['group'] !== 'admin') {	
+	$userGroup = $_SESSION['group'];
+
+	
+	//If the group is just user, tell the user that they are unauthorized
+  	if ($userGroup != 'admin') {
 	echo ("Unauthorized, only admin users can delete users!");
-	die;	
-	}
+	 die;
+  	}
+
 
 
 	
