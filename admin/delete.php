@@ -6,9 +6,9 @@
 
 
 	//If User Group isn't set redirect to sign in page
-	if(!isset ($_SESSION['group'])){
-	header('Location: '. $login);
-	}
+	//if(!isset ($_SESSION['group'])){
+	//header('Location: '. $login);
+//	}
 
 	
 	//If the group is just user, tell the user that they are unauthorized
