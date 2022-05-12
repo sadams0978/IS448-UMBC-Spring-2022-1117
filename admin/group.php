@@ -13,7 +13,7 @@
 	
 	//If the group is just user, tell the user that they are unauthorized
   	if ($_SESSION['group'] == 'admin') {
-	deleteUser();	
+	changeGroup();	
 	
 	} else {
      header('Location: '. $home); 
