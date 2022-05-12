@@ -1,7 +1,7 @@
 <?php
 
 	//Only Authorized Users can access this admin page
-	include('../menu.php');
+	//include('../menu.php');
 		
 	$login = "../uc5-login/index.php"	
 
