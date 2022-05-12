@@ -94,12 +94,43 @@
 			<td>$db_row[first_name]</td>
 			<td>$db_row[last_name]</td> 
 			<td>$db_row[date_of_birth]</td> 
-			<td><button id='$db_row[email_address]' onclick='buttonPressed(this)' > Delete </button></td>
+			<td><button id='$db_row[email_address]' onclick='buttonPressed(this)' > Delete </button></td>");
+		  
+		  
+		  $groups = array("user", "viewer", "admin");
+		  
+		  switch ($db_row[Member]) {
+  			
+			 case 'user':
+    			$role = $groups[0];
+			$second = $groups[1];
+			$third = $groups[2];
+   			 break;
+				  
+  			case 'viewer':
+			$role = $groups[1];
+			$second = $groups[0];
+			$third = $groups[2];
+   			 break;
+				  
+  			case 'admin':
+			$role = $groups[2];
+			$second = $groups[1];
+			$third = $groups[0];
+    			break;		
+    
+}
+
+			
+			
+			
+			
+			print ("
 			<td> 
 			<select>
-			<option value='$db_row[Member]' selected > '$db_row[Member]' </option>
-           		<option value='viewer'>Viewer</option>
-            		<option value='admin'>Admin</option>
+			<option value=$role selected > $role </option>
+           		<option value=$second > $second</option>
+            		<option value=$third > $third </option>
       			
 			</select>
   			</td>");
