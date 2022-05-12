@@ -89,32 +89,14 @@
 		
      <?php
 		
-	 $groups = array("user", "viewer", "admin");
-		
 	  while($db_row = mysqli_fetch_array($result)) {
 		
 		  echo ($db_row[Member]);
-		  	 switch ($db_row[Member]) {
-  			
-			 case "user":
-    			$role = $groups[0];
-			$second = $groups[1];
-			$third = $groups[2];
-   			 break;
-				  
-  			case viewer:
-			$role = $groups[1];
-			$second = $groups[0];
-			$third = $groups[2];
-   			 break;
-				  
-  			case admin:
-			$role = $groups[2];
-			$second = $groups[1];
-			$third = $groups[0];
-    			break;		
-			 
-			 }
+		  	 
+		  
+		 $role = "user";
+		 $second = "viewer";
+		 $third = "admin";
 		  
 		  
 		  print("<tr>");
