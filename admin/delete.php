@@ -2,9 +2,8 @@
 
 	//Only Authorized Users can access this admin page
 		
-	$login = "../uc5-login/index.php"	
-		
-	session_start();
+	$login = "../uc5-login/index.php";	
+
 
 	//If User Group isn't set redirect to sign in page
 	if(!isset ($_SESSION['group'])){
