@@ -44,29 +44,28 @@
 
 
 <?php
-
-	//Only Logged in Users can access this admin page
 	include('../menu.php');
-	
-	
+
+
 	//If User Group isn't set, check the DB and update the session variable
 	if(!isset ($_SESSION['group'])){
+	$email = $_SESSION['email'];
+
+	//Connecting to DB and searching for user permission
+	include('../db_connection.php');
+	$select = "select Member from login where email_address = '$email'"; 
 	
-	include('../db_connection.php');	
-	$select = "select Member from login where email_address = '$_SESSION['email']'"; 
+	//Looking through first result and setting the group session variable to it
 	$group_result = mysqli_query($db,$select);
-    	$_SESSION['group'] = $group_result;
+	$row = mysqli_fetch_row($group_result);
+	$_SESSION['group'] = $row[0];
 	mysqli_close();
 	}
-	
-	
-	//If the user is only a user, don't allow them to access the site
-	if ($_SESSION['group'] == 'user') {
-	echo ("Were Sorry, You are not permitted to enter, please try again later.");		
-	die;
-    	} 
-	
 
+  	if ($_SESSION['group'] == 'user') {
+	echo ("Unauthorized, please try again!");
+	  die;
+  	}
 
 	
 	//Querying the DB for login info
