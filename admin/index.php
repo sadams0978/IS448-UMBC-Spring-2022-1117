@@ -88,18 +88,13 @@
 
 		
      <?php
+		
+	 $groups = array("user", "viewer", "admin");
+		
 	  while($db_row = mysqli_fetch_array($result)) {
-		print("<tr>");
-		print("<td> $db_row[email_address] </td>	
-			<td>$db_row[first_name]</td>
-			<td>$db_row[last_name]</td> 
-			<td>$db_row[date_of_birth]</td> 
-			<td><button id='$db_row[email_address]' onclick='buttonPressed(this)' > Delete </button></td>");
+		
 		  
-		  
-		  $groups = array("user", "viewer", "admin");
-		  
-		  switch ($db_row[Member]) {
+		  	 switch ($db_row[Member]) {
   			
 			 case 'user':
     			$role = $groups[0];
@@ -118,16 +113,20 @@
 			$second = $groups[1];
 			$third = $groups[0];
     			break;		
-    
-}
-
+			 
+			 }
+		  
+		  
+		  print("<tr>");
+		print("<td> $db_row[email_address] </td>	
+			<td>$db_row[first_name]</td>
+			<td>$db_row[last_name]</td> 
+			<td>$db_row[date_of_birth]</td> 
+			<td><button id='$db_row[email_address]' onclick='buttonPressed(this)' > Delete </button></td>
 			
-			
-			
-			
-			print ("
 			<td> 
 			<select>
+			
 			<option value=$role selected > $role </option>
            		<option value=$second > $second</option>
             		<option value=$third > $third </option>
