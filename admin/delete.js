@@ -6,3 +6,16 @@
          
       }
     }
+
+   function changeGroup (newGroup) {
+   var email = newGroup.id;
+    var group = newGroup.value;
+      
+    console.log("The user's email address is " + email);
+      
+     console.log("The user's new group is " + group);
+    
+      
+      
+      
+   }
