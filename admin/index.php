@@ -96,23 +96,8 @@
 	  while($db_row = mysqli_fetch_array($result)) {
 		
 		$group = $db_row['Member'];
-		  
-		switch ($group) {
-  		case  'user':
-		$second = 'viewer';
-		$third = 'admin';
-		break;
-				
-  		case 'viewer':
-   		$second = 'user';
-		$third = 'admin';
-    		break;
-				
-  		case 'admin':
-   		$second = 'viewer';
-		$third = 'user';
-   		 break;
-		  
+		  $second = "Second";
+		  $third = "Third";
 		  
 		  print("<tr>");
 		print("<td> $db_row[email_address] </td>	
