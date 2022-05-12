@@ -92,6 +92,17 @@
 	
 		<div class = "cardsContainer">
 		<!-- <form action = "case2.php" method = "GET"> -->
+				<!-- load from home page -->
+				<?php
+				$C_ID=$_GET['C_ID'];
+				
+				if (!isset($_SESSION['favorites'])){
+					$favoritesArray = array();	//create favorites array
+					$_SESSION['favorites'] = $favoritesArray;	//add array to session array
+				}
+								
+				array_push($_SESSION['favorites'],$C_ID);
+				?>
 			<ul class = "cards">
 				
 				<li>
@@ -115,19 +126,32 @@
 				'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
 				
 				</li>
+				
 				<li>
 				<?php
-				$C_ID=$_GET['C_ID'];
-				
-				if (!isset($_SESSION['favorites'])){
-					$favoritesArray = array();	//create favorites array
-					$_SESSION['favorites'] = $favoritesArray;	//add array to session array
+				if(isset($_SESSION['favorites'])){
+					foreach($_SESSION['favorites'] as $item){
+						$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
+						$result = mysqli_query($con,$sql);
+						$row1 = mysqli_fetch_array($result);
+					}
 				}
-								
-				array_push($_SESSION['favorites'],$C_ID);
+				?>
+				<?php
+				if($row1['cardInfo']!=''){ ?>
+					<?php echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");?>
+					<br>
+					<?php
+					echo ($row1['C_NAME']);
+					?>
+					<br>
+					<?php
+					echo  'Price: ' . ($row1['PRICE']);
+					?>
+				<?php	
+				}
 				?>
 				</li>
-				
 			</ul>
 		<!-- </form> -->
 		</div>
