@@ -93,10 +93,10 @@
 		
 	  while($db_row = mysqli_fetch_array($result)) {
 		
-		  
+		  echo ($db_row[Member]);
 		  	 switch ($db_row[Member]) {
   			
-			 case user:
+			 case "user":
     			$role = $groups[0];
 			$second = $groups[1];
 			$third = $groups[2];
