@@ -12,11 +12,15 @@ include('../menu.php');
 		
 	echo ($select);
 	$group_result = mysqli_query($db,$select);
-    	$_SESSION['group'] = $group_result;
+		
+	echo ($group_result);
+		
+		
+   // 	$_SESSION['group'] = $group_result;
 	mysqli_close();
 	}
 
-  echo ("We have made it past with the group of " . $_SESSION['group']);
+ // echo ("We have made it past with the group of " . $_SESSION['group']);
 
 
 ?>
