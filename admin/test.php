@@ -17,7 +17,10 @@ include('../menu.php');
 	mysqli_close();
 	}
 
-  echo ("We have made it past with the group of " . $_SESSION['group']);
+  if ($_SESSION['group'] == 'user') {
+	echo ("Unauthorized, please try again!");	  
+  }
+	
 
 
 ?>
