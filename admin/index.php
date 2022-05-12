@@ -45,28 +45,20 @@
 
 <?php
 	include('../menu.php');
+	$login = "../uc5-login/index.php";
 
-
-	//If User Group isn't set, check the DB and update the session variable
+	//If User Group isn't set redirect to sign in page
 	if(!isset ($_SESSION['group'])){
-	$email = $_SESSION['email'];
-
-	//Connecting to DB and searching for user permission
-	include('../db_connection.php');
-	$select = "select Member from login where email_address = '$email'"; 
-	
-	//Looking through first result and setting the group session variable to it
-	$group_result = mysqli_query($db,$select);
-	$row = mysqli_fetch_row($group_result);
-	$_SESSION['group'] = $row[0];
-	mysqli_close();
+	header('Location: '. $login);
 	}
 
+	//If the group is just user, tell the user that they are unauthorized
   	if ($_SESSION['group'] == 'user') {
 	echo ("Unauthorized, please try again!");
-	  die;
+	 die;
   	}
 
+	//User Group is either admin or viewer
 	
 	//Querying the DB for login info
 	include('../db_connection.php');
