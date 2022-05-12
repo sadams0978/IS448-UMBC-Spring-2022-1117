@@ -127,7 +127,7 @@
 		<!--<button href = "case2.php?card = 'cardInfo'">Favorite</button>-->
 		
 		<!-- favorites submit button test -->
-		<?php $cardTest = $card[$i]; ?>
+		<?php $_SESSION['cardTest'] = $card[$i]; ?>
 		<input type = "hidden" name = "text" value = $cardTest[i]>
 		<button type="submit">Favorite</button>
 			
