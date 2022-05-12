@@ -15,10 +15,24 @@
 	{ 
 		method: "post", 
 		parameters: {email:email,group:group},
-		onSuccess: console.log("The user with e-mail of " + email + " was changed to group " + group),
-		onFailure: alert("We were unable to change the user's status, please try again")
+		onSuccess: logResult,
+	  	onFailure: displayErrorMessage
 	} 
 	);
       
       
    }
+
+
+	function displayErrorMessage () {
+	alert("We were unable to change the user group, please try again later");	
+		
+		
+	}
+
+
+	function logResult () {
+		
+	console.log("We were able to change the group of the user " + user);	
+		
+	}
