@@ -6,7 +6,7 @@ $group_result = 'user';
 	
 	//include('../db_connection.php');
 	
-	//$email = $_SESSION['email'];
+	$email = $_SESSION['email'];
 		
 	
 	$select = "select Member from login where email_address = '$email'"; 
