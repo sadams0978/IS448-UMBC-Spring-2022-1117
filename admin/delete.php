@@ -12,7 +12,7 @@
 	}
 
 	if ($_SESSION['group'] != 'admin') {	
-	header('Location: '. $adminPage);
+	echo ("Unauthorized, only admin users can delete users!");
 	die;	
 	}
 
