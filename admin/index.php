@@ -95,14 +95,8 @@
 			<td>$db_row[last_name]</td> 
 			<td>$db_row[date_of_birth]</td> 
 			<td><button id='$db_row[email_address]' onclick='buttonPressed(this)' > Delete </button></td>
-			<td> <select>        
-            		
-			<option value="user">User</option>
-           		<option value="viewer">Viewer</option>
-            		<option value="admin">Admin</option>
-      			
-			</select>
-    
+			<td> 
+			Future home of a select menu!
   			</td>");
 		      
 
