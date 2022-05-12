@@ -11,11 +11,8 @@
 	}
 
 	
-	$userGroup = $_SESSION['group'];
-
-	
 	//If the group is just user, tell the user that they are unauthorized
-  	if ($userGroup == 'admin') {
+  	if ($_SESSION['group'] == 'admin') {
 	deleteUser();	
 	
 	} else {
