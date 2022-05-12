@@ -72,17 +72,24 @@ include('../menu.php');
 	<div class="cart">
 	<p class="price">Price: <?php $price?><!--from sql & php-->
 	</p>
-	<p class="price">Quantity:<!--from sql & php-->
-		<select name= "addToCart"> <!-- with php depending on how many are in stock you can choose to add to inventory -->
+	
+	<form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>" id="amount"></form>
+		<select name= "addToCart" form="amount" id="selectAmount"> <!-- with php depending on how many are in stock you can choose to add to inventory -->
 			<?php
 			for ($i = 1; $i <= $quantity; $i++){
-				echo "<option value=”$i”>$i</option>";
+				echo "<option value="$i">$i</option>";
 			}
 			?>
 		</select>
 	</p>
+	
+	
+	<?php
+		$_SESSION['cart'][$c_id]['qty'] = $_POST['addToCart'];
+	?>
 		
-	<p><button type="submit" onclick="alert('Card Added to Shopping Card')">Add to cart</button><!--input into cart table to sql--></p>
+	<p><input type="submit" value = "Add to Cart" onclick="alert('Card Added to Shopping Card')"><!--input into cart table to sql--></p>
+	
 	</div>
 	
 </div>
