@@ -121,7 +121,7 @@
 				?>
 					<?php
 					$card_info = $_REQUEST['i'];
-					echo ($card_info);
+					print ($card_info);
 					?>
 				<?php
 				}
