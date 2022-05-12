@@ -37,8 +37,16 @@ if (mysqli_num_rows($result) == 0) {
    
   if  ( ($db_email == $email) && ($db_password == $password) ){
    
-   //Sets session variable
-   $_SESSION['email'] = $email;
+	$selectGroup = "select Member from login where email_address = '$email'"; 
+	
+	//Looking through the result and setting the group session variable to it
+	$group_result = mysqli_query($db,$selectGroup);
+	$group_row = mysqli_fetch_row($group_result);
+	  
+   	//Sets session variables
+	  $_SESSION['email'] = $email;
+	  $_SESSION['group'] = $group_row[0];
+	
    header('Location: '. $homepage);
    
   } else header('Location: '. $login);
