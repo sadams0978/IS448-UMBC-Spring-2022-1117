@@ -1,7 +1,7 @@
 <?php
 include('../menu.php');
 
-//$group_result = 'user';
+
 //If User Group isn't set, check the DB and update the session variable
 	if(!isset ($_SESSION['group'])){
 	$email = $_SESSION['email'];
@@ -13,7 +13,8 @@ include('../menu.php');
 	echo ($select);
 	$group_result = mysqli_query($db,$select);
 		
-	echo ($group_result);
+	$row = mysqli_fetch_row($group_result);
+	echo($row[0]);
 		
 		
    // 	$_SESSION['group'] = $group_result;
