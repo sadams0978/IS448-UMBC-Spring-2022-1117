@@ -15,7 +15,6 @@
 	{ 
 		method: "post", 
 		parameters: {email:email,group:group},
-		onSuccess: logResult,
 	  	onFailure: displayErrorMessage
 	} 
 	);
@@ -25,14 +24,10 @@
 
 
 	function displayErrorMessage () {
-	alert("We were unable to change the user group, please try again later");	
-		
-		
-	}
+	//Alerts the user that they couldn't change the group
+	alert("The update was unsuccessful. Only Admin users can delete/modify users. ");
+	
+	//Reloads the Window to show the actual value
+	location.reload()
 
-
-	function logResult () {
-		
-	console.log("We were able to change the group of the user " + user);	
-		
 	}
