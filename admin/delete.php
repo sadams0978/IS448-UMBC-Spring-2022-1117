@@ -2,11 +2,22 @@
 
 	//Only Authorized Users can access this admin page
 	include('../menu.php');
-	
-	if ($_SESSION['email'] !== "sam@arlcyber.me") {
-	header("Location: ../404.html");
-	exit();
+		
+	$adminPage = "index.php"	
+
+
+	if(!isset ($_SESSION['group'])){
+	header('Location: '. $adminPage);
+	die;		
 	}
+
+	if ($_SESSION['group'] != 'admin') {	
+	header('Location: '. $adminPage);
+	die;	
+	}
+
+
+	
 	
 	include('../db_connection.php');
 	$userEmail = $_POST['userEmail'];
