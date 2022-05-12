@@ -14,9 +14,9 @@
   new Ajax.Request( "group.php", 
 	{ 
 		method: "post", 
-		parameters: {email:email,group:group},
-		onSuccess: console.log("This was successful"),
-		onFailure: alert("We were unable to change the user's status, please try again")
+		parameters: {email:email,group:group}
+		//onSuccess: console.log("This was successful"),
+		//onFailure: alert("We were unable to change the user's status, please try again")
 	} 
 	);
       
