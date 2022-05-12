@@ -94,9 +94,9 @@
 		  echo ($db_row[Member]);
 		  	 
 		  
-		 $role = "user";
-		 $second = "viewer";
-		 $third = "admin";
+		 $role = user;
+		 $second = viewer;
+		 $third = admin;
 		  
 		  
 		  print("<tr>");
