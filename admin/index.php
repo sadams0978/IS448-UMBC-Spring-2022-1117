@@ -82,6 +82,7 @@
         <th> Last Name </th>
 	<th> Date of Birth </th>
 	<th> <i class="fa-solid fa-delete-left"></i> Delete User </th>
+	<th> Change User Permissions </th>
 	</tr>
 
 
@@ -94,7 +95,15 @@
 			<td>$db_row[last_name]</td> 
 			<td>$db_row[date_of_birth]</td> 
 			<td><button id='$db_row[email_address]' onclick='buttonPressed(this)' > Delete </button></td>
-			");
+			<td> <select>        
+            		
+			<option value="user">User</option>
+           		<option value="viewer">Viewer</option>
+            		<option value="admin">Admin</option>
+      			
+			</select>
+    
+  			</td>");
 		      
 
 		
