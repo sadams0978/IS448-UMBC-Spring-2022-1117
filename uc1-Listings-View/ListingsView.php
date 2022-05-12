@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include('../db_connection.php');
     $constructed_query = "SELECT * FROM STOCK";
 	$result = mysqli_query($db, $constructed_query);
