@@ -15,8 +15,8 @@
 	{ 
 		method: "post", 
 		parameters: {email:email,group:group}
-		//onSuccess: console.log("This was successful"),
-		//onFailure: alert("We were unable to change the user's status, please try again")
+		onSuccess: console.log("The user with e-mail of " + email + " was changed to group " + group),
+		onFailure: alert("We were unable to change the user's status, please try again")
 	} 
 	);
       
