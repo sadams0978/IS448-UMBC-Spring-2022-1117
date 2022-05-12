@@ -89,12 +89,29 @@
 		
      <?php
 		
-		$group = "user";
 		$second = "viewer";
-		$third = "admin";		
-		  
+		$third = "admin";
+		
+		
 	  while($db_row = mysqli_fetch_array($result)) {
 		
+		$group = $db_row[Member];
+		  
+		switch ($group) {
+  		case  'user':
+		$second = 'viewer';
+		$third = 'admin';
+		break;
+				
+  		case 'viewer':
+   		$second = 'user';
+		$third = 'admin';
+    		break;
+				
+  		case 'admin':
+   		$second = 'viewer';
+		$third = 'user';
+   		 break;
 		  
 		  
 		  print("<tr>");
