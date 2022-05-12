@@ -116,8 +116,14 @@
 				'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
 				
 				<?php
-				$text=$_POST['text'];
-				echo $text;
+				if (isset($_REQUEST['i'])){
+				?>
+					<?php
+					$card_info = $_REQUEST['i'];
+					echo ($card_info);
+					?>
+				<?php
+				}
 				?>
 				</li>
 				
