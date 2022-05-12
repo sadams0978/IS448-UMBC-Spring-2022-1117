@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
 	include('../db_connection.php');
