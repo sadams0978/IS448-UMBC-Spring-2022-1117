@@ -74,7 +74,10 @@ if (empty($email) or empty($password)) {
      $result = mysqli_query($db, $select);
 if (mysqli_num_rows($result) == 0) {
  	  echo ("The Username or Password is incorrect. Please Try again");
-	  //header('Location: '. $login);
+	  mysqli_close($db);
+	die;
+	
+	
 }
 
   
@@ -98,8 +101,9 @@ if (mysqli_num_rows($result) == 0) {
    	header('Location: '. $homepage);
    
   } else 
-	  echo ("The Username or Password is incorrect. Please Try again");
-	 // header('Location: '. $login);
+	 echo ("The Username or Password is incorrect. Please Try again");
+	  mysqli_close($db);
+	die;
   
   }
   
