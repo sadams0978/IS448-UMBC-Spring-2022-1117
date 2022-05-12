@@ -20,9 +20,7 @@
 	
 	} else {
 		
-	echo ("<h1>Unauthorized!</h1>");
-	echo ("<br>");
-	echo ("You are unauthorized to delete the user " . $_POST['userEmail']);
+	echo ("Unauthorized!");
 	echo ("Please try again later.");
 	die;
 		
@@ -38,8 +36,7 @@
 
 	mysqli_query($db, $delete);
 	header('Location: '. $admin);
-	mysqli_close($db);	
-	die;
+	mysqli_close($db);
 		
 	}
 	
