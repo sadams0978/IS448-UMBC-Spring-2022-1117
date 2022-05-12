@@ -89,15 +89,22 @@
 		
      <?php
 		
-		$second = "viewer";
-		$third = "admin";
-		
-		
-	  while($db_row = mysqli_fetch_array($result)) {
+	while($db_row = mysqli_fetch_array($result)) {
 		
 		$group = $db_row['Member'];
-		  $second = "Second";
-		  $third = "Third";
+		if ($group == "user") {
+		$second = "viewer";
+		$third = "admin";	
+			
+		} else if ($group == "viewer") {
+		$second = "user";
+		$third = "admin";
+			
+			
+		} else {
+		$second = "user";	
+		$third = "viewer";	
+		}
 		  
 		  print("<tr>");
 		print("<td> $db_row[email_address] </td>	
