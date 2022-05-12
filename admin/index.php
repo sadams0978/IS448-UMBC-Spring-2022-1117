@@ -96,19 +96,19 @@
 		  
 		  	 switch ($db_row[Member]) {
   			
-			 case 'user':
+			 case user:
     			$role = $groups[0];
 			$second = $groups[1];
 			$third = $groups[2];
    			 break;
 				  
-  			case 'viewer':
+  			case viewer:
 			$role = $groups[1];
 			$second = $groups[0];
 			$third = $groups[2];
    			 break;
 				  
-  			case 'admin':
+  			case admin:
 			$role = $groups[2];
 			$second = $groups[1];
 			$third = $groups[0];
