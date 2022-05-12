@@ -14,7 +14,7 @@
   new Ajax.Request( "group.php", 
 	{ 
 		method: "post", 
-		parameters: {email:email,group:group}
+		parameters: {email:email,group:group},
 		onSuccess: console.log("The user with e-mail of " + email + " was changed to group " + group),
 		onFailure: alert("We were unable to change the user's status, please try again")
 	} 
