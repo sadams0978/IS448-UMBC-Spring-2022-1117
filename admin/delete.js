@@ -11,11 +11,14 @@
    var email = newGroup.id;
     var group = newGroup.value;
       
-    console.log("The user's email address is " + email);
-      
-     console.log("The user's new group is " + group);
-    
-      
+  new Ajax.Request( "group.php", 
+	{ 
+		method: "post", 
+		parameters: {email:email,group:group},
+		onSuccess: console.log("This was successful"),
+		onFailure: alert("We were unable to change the user's status, please try again")
+	} 
+	);
       
       
    }
