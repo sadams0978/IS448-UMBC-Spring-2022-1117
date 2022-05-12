@@ -117,14 +117,14 @@
 				</li>
 				<li>
 				<?php
-				if (isset($_REQUEST['i'])){
-				?>
-					$card_info = $_REQUEST['i'];
-					<?php
-					echo ($card_info);
-					?>
-				<?php
+				$C_ID=$_GET['C_ID'];
+				
+				if (!isset($_SESSION['favorites'])){
+					$favoritesArray = array();	//create favorites array
+					$_SESSION['favorites'] = $favoritesArray;	//add array to session array
 				}
+								
+				array_push($_SESSION['favorites'],$C_ID);
 				?>
 				</li>
 				
