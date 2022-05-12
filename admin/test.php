@@ -5,7 +5,8 @@
 	//if(!isset ($_SESSION['group'])){
 	
 	//include('../db_connection.php');
-	
+	include('../menu.php');
+
 	$email = $_SESSION['email'];
 		
 	echo ($email);
