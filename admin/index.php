@@ -63,7 +63,7 @@
 	//Querying the DB for login info
 	include('../db_connection.php');
 
-	$constructed_query = "SELECT email_address, first_name, last_name, date_of_birth FROM login;";
+	$constructed_query = "SELECT email_address, first_name, last_name, date_of_birth, Member FROM login;";
 	$result = mysqli_query($db, $constructed_query);
 
 	$num_rows = mysqli_num_rows($result);
@@ -96,8 +96,8 @@
 			<td>$db_row[date_of_birth]</td> 
 			<td><button id='$db_row[email_address]' onclick='buttonPressed(this)' > Delete </button></td>
 			<td> 
-			<select>        
-			<option value='user'>User</option>
+			<select>
+			<option value='$db_row[Member]' selected > '$db_row[Member]' </option>
            		<option value='viewer'>Viewer</option>
             		<option value='admin'>Admin</option>
       			
