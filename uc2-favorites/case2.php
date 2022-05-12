@@ -119,8 +119,8 @@
 				<?php
 				if (isset($_REQUEST['i'])){
 				?>
-					<?php
 					$card_info = $_REQUEST['i'];
+					<?php
 					print ($card_info);
 					?>
 				<?php
