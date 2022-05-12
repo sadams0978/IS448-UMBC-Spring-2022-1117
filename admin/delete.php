@@ -18,7 +18,14 @@
   	if ($userGroup == 'admin') {
 	deleteUser();	
 	
-	} 
+	} else {
+		
+	echo ("<h1>Unauthorized!</h1>");
+	echo ("<br>");
+	echo ("You are unauthorized to perform this action. Please try again later. ")
+	
+		
+	}
 
 
 	function deleteUser () {
