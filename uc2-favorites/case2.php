@@ -13,7 +13,7 @@
 
 	array_push($_SESSION['cards'],$c_id);
 
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_id'";
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID=" .$c_id;
 
 	$result = mysqli_query($db, $constructed_query);
 
