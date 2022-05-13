@@ -13,8 +13,7 @@
     <title>Card Listings</title>
 </head>
 <body>
-
-	<?php
+<?php
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
 	$_SESSION['category'] = $_POST["category"];
@@ -22,13 +21,17 @@
 	$_SESSION['finish'] = $_POST["finish"];
 	$_SESSION['composition'] = $_POST["composition"];
 	$_SESSION['year'] = $_POST["year"];
-	$category = $_SESSION['category'];
 	
-	$constructed_query = "SELECT * FROM STOCK WHERE C_CATEG = *";
+	
+	$category = $_SESSION['category'];
+	echo $category;
+	
+
+
+	$constructed_query = "SELECT * FROM STOCK";
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
-	echo $constructed_query;
 	?>
     	
 <p class="spacer"></p>
@@ -40,7 +43,7 @@
 		<label for="category"> Category:</label> 
         <!--from sql & php-->
 			<select name= "category" id="category"> 
-				<option value="*">Select Category</option> 
+				<option value="*" disabled selection>Select Category</option> 
         <!-- acts as place holder prior to user interacting with element--> 
 				<option value="Pokemon">Pokemon</option>
 				<option value="Yu Gi Oh">Yu Gi Oh</option>
@@ -55,7 +58,7 @@
 		<label for="condition"> Condition:</label> 
         <!--from sql & php-->
 			<select name= "condition" id="condition"> 
-				<option value="*">Select Condition</option>
+				<option value="*" disabled selection >Select Condition</option>
 				<option value="Poor">Poor</option>
 				<option value="Average">Average</option>
 				<option value="Great">Great</option>
@@ -67,7 +70,7 @@
 		<label for="finish"> Finish:</label> 
         <!--from sql & php-->
 			<select name= "finish" id="finish"> 
-				<option value="*">Select Finish</option>
+				<option value="*" disabled selection >Select Finish</option>
 				<option value="Matte">Matte</option>
 				<option value="Satin">Satin</option>
 				<option value="Gloss">Gloss</option>
@@ -79,7 +82,7 @@
 		<label for="composition"> Composition:</label> 
         <!--from sql & php-->
 			<select name= "composition" id="composition"> 
-				<option value="*">Select Composition</option>
+				<option value="*" disabled selection >Select Composition</option>
 				<option value="Paper Board">Paper Board</option>
 				<option value="Thick Paper">Thick Paper</option>
 				<option value="Plastic">Plastic</option>
@@ -92,7 +95,7 @@
 		<label for="year"> Year:</label> 
         <!--from sql & php-->
 			<select name= "year" id="year"> 
-				<option value="*">Select Year</option>
+				<option value="*" disabled selection>Select Year</option>
 				<option>Select Year</option>
             	<?php
                 for($year = 1980; $year <=2022; $year++){
@@ -119,6 +122,7 @@
         ?>
 	</div>
     <!--FILTER Section Over--> 
+    
 
     <!--CARD DISPLAY Section--> 
 	<div class="cards">
