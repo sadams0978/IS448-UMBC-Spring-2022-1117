@@ -3,9 +3,9 @@
 	include('../db_connection.php');
 
 		//$c_id = 1;
-	$C_ID = $_GET['C_ID'];
+	$c_id = $_GET['C_ID'];
 
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$C_ID'";
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_id'";
 
 	$result = mysqli_query($db, $constructed_query);
 
