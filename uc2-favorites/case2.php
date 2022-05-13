@@ -130,7 +130,7 @@
 				?>
 				<br>
 				<?php
-				echo ($name);
+				echo $card['C_NAME'];
 				?>
 				<br>
 				<?php
