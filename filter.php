@@ -1,7 +1,7 @@
 <p class="spacer"></p>
 	<div class ="cardDetailsContainer"> 
 	<h2> Filters </h2>
-        <form action="ListingsView.php" method="POST" name="Filter">
+        <form action="uc1-Listings-View/ListingsView.php" method="POST" name="Filter">
 		
         <!--Enter card category --> 
 		<label for="category"> Category:</label> 
