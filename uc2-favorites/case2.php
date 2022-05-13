@@ -2,7 +2,8 @@
 	include('../menu.php');
 	include('../db_connection.php');
 
-		$c_id = 1;
+		//$c_id = 1;
+	$c_id = $_GET['C_ID'];
 
 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_id'";
 
@@ -31,7 +32,7 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset = "utf-8">
+		<meta charset = "utf-8" content = "1;url = ListingsView.php"/>
 		<link rel = "stylesheet" type = "text/css" href = "../root.css"/>
 		<link rel = "stylesheet" type = "text/css" href = "uc2-favorites.css"/>
 		<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
