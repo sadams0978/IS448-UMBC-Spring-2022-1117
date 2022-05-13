@@ -28,6 +28,7 @@
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
+	echo $constructed_query;
 	?>
     	
 <p class="spacer"></p>
@@ -54,7 +55,7 @@
 		<label for="condition"> Condition:</label> 
         <!--from sql & php-->
 			<select name= "condition" id="condition"> 
-				<option value="*" disabled selected>Select Condition</option>
+				<option value="*">Select Condition</option>
 				<option value="Poor">Poor</option>
 				<option value="Average">Average</option>
 				<option value="Great">Great</option>
@@ -66,7 +67,7 @@
 		<label for="finish"> Finish:</label> 
         <!--from sql & php-->
 			<select name= "finish" id="finish"> 
-				<option value="*" disabled selected>Select Finish</option>
+				<option value="*">Select Finish</option>
 				<option value="Matte">Matte</option>
 				<option value="Satin">Satin</option>
 				<option value="Gloss">Gloss</option>
@@ -78,7 +79,7 @@
 		<label for="composition"> Composition:</label> 
         <!--from sql & php-->
 			<select name= "composition" id="composition"> 
-				<option value="*" disabled selected>Select Composition</option>
+				<option value="*">Select Composition</option>
 				<option value="Paper Board">Paper Board</option>
 				<option value="Thick Paper">Thick Paper</option>
 				<option value="Plastic">Plastic</option>
@@ -91,7 +92,7 @@
 		<label for="year"> Year:</label> 
         <!--from sql & php-->
 			<select name= "year" id="year"> 
-				<option value="*" disabled selected>Select Year</option>
+				<option value="*">Select Year</option>
 				<option>Select Year</option>
             	<?php
                 for($year = 1980; $year <=2022; $year++){
