@@ -122,11 +122,11 @@
 				?>
 				<br>
 				<?php
-				echo ($card['C_NAME']);
+				echo '$name';
 				?>
 				<br>
 				<?php
-				echo  'Price: ' . ($card['PRICE']);
+				echo  'price';
 				?>
 				<br>
 				<!-- button to remove card from favorites -->
