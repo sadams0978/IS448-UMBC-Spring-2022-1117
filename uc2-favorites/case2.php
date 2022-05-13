@@ -6,6 +6,13 @@
 		//$c_id = 1;
 	$c_id = $_GET['C_ID'];
 
+	if (!isset($_SESSION['cards'])){
+		$cardsArr = array();
+		$_SESSION['cards'] = $cardsArr;
+	}
+
+	array_push($_SESSION['cards'],$c_id);
+
 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_id'";
 
 	$result = mysqli_query($db, $constructed_query);
@@ -123,7 +130,7 @@
 				?>
 				<br>
 				<?php
-				echo ($_SESSION['name']);
+				echo ($name);
 				?>
 				<br>
 				<?php
