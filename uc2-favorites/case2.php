@@ -17,10 +17,10 @@
 
 	$result = mysqli_query($db, $constructed_query);
 
-	if(!$result){
-		$error = mysqli_error($db);
-		exit;
-	}
+	//if(!$result){
+	//	$error = mysqli_error($db);
+	//	exit;
+	//}
 
 	$card = mysqli_fetch_array($result);
 
