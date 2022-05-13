@@ -8,8 +8,13 @@
 
 }
 
+.displayArea {
+
+
+}
+
 ul.cardDisplay{
-	float:right;
+	float: left;
 	margin: 8px;
 	background-color: antiquewhite;
 }
@@ -21,6 +26,6 @@ li {
 
 }
 .cards{
-	float:right;
+	float: left;
 	margin-bottom: 8px;
 } 
