@@ -13,7 +13,22 @@
     <title>Card Listings</title>
 </head>
 <body>
+
+	<?php
+	// Includes our menu bar, instead of copying and pasting through the pages
+	include('../menu.php');
+	$_SESSION['category'] = $_POST["category"];
+	$_SESSION['condition'] = $_POST["condition"];
+	$_SESSION['finish'] = $_POST["finish"];
+	$_SESSION['composition'] = $_POST["composition"];
+	$_SESSION['year'] = $_POST["year"];
 	
+	$constructed_query = "SELECT * FROM STOCK";
+	$result = mysqli_query($db, $constructed_query);
+	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+	}
+	?>
+    	
 <p class="spacer"></p>
 	<div class ="cardDetailsContainer"> 
 	<h2> Filters </h2>
@@ -103,21 +118,6 @@
 	</div>
     <!--FILTER Section Over--> 
 
-	<?php
-	// Includes our menu bar, instead of copying and pasting through the pages
-	include('../menu.php');
-	$_SESSION['category'] = $_POST["category"];
-	$_SESSION['condition'] = $_POST["condition"];
-	$_SESSION['finish'] = $_POST["finish"];
-	$_SESSION['composition'] = $_POST["composition"];
-	$_SESSION['year'] = $_POST["year"];
-	
-	$constructed_query = "SELECT * FROM STOCK";
-	$result = mysqli_query($db, $constructed_query);
-	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
-	}
-	?>
-    
     <!--CARD DISPLAY Section--> 
 	<div class="cards">
 		<ul class="cardDisplay">
