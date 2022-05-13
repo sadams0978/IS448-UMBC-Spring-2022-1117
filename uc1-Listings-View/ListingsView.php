@@ -19,18 +19,15 @@
 	include('../menu.php');
 	include('../filter.php');
 	$_SESSION['category'] = $_POST["category"];
-	$catergory = $_POST["category"];
-	$condition = $_POST["condition"];
-	$finish = $_POST["finish"];
-	$composition = $_POST["composition"];
-	$year = $_POST["year"];
+	$_SESSION['condition'] = $_POST["condition"];
+	$_SESSION['finish'] = $_POST["finish"];
+	$_SESSION['composition'] = $_POST["composition"];
+	$_SESSION['year'] = $_POST["year"];
 	
 	$constructed_query = "SELECT * FROM STOCK";
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
-	echo $_SESSION['email'];
-	echo $_SESSION['category'];
 	?>
     
     <!--CARD DISPLAY Section--> 
