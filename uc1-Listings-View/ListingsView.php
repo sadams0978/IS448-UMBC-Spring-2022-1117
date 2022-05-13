@@ -51,6 +51,7 @@
 	?>
     	
 <p class="spacer"></p>
+	
 	<div class ="cardDetailsContainer"> 
 	<h2> Filters </h2>
         <form action="ListingsView.php" method="POST" name="Filter">
@@ -135,11 +136,9 @@
             echo "<br>";
             echo "Year: " . $_SESSION['year'];
         ?>
-	</div>
     <!--FILTER Section Over--> 
 
     <!--CARD DISPLAY Section--> 
-	<div class="cards">
 		<ul class="cardDisplay">
 		<?php
 		for($i = 0; $i < count($card); $i++){
