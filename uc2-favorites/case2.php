@@ -1,4 +1,5 @@
 <?php
+	session_start(); 
 	include('../menu.php');
 	include('../db_connection.php');
 
@@ -122,7 +123,7 @@
 				?>
 				<br>
 				<?php
-				echo "$name";
+				echo ($_SESSION['name']);
 				?>
 				<br>
 				<?php
