@@ -3,17 +3,13 @@
   border-radius: 5px 30px;
   padding: 8px;
   padding-bottom: 29%;
+margin-right: 100px;
   background-color: white;
   float: left;
 }
 
-.displayArea {
-
-
-}
-
 ul.cardDisplay{
-	margin-left: 20px;
+	padding-left: 20px;
 	float: up;
 	margin: 8px;
 	background-color: antiquewhite;
