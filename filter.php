@@ -71,5 +71,18 @@
 
             <input type="submit" value="Submit"/>
         </form>
+        <?php
+            echo "Your current filters are:";
+            echo '\n';
+            echo "Category: " . $_SESSION['category'] ;
+            echo '\n';
+            echo "Category: " . $_SESSION['condition'];
+            echo '\n';
+            echo "Category: " . $_SESSION['finish'];
+            echo '\n';
+            echo "Category: " . $_SESSION['composition'];
+            echo '\n';
+            echo "Category: " . $_SESSION['year'];
+        ?>
 	</div>
     <!--FILTER Section Over--> 
