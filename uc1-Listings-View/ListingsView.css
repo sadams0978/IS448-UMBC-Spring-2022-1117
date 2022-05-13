@@ -9,7 +9,7 @@
 }
 
 ul.cardDisplay{
-	float:left;
+	float:right;
 	margin: 8px;
 	background-color: antiquewhite;
 }
@@ -21,6 +21,6 @@ li {
 
 }
 .cards{
-	float:left;
+	float:right;
 	margin-bottom: 8px;
 } 
