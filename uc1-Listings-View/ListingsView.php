@@ -108,8 +108,7 @@
 		?>
 		<li>
 		<?php
-		//echo ("<img src='blankcard.jpg'/>");  //commented out just in case 
-		echo <a href="card-details-Andrew-part3.php?c_id=$card[$i]['C_ID']"><img src='blankcard.jpg'/></a>; //added by Andrew so that card links to card desc.
+		echo ("<img src='blankcard.jpg'/>");
 		?>
 		<br>
 		<?php
@@ -120,12 +119,6 @@
 		echo  'Price: ' . ($card[$i]['PRICE']);
 		?>
 		<br>
-		<!-- button to add card as a favorite "dylan"-->
-		<!--<button href = "case2.php?card = 'cardInfo'">Favorite</button>-->
-		<?php
-		echo '<button href = "case2.php?C_ID='.$card[$i]['C_ID'].'">Favorite</button>';	
-		?>
-			
 		<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card[$i]['C_NAME']) . '\n' . 'Card Description: ' . ($card[$i]['C_DESC']) . '\n' . 'Card Quantity: ' . ($card[$i]['C_QUANTITY']) . '\n' . 'Card Category: ' . ($card[$i]['C_CATEG']) . '\n' . 'Card Condition: ' . ($card[$i]['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card[$i]['C_FINISH']) . '\n' . 'Card Composition: ' .($card[$i]['C_COMP']) . '\n' . 'Card Year: ' .($card[$i]['C_YEAR']) . '\n' . 'Card Price: ' . ($card[$i]['PRICE'])?>')">Card Details</button>
 		</li>
 		<?php
