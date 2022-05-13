@@ -49,7 +49,6 @@
 	?>
     	
 <p class="spacer"></p>
-	<div class ="displayArea"> 
 	<div class ="cardDetailsContainer"> 
 	<h2> Filters </h2>
         <form action="ListingsView.php" method="POST" name="Filter">
@@ -165,7 +164,6 @@
 		}
 		?>
 		</ul>
-	</div>
 	</div>
     <!--CARD DISPLAY Section Over--> 
 
