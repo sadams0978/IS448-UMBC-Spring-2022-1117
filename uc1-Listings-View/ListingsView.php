@@ -1,11 +1,5 @@
 <?php
     	include('../db_connection.php');
-	include('../filter.php');
-	$catergory = $_POST["category"];
-	$condition = $_POST["condition"];
-	$finish = $_POST["finish"];
-	$composition = $_POST["composition"];
-	$year = $_POST["year"];
     	$constructed_query = "SELECT * FROM STOCK";
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
@@ -27,6 +21,12 @@
 	<?php
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
+	include('../filter.php');
+	$catergory = $_POST["category"];
+	$condition = $_POST["condition"];
+	$finish = $_POST["finish"];
+	$composition = $_POST["composition"];
+	$year = $_POST["year"];
 	?>
     
     <!--CARD DISPLAY Section--> 
