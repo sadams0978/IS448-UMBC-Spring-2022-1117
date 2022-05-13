@@ -23,6 +23,12 @@
 	$_SESSION['composition'] = $_POST["composition"];
 	$_SESSION['year'] = $_POST["year"];
 	
+	if (!empty($_SESSION['category'])) {
+		echo "NICE";
+	}
+	else{
+		echo "BOOOo";
+	}
 	
 	$category = $_SESSION['category'];
 	echo $category;
