@@ -122,11 +122,11 @@
 				?>
 				<br>
 				<?php
-				echo '$name';
+				echo "$name";
 				?>
 				<br>
 				<?php
-				echo  'price';
+				echo  "$price";
 				?>
 				<br>
 				<!-- button to remove card from favorites -->
