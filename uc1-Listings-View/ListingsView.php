@@ -24,11 +24,10 @@
 	$_SESSION['year'] = $_POST["year"];
 	
 	if (!empty($_SESSION['category'])) {
-		echo "NICE";
+		$category = "WHERE C_CATEG = '$_SESSION[category]'";
 	}
-	else{
-		echo "BOOOo";
-	}
+
+	echo $category;
 	
 	$category = $_SESSION['category'];
 	echo $category;
