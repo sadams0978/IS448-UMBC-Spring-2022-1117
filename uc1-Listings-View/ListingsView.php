@@ -5,27 +5,6 @@
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
-
-	$name = $card['C_NAME'];
-	$description = $card['C_DESC'];
-	$quantity = $card['C_QUANTITY'];
-	$categ = $card['C_CATEG'];
-	$condition = $card['C_CONDITION'];
-	$finish = $card['C_FINISH'];
-	$comp = $card['C_COMP'];
-	$year = $card['C_YEAR'];
-	$price = $card['PRICE'];
-
-	//session variables
-	$_SESSION['name'] = $name;
-	$_SESSION['description'] = $description;
-	$_SESSION['quantity'] = $quantity;
-	$_SESSION['categ'] = $categ;
-	$_SESSION['condition'] = $condition;
-	$_SESSION['finish'] = $finish;
-	$_SESSION['comp'] = $comp;
-	$_SESSION['year'] = $year;
-	$_SESSION['price'] = $price;
 ?>
 <!doctype html>
 <html lang ="en">
