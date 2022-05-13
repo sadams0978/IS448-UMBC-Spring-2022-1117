@@ -150,24 +150,15 @@
 				
 				<li>
 				<?php
-				if(isset($_SESSION['favorites'])){
-					foreach($_SESSION['favorites'] as $item){
-						$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
-						$result = mysqli_query($con,$sql);
-						$row1 = mysqli_fetch_array($result);
-					}
-				}
-				?>
-				<?php
-				if($row1['cardInfo']!=''){ ?>
+				if($card['cardInfo']!=''){ ?>
 					<?php echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");?>
 					<br>
 					<?php
-					echo ($row1['C_NAME']);
+					echo ($card['C_NAME']);
 					?>
 					<br>
 					<?php
-					echo  'Price: ' . ($row1['PRICE']);
+					echo  'Price: ' . ($card['PRICE']);
 					?>
 				<?php	
 				}
