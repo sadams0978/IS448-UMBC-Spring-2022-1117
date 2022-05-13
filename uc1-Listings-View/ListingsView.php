@@ -104,15 +104,15 @@
         </form>
         <?php
             echo "Your current filters are:";
-            echo '\n';
+            echo "<br>";
             echo "Category: " . $_SESSION['category'] ;
-            echo '\n';
+            echo "<br>";
             echo "Condition: " . $_SESSION['condition'];
-            echo '\n';
+            echo "<br>";
             echo "Finish: " . $_SESSION['finish'];
-            echo '\n';
+            echo "<br>";
             echo "Composition: " . $_SESSION['composition'];
-            echo '\n';
+            echo "<br>";
             echo "Year: " . $_SESSION['year'];
         ?>
 	</div>
