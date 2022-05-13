@@ -24,7 +24,7 @@
 	$composition = $_POST["composition"];
 	$year = $_POST["year"];
 	
-	$constructed_query = "SELECT * FROM STOCK";
+	$constructed_query = "SELECT * FROM STOCK WHERE year='$year' ";
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
