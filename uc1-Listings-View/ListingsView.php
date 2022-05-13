@@ -23,27 +23,26 @@
 	$_SESSION['composition'] = $_POST["composition"];
 	$_SESSION['year'] = $_POST["year"];
 	
-		
 	if (!empty($_SESSION['category'])) {
-		$category = "WHERE C_CATEG = '$_SESSION[category]'";
+		$category = "AND C_CATEG = '$_SESSION[category]'";
 	}
 	if (!empty($_SESSION['condition'])) {
-		$condition = "WHERE C_CONDITION = '$_SESSION[condition]'";
+		$condition = "AND C_CONDITION = '$_SESSION[condition]'";
 	}
 
 	if (!empty($_SESSION['finish'])) {
-		$finish = "WHERE C_FINISH = '$_SESSION[finish]'";
+		$finish = "AND C_FINISH = '$_SESSION[finish]'";
 	}
 
 	if (!empty($_SESSION['composition'])) {
-		$composition = "WHERE C_COMP = '$_SESSION[composition]'";
+		$composition = "AND C_COMP = '$_SESSION[composition]'";
 	}
 
 	if (!empty($_SESSION['year'])) {
-		$year = "WHERE C_YEAR = '$_SESSION[year]'";
+		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 
-	$constructed_query = "SELECT * FROM STOCK $category $condition $finish $composition $year";
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
 
 	echo $constructed_query;
 	$result = mysqli_query($db, $constructed_query);
