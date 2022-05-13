@@ -5,6 +5,7 @@
   padding-bottom: 29%;
   background-color: white;
   float: left;
+position: absolute;
 }
 
 .displayArea {
@@ -13,8 +14,7 @@
 }
 
 ul.cardDisplay{
-	position: absolute;
-	float: right;
+	float: left;
 	margin: 8px;
 	background-color: antiquewhite;
 }
