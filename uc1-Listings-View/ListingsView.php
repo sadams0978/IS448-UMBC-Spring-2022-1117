@@ -18,6 +18,7 @@
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
 	include('../filter.php');
+	$_SESSION['category'] = $_POST["category"];
 	$catergory = $_POST["category"];
 	$condition = $_POST["condition"];
 	$finish = $_POST["finish"];
@@ -29,6 +30,7 @@
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
 	echo $_SESSION['email'];
+	echo $_SESSION['category'];
 	?>
     
     <!--CARD DISPLAY Section--> 
