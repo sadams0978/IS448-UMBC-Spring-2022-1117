@@ -24,7 +24,7 @@
 	$_SESSION['year'] = $_POST["year"];
 	$category = $_SESSION['category'];
 	
-	$constructed_query = "SELECT * FROM STOCK WHERE C_CATEG = '$category'";
+	$constructed_query = "SELECT * FROM STOCK WHERE C_CATEG = *";
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
