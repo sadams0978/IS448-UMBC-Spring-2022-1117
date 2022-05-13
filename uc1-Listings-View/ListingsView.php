@@ -116,10 +116,6 @@
 		?>
 		<br>
 		<?php
-		echo ($card[$i]['C_ID']);
-		?>
-		<br>
-		<?php
 		echo  'Price: ' . ($card[$i]['PRICE']);
 		?>
 		<br>
