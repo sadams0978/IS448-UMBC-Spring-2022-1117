@@ -5,6 +5,7 @@
   padding-bottom: 29%;
   background-color: white;
   float: left;
+	position: absolute;
 
 }
 
@@ -14,12 +15,14 @@
 }
 
 ul.cardDisplay{
+	position: absolute;
 	float: left;
 	margin: 8px;
 	background-color: antiquewhite;
 }
 
 li {
+	position: absolute;
 	padding: 4px;
 	margin-top: 2px;
 	margin-bottom: 2px;
