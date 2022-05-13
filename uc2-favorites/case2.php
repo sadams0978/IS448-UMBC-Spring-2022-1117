@@ -114,17 +114,6 @@
 	
 		<div class = "cardsContainer">
 		<!-- <form action = "case2.php" method = "GET"> -->
-				<!-- load from home page -->
-				<?php
-				$C_ID=$_GET['C_ID'];
-				
-				if (!isset($_SESSION['favorites'])){
-					$favoritesArray = array();	//create favorites array
-					$_SESSION['favorites'] = $favoritesArray;	//add array to session array
-				}
-								
-				array_push($_SESSION['favorites'],$C_ID);
-				?>
 			<ul class = "cards">
 				
 				<li>
