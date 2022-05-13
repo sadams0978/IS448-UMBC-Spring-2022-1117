@@ -51,7 +51,6 @@
 	?>
     	
 <p class="spacer"></p>
-	<div class="cards">
 	<div class ="cardDetailsContainer"> 
 	<h2> Filters </h2>
         <form action="ListingsView.php" method="POST" name="Filter">
@@ -140,6 +139,7 @@
     <!--FILTER Section Over--> 
     
     <!--CARD DISPLAY Section--> 
+	<div class="cards">
 		<ul class="cardDisplay">
 		<?php
 		for($i = 0; $i < count($card); $i++){
@@ -157,6 +157,9 @@
 		echo  'Price: ' . ($card[$i]['PRICE']);
 		?>
 		<br>
+		<!-- <button href = "case2.php?C_ID='.$card[$i]['C_ID'].'" onclick = "alert('Added to Favorites')">Favorite</button> -->	
+		<a href="case2.php?c_id= <?php echo $card[$i]['C_ID']; ?>">Favorite</a>	
+		
 		<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card[$i]['C_NAME']) . '\n' . 'Card Description: ' . ($card[$i]['C_DESC']) . '\n' . 'Card Quantity: ' . ($card[$i]['C_QUANTITY']) . '\n' . 'Card Category: ' . ($card[$i]['C_CATEG']) . '\n' . 'Card Condition: ' . ($card[$i]['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card[$i]['C_FINISH']) . '\n' . 'Card Composition: ' .($card[$i]['C_COMP']) . '\n' . 'Card Year: ' .($card[$i]['C_YEAR']) . '\n' . 'Card Price: ' . ($card[$i]['PRICE'])?>')">Card Details</button>
 		</li>
 		<?php
