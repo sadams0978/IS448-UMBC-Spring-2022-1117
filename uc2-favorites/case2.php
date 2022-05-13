@@ -137,23 +137,6 @@
 				'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
 				
 				</li>
-				
-				<li>
-				<?php
-				if($card['cardInfo']!=''){ ?>
-					<?php echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");?>
-					<br>
-					<?php
-					echo ($card['C_NAME']);
-					?>
-					<br>
-					<?php
-					echo  'Price: ' . ($card['PRICE']);
-					?>
-				<?php	
-				}
-				?>
-				</li>
 			</ul>
 		<!-- </form> -->
 		</div>
