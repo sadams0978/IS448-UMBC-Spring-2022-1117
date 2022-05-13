@@ -3,13 +3,12 @@
   border-radius: 5px 30px;
   padding: 8px;
   padding-bottom: 29%;
-margin-right: 100px;
+margin-right: 20px;
   background-color: white;
   float: left;
 }
 
 ul.cardDisplay{
-	padding-left: 20px;
 	float: up;
 	margin: 8px;
 	background-color: antiquewhite;
