@@ -4,16 +4,16 @@
 	include('../db_connection.php');
 
 		//$c_id = 1;
-	$c_id = $_GET['C_ID'];
+	//$c_id = $_GET['C_ID'];
 
-	if (!isset($_SESSION['cards'])){
-		$cardsArr = array();
-		$_SESSION['cards'] = $cardsArr;
-	}
+	//if (!isset($_SESSION['cards'])){
+	//	$cardsArr = array();
+	//	$_SESSION['cards'] = $cardsArr;
+	//}
 
-	array_push($_SESSION['cards'],$c_id);
+	//array_push($_SESSION['cards'],$c_id);
 
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_id'";
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID=" .$_GET["C_ID"];
 
 	$result = mysqli_query($db, $constructed_query);
 
