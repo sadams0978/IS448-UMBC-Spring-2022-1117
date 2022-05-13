@@ -4,7 +4,7 @@
 	include('../db_connection.php');
 
 		//$c_id = 1;
-	$c_id = $_GET['C_ID'];
+	$c_id = $_GET['c_id'];
 
 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID= 'c_id'";
 
