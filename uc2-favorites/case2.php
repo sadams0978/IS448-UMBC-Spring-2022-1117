@@ -1,6 +1,8 @@
 <?php
-	session_start();
+	include('../menu.php');
 	include('../db_connection.php');
+
+		$c_id = 1;
 
 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_id'";
 
@@ -38,10 +40,6 @@
 	</head>
 	
 	<body>
-		<?php
-		// Includes our menu bar, instead of copying and pasting through the pages
-		include('../menu.php');
-		?>
 		
 		<!-- favorites section -->
 		<p class="spacer"></p>
