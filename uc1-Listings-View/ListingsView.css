@@ -14,7 +14,7 @@
 
 ul.cardDisplay{
 	position: absolute;
-	float: left;
+	float: right;
 	margin: 8px;
 	background-color: antiquewhite;
 }
