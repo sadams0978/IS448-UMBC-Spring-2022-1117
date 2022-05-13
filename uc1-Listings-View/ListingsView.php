@@ -28,13 +28,10 @@
 	}
 
 	echo $category;
-	
-	$category = $_SESSION['category'];
-	echo $category;
-	
 
+	$constructed_query = "SELECT * FROM STOCK $category";
 
-	$constructed_query = "SELECT * FROM STOCK";
+	echo $constructed_query;
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
