@@ -109,7 +109,8 @@
 		?>
 		<li>
 		<?php
-		echo ("<img src='blankcard.jpg'/>");
+		//echo ("<img src='blankcard.jpg'/>");  //commented out just in case 
+		echo <a href="card-details-Andrew-part3.php?c_id=$card[$i]['C_ID']"><img src='blankcard.jpg'/></a>; //added by Andrew so that card links to card desc.
 		?>
 		<br>
 		<?php
