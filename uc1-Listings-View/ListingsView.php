@@ -39,7 +39,7 @@
 		<label for="category"> Category:</label> 
         <!--from sql & php-->
 			<select name= "category" id="category"> 
-				<option value="*" disabled selected>Select Category</option> 
+				<option value="*">Select Category</option> 
         <!-- acts as place holder prior to user interacting with element--> 
 				<option value="Pokemon">Pokemon</option>
 				<option value="Yu Gi Oh">Yu Gi Oh</option>
