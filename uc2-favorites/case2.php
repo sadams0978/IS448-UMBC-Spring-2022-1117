@@ -81,7 +81,7 @@
 <p class="spacer"></p>
 	<div class ="cardDetailsContainer"> 
 	<h2> Filters </h2>
-        <form action="ListingsView.php" method="POST" name="Filter">
+        <form action="case2.php" method="POST" name="Filter">
 		
         <!--Enter card category --> 
 		<label for="category"> Category:</label> 
