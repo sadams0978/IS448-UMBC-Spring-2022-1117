@@ -157,7 +157,7 @@
 		<br>
 		
 		<!-- favorites button -->
-		<form action="case2.php" method="POST" name="Favorites">
+		<form action="case2.php" method="GET" name="Favorites">
 			<input type = "hidden" name="C_ID" value="<?php echo $card[$i]['C_ID'];?>">
 			<button type="submit">Favorite</button>
 		</form>
