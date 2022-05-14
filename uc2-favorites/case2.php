@@ -180,7 +180,7 @@
 				?>
 				<br>
 				<?php
-				echo  "$price";
+				echo  'To implement favorited cards using AJAX';
 				?>
 				<br>
 				<!-- button to remove card from favorites -->
