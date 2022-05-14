@@ -42,8 +42,7 @@
 	
 	<body>
 		
-		<!-- favorites section -->
-		<?php
+        <?php
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
 	$_SESSION['category'] = $_POST["category"];
@@ -77,6 +76,7 @@
 	}
 	?>
     	
+	<!-- favorites section -->
 <p class="spacer"></p>
 	<div class ="favoriteCardsContainer"> 
 	<h2> Filters </h2>
