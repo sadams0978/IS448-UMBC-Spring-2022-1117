@@ -44,74 +44,126 @@
 	<body>
 		
 		<!-- favorites section -->
-		<p class="spacer"></p>
-		<div class = "favoriteCardsContainer">
-			<h2> Filters: </h2>
-			<form action = "case-two.php" method = "POST" name = "Filter">
-				<label for = "category"> Category: </label>
-					<select name = "category" id = "category">
-						<option value="" disabled selected>Select your option</option>
-						<option value="1">Pokémon</option>
-						<option value="2">Yu Gi Oh</option>
-						<option value="3">Baseball</option>
-						<option value="4">Football</option>
-						<option value="5">Other</option>
-					</select>
-				
-				</br>	
-					
-				<label for="condition"> Condition:</label> 
-					<select name= "condition" id="condition"> 
-						<option value="" disabled selected>Select Condition</option>
-						<option value="1">Poor</option>
-						<option value="2">Average</option>
-						<option value="3">Great</option>
-						<option value="4">Mint</option>
-					</select>
-					
-				</br>	
+		<?php
+	// Includes our menu bar, instead of copying and pasting through the pages
+	include('../menu.php');
+	$_SESSION['category'] = $_POST["category"];
+	$_SESSION['condition'] = $_POST["condition"];
+	$_SESSION['finish'] = $_POST["finish"];
+	$_SESSION['composition'] = $_POST["composition"];
+	$_SESSION['year'] = $_POST["year"];
+	
+	if (!empty($_SESSION['category'])) {
+		$category = "AND C_CATEG = '$_SESSION[category]'";
+	}
+	if (!empty($_SESSION['condition'])) {
+		$condition = "AND C_CONDITION = '$_SESSION[condition]'";
+	}
 
-				<label for="finish"> Finish:</label> 
-					<select name= "finish" id="finish"> 
-						<option value="" disabled selected>Select Finish</option>
-						<option value="1">Matte</option>
-						<option value="2">Satin</option>
-						<option value="3">Gloss</option>
-						<option value="4">Other</option>
-					</select>	
-					
-				</br>
-				
-				<label for="composition"> Composition:</label> 
-					<select name= "composition" id="composition"> 
-						<option value="" disabled selected>Select Composition</option>
-						<option value="1">paperboard</option>
-						<option value="2">thick paper</option>
-						<option value="3">plastic</option>
-						<option value="4">metal</option>
-						<option value="5">other</option>
-					</select>
-		
-				</br>
-				
-				<label for="year"> Year:</label> 
-					<select name= "year" id="year"> 
-						<option value="" disabled selected>Select Year</option>
-						<option>Select Year</option>
-					<?php
-						for($year = 1980; $year <=2022; $year++){
-						echo "<option value=".$year.">".$year."</option>";
-					}
-					?>
-					</select>
-				</br>
-				
-				<input type="submit" value="Submit"/>
-				</br>
+	if (!empty($_SESSION['finish'])) {
+		$finish = "AND C_FINISH = '$_SESSION[finish]'";
+	}
 
-			</form>
+	if (!empty($_SESSION['composition'])) {
+		$composition = "AND C_COMP = '$_SESSION[composition]'";
+	}
+
+	if (!empty($_SESSION['year'])) {
+		$year = "AND C_YEAR = '$_SESSION[year]'";
+	}
+
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
+	$result = mysqli_query($db, $constructed_query);
+	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+	}
+	?>
+    	
+<p class="spacer"></p>
+	<div class ="cardDetailsContainer"> 
+	<h2> Filters </h2>
+        <form action="ListingsView.php" method="POST" name="Filter">
 		
-		</div>
+        <!--Enter card category --> 
+		<label for="category"> Category:</label> 
+        <!--from sql & php-->
+			<select name= "category" id="category"> 
+				<option value="">Select Category</option> 
+        <!-- acts as place holder prior to user interacting with element--> 
+				<option value="Pokemon">Pokemon</option>
+				<option value="Yu Gi Oh">Yu Gi Oh</option>
+				<option value="Baseball">Baseball</option>
+				<option value="Football">Football</option>
+				<option value="Hockey">Hockey</option>
+				<option value="Other">Other</option>
+			</select>
+		<br/>
+
+		<!--Enter card condition--> 
+		<label for="condition"> Condition:</label> 
+        <!--from sql & php-->
+			<select name= "condition" id="condition"> 
+				<option value="" >Select Condition</option>
+				<option value="Poor">Poor</option>
+				<option value="Average">Average</option>
+				<option value="Great">Great</option>
+				<option value="Mint">Mint</option>
+			</select>
+		<br/> 
+
+		<!--Enter card finish--> 
+		<label for="finish"> Finish:</label> 
+        <!--from sql & php-->
+			<select name= "finish" id="finish"> 
+				<option value="">Select Finish</option>
+				<option value="Matte">Matte</option>
+				<option value="Satin">Satin</option>
+				<option value="Gloss">Gloss</option>
+				<option value="Other">Other</option>
+			</select>
+		<br/>
+
+		<!-- Enter card composition--> 
+		<label for="composition"> Composition:</label> 
+        <!--from sql & php-->
+			<select name= "composition" id="composition"> 
+				<option value="">Select Composition</option>
+				<option value="Paper Board">Paper Board</option>
+				<option value="Thick Paper">Thick Paper</option>
+				<option value="Plastic">Plastic</option>
+				<option value="Metal">Metal</option>
+				<option value="Other">Other</option>
+			</select>
+            </br>
+
+        <!-- Enter card Year--> 
+		<label for="year"> Year:</label> 
+        <!--from sql & php-->
+			<select name= "year" id="year"> 
+				<option value="">Select Year</option>
+            	<?php
+                for($year = 1980; $year <=2022; $year++){
+                echo "<option value=".$year.">".$year."</option>";
+            }
+            ?>
+			</select>
+            </br>
+
+            <input type="submit" value="Submit"/>
+        </form>
+        <?php
+            echo "Your current filters are:";
+            echo "<br>";
+            echo "Category: " . $_SESSION['category'] ;
+            echo "<br>";
+            echo "Condition: " . $_SESSION['condition'];
+            echo "<br>";
+            echo "Finish: " . $_SESSION['finish'];
+            echo "<br>";
+            echo "Composition: " . $_SESSION['composition'];
+            echo "<br>";
+            echo "Year: " . $_SESSION['year'];
+        ?>
+	</div>
 	
 		<div class = "cardsContainer">
 		<!-- <form action = "case2.php" method = "GET"> -->
