@@ -78,7 +78,7 @@
 	?>
     	
 <p class="spacer"></p>
-	<div class ="cardDetailsContainer"> 
+	<div class ="favoriteCardsContainer"> 
 	<h2> Filters </h2>
         <form action="case2.php" method="POST" name="Filter">
 		
