@@ -77,7 +77,7 @@ include('../menu.php');
 		<select name= "addToCart" form="amount" id="selectAmount"> <!-- with php depending on how many are in stock you can choose to add to inventory -->
 			<?php
 			for ($i = 1; $i <= $quantity; $i++){
-				echo "<option value="$i">$i</option>";
+				echo ("<option value='$i'>$i</option>");
 			}
 			?>
 		</select>
