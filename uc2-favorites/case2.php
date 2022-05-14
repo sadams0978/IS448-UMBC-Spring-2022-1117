@@ -3,28 +3,28 @@
 	include('../db_connection.php');
 
 		//$c_id = 1;
-	$C_ID = $_GET['C_ID'];
+// 	$C_ID = $_GET['C_ID'];
 
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID= 'C_ID'";
+// 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID= 'C_ID'";
 
-	$result = mysqli_query($db, $constructed_query);
+// 	$result = mysqli_query($db, $constructed_query);
 
-	if(!$result){
-		$error = mysqli_error($db);
-		exit;
-	}
+// 	if(!$result){
+// 		$error = mysqli_error($db);
+// 		exit;
+// 	}
 
-	$card = mysqli_fetch_array($result);
+// 	$card = mysqli_fetch_array($result);
 
-	$name = $card['C_NAME'];
-	$description = $card['C_DESC'];
-	$quantity = $card['C_QUANTITY'];
-	$categ = $card['C_CATEG'];
-	$condition = $card['C_CONDITION'];
-	$finish = $card['C_FINISH'];
-	$comp = $card['C_COMP'];
-	$year = $card['C_YEAR'];
-	$price = $card['PRICE'];
+// 	$name = $card['C_NAME'];
+// 	$description = $card['C_DESC'];
+// 	$quantity = $card['C_QUANTITY'];
+// 	$categ = $card['C_CATEG'];
+// 	$condition = $card['C_CONDITION'];
+// 	$finish = $card['C_FINISH'];
+// 	$comp = $card['C_COMP'];
+// 	$year = $card['C_YEAR'];
+// 	$price = $card['PRICE'];
 
 ?>
 
@@ -70,7 +70,9 @@
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
+	$C_ID=$_POST['C_ID'];
+		
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID = 'C_ID' $category $condition $finish $composition $year";
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
