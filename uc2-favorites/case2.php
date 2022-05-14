@@ -1,6 +1,5 @@
 <?php
-	//session_start(); 
-	include('../menu.php');
+
 	include('../db_connection.php');
 
 		//$c_id = 1;
