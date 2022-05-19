@@ -1,56 +1,57 @@
 function checkPassword () {
-
-	
 	//Variables
 	var pagePassword = document.getElementById("password");
 	var userPassword = pagePassword.value;
+	var secondPassword =  document.getElementById("password_verify").value;
  	var contains_uppercase = /[A-Z]+/; 
  	var contains_special_char = /\W+/;
  	var contains_digit = /\d+/;
+	var passwordMatch = false;
  
 
   	//Result Checking for conditions
-  
 	var result1 = contains_uppercase.test(userPassword);
 	var result2 = contains_special_char.test(userPassword);
 	var result3 = contains_digit.test(userPassword);
 	var passwordLength = userPassword.length;
 	
+	if (userPassword == secondPassword) {
+		passwordMatch == true;	
+	} 
 	
-	
+	if ((result1 && result2 && result3 && passwordLength && passwordMatch) == true) {
+	return true;
+	} else return false;
 	
 	if (result1) {
 	document.getElementById("upper_req").style.color="green"; 
-	return true;
 	} else {
 		document.getElementById("upper_req").style.color="red"; 	
 	}
 		
 		
 	if (result2) {
-	return true;
-	document.getElementById("special_req").style.color="green"; 	
+	document.getElementById("special_req").style.color="green";
 	} else {
 		document.getElementById("special_req").style.color="red"; 
-		return false;
 	}
 	
 	if (result3) {	
-	return true;
 	document.getElementById("digit_req").style.color="green"; 	
 	} else {
 		document.getElementById("digit_req").style.color="red";
-		return false;
 	}
 	
 	if (passwordLength >= 8) {
 	document.getElementById("char_req").style.color="green"; 
-		return true;
 	} else {
 		document.getElementById("char_req").style.color="red"; 	
-		return false;
 	}
-	
+
+
+	if (passwordMatch == false) {
+	document.getElementById("password_verify").style.color = "red";
+	}
 }
 
 
@@ -66,61 +67,27 @@ function hide () {
 }
 
 
-function secondVerify () {
-		var initial = document.getElementById("password").value;
-		var second =  document.getElementById("password_verify").value;
-	
-	
-	if (initial == second) {
-	document.getElementById("password_verify").style.color = "green";
-		return true;
-		
-	} else {
-	document.getElementById("password_verify").style.color = "red";
-		return false;
-			
-	}
-	
-}
-
-
-
-
-
-
 
 // Below Function Executes On Form Submit
 function formCheck (formName) {
 var result = false;
 
 if (formName == "passwordChange") {
-	result = passwordChangeCheck();
+	result = passwordCheck();
 	if (result) {
 	return true;	
 	} else {
 	return false;	
-	}
+	} 
 	
-} else {
+	
+}else {
 	result = newUserCheck();
 	if (result) {
 	return true;	
 	} else {
 	return false;	
 	}
-	
-}
-
-}
-
-function passwordChangeCheck () {
-if (checkPassword()) {
-return true;	
-} else {
-alert ("Please check your password and try again");
-return false;	
-
-}
 }
 
 
@@ -171,5 +138,3 @@ function checkEmail () {
 	}
 	
 }
-
-
