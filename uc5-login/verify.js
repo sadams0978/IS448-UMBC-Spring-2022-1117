@@ -78,11 +78,10 @@ var passwordResult = checkPassword();
 var nameResult = checkName();
 var emailResult = checkEmail();	
 	
-	if ( (passwordResult && nameResult && emailResult) == true) {
-	return true;
+	if ( (passwordResult || nameResult || emailResult) == false) {
+	return false;
 	} else {
-	return false;	
-	
+	return true;	
 	}
 
 }
