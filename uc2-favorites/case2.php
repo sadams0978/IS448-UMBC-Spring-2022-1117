@@ -77,7 +77,7 @@
 // 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 // 	}
 		
-	$c_ID = $_POST["c_id"];
+	$c_ID = $_POST['c_id'];
 	
 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$c_ID'";
 	
