@@ -31,7 +31,7 @@
     <input type="text" name="last_name" id="last_name" placeholder="Last Name">
     <input type="date" name="dob" id="dob">
 
-    <input type="email" name="email" id="email" placeholder="email-address">
+    <input type="text" name="email" id="email" placeholder="email-address">
     	<button type="button" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
     
     <input type="password" name="password" id="password" placeholder="Password" onfocus="visible()" onblur="hide()" onchange="checkPassword()">
