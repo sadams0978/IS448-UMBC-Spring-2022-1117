@@ -80,17 +80,11 @@ var passwordResult;
 	passwordResult == true;
 	
 	} else passwordResult == false;
-
 	
-	if (dateTest === false) {
-	return false;	
-		
-	}
-	
-	if ( (nameResult && emailResult && passwordResult) == true) {
-	return true;
+	if ( (nameResult || emailResult || passwordResult || dateTest) == false) {
+	return false;
 	} else {
-	return false;	
+	return true;	
 	}
 
 }
@@ -133,10 +127,6 @@ function checkDate () {
 	var userDate = document.getElementById("dob").value;
 	var isDate = /^\d{4}-\d{2}-\d{2}$/;
 	var dateTest = isDate.test(userDate);
-	
-	if (dateTest === false ) {
-	alert ("Please check your Date of Birth.");
-	}
 
 }
 
