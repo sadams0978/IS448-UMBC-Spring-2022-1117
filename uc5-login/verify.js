@@ -82,7 +82,7 @@ var passwordResult;
 	} else passwordResult == false;
 
 	
-	if ( (nameResult && emailResult && dateResult && passwordResult) == true) {
+	if ( (nameResult && emailResult) && (dateResult && passwordResult) == true) {
 	return true;
 	} else {
 	return false;	
