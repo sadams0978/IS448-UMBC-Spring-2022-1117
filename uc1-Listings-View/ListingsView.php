@@ -161,8 +161,10 @@
 		
 		<!-- favorites button -->
 		<?php 
-		$_SESSION['id'] = $card[$i]['C_ID'];	
+		$_SESSION['c_id'] = $card[$i]['C_ID'];	
 		?>
+		<br>
+		<?php echo 'Test Session: ' . $_SESSION['c_id'];?>
 		<input type = "hidden" id = "c_id" value = "<?php echo $card[$i]['C_ID'];?>"/>
 		<input type = "submit" id = "submitFav" value = "Favorite"/>
 		
