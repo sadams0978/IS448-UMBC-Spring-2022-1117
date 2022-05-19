@@ -40,12 +40,7 @@ function checkPassword () {
 	} else {
 		document.getElementById("char_req").style.color="red"; 	
 	}
-
-
-	if ((result1 && result2 && result3 && passwordLength) == true) {
-	return true;
 	
-	} else return false;
 
 }
 
@@ -62,28 +57,36 @@ function hide () {
 }
 
 
-
 // Below Function Executes On Form Submit
 function formCheck (formName) {
 var formResult = false;
 
 if (formName == "passwordChange") {
-	var formResult = passwordCheck();
-	if (formResult == true) {
-	return true;	
-	} else {
-	return false;	
-	}
+	
+	if ((result1 && result2 && result3 && passwordLength) == true) {
+	return true;
+	
+	} else return false;
+
 
 } else {
-var passwordResult = checkPassword();
+checkPassword();
 var nameResult = checkName();
 var emailResult = checkEmail();	
+var passwordResult;	
 	
-	if ( (passwordResult && nameResult && emailResult) == false) {
-	return false;
+	
+		
+	if ((result1 && result2 && result3 && passwordLength) == true) {
+	passwordResult == true;
+	
+	} else passwordResult == false;
+
+	
+	if ( (nameResult && emailResult && passwordResult) == true) {
+	return true;
 	} else {
-	return true;	
+	return false;	
 	}
 
 }
