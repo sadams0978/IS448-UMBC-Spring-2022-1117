@@ -125,6 +125,52 @@ return false;
 
 
 function newUserCheck () {
-	alert ("You are on the new User Form!");
+	
+if (checkPassword() && checkOther()) {
+return true;	
+} else {
+return false;	
+
+}	
+	
+	
+}
+
+
+function checkOther () {
+	
+	//First and Last Name Check
+	var firstName = document.getElementById("first_name").value;
+	var lastName = document.getElementById("last_name").value;
+ 	var contains_letters = /^[a-zA-Z]+$/; 
+	var firstNameResult = contains_letters.test(firstName);
+	var lastNameResult = contains_letters.test(lastName);
+	
+	
+	
+	if ((firstNameResult || lastNameResult) === false ) {
+	alert ("Please check your first name or last name. It should only contain Letters.");
 	return false;
+	}
+	
+	
+	
+	//Email Check
+	var email = document.getElementById("email").value;
+ 	var isEmail = /^[a-zA-Z]+$/; 
+	var emailResult = isEmail.test(email);
+	
+	else if (emailResult === false ) {
+	alert ("Please check your email address.");
+	return false;
+	}
+	
+	else { 
+	return true;
+		
+	}
+	
+	
+	
+	
 }
