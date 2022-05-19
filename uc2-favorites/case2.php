@@ -45,35 +45,44 @@
         <?php
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
-	$_SESSION['category'] = $_POST["category"];
-	$_SESSION['condition'] = $_POST["condition"];
-	$_SESSION['finish'] = $_POST["finish"];
-	$_SESSION['composition'] = $_POST["composition"];
-	$_SESSION['year'] = $_POST["year"];
+// 	$_SESSION['category'] = $_POST["category"];
+// 	$_SESSION['condition'] = $_POST["condition"];
+// 	$_SESSION['finish'] = $_POST["finish"];
+// 	$_SESSION['composition'] = $_POST["composition"];
+// 	$_SESSION['year'] = $_POST["year"];
 	
-	if (!empty($_SESSION['category'])) {
-		$category = "AND C_CATEG = '$_SESSION[category]'";
-	}
-	if (!empty($_SESSION['condition'])) {
-		$condition = "AND C_CONDITION = '$_SESSION[condition]'";
-	}
+// 	if (!empty($_SESSION['category'])) {
+// 		$category = "AND C_CATEG = '$_SESSION[category]'";
+// 	}
+// 	if (!empty($_SESSION['condition'])) {
+// 		$condition = "AND C_CONDITION = '$_SESSION[condition]'";
+// 	}
 
-	if (!empty($_SESSION['finish'])) {
-		$finish = "AND C_FINISH = '$_SESSION[finish]'";
-	}
+// 	if (!empty($_SESSION['finish'])) {
+// 		$finish = "AND C_FINISH = '$_SESSION[finish]'";
+// 	}
 
-	if (!empty($_SESSION['composition'])) {
-		$composition = "AND C_COMP = '$_SESSION[composition]'";
-	}
+// 	if (!empty($_SESSION['composition'])) {
+// 		$composition = "AND C_COMP = '$_SESSION[composition]'";
+// 	}
 
-	if (!empty($_SESSION['year'])) {
-		$year = "AND C_YEAR = '$_SESSION[year]'";
-	}
+// 	if (!empty($_SESSION['year'])) {
+// 		$year = "AND C_YEAR = '$_SESSION[year]'";
+// 	}
 
-	$C_ID=$_GET['C_ID'];
+// 	$C_ID=$_GET['C_ID'];
 		
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID = 'C_ID' $category $condition $finish $composition $year";
+// 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID = 'C_ID' $category $condition $finish $composition $year";
+// 	$result = mysqli_query($db, $constructed_query);
+// 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+// 	}
+		
+	$C_ID = $_POST['C_ID'];
+	
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID = 'C_ID'";
+	
 	$result = mysqli_query($db, $constructed_query);
+	
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
 	?>
@@ -167,7 +176,6 @@
 	</div>
 	
 		<div class = "cardsContainer">
-		<!-- <form action = "case2.php" method = "GET"> -->
 			<ul class = "cards">
 				
 				<li>
@@ -176,15 +184,9 @@
 				?>
 				<br>
 				<?php
-				echo $card['C_NAME'];
+				echo ($card['C_NAME']);
 				?>
 				<br>
-				<?php
-				echo  'To implement favorited cards using AJAX';
-				?>
-				<br>
-				<!-- button to remove card from favorites -->
-				<button href = "../index.html">Favorite</button>
 				
 				<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card['C_NAME']) . '\n' . 'Card Description: ' . ($card['C_DESC']) . '\n' . 'Card Quantity: ' . ($card['C_QUANTITY']) .
 				'\n' . 'Card Category: ' . ($card['C_CATEG']) . '\n' . 'Card Condition: ' . ($card['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card['C_FINISH']) . 
@@ -192,7 +194,6 @@
 				
 				</li>
 			</ul>
-		<!-- </form> -->
 		</div>
 
 		<div class = "footer">
