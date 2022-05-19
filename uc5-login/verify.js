@@ -46,7 +46,7 @@ function checkPassword () {
 	}
 
 
-	if (passwordMatch) {
+	if (passwordMatch == true) {
 	document.getElementById("password_verify").style.color = "green";
 	} else {
 	document.getElementById("password_verify").style.color = "red";
