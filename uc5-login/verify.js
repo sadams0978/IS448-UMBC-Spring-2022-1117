@@ -82,12 +82,23 @@ function secondVerify () {
 
 // Below Function Executes On Form Submit
 function formCheck (formName) {
+var result = false;
 
 if (formName == "passwordChange") {
-	passwordChangeCheck();
+	result = passwordChangeCheck();
+	if (result) {
+	return true;	
+	} else {
+	return false;	
+	}
 	
 } else {
-	newUserCheck();
+	result = newUserCheck();
+	if (result) {
+	return true;	
+	} else {
+	return false;	
+	}
 	
 }
 
