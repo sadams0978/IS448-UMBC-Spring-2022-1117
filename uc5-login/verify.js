@@ -21,27 +21,34 @@ function checkPassword () {
 	
 	if (result1) {
 	document.getElementById("upper_req").style.color="green"; 
+	return true;
 	} else {
 		document.getElementById("upper_req").style.color="red"; 	
 	}
 		
 		
 	if (result2) {
+	return true;
 	document.getElementById("special_req").style.color="green"; 	
 	} else {
-		document.getElementById("special_req").style.color="red"; 	
+		document.getElementById("special_req").style.color="red"; 
+		return false;
 	}
 	
 	if (result3) {	
+	return true;
 	document.getElementById("digit_req").style.color="green"; 	
 	} else {
-		document.getElementById("digit_req").style.color="red"; 	
+		document.getElementById("digit_req").style.color="red";
+		return false;
 	}
 	
 	if (passwordLength >= 8) {
-	document.getElementById("char_req").style.color="green"; 	
+	document.getElementById("char_req").style.color="green"; 
+		return true;
 	} else {
 		document.getElementById("char_req").style.color="red"; 	
+		return false;
 	}
 	
 }
@@ -66,9 +73,11 @@ function secondVerify () {
 	
 	if (initial == second) {
 	document.getElementById("password_verify").style.color = "green";
+		return true;
 		
 	} else {
 	document.getElementById("password_verify").style.color = "red";
+		return false;
 			
 	}
 	
@@ -105,8 +114,13 @@ if (formName == "passwordChange") {
 }
 
 function passwordChangeCheck () {
-alert("You are on the Password Change Form!");	
-return false;
+if (checkPassword()) {
+return true;	
+} else {
+alert ("Please check your password and try again");
+return false;	
+
+}
 }
 
 
