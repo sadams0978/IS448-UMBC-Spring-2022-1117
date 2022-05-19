@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../root.css"/>
     <link rel="stylesheet" type="text/css" href="ListingsView.css"/>
     <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
-    <script type = "text/javascript" src = "uc2-js.js"></script>
+    <script type = "text/javascript" src = "../uc2-favorites/uc2-js.js"></script>
 
     <title>Card Listings</title>
 </head>
