@@ -135,5 +135,4 @@ function checkDate () {
 	} else return true;
 
 }
-	
-}
+
