@@ -141,7 +141,7 @@ return false;
 }
 
 
-function checkOther () {
+function checkName () {
 	
 	//First and Last Name Check
 	var firstName = document.getElementById("first_name").value;
@@ -156,8 +156,10 @@ function checkOther () {
 	return false;
 	}
 	
-	
-	
+}
+
+
+function checkEmail () {
 	//Email Check
 	var email = document.getElementById("email").value;
  	var isEmail = /^[a-zA-Z]+$/; 
@@ -166,14 +168,10 @@ function checkOther () {
 	if (emailResult === false ) {
 	alert ("Please check your email address.");
 	return false;
+	} else { 
+	return true;	
 	}
-	
-	else { 
-	return true;
-		
-	}
-	
-	
-	
 	
 }
+
+
