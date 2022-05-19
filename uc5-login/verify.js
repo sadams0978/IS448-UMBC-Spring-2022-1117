@@ -70,7 +70,8 @@ if (formName == "passwordChange") {
 } else {
 checkPassword();
 var nameResult = checkName();
-var emailResult = checkEmail();	
+var emailResult = checkEmail();
+var dateResult = checkDate();
 var passwordResult;	
 	
 	
@@ -81,7 +82,7 @@ var passwordResult;
 	} else passwordResult == false;
 
 	
-	if ( (nameResult && emailResult && passwordResult) == true) {
+	if ( (nameResult && emailResult && dateResult && passwordResult) == true) {
 	return true;
 	} else {
 	return false;	
@@ -118,6 +119,21 @@ function checkEmail () {
 	return false;
 	} else return true;
 	
+}
+	
+}
+
+
+function checkDate () {
+	var userDate = document.getElementById("dob").value;
+	var isDate = /^\d{4}-\d{2}-\d{2}$/;
+	var dateTest = isDate.test(userDate);
+	
+	if (dateTest === false ) {
+	alert ("Please check your Date of Birth.");
+	return false;
+	} else return true;
+
 }
 	
 }
