@@ -17,6 +17,20 @@ function validate(){
 	// var cardprice = document.getElementById("").value;
 	
 	//C_ID
+	var valid = true;
+	var errormessage = "";
+	
 	var cardid = document.getElementById("C_ID").value;
+	if(cardid == ''){
+		errormessage = errormessage + "Customer ID is empty \n";
+		valid = false;
+	}
+	
+	if(valid == false){
+		alert(errormessage);
+		return false;
+	}else{
+		return true;
+	}
 	
 }
