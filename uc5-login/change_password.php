@@ -7,6 +7,7 @@
   <meta charset="UTF-8">
   <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
 	<script src="visable.js"></script>
+	<script src="verify.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
     <div class="Login_Box">
 
     <h1> Change Your Password: </h1>
-    <form action="password_update.php" target="_blank" method="post">
+    <form action="password_update.php" target="_blank" onsubmit="return formCheck('passwordChange')" method="post">
     
     <input type="email" name="email" id="email" placeholder="email-address" required>
      
@@ -47,7 +48,7 @@
       
       
 	    <br> <br>
-	    <button type="submit" id="submit_button" > <i class="fa-solid fa-arrow-right"></i> Submit </button>
+	    <button type="submit" id="submit_button"> <i class="fa-solid fa-arrow-right"></i> Submit </button>
      
       
     <h3> <a href="create.php" class = "Site_Link"> Create An Account</a> </h3>
