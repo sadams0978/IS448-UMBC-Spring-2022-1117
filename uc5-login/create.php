@@ -25,7 +25,7 @@
     <div class="Login_Box">
     <h1> Create a new Account: </h1>
 
-  <form action="create_user.php" method="post">
+  <form action="create_user.php" method="post" onsubmit="return formCheck('newUserForm')">
     
     <input type="text" name="first_name" id="first_name" placeholder="First Name" >
     <input type="text" name="last_name" id="last_name" placeholder="Last Name">
