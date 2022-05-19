@@ -2,7 +2,7 @@
 "use strict";
 window.onload=pageLoad;
 function pageLoad(){
-// 	document.getElementById("submitFav").onclick=validate;
+ 	document.getElementById("submitFav").onclick=validate;
 	document.getElementById("c_id").value;
 }
 
