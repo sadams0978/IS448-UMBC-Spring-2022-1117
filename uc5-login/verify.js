@@ -125,9 +125,13 @@ return false;
 
 
 function newUserCheck () {
+passwordResult = checkPassword();
+checkOtherResult = checkOther();
 	
-if (checkPassword() && checkOther()) {
-return true;	
+
+if ( (passwordResult && checkOtherResult) == true) {
+return true;
+	
 } else {
 return false;	
 
