@@ -19,9 +19,6 @@ function checkPassword () {
 		passwordMatch == true;	
 	} 
 	
-	if ((result1 && result2 && result3 && passwordLength && passwordMatch) == true) {
-	return true;
-	} else return false;
 	
 	if (result1) {
 	document.getElementById("upper_req").style.color="green"; 
@@ -52,6 +49,14 @@ function checkPassword () {
 	if (passwordMatch == false) {
 	document.getElementById("password_verify").style.color = "red";
 	}
+
+	if ((result1 && result2 && result3 && passwordLength && passwordMatch) == true) {
+	return true;
+	} else return false;
+
+
+
+
 }
 
 
