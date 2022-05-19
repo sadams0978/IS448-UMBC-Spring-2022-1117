@@ -163,7 +163,7 @@
 		<?php 
 		$_SESSION['c_id'] = $card[$i]['C_ID'];	
 		?>
-		<input type = "hidden" id = "c_id" name="c_id"/>
+		<input type = "hidden" id = "c_id" name="c_id" value = "<?php $_SESSION['c_id']?>"/>
 		<button type = "submit" id = "submitFav">Favorite</>
 		
 
