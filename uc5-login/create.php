@@ -27,9 +27,9 @@
 
   <form action="create_user.php" method="post">
     
-    <input type="text" name="first_name" placeholder="First Name" required >
-    <input type="text" name="last_name" placeholder="Last Name" required >
-    <input type="date" name="dob" required >
+    <input type="text" name="first_name" id="first_name" placeholder="First Name" required >
+    <input type="text" name="last_name" id="last_name" placeholder="Last Name" required >
+    <input type="date" name="dob" id="dob" required >
 
     <input type="email" name="email" id="email" placeholder="email-address" required >
     	<button type="button" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
