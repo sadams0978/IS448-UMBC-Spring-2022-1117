@@ -2,10 +2,11 @@
 "use strict";
 window.onload=pageLoad;
 function pageLoad(){
-	document.getElementById("submitFav").onclick=validate;
+// 	document.getElementById("submitFav").onclick=validate;
+	document.getElementById("c_id").value;
 }
 
-function validate(){
+//function validate(){
 	//variables
 	// var cardname = document.getElementById("").value;
 	// var carddescription = document.getElementById("").value;
@@ -17,20 +18,20 @@ function validate(){
 	// var cardprice = document.getElementById("").value;
 	
 	//C_ID
-	var valid = true;
-	var errormessage = "";
+// 	var valid = true;
+// 	var errormessage = "";
 	
-	var cardid = document.getElementById("c_id").value;
-	if(cardid == ''){
-		errormessage = errormessage + "Customer ID is empty \n";
-		valid = false;
-	}
+// 	var cardid = document.getElementById("c_id").value;
+// 	if(cardid == ''){
+// 		errormessage = errormessage + "Customer ID is empty \n";
+// 		valid = false;
+// 	}
 	
-	if(valid == false){
-		alert(errormessage);
-		return false;
-	}else{
-		return true;
-	}
+// 	if(valid == false){
+// 		alert(errormessage);
+// 		return false;
+// 	}else{
+// 		return true;
+// 	}
 	
-}
+//}
