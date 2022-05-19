@@ -78,7 +78,7 @@ var passwordResult = checkPassword();
 var nameResult = checkName();
 var emailResult = checkEmail();	
 	
-	if ( (passwordResult || nameResult || emailResult) == false) {
+	if ( (passwordResult && nameResult && emailResult) == false) {
 	return false;
 	} else {
 	return true;	
