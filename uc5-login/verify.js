@@ -151,7 +151,6 @@ function checkOther () {
 	var lastNameResult = contains_letters.test(lastName);
 	
 	
-	
 	if ((firstNameResult || lastNameResult) === false ) {
 	alert ("Please check your first name or last name. It should only contain Letters.");
 	return false;
@@ -164,7 +163,7 @@ function checkOther () {
  	var isEmail = /^[a-zA-Z]+$/; 
 	var emailResult = isEmail.test(email);
 	
-	else if (emailResult === false ) {
+	if (emailResult === false ) {
 	alert ("Please check your email address.");
 	return false;
 	}
