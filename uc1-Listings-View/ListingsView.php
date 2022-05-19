@@ -139,7 +139,7 @@
     
     <!--CARD DISPLAY Section-->
 	<div class="cards">
-	<form name = "favinfo" action = "case2.php" method = "post">
+	<form name = "favinfo" action = "../case2.php" method = "post">
 		<ul class="cardDisplay">
 		<?php
 		for($i = 0; $i < count($card); $i++){
