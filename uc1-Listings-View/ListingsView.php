@@ -23,8 +23,6 @@
 	$_SESSION['finish'] = $_POST["finish"];
 	$_SESSION['composition'] = $_POST["composition"];
 	$_SESSION['year'] = $_POST["year"];
-	//test session for favorites
-	$_SESSION['c_id'] = $_POST["c_id"];
 	
 	if (!empty($_SESSION['category'])) {
 		$category = "AND C_CATEG = '$_SESSION[category]'";
@@ -45,10 +43,6 @@
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 	
-	//test session for favorites
-	if (!empty($_SESSION['c_id'])){
-		$c_id = "AND C_ID = '$_SESSION[c_id]'";
-	}
 
 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
 	$result = mysqli_query($db, $constructed_query);
@@ -166,7 +160,9 @@
 		<br>
 		
 		<!-- favorites button -->
-		
+		<?php 
+		$_SESSION['id'] = $card[$i]['C_ID'];	
+		?>
 		<input type = "hidden" id = "c_id" value = "<?php echo $card[$i]['C_ID'];?>"/>
 		<input type = "submit" id = "submitFav" value = "Favorite"/>
 		
