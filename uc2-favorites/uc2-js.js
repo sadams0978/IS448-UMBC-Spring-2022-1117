@@ -20,7 +20,7 @@ function validate(){
 	var valid = true;
 	var errormessage = "";
 	
-	var cardid = document.getElementById("C_ID").value;
+	var cardid = document.getElementById("<?php echo ($card[$i]['C_ID']);?>").value;
 	if(cardid == ''){
 		errormessage = errormessage + "Customer ID is empty \n";
 		valid = false;
