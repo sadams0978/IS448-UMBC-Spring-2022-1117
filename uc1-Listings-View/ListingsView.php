@@ -167,7 +167,7 @@
 		
 		<!-- favorites button -->
 		
-		<input type = "hidden" id = "c_id" name = "c_id"/>
+		<input type = "hidden" id = "c_id" value = "<?php echo $card[$i]['C_ID'];?>"/>
 		<input type = "submit" id = "submitFav" value = "Favorite"/>
 		
 
