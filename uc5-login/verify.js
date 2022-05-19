@@ -11,8 +11,8 @@ function checkPassword () {
 	var result1 = contains_uppercase.test(userPassword);
 	var result2 = contains_special_char.test(userPassword);
 	var result3 = contains_digit.test(userPassword);
-	var passwordLength = userPassword.length;
-		
+	var passwordLength = false; 
+	
 	
 	if (result1) {
 	document.getElementById("upper_req").style.color="green"; 
@@ -33,8 +33,10 @@ function checkPassword () {
 		document.getElementById("digit_req").style.color="red";
 	}
 	
-	if (passwordLength >= 8) {
-	document.getElementById("char_req").style.color="green"; 
+	if (userPassword.length >= 8) {
+	document.getElementById("char_req").style.color="green";
+	passwordLength == true;
+	
 	} else {
 		document.getElementById("char_req").style.color="red"; 	
 	}
