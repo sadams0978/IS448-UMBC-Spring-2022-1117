@@ -59,10 +59,8 @@ function hide () {
 
 // Below Function Executes On Form Submit
 function formCheck (formName) {
-var formResult = false;
-
 if (formName == "passwordChange") {
-	
+	checkPassword();
 	if ((result1 && result2 && result3 && passwordLength) == true) {
 	return true;
 	
