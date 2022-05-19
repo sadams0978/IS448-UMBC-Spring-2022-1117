@@ -66,38 +66,26 @@ function formCheck (formName) {
 var formResult = false;
 
 if (formName == "passwordChange") {
-	formResult = passwordCheck();
-	if (formResult) {
-	return true;	
-	} else {
-	return false;	
-	} 
-	
-	
-}else {
-	formResult = newUserCheck();
-	if (formResult) {
+	var formResult = passwordCheck();
+	if (formResult == true) {
 	return true;	
 	} else {
 	return false;	
 	}
-}
 
-
-function newUserCheck () {
-passwordResult = checkPassword();
-nameResult = checkName();
-emailResult = checkEmail();	
-
-if ( (passwordResult && nameResult && emailResult) == true) {
-return true;
 } else {
-return false;	
+var passwordResult = checkPassword();
+var nameResult = checkName();
+var emailResult = checkEmail();	
+	
+	if ( (passwordResult && nameResult && emailResult) == true) {
+	return true;
+	} else {
+	return false;	
+	
+	}
 
-}	
-		
 }
-
 
 function checkName () {
 	
