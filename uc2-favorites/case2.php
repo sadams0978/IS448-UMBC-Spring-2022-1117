@@ -56,7 +56,7 @@
 	// $cprice = $_POST[''];
 	$_SESSION['c_id'] = $_POST['c_id'];
 	
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID = $_SESSION['c_id']";
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID = c_id";
 	
 	$result = mysqli_query($db, $constructed_query);
 	
