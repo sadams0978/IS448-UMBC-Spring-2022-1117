@@ -27,11 +27,11 @@
 
   <form action="create_user.php" method="post">
     
-    <input type="text" name="first_name" id="first_name" placeholder="First Name" required >
-    <input type="text" name="last_name" id="last_name" placeholder="Last Name" required >
-    <input type="date" name="dob" id="dob" required >
+    <input type="text" name="first_name" id="first_name" placeholder="First Name" >
+    <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+    <input type="date" name="dob" id="dob">
 
-    <input type="email" name="email" id="email" placeholder="email-address" required >
+    <input type="email" name="email" id="email" placeholder="email-address">
     	<button type="button" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
     
     <input type="password" name="password" id="password" placeholder="Password" onfocus="visible()" onblur="hide()" onchange="checkPassword()">
