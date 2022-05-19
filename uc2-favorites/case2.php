@@ -54,9 +54,9 @@
 	// $ccomposition = $_POST[''];
 	// $cyear = $_POST[''];
 	// $cprice = $_POST[''];
-	$c_ID = $_POST['c_id'];
+	$_SESSION['c_id'] = $_POST['c_id'];
 	
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID = $c_ID";
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID = $_SESSION['c_id']";
 	
 	$result = mysqli_query($db, $constructed_query);
 	
@@ -197,7 +197,7 @@
 				?>
 				<br>
 				<?php
-				echo 'ID: ' . ($c_ID);
+				echo "ID: " . $_SESSION['c_id'];
 				?>
 				<br>
 				<!-- button to remove card from favorites -->
