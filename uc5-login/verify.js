@@ -82,7 +82,12 @@ var passwordResult;
 	} else passwordResult == false;
 
 	
-	if ( (nameResult && emailResult) && (dateResult && passwordResult) == true) {
+	if (dateTest === false) {
+	return false;	
+		
+	}
+	
+	if ( (nameResult && emailResult && passwordResult) == true) {
 	return true;
 	} else {
 	return false;	
@@ -131,8 +136,7 @@ function checkDate () {
 	
 	if (dateTest === false ) {
 	alert ("Please check your Date of Birth.");
-	return false;
-	} else return true;
+	}
 
 }
 
