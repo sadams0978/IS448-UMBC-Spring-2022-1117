@@ -79,7 +79,7 @@
 		
 	$C_ID = $_POST['C_ID'];
 	
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID = 'C_ID'";
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID='$C_ID'";
 	
 	$result = mysqli_query($db, $constructed_query);
 	
