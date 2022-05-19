@@ -46,14 +46,15 @@ function checkPassword () {
 	}
 
 
-	if (passwordMatch == false) {
+	if (passwordMatch) {
+	document.getElementById("password_verify").style.color = "green";
+	} else {
 	document.getElementById("password_verify").style.color = "red";
 	}
 
 	if ((result1 && result2 && result3 && passwordLength && passwordMatch) == true) {
 	return true;
 	} else return false;
-
 
 
 
