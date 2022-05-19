@@ -2,7 +2,6 @@ function checkPassword () {
 	//Variables
 	var pagePassword = document.getElementById("password");
 	var userPassword = pagePassword.value;
-	var secondPassword =  document.getElementById("password_verify").value;
  	var contains_uppercase = /[A-Z]+/; 
  	var contains_special_char = /\W+/;
  	var contains_digit = /\d+/;
@@ -43,9 +42,8 @@ function checkPassword () {
 
 	if ((result1 && result2 && result3 && passwordLength) == true) {
 	return true;
+	
 	} else return false;
-
-
 
 }
 
@@ -65,11 +63,11 @@ function hide () {
 
 // Below Function Executes On Form Submit
 function formCheck (formName) {
-var result = false;
+var formResult = false;
 
 if (formName == "passwordChange") {
-	result = passwordCheck();
-	if (result) {
+	formResult = passwordCheck();
+	if (formResult) {
 	return true;	
 	} else {
 	return false;	
@@ -77,8 +75,8 @@ if (formName == "passwordChange") {
 	
 	
 }else {
-	result = newUserCheck();
-	if (result) {
+	formResult = newUserCheck();
+	if (formResult) {
 	return true;	
 	} else {
 	return false;	
@@ -114,7 +112,7 @@ function checkName () {
 	if ((firstNameResult || lastNameResult) === false ) {
 	alert ("Please check your first name or last name. It should only contain Letters.");
 	return false;
-	}
+	} else return true;
 	
 }
 
@@ -128,10 +126,6 @@ function checkEmail () {
 	if (emailResult === false ) {
 	alert ("Please check your email address.");
 	return false;
-	} else { 
-	return true;	
-	}
-	
-}
+	} else return true;
 	
 }
