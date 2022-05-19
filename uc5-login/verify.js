@@ -73,3 +73,33 @@ function secondVerify () {
 	}
 	
 }
+
+
+
+
+
+
+
+// Below Function Executes On Form Submit
+function formCheck (formName) {
+
+if (formName == "passwordChange") {
+	passwordChangeCheck();
+	
+} else {
+	newUserCheck();
+	
+}
+
+}
+
+function passwordChangeCheck () {
+alert("You are on the Password Change Form!");	
+return false;
+}
+
+
+function newUserCheck () {
+	alert ("You are on the new User Form!");
+	return false;
+}
