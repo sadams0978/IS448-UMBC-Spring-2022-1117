@@ -126,18 +126,16 @@ return false;
 
 function newUserCheck () {
 passwordResult = checkPassword();
-checkOtherResult = checkOther();
-	
+nameResult = checkName();
+emailResult = checkEmail();	
 
-if ( (passwordResult && checkOtherResult) == true) {
+if ( (passwordResult && nameResult && emailResult) == true) {
 return true;
-	
 } else {
 return false;	
 
 }	
-	
-	
+		
 }
 
 
