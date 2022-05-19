@@ -6,7 +6,6 @@ function checkPassword () {
  	var contains_uppercase = /[A-Z]+/; 
  	var contains_special_char = /\W+/;
  	var contains_digit = /\d+/;
-	var passwordMatch = false;
  
 
   	//Result Checking for conditions
@@ -14,11 +13,7 @@ function checkPassword () {
 	var result2 = contains_special_char.test(userPassword);
 	var result3 = contains_digit.test(userPassword);
 	var passwordLength = userPassword.length;
-	
-	if (userPassword == secondPassword) {
-		passwordMatch == true;	
-	} 
-	
+		
 	
 	if (result1) {
 	document.getElementById("upper_req").style.color="green"; 
@@ -46,13 +41,7 @@ function checkPassword () {
 	}
 
 
-	if (passwordMatch == true) {
-	document.getElementById("password_verify").style.color = "green";
-	} else {
-	document.getElementById("password_verify").style.color = "red";
-	}
-
-	if ((result1 && result2 && result3 && passwordLength && passwordMatch) == true) {
+	if ((result1 && result2 && result3 && passwordLength) == true) {
 	return true;
 	} else return false;
 
