@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../root.css"/>
     <link rel="stylesheet" type="text/css" href="ListingsView.css"/>
     <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
+    <script type = "text/javascript" src = "../uc2-favorites/uc2-js.js"></script>
 
     <title>Card Listings</title>
 </head>
@@ -157,9 +158,13 @@
 		<br>
 		
 		<!-- favorites button -->
-		<form action="" method="GET" name="Favorites">
+		<!-- 		<form action="" method="GET" name="Favorites">
 			<input type = "hidden" name="C_ID" value="<?php echo $card[$i]['C_ID'];?>">
 			<button type="submit">Favorite</button>
+		</form> -->
+			
+		<form name = "favinfo" action = "case2.php" method = "post">
+			<input type = "submit" id = "submitFav" value = "<?php echo $card[$i]['C_ID'];?>">
 		</form>
 
 		<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card[$i]['C_NAME']) . '\n' . 'Card Description: ' . ($card[$i]['C_DESC']) . '\n' . 'Card Quantity: ' . ($card[$i]['C_QUANTITY']) . '\n' . 'Card Category: ' . ($card[$i]['C_CATEG']) . '\n' . 'Card Condition: ' . ($card[$i]['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card[$i]['C_FINISH']) . '\n' . 'Card Composition: ' .($card[$i]['C_COMP']) . '\n' . 'Card Year: ' .($card[$i]['C_YEAR']) . '\n' . 'Card Price: ' . ($card[$i]['PRICE'])?>')">Card Details</button>
