@@ -69,6 +69,7 @@ if (formName == "passwordChange") {
 	if (passwordCheck == true) {
 	return true;	
 	} else {
+	alert ("Please check to make sure that your new password meets the criteria");
 	return false;	
 	}
 	
@@ -82,9 +83,10 @@ var dateResult = checkDate();
 	
 	if (nameResult && emailResult && dateResult && passwordResult) {
 	return true;
-	} else {
+	} else if (passwordResult == false){
+	alert ("Please check to make sure that your new password meets the criteria");
 	return false;	
-	}
+	} else return false;
 
 }
 
