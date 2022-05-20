@@ -34,13 +34,14 @@ function checkPassword () {
 		return false;
 	}
 	
-	if (userPassword.length >= 8) {
-	document.getElementById("char_req").style.color="green";
-	passwordLength == true;
+	if (userPassword.length < 8) {
+	document.getElementById("char_req").style.color="red";
+	return false;
 	
 	} else {
-		document.getElementById("char_req").style.color="red";
-		return false;
+	document.getElementById("char_req").style.color="green";
+	passwordLength == true;
+		
 	}
 	
 	return true;
