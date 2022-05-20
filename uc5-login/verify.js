@@ -84,7 +84,7 @@ var emailResult = checkEmail();
 var passwordResult = checkPassword();
 var dateResult = checkDate();
 	
-	if ( (nameResult && emailResult && passwordResult && dateResult) == true) {
+	if (nameResult && emailResult && passwordResult && dateResult) {
 	return true;
 	} else {
 	return false;	
