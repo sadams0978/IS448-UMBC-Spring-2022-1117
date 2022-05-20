@@ -16,7 +16,8 @@ function checkPassword () {
 	if (result1) {
 	document.getElementById("upper_req").style.color="green"; 
 	} else {
-		document.getElementById("upper_req").style.color="red"; 	
+		document.getElementById("upper_req").style.color="red"; 
+		return;
 	}
 		
 		
@@ -24,12 +25,14 @@ function checkPassword () {
 	document.getElementById("special_req").style.color="green";
 	} else {
 		document.getElementById("special_req").style.color="red"; 
+		return;
 	}
 	
 	if (result3) {	
 	document.getElementById("digit_req").style.color="green"; 	
 	} else {
 		document.getElementById("digit_req").style.color="red";
+		return;
 	}
 	
 	if (userPassword.length >= 8) {
@@ -37,7 +40,8 @@ function checkPassword () {
 	passwordLength == true;
 	
 	} else {
-		document.getElementById("char_req").style.color="red"; 	
+		document.getElementById("char_req").style.color="red";
+		return;
 	}
 	
 	if ((result1 && result2 && result3 && passwordLength) == true) {
@@ -112,12 +116,12 @@ function checkEmail () {
  	var isEmail = /^[a-zA-Z]+$/; 
 	var emailResult = isEmail.test(email);
 	
-	if (emailResult === false ) {
-	alert ("Please check your email address.");
-	return false;
-	} else return true;
-	
-}
+	if (emailResult) {
+	return true;
+	} else  {
+	alert ("Please check your email address.");	
+		return false;
+	}
 	
 }
 
@@ -126,6 +130,7 @@ function checkDate () {
 	var userDate = document.getElementById("dob").value;
 	var isDate = /^\d{4}-\d{2}-\d{2}$/;
 	var dateTest = isDate.test(userDate);
+	
 
 }
 
