@@ -75,21 +75,13 @@ if (formName == "passwordChange") {
 
 
 } else {
-checkPassword();
 var nameResult = checkName();
 var emailResult = checkEmail();
+var passwordResult = checkPassword();
 var dateResult = checkDate();
-var passwordResult;	
 	
-	
-		
-	if ((result1 && result2 && result3 && passwordLength) == true) {
-	passwordResult == true;
-	
-	} else passwordResult == false;
-	
-	if ( (nameResult || emailResult || passwordResult || dateTest) == false) {
-	return false;
+	if ( (nameResult && emailResult && passwordResult && dateResult) == true) {
+	return true;
 	} else {
 	return true;	
 	}
