@@ -79,7 +79,7 @@ var emailResult = checkEmail();
 var passwordResult = checkPassword();
 var dateResult = checkDate();
 	
-	if (nameResult && emailResult && dateResult) {
+	if (nameResult && emailResult && dateResult && passwordResult) {
 	return true;
 	} else {
 	return false;	
