@@ -118,10 +118,12 @@ function checkEmail () {
 	console.log(isEmail);
 	var emailResult = isEmail.test(email);
 	
+	
+	alert ("Please check your email address.");	
 	if (emailResult) {
 	return true;
 	} else  {
-	alert ("Please check your email address.");	
+	
 		return false;
 	}
 	
