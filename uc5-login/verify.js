@@ -114,6 +114,8 @@ function checkEmail () {
 	//Email Check
 	var email = document.getElementById("email").value;
  	var isEmail = /^\w+@\w+\.\w+$/; 
+	console.log(email);
+	console.log(isEmail);
 	var emailResult = isEmail.test(email);
 	
 	if (emailResult) {
