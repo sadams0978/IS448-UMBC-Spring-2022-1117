@@ -133,6 +133,13 @@ function checkDate () {
 	var isDate = /^\d{4}-\d{2}-\d{2}$/;
 	var dateTest = isDate.test(userDate);
 	
+	if (dateTest) {
+	return true;	
+	} else {
+	alert ("You need to enter your birthday!");	
+	return false;
+	}
+	
 
 }
 }
