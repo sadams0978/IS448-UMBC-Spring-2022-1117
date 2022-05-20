@@ -1,7 +1,6 @@
 function checkPassword () {
 	//Variables
-	var pagePassword = document.getElementById("password");
-	var userPassword = pagePassword.value;
+	var userPassword = document.getElementById("password").value;
  	var contains_uppercase = /[A-Z]+/; 
  	var contains_special_char = /\W+/;
  	var contains_digit = /\d+/;
@@ -41,6 +40,11 @@ function checkPassword () {
 		document.getElementById("char_req").style.color="red"; 	
 	}
 	
+	if ((result1 && result2 && result3 && passwordLength) == true) {
+	return true;
+	} else {
+	return false;	
+	}
 
 }
 
@@ -60,11 +64,14 @@ function hide () {
 // Below Function Executes On Form Submit
 function formCheck (formName) {
 if (formName == "passwordChange") {
-	checkPassword();
-	if ((result1 && result2 && result3 && passwordLength) == true) {
-	return true;
+	//Checking Password and seeing if it is valid
+	var passwordCheck = checkPassword();
+	if (passwordCheck == true) {
+	return true;	
+	} else {
+	return false;	
+	}
 	
-	} else return false;
 
 
 } else {
