@@ -87,7 +87,7 @@ var dateResult = checkDate();
 	if ( (nameResult && emailResult && passwordResult && dateResult) == true) {
 	return true;
 	} else {
-	return true;	
+	return false;	
 	}
 
 }
@@ -105,7 +105,9 @@ function checkName () {
 	if ((firstNameResult || lastNameResult) === false ) {
 	alert ("Please check your first name or last name. It should only contain Letters.");
 	return false;
-	} else return true;
+	} else  {
+		return true;
+	}
 	
 }
 
