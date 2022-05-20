@@ -49,7 +49,9 @@
 
 </div>
 	
-	 <?php 
+
+
+	<?php 
  session_start();
 //Variables 
  $email = htmlspecialchars($_POST['email']);
