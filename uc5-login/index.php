@@ -7,6 +7,8 @@
 	<meta charset="UTF-8">
 	<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
 	<script src="visable.js"></script>
+	<script src="verify.js"></script>
+
 </head>
 
 	
@@ -16,7 +18,7 @@
     <h1> Sign In: </h1>
 	    
 	<!-- JavaScript will be used to validate user input on this site and provide feedback to the form -->   
-    <form action="index.php" method="post">
+    <form action="index.php" method="post" onsubmit="return checkEmail()">
     
     <input type="email" name="email" id="email" placeholder="Enter Your E-Mail Here" required >  
 	    
