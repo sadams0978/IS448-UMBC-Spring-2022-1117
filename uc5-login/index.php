@@ -20,7 +20,7 @@
 	<!-- JavaScript will be used to validate user input on this site and provide feedback to the form -->   
     <form action="index.php" method="post" onsubmit="return checkEmail()">
     
-    <input type="text" name="email" id="email" placeholder="Enter Your E-Mail Here" >  
+    	<input type="text" name="email" id="email" placeholder="email-address">
 	    
 	   <button type="button" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
 
