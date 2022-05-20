@@ -17,22 +17,21 @@ function checkPassword () {
 	document.getElementById("upper_req").style.color="green"; 
 	} else {
 		document.getElementById("upper_req").style.color="red"; 
-		return;
+		return false;
 	}
-		
 		
 	if (result2) {
 	document.getElementById("special_req").style.color="green";
 	} else {
 		document.getElementById("special_req").style.color="red"; 
-		return;
+		return false;
 	}
 	
 	if (result3) {	
 	document.getElementById("digit_req").style.color="green"; 	
 	} else {
 		document.getElementById("digit_req").style.color="red";
-		return;
+		return false;
 	}
 	
 	if (userPassword.length >= 8) {
@@ -41,14 +40,10 @@ function checkPassword () {
 	
 	} else {
 		document.getElementById("char_req").style.color="red";
-		return;
+		return false;
 	}
 	
-	if ((result1 && result2 && result3 && passwordLength) == true) {
 	return true;
-	} else {
-	return false;	
-	}
 
 }
 
