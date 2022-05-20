@@ -113,7 +113,7 @@ function checkName () {
 function checkEmail () {
 	//Email Check
 	var email = document.getElementById("email").value;
- 	var isEmail = /^[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z]$/; 
+ 	var isEmail = /^\w+@\w+\.[A-Za-z]$/; 
 	var emailResult = isEmail.test(email);
 	
 	if (emailResult) {
