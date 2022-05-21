@@ -28,22 +28,22 @@
     
     <input type="email" name="email" id="email" placeholder="email-address" required>
      
-     <button type="button" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
+     <button type="button" tabindex="-1" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
 
     
     <input type="password" name="old_password" id="old_password" placeholder="Existing Password:" required>
       
-    <button type="button" onclick="visibility(old_password)"> <i class="fa-solid fa-eye"></i> </button>
+    <button type="button" tabindex="-1" onclick="visibility(old_password)"> <i class="fa-solid fa-eye"></i> </button>
 
     
     <input type="password" name="password" id="password" placeholder="New Password:" onfocus="visible()" onblur="hide()" onchange="checkPassword()">
       
-    <button type="button" onclick="visibility(password)"> <i class="fa-solid fa-eye"></i> </button>
+    <button type="button" tabindex="-1" onclick="visibility(password)"> <i class="fa-solid fa-eye"></i> </button>
 
     
     <input type="password" name="password_verify" id = "password_verify" placeholder="Verify your New Password:">
       
-     <button type="button" onclick="visibility(password_verify)"> <i class="fa-solid fa-eye"></i> </button>
+     <button type="button" tabindex="-1" onclick="visibility(password_verify)"> <i class="fa-solid fa-eye"></i> </button>
     
       
       
