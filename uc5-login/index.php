@@ -25,7 +25,7 @@
 	   <button type="button" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
 
     
-    <input type="password" name="password" id="userPassword" placeholder="Enter Your Password Here" required > 
+    <input type="password" name="password" id="userPassword" autocomplete="current-password" placeholder="Enter Your Password Here" required > 
 	    
 	<button type="button" onclick="visibility(userPassword)"> <i class="fa-solid fa-eye"></i> </button>
 	    
