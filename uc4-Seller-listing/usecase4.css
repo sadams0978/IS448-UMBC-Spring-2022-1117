@@ -43,6 +43,7 @@
 textarea{ 
   resize: none; /* disable default resize option for all textareas */ 
   cursor:  text;
+  font-size: 12pt; 
 }
 
 select{
