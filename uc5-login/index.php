@@ -17,7 +17,7 @@
     <h1> Sign In: </h1>
 	    
 	<!-- JavaScript will be used to validate user input on this site and provide feedback to the form -->   
-    <form action="login.php" onsubmit="return formCheck('login')" method="post">
+    <form onsubmit="return formCheck('login')">
     
     	<input type="text" name="email" id="email" placeholder="email-address">
 	    
