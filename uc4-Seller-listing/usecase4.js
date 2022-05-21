@@ -1,7 +1,7 @@
 "use strict";
 
 window.onload = pageLoad; 
-function pageload(){
+function pageLoad(){
 	document.getElementById("biggerTextB").onclick=increaseTextSize;
 	document.getElementById("smallerTextB").onclick=decreaseTextSize;
 
