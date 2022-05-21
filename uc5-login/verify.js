@@ -56,8 +56,7 @@ function visible () {
 
 function hide () {
 	document.getElementById("password_requirements").style.visibility = "hidden";
-	
-	
+		
 }
 
 
