@@ -8,7 +8,7 @@ function pageLoad(){
 	document.getElementById("biggerTextB").onclick=increaseTextSize;
 	document.getElementById("smallerTextB").onclick=decreaseTextSize;
 
-	//document.getElementById("submitB").onclick = checkForm; 
+	document.getElementById("submitB").onclick = checkForm; 
 
 	//to test if placeholders are stored into vars
 	//document.getElementById("category").onblur = checkCat; 
