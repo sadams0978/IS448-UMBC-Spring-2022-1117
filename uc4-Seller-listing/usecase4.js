@@ -1,3 +1,5 @@
+"use strict";
+
 window.onload = pageLoad; 
 function pageload(){
 	document.getElementById("biggerTextB").onclick=increaseTextSize;
