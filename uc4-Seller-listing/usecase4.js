@@ -36,22 +36,26 @@ function checkForm() {
 	//var card_name = document.getElementById("card_name"); 
 	var card_year = document.getElementById("year");
 	//var card_category = document.getElementById("category");
-	alert("check form end ran successfully");
+	//alert("check form end ran successfully");
+
+
+//checks to ensure that fields have not been left empty 
 
 /*
-//checks to ensure that fields have not been left empty 
 	if(card_name == ""){
 		alert("You did not enter a card name. Please enter one now.");
 		document.getElementById("year").focus();
 		return false; 
 	}
+
+	*/
 	if(card_year == ""){
 		alert("You did not enter a card year. Please enter one now.");
 		document.getElementById("year").focus();
 		return false;
 	}
 
-	*/
+	
 
 	/* might not be needed? 
 	if(card_category == ""){
