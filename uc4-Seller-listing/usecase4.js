@@ -2,7 +2,9 @@
 
 window.onload = pageLoad; 
 function pageLoad(){
-	document.getElementById("submitB").onclick = checkForm; 
+	//document.getElementById("submitB").onclick = checkForm; 
+	document.getElementById("category").onblur = checkCat; 
+
 
 	document.getElementById("biggerTextB").onclick=increaseTextSize;
 	document.getElementById("smallerTextB").onclick=decreaseTextSize;
@@ -21,6 +23,7 @@ function decreaseTextSize () {
 	tarea.style.fontSize = "10pt"; 
 }
 
+/*
 function checkForm () {
 
 	var card_name = document.getElementById("card_name"); 
@@ -43,7 +46,7 @@ function checkForm () {
 		document.getElementById("category").focus();
 		return false; 
 	}
-	if(card_year == "Select your option"){
+	if(card_category == "Select your option"){
 		alert(" select your option is stored");
 		document.getElementById("category").focus();
 		return false;
@@ -58,6 +61,27 @@ function checkForm () {
 		alert("The year you entered (" + card_name + ") is not valid. Please enter a four digit year (example: 1999)  ");
 		document.getElementById("year").focus(); 
 		return false; 
+	}
+
+}
+*/
+
+function checkCat() {
+
+	
+	var card_category = document.getElementById("category");
+
+//checks to ensure that fields have not been left empty 
+	
+	if(card_category == ""){
+		alert("cateogry empty");
+		document.getElementById("category").focus();
+		return false; 
+	}
+	if(card_category == "Select your option"){
+		alert(" 'select your option is stored' as (" + card_category + ")");
+		document.getElementById("category").focus();
+		return false;
 	}
 
 
