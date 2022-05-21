@@ -35,10 +35,10 @@
     	<button type="button" tabindex="-1" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
     
     <input type="password" name="password" id="password" placeholder="Password" onfocus="visible()" onblur="hide()" onchange="checkPassword()">
-    	<button type="button" tabindex="-1" onclick="visibility(password)"> <i class="fa-solid fa-eye"></i> </button>
+    	<button type="button" tabindex="-1" onclick="visibility(password)"> <i class="fa-solid fa-eye" onClick="icon(this)"></i> </button>
 
     <input type="password" name="password_verify" id="password_verify" placeholder="Confirm your Password">
-    	<button type="button" tabindex="-1" onclick="visibility(password_verify)"> <i class="fa-solid fa-eye"></i> </button>
+    	<button type="button" tabindex="-1" onclick="visibility(password_verify)"> <i class="fa-solid fa-eye" onClick="icon(this)"></i> </button>
 	  
 	  <p style="font-size:8pt;"> By Continuing you agree to our Terms and Conditions and Privacy Policy </p> 
 	<br>
