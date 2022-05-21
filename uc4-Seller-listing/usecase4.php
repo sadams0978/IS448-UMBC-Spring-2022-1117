@@ -107,8 +107,9 @@ include('../menu.php');
         <textarea name = "description" id="description" rows="15" cols = "79">
           Enter card description here...
         </textarea>
+        <br/>
         <input type="button" value="Bigger Text" name="bigText"id = "biggerTextB"/>
-
+        <input type="button" value="Smaller Text" name="smallText"id = "smallerTextB"/>
       
     </div>
 
