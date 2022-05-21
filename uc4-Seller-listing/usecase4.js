@@ -2,8 +2,10 @@
 
 window.onload = pageLoad; 
 function pageLoad(){
-	//document.getElementById("submitB").onclick = checkForm; 
-	document.getElementById("category").onblur = checkCat; 
+	document.getElementById("submitB").onclick = checkForm; 
+
+	//to test if placeholders are stored into vars
+	//document.getElementById("category").onblur = checkCat; 
 
 
 	document.getElementById("biggerTextB").onclick=increaseTextSize;
@@ -23,12 +25,12 @@ function decreaseTextSize () {
 	tarea.style.fontSize = "10pt"; 
 }
 
-/*
+
 function checkForm () {
 
 	var card_name = document.getElementById("card_name"); 
 	var card_year = document.getElementById("year");
-	var card_category = document.getElementById("category");
+	//var card_category = document.getElementById("category");
 
 //checks to ensure that fields have not been left empty 
 	if(card_name == ""){
@@ -41,6 +43,8 @@ function checkForm () {
 		document.getElementById("year").focus();
 		return false;
 	}
+
+	/* might not be needed? 
 	if(card_category == ""){
 		alert("cateogry empty");
 		document.getElementById("category").focus();
@@ -51,7 +55,7 @@ function checkForm () {
 		document.getElementById("category").focus();
 		return false;
 	}
-
+	*/ 
 
 
 //checks and alerts user to enter a year as 4 digits
@@ -64,8 +68,9 @@ function checkForm () {
 	}
 
 }
-*/
 
+/*
+//to test if placeholders are stored into vars
 function checkCat() {
 
 	
@@ -87,3 +92,5 @@ function checkCat() {
 
 
 }
+
+*/
