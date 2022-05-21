@@ -62,7 +62,7 @@ function checkForm () {
 	}
 	*/ 
 
-
+/*
 //checks and alerts user to enter a year as 4 digits
 	var card_year_pattern = /\d{4}/; 
 	var card_year_pattern_result = card_year_pattern.test(card_year); 
@@ -71,6 +71,8 @@ function checkForm () {
 		document.getElementById("year").focus(); 
 		return false; 
 	}
+
+	*/
 
 }
 
