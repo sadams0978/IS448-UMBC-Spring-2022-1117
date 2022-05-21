@@ -49,7 +49,7 @@ function checkForm() {
 	}
 
 	*/
-	if(card_year == ""){
+	if(card_year == "hello"){
 		alert("You did not enter a card year. Please enter one now.");
 		document.getElementById("year").focus();
 		return false;
