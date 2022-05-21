@@ -32,9 +32,11 @@ function decreaseTextSize() {
 
 function checkForm() {
 
+	alert("check form beginning ran successfully");
 	//var card_name = document.getElementById("card_name"); 
 	var card_year = document.getElementById("year");
 	//var card_category = document.getElementById("category");
+
 
 /*
 //checks to ensure that fields have not been left empty 
