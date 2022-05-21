@@ -8,7 +8,9 @@ function pageLoad(){
 	document.getElementById("biggerTextB").onclick=increaseTextSize;
 	document.getElementById("smallerTextB").onclick=decreaseTextSize;
 
-	document.getElementById("submitB").onclick = checkForm; 
+	//document.getElementById("submitB").onclick = checkForm; 
+	document.getElementById("year").onblur = checkForm; 
+
 
 	//to test if placeholders are stored into vars
 	//document.getElementById("category").onblur = checkCat; 
@@ -16,19 +18,19 @@ function pageLoad(){
 }
 
 //modifies the text size within the text box to increase 
-function increaseTextSize () { 
+function increaseTextSize() { 
 	var tarea = document.getElementById("description");
 	tarea.style.fontSize = "24pt";
 }
 
 //modifies the text size within the text box to decrease 
-function decreaseTextSize () { 
+function decreaseTextSize() { 
 	var tarea = document.getElementById("description");
 	tarea.style.fontSize = "10pt"; 
 }
 
 
-function checkForm () {
+function checkForm() {
 
 	//var card_name = document.getElementById("card_name"); 
 	var card_year = document.getElementById("year");
