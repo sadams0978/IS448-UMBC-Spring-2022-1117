@@ -22,12 +22,12 @@
     
     	<input type="text" name="email" id="email" placeholder="email-address">
 	    
-	   <button type="button" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
+	   <button type="button" tabindex="-1" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
 
     
     <input type="password" name="password" id="userPassword" autocomplete="current-password" placeholder="Enter Your Password Here" required > 
 	    
-	<button type="button" onclick="visibility(userPassword)"> <i class="fa-solid fa-eye"></i> </button>
+	<button type="button" tabindex="-1" onclick="visibility(userPassword)"> <i class="fa-solid fa-eye"></i> </button>
 	    
 	    <br> <br>
 	    
