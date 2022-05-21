@@ -61,7 +61,7 @@ function checkForm () {
 //checks and alerts user to enter a year as 4 digits
 	var card_year_pattern = /\d{4}/; 
 	var card_year_pattern_result = card_year_pattern.test(card_year); 
-	if (result1 == false){
+	if (card_year_pattern_result == false){
 		alert("The year you entered (" + card_name + ") is not valid. Please enter a four digit year (example: 1999)  ");
 		document.getElementById("year").focus(); 
 		return false; 
