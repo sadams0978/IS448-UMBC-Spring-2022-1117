@@ -8,7 +8,7 @@ function pageLoad(){
 	document.getElementById("biggerTextB").onclick=increaseTextSize;
 	document.getElementById("smallerTextB").onclick=decreaseTextSize;
 
-	document.getElementById("submitB").onclick = checkForm; 
+	//document.getElementById("submitB").onclick = checkForm; 
 
 	//to test if placeholders are stored into vars
 	//document.getElementById("category").onblur = checkCat; 
@@ -30,7 +30,7 @@ function decreaseTextSize () {
 
 function checkForm () {
 
-	var card_name = document.getElementById("card_name"); 
+	//var card_name = document.getElementById("card_name"); 
 	var card_year = document.getElementById("year");
 	//var card_category = document.getElementById("category");
 
