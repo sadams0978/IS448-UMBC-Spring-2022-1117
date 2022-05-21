@@ -43,9 +43,9 @@
 
 	    
 	    <p>
-	    <a href="https://instagram.com/umbclife" target="_blank"> <i class="fa-brands fa-instagram fa-xl"></i> </a>
-	    <a href="https://facebook.com/umbcpage" target="_blank"> <i class="fa-brands fa-facebook fa-xl"></i> </a>
-	    <a href="https://twitter.com/UMBC" target="_blank"> <i class="fa-brands fa-twitter fa-xl"></i> </a>
+	    <a href="https://instagram.com/umbclife" target="_blank" tabindex="-1"> <i class="fa-brands fa-instagram fa-xl"></i> </a>
+	    <a href="https://facebook.com/umbcpage" target="_blank" tabindex="-1"> <i class="fa-brands fa-facebook fa-xl"></i> </a>
+	    <a href="https://twitter.com/UMBC" target="_blank" tabindex="-1"> <i class="fa-brands fa-twitter fa-xl"></i> </a>
 	    </p>
 
 </div>
