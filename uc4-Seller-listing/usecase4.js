@@ -2,14 +2,16 @@
 
 window.onload = pageLoad; 
 function pageLoad(){
-	document.getElementById("submitB").onclick = checkForm; 
-
-	//to test if placeholders are stored into vars
-	//document.getElementById("category").onblur = checkCat; 
+	
 
 
 	document.getElementById("biggerTextB").onclick=increaseTextSize;
 	document.getElementById("smallerTextB").onclick=decreaseTextSize;
+
+	document.getElementById("submitB").onclick = checkForm; 
+
+	//to test if placeholders are stored into vars
+	//document.getElementById("category").onblur = checkCat; 
 
 }
 
@@ -32,6 +34,7 @@ function checkForm () {
 	var card_year = document.getElementById("year");
 	//var card_category = document.getElementById("category");
 
+/*
 //checks to ensure that fields have not been left empty 
 	if(card_name == ""){
 		alert("You did not enter a card name. Please enter one now.");
@@ -43,6 +46,8 @@ function checkForm () {
 		document.getElementById("year").focus();
 		return false;
 	}
+
+	*/
 
 	/* might not be needed? 
 	if(card_category == ""){
@@ -62,7 +67,7 @@ function checkForm () {
 	var card_year_pattern = /\d{4}/; 
 	var card_year_pattern_result = card_year_pattern.test(card_year); 
 	if (card_year_pattern_result == false){
-		alert("The year you entered (" + card_name + ") is not valid. Please enter a four digit year (example: 1999)  ");
+		alert("The year you entered (" + card_year + ") is not valid. Please enter a four digit year (example: 1999)  ");
 		document.getElementById("year").focus(); 
 		return false; 
 	}
