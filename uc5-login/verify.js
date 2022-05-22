@@ -13,36 +13,35 @@ function checkPassword () {
 	var passwordLength = false; 
 	
 	
-	if (result1) {
+	
+	
+	
+	while (result1 == false) {
+	document.getElementById("upper_req").style.color="red"; 
+	return false;
+	} 
 	document.getElementById("upper_req").style.color="green"; 
-	} else {
-		document.getElementById("upper_req").style.color="red"; 
-		return false;
-	}
 		
-	if (result2) {
+	while (result2 == false) {
+	document.getElementById("special_req").style.color="red"; 
+		return false;
+	}
 	document.getElementById("special_req").style.color="green";
-	} else {
-		document.getElementById("special_req").style.color="red"; 
-		return false;
-	}
 	
-	if (result3) {	
-	document.getElementById("digit_req").style.color="green"; 	
-	} else {
-		document.getElementById("digit_req").style.color="red";
-		return false;
+	while (result3 == false) {	
+	document.getElementById("digit_req").style.color="red";
+	return false;
 	}
+	document.getElementById("digit_req").style.color="green"; 
 	
-	if (userPassword.length < 8) {
+	
+	while (userPassword.length < 8) {
 	document.getElementById("char_req").style.color="red";
 	return false;
+	}
 	
-	} else {
 	document.getElementById("char_req").style.color="green";
 	passwordLength == true;
-		
-	}
 	
 	return true;
 
