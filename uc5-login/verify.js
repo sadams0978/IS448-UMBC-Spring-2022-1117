@@ -50,6 +50,7 @@ function checkPassword () {
 			return true;
 			
 		} else {
+		document.getElementById("password").style.border = "2px solid red";
 		return false;	
 		}
 		
@@ -78,7 +79,6 @@ if (formName == "passwordChange") {
 	if (passwordCheck == true) {
 	return true;	
 	} else {
-	 document.getElementById("password").style.border = "2px solid red";
 		return false;	
 	}
 	
