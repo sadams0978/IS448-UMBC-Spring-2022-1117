@@ -109,11 +109,14 @@ function checkName () {
 	var lastNameResult = contains_letters.test(lastName);
 	
 	
-	if ((firstNameResult || lastNameResult) === false ) {
-	alert ("Please check your first name or last name. It should only contain Letters.");
-	return false;
-	} else  {
-		return true;
+	if (firstNameResult == false) {
+	  document.getElementById("first_name").style.border = "2px solid red";
+		return false;
+	} else if (lastNameResult === false) {
+		 document.getElementById("last_name").style.border = "2px solid red";
+		return false;
+	} else {
+	return true	
 	}
 	
 }
@@ -126,10 +129,10 @@ function checkEmail () {
 	
 	var emailResult = isEmail.test(email);
 	
-	if (emailResult) {
+	if (emailResult == true) {
 	return true;
 	} else  {
-	alert ("Please check your email address.");
+ 	document.getElementById("email").style.border = "2px solid red";
 		return false;
 	}
 	
@@ -141,10 +144,10 @@ function checkDate () {
 	var isDate = /^\d{4}-\d{2}-\d{2}$/;
 	var dateTest = isDate.test(userDate);
 	
-	if (dateTest) {
+	if (dateTest == true) {
 	return true;	
 	} else {
-	alert ("You need to enter your birthday!");	
+	 document.getElementById("dob").style.border = "2px solid red";
 	return false;
 	}
 	
