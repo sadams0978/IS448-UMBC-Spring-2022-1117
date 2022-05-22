@@ -47,18 +47,12 @@ function checkPassword () {
 	
 		if (result1 && result2 && result3 && userPassword.length >= 8) {
 			passwordRequirements == true;
-			break;
+			return true;
 			
 		}
 		
 		
 	}
-
-	
-	
-	
-	
-	return true;
 
 }
 
