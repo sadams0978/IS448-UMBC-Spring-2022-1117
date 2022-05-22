@@ -26,12 +26,12 @@
     <h1> Change Your Password: </h1>
     <form action="password_update.php" target="_blank" onsubmit="return formCheck('passwordChange')" method="post">
     
-    <input type="email" name="email" id="email" placeholder="email-address">
+    <input type="email" name="email" id="email" placeholder="email-address" required>
      
      <button type="button" tabindex="-1" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
 
     
-    <input type="password" name="old_password" id="old_password" placeholder="Existing Password:">
+    <input type="password" name="old_password" id="old_password" placeholder="Existing Password:" required>
       
     <button type="button" tabindex="-1" onclick="visibility(old_password)"> <i class="fa-solid fa-eye"></i> </button>
 
