@@ -1,9 +1,9 @@
 function checkPassword () {
 	//Variables
 	var userPassword = document.getElementById("password").value;
- 	var contains_uppercase = /[A-Z]+/; 
- 	var contains_special_char = /\W+/;
- 	var contains_digit = /\d+/;
+ 	var contains_uppercase = /[A-Z]/; 
+ 	var contains_special_char = /\W/;
+ 	var contains_digit = /\d/;
  
 
   	//Result Checking for conditions
