@@ -47,7 +47,7 @@ function checkPassword () {
 	
 		if ( (result1 == true) && (result2 == true) && (result3 == true) && (result4 == true) ) {
 			passwordRequirements == true;
-			document.getElementById("password").style.border = "none";
+			document.getElementById("password").style.border = "black";
 			return true;
 			
 		} else {
