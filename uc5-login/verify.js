@@ -124,13 +124,14 @@ function checkName () {
 	
 	if (firstNameResult == false) {
 	  document.getElementById("first_name").style.border = "2px solid red";
-		return false;
-	} else if (lastNameResult === false) {
-		 document.getElementById("last_name").style.border = "2px solid red";
-		return false;
-	} else {
-	return true	
 	}
+	 if (lastNameResult === false) {
+		 document.getElementById("last_name").style.border = "2px solid red";
+	} 
+	
+	if ((firstNameResult && lastNameResult) == true) {
+	return true;	
+	} else return false;
 	
 }
 
