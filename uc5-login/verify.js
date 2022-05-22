@@ -14,7 +14,7 @@ function checkPassword () {
 	var result1 = contains_uppercase.test(userPassword);
 	var result2 = contains_special_char.test(userPassword);
 	var result3 = contains_digit.test(userPassword);	
-		
+	var result4 = (userPassword.length >= 8);
 		
 		
 	if (result1 == false) {
@@ -38,17 +38,19 @@ function checkPassword () {
 	document.getElementById("digit_req").style.color="green";		
 	}
 		
-	if (userPassword.length < 8) {
+	if (result4 == false) {
 	document.getElementById("char_req").style.color="red";
 	} else {
 	document.getElementById("char_req").style.color="green";
 	}	
 		
 	
-		if (result1 && result2 && result3 && userPassword.length >= 8) {
+		if ( (result1 == true) && (result2 == true) && (result3 == true) && (result4 == true) ) {
 			passwordRequirements == true;
 			return true;
 			
+		} else {
+		return false;	
 		}
 		
 		
