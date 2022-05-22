@@ -7,7 +7,7 @@ function checkEmail () {
 	if (emailResult) {
 	return true;
 	} else  {
-	alert ("Please check your email address.");
+ 	document.getElementById("email").style.border = "2px solid red";
 		return false;
 	}
 	
