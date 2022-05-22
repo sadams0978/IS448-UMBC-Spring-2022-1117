@@ -34,7 +34,7 @@
     <input type="text" name="email" id="email" placeholder="email-address">
     	<button type="button" tabindex="-1" onclick="clearField()"> <i class="fa-solid fa-trash"></i> </button>
     
-    <input type="password" name="password" id="password" placeholder="Password" onfocus="visible()" onblur="hide()" onchange="checkPassword()">
+    <input type="password" name="password" id="password" placeholder="Password" onfocus="visible()" onblur="hide()" onkeyup="checkPassword()">
     	<button type="button" tabindex="-1" onclick="visibility(password)"> <i class="fa-solid fa-eye"></i> </button>
 
     <input type="password" name="password_verify" id="password_verify" placeholder="Confirm your Password">
