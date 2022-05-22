@@ -1,4 +1,9 @@
 function checkPassword () {
+	var passwordRequirements = false;
+	
+	
+	while (passwordRequirements == false) {
+	
 	//Variables
 	var userPassword = document.getElementById("password").value;
  	var contains_uppercase = /[A-Z]/; 
@@ -9,39 +14,50 @@ function checkPassword () {
   	//Result Checking for conditions
 	var result1 = contains_uppercase.test(userPassword);
 	var result2 = contains_special_char.test(userPassword);
-	var result3 = contains_digit.test(userPassword);
-	var passwordLength = false; 
-	
-	
-	
-	
-	
-	while (result1 == false) {
-	document.getElementById("upper_req").style.color="red"; 
-	return false;
-	} 
-	document.getElementById("upper_req").style.color="green"; 
+	var result3 = contains_digit.test(userPassword);	
 		
-	while (result2 == false) {
-	document.getElementById("special_req").style.color="red"; 
-		return false;
+		
+		
+	if (result1 == false) {
+	document.getElementById("upper_req").style.color="red"; 
+	} else {
+	document.getElementById("upper_req").style.color="green"; 
 	}
-	document.getElementById("special_req").style.color="green";
+		
+		
+	if (result2 == false) {
+	document.getElementById("upper_req").style.color="red"; 
+	} else {
+	document.getElementById("upper_req").style.color="green"; 
+	}	
 	
-	while (result3 == false) {	
+		
+		
+	if (result3 == false) {	
 	document.getElementById("digit_req").style.color="red";
-	return false;
+	} else {
+	document.getElementById("digit_req").style.color="green";		
 	}
-	document.getElementById("digit_req").style.color="green"; 
-	
-	
-	while (userPassword.length < 8) {
+		
+	if (userPassword.length < 8) {
 	document.getElementById("char_req").style.color="red";
-	return false;
-	}
-	
+	} else {
 	document.getElementById("char_req").style.color="green";
-	passwordLength == true;
+	}	
+		
+	
+		if (result1 && result2 && result3 && userPassword.length >= 8) {
+			passwordRequirements == true;
+			break;
+			
+		}
+		
+		
+	}
+
+	
+	
+	
 	
 	return true;
 
