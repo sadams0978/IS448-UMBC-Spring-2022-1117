@@ -1,8 +1,7 @@
 function checkPassword () {
 	var passwordRequirements = false;
 	
-	
-	while (passwordRequirements == false) {
+	if (passwordRequirements == false) {
 	
 	//Variables
 	var userPassword = document.getElementById("password").value;
