@@ -36,7 +36,7 @@
     <button type="button" tabindex="-1" onclick="visibility(old_password)"> <i class="fa-solid fa-eye"></i> </button>
 
     
-    <input type="password" name="password" id="password" placeholder="New Password:" onfocus="visible()" onblur="hide()" onchange="checkPassword()">
+    <input type="password" name="password" id="password" placeholder="New Password:" onfocus="visible()" onblur="hide()" onkeyup="checkPassword()">
       
     <button type="button" tabindex="-1" onclick="visibility(password)"> <i class="fa-solid fa-eye"></i> </button>
 
