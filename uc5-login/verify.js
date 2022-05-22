@@ -78,8 +78,8 @@ if (formName == "passwordChange") {
 	if (passwordCheck == true) {
 	return true;	
 	} else {
-	alert ("Please check to make sure that your new password meets the criteria");
-	return false;	
+	 document.getElementById("password").style.border = "2px solid red";
+		return false;	
 	}
 	
 
