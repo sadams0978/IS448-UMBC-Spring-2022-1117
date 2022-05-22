@@ -25,9 +25,9 @@ function checkPassword () {
 		
 		
 	if (result2 == false) {
-	document.getElementById("upper_req").style.color="red"; 
+	document.getElementById("special_req").style.color="red"; 
 	} else {
-	document.getElementById("upper_req").style.color="green"; 
+	document.getElementById("special_req").style.color="green"; 
 	}	
 	
 		
