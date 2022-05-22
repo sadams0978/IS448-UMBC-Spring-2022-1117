@@ -1,3 +1,17 @@
+function verifyPassword () {
+	var initialPassword = document.getElementById("password").value;
+	var passwordVerify = document.getElementById("password_verify").value;
+	
+	if (initialPassword == passwordVerify) {
+	return true;	
+	} else {
+	document.getElementById("password_verify").style.border = "2px solid red";
+	return false;	
+	}
+
+	
+}
+
 function checkPassword () {
 	var passwordRequirements = false;
 	
@@ -77,21 +91,22 @@ function formCheck (formName) {
 if (formName == "passwordChange") {
 	//Checking Password and seeing if it is valid
 	var passwordCheck = checkPassword();
-	if (passwordCheck == true) {
+	var resultVerify = verifyPassword();
+	if ((passwordCheck == true) && (resultVerify == true)) {
 	return true;	
 	} else {
 		return false;	
 	}
 	
 
-
 } else {
 var nameResult = checkName();
 var emailResult = checkEmail();
 var passwordResult = checkPassword();
 var dateResult = checkDate();
+var verifyResult = verifyPassword();
 	
-	if (nameResult && emailResult && dateResult && passwordResult) {
+	if (nameResult && emailResult && dateResult && passwordResult && verifyResult) {
 	return true;
 	} else return false;
 
