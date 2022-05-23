@@ -22,6 +22,8 @@
 			$favoritesArr = array();
 			$_SESSION['favorites'] = $favoritesArr;
 		}
+		
+		unset($_SESSION['qty_array']);
 	
 		array_push($_SESSION['favorites'],$c_ID);
 		//echo $_SESSION['favorites'][$c_ID];
