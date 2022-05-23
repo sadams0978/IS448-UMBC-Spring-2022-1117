@@ -142,10 +142,13 @@
 		foreach($_SESSION['favorites'] as $item){
 			$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
 			$result1 = mysqli_query($db,$sql);
-			$card1 = mysqli_fetch_array($result1);
+			
 	?>
 		<div class = "cardsContainer">
-			<ul class = "cards">	
+			<ul class = "cards">
+				<?php
+				while ($card1 = mysqli_fetch_array($result1)){
+				?>
 				<li>
 				<?php
 				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
@@ -169,6 +172,9 @@
 				'\n' . 'Card Composition: ' . ($card1['C_COMP']) . '\n' . 'Card Year: ' . ($card1['C_YEAR']) . '\n' . 'Card Price: ' . ($card1['PRICE'])?>')">Card Details</button>
 								
 				</li>
+				<?php
+				}
+				?>
 			</ul>
 
 		</div>
