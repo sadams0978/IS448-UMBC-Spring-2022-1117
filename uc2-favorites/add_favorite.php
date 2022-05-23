@@ -27,8 +27,5 @@
     
     array_push($_SESSION['favorites'],$C_ID);
     ?>
-  
-  $refresh = "../uc1-Listings-View/ListingsView.php";
-  header("Refresh:0; url=$refresh");  
   </body>
 </html>
