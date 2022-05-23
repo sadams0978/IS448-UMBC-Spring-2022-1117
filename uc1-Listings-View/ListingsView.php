@@ -159,7 +159,7 @@
 		<br>
 		
 		<!-- favorites button -->
-		
+		<?php
 		$favcard['C_ID']=$card[$i]['C_ID'];
 		echo '<a href = "../uc2-favorites/add_favorite.php?C_ID='.$favcard['C_ID'].'"><i class = "fa-solid fa-heart" style = "color:red"></i></a>';
 			
