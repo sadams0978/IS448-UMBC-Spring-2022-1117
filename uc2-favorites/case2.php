@@ -44,16 +44,23 @@
 	}
 		
 	$c_ID=$_GET['C_ID'];
-			
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID = '$c_ID'";
-	$result = mysqli_query($db, $constructed_query);
-	
-	if(!$result){
-		$error = mysqli_error($db);
-		exit;
-	}
+		
+	$favoritesArr = array();
+	$_SESSION['favorites'] = $favoritesArr;
+		
+	array_push($_SESSION['favorites'],$c_ID);
+		
+	foreach($_SESSION['favorites'] as $item){
+		$constructed_query = "SELECT * FROM STOCK WHERE C_ID =".$item;
+		$result = mysqli_query($db, $constructed_query);
 
-	$card = mysqli_fetch_array($result);
+		if(!$result){
+			$error = mysqli_error($db);
+			exit;
+		}
+
+		$card = mysqli_fetch_array($result);
+	}
 	?>
     	
 	<!-- favorites section -->
