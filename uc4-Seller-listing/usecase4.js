@@ -2,7 +2,7 @@
 
 window.onload = pageLoad; 
 function pageLoad(){
-	//test
+	
 
 
 	document.getElementById("biggerTextB").onclick=increaseTextSize;
@@ -49,7 +49,7 @@ function checkForm() {
 	}
 
 	*/
-	if(card_year == "test"){
+	if(card_year == ""){
 		alert("You did not enter a card year. Please enter one now.");
 		document.getElementById("year").focus();
 		return false;
@@ -70,7 +70,7 @@ function checkForm() {
 	}
 	*/ 
 
-/*
+
 //checks and alerts user to enter a year as 4 digits
 	var card_year_pattern = /\d{4}/; 
 	var card_year_pattern_result = card_year_pattern.test(card_year); 
@@ -79,7 +79,7 @@ function checkForm() {
 		document.getElementById("year").focus(); 
 		return false; 
 	}
-*/
+
 	
 
 }
