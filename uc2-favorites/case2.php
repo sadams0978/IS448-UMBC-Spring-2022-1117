@@ -1,6 +1,4 @@
-<?php
-	include('../db_connection.php');
-?>
+
 <!doctype html>
 <html lang ="en">
 	<head>
@@ -16,7 +14,7 @@
 		
         <?php
 	// Includes our menu bar, instead of copying and pasting through the pages
-	//include('../menu.php');
+	include('../menu.php');
 		
 	$_SESSION['category'] = $_POST["category"];
 	$_SESSION['condition'] = $_POST["condition"];
