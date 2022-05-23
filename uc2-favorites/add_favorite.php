@@ -24,7 +24,9 @@
 		}
 	
 		array_push($_SESSION['favorites'],$C_ID);
-		echo $_SESSION['favorites'];
+		foreach($_SESSION['favorites'] as $item){
+			echo "$item";
+		}
 	?>
 	
 </body>
