@@ -138,7 +138,7 @@
 	</div>
 	
 		<div class = "cardsContainer">
-			
+			Hello
 			<?php
 			$C_ID=$_GET['C_ID'];
 			
