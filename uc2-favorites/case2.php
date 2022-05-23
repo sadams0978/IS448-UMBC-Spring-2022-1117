@@ -136,8 +136,9 @@
             echo "Year: " . $_SESSION['year'];
         ?>
 	</div>
-	
-		<?php
+
+		<div class = "cardsContainer">
+			<?php
 			$c_ID=$_GET['C_ID'];
 			
 			if(!isset($_SESSION['favorites'])){
@@ -156,9 +157,7 @@
 				$result = mysqli_query($db,$sql);
 				$card = mysqli_fetch_array($result);
 			?>
-		<div class = "cardsContainer">
 			<ul class = "cards">
-				
 				<li>
 				<?php
 				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
