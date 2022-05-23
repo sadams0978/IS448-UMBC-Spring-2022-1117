@@ -45,7 +45,7 @@
       $passwords_match = true;
       
     } else {
-    echo ("<h3> Your Passwords don't match, please try again. </h3>" );
+    echo ("<h1> Your Passwords don't match, please try again. </h1>" );
        die;
     }
           
@@ -59,7 +59,7 @@
 
 //If it's not meeting minimum requirements, alert the user of the requirements
     if(!$min_length || !$contains_uppercase || !$contains_digit || !$contains_special_char) {
-    echo (" <h3> Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character </h3> ");
+    echo (" <h1> Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character </h1> ");
      die;
     }
 
@@ -92,14 +92,14 @@
 
        //Updates Password after verifiying the old password is right
       if (mysqli_query($db, $update)) {
-      echo " <h3> We changed your password. </h3> ";
+      echo "<h1> We changed your password. </h1> ";
       } else {
-  echo "<h3> We were unable to change your password. </h3>" . mysqli_error($db);
+  echo "<h1> We were unable to change your password. </h1>" . mysqli_error($db);
 }   
              
         
         
-  }  else echo (" <h3> You are not logged in. </h3> ");
+  }  else echo (" <h1> Please check your email address or password, and try again.  </h1> ");
    
   }
 
