@@ -155,7 +155,7 @@
 			
 			<ul class = "cards">
 				<?php
-				for($i = 0; $i < count($card); $i++){
+				for($i = 0; $i < count($_SESSION['favorites']); $i++){
 				?>	
 				<li>
 				<?php
