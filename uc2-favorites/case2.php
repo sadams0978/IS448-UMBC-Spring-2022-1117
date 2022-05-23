@@ -140,11 +140,15 @@
 			<ul class = "cards">
 				<?php
 				if(isset($_SESSION['favorites'])){
+				?>
+					<?php
 					foreach($_SESSION['favorites'] as $item){
+					?>
+						<?php
 						$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
 						$result1 = mysqli_query($db,$sql);
 						$card1 = mysqli_fetch_array($result1);
-				?>
+						?>
 				<li>
 				<?php
 				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
@@ -174,6 +178,8 @@
 				</li>
 				<?php
 					}
+				?>
+				<?php
 				}
 				?>
 			</ul>
