@@ -163,7 +163,7 @@
 				?>
 				<br>
 				<?php
-				echo $C_ID;	
+				echo ($card1['C_ID']);	
 				?>
 				<br>
 				<!-- button to remove card from favorites -->	
