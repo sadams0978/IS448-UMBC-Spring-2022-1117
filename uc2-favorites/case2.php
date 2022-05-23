@@ -44,7 +44,7 @@
 	}
 		
 	if(isset($_SESSION['favorites'])){
-		foreach($_SESSIONp['favorites'] as $item){
+		foreach($_SESSION['favorites'] as $item){
 			$sql = "SELECT * FROM STOCK WHERE C_ID=".$item;
 			$result = mysqli_query($db,$sql);
 			$card = mysqli_fetch_array($result);
