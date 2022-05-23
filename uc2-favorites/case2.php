@@ -43,12 +43,9 @@
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 	
-	
-	if (!empty($_SESSION['favorites'])){
 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID IN (".implode(',',$_SESSION['favorites']).")";
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
-	}
 	}
 	?>
     	
@@ -166,6 +163,7 @@
 			'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
 				
 		</section>
+		
 	</div>
 		
 		<p class = "spacer"></p>
