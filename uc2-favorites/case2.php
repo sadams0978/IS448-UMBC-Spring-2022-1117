@@ -135,6 +135,17 @@
             echo "<br>";
             echo "Year: " . $_SESSION['year'];
         ?>
+	
+	<?php
+		if(isset($_SESSION['message'])){
+			?>
+			<div class="alert alert-info text-center">
+				<?php echo $_SESSION['message']; ?>
+			</div>
+			<?php
+			unset($_SESSION['message']);
+		}
+	?>
 	</div>
 	<div class = "cardsContainer">
 		<?php
@@ -183,20 +194,6 @@
 			    </ul>
 			    <?php
 			}
-		?>
-	</div>
-	
-	<!-- alert message display -->
-	<div class = "cardsContainer">
-		<?php
-		if(isset($_SESSION['message'])){
-			?>
-			<div class="alert alert-info text-center">
-				<?php echo $_SESSION['message']; ?>
-			</div>
-			<?php
-			unset($_SESSION['message']);
-		}
 		?>
 	</div>
 		
