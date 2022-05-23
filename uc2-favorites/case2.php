@@ -144,7 +144,7 @@
 			$query = $db->query($sql);
 				while($card1 = $query->fetch_assoc()){
 					?>
-					<ul class = "cards">
+					<ul class = "display">
 					<li>
 						<?php
 						echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
@@ -175,7 +175,7 @@
 			}
 			else{
 			    ?>
-			    <ul class = "cards">
+			    <ul class = "display">
 				    <li>No Cards In Favorites</li>
 			    </ul>
 			    <?php
