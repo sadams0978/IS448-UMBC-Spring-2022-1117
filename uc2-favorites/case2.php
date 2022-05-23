@@ -43,7 +43,7 @@
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 	
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID IN (".implode(',',$_SESSION['favorites']).")";
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
@@ -137,33 +137,50 @@
         ?>
 	</div>
 	<div class = "cardsContainer">
-		
-		<section>
-			<img src='blank-card.jpg' width = '150' height = '250'/>
-			<br>
-			<?php
-			echo $card['C_NAME'];	
-			?>
-			<br>
-			<?php
-			echo "Price: " . ($card['PRICE']);	
-			?>
-			<br>
-			<?php
-			echo ($card['C_ID']);	
-			?>
-			<br>
-			<!-- button to remove card from favorites -->	
-			<?php
-			echo '<a href = "../uc1-Listings-View/ListingsView.php"><button class = "fa-regular fa-heart" style = "color:red"></button></a>';
-			?>
-			
-			<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card['C_NAME']) . '\n' . 'Card Description: ' . ($card['C_DESC']) . '\n' . 'Card Quantity: ' . ($card['C_QUANTITY']) .
-			'\n' . 'Card Category: ' . ($card['C_CATEG']) . '\n' . 'Card Condition: ' . ($card['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card['C_FINISH']) . 
-			'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
-				
-		</section>
-		
+		<?php
+			if(!empty($_SESSION['favorites'])){
+			include('../db_connection.php');
+			$sql = "SELECT * FROM STOCK WHERE C_ID IN (".implode(',',$_SESSION['favorites']).")";
+			$query = $db->query($sql);
+				while($card1 = $query->fetch_assoc()){
+					?>
+					<ul class = "cards">
+					<li>
+						<?php
+						echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
+						?>
+						<br>
+						<?php
+						echo ($card1['C_NAME']);
+						?>
+						<br>
+						<?php
+						echo "Price: " . ($card1['PRICE']);	
+						?>
+						<br>
+						<?php
+						echo ($card1['C_ID']);	
+						?>
+						<br>
+						<?php
+						echo '<a href = "../uc1-Listings-View/ListingsView.php"><button class = "fa-regular fa-heart" style = "color:red"></button></a>';
+						?>
+						<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card1['C_NAME']) . '\n' . 'Card Description: ' . ($card1['C_DESC']) . '\n' . 'Card Quantity: ' . ($card1['C_QUANTITY']) .
+						'\n' . 'Card Category: ' . ($card1['C_CATEG']) . '\n' . 'Card Condition: ' . ($card1['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card1['C_FINISH']) . 
+						'\n' . 'Card Composition: ' . ($card1['C_COMP']) . '\n' . 'Card Year: ' . ($card1['C_YEAR']) . '\n' . 'Card Price: ' . ($card1['PRICE'])?>')">Card Details</button>
+					</li>
+					</ul>
+					<?php
+				}
+			}
+			else{
+			    ?>
+			    <ul class = "cards">
+				    <li>No Cards In Favorites</li>
+			    </ul>
+			    <?php
+			}
+		?>
 	</div>
 		
 		<p class = "spacer"></p>
