@@ -1,15 +1,30 @@
-<?php
-	session_start();
-	include('../db_connection.php');
-  	$addFav = "../uc1-Listings-View/ListingsView.php";
-	//check if card is already in favorites
-	if(!in_array($_GET['C_ID'], $_SESSION['favorites'])){
-		array_push($_SESSION['favorites'], $_GET['C_ID']);
-		$_SESSION['message'] = 'Card added to favorites';
-	}
-	else{
-		$_SESSION['message'] = 'Card already in favorites';
-	}
- 
-	header('location: '.$addfav);
-?>
+<!doctype html>
+<html lang ="en">
+<head>
+    
+    <meta http-equiv="refresh" content="1;url=../uc1-Listings-View/ListingsView.php"/>
+    <link rel="stylesheet" type="text/css" href="../root.css"/>
+    <link rel="stylesheet" type="text/css" href="uc2-favorites.css"/>
+    
+</head>
+<body>
+	<?php
+    	include('../db_connection.php');
+	?>
+	<?php
+	include('../menu.php');
+	?>
+	Added To Favorites
+	<?php
+		$C_ID = $_GET['C_ID'];
+	
+		if(!isset($_SESSION['favorites'])){
+			$favoritesArr = array();
+			$_SESSION['favorites'] = $favoritesArr;
+		}
+	
+		array_push($_SESSION['favorites'],$C_ID);
+	?>
+	
+</body>
+</html>
