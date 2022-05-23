@@ -3,8 +3,17 @@
 //an array that contains the abbreviations in upper-case and their corresponding full-form
 $arr = array(
 	"GEM MINT" => "GEM-MT10",
-	"MINT" => "Mint",
+	"MINT" => "MINT 9",
 	"NEAR MINT-MINT" => "NM-MT 8",
+	"NEAR MINT" => "NM7"
+	"EXCELLENT-MINT" => "EX-MT6",
+	"EXCELLENT" => "EX 5",
+	"VERY GOOD-EXCELLENT" => "VG-EX4",
+	"VERY GOOD" => "VG 3",
+	"GOOD" => "GOOD 2",
+	"FAIR" => "FR 1.5",
+	"POOR" => "PR 1",
+
 	
 );
 

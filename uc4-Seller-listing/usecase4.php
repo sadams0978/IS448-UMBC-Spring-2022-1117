@@ -54,15 +54,9 @@ include('../menu.php');
 
         <br/> 
       
-      <!--Enter card condition dropdown--> 
-      <label for="condition"> Condition:</label> <!--from sql & php-->
-        <select name= "condition" id="condition"> 
-          <option value="" disabled selected>Select your option</option>
-          <option value=”1”>GEM MINT</option>
-          <option value=”2”>MINT</option>
-          <option value=”3”>NEAR MINT-MINT</option>
-          <!--option value=”4”>Mint</option-->
-        </select>
+      <label for ="condition"> Card Name: </label>
+        <input type="text" name="condition" id= "condition" size ="16" placeholder="Condition" > 
+
 
       <p> PSA Grade: </p>
       <div id="result">

@@ -70,18 +70,6 @@ function checkForm() {
 		return false; 
 	}
 
-	/* might not be needed? 
-	if(card_category == ""){
-		alert("cateogry empty");
-		document.getElementById("category").focus();
-		return false; 
-	}
-	if(card_category == "Select your option"){
-		alert(" select your option is stored");
-		document.getElementById("category").focus();
-		return false;
-	}
-	*/ 
 
 	//Ensures that card year is a year that has aleardy occurred
   	if (card_year >= 2022){
@@ -90,36 +78,7 @@ function checkForm() {
 			return false; 
   	}
 
-
-	
-
 }
-
-/*
-//to test if placeholders are stored into vars
-function checkCat() {
-
-	
-	var card_category = document.getElementById("category");
-
-//checks to ensure that fields have not been left empty 
-	
-	if(card_category == ""){
-		alert("cateogry empty");
-		document.getElementById("category").focus();
-		return false; 
-	}
-	if(card_category == "Select your option"){
-		alert(" 'select your option is stored' as (" + card_category + ")");
-		document.getElementById("category").focus();
-		return false;
-	}
-
-
-
-}
-
-*/
 
 
 
