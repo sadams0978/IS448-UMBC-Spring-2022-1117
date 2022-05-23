@@ -43,9 +43,16 @@
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 	
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
-	$result = mysqli_query($db, $constructed_query);
-	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+// 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
+// 	$result = mysqli_query($db, $constructed_query);
+// 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+// 	}
+	if(isset($_SESSION['favorites'])){
+		foreach($_SESSION['favorites'] as $item){
+			$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
+			$result1 = mysqli_query($db,$sql);
+			$card1 = mysqli_fetch_array($result1);
+		}
 	}
 	?>
     	
