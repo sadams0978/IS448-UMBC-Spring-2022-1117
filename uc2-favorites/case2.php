@@ -164,16 +164,14 @@
 				?>
 				<br>
 				<?php
-				echo ($card['PRICE']);	
+				echo "Price: " . ($card['PRICE']);	
 				?>
 				<br>
 				<?php
 				echo "ID: " . ($c_ID);
 				?>
 				<br>
-				<!-- button to remove card from favorites -->
-				
-					
+				<!-- button to remove card from favorites -->	
 				<?php
 				echo '<a href = "../uc1-Listings-View/ListingsView.php"><button class = "fa-regular fa-heart" style = "color:red"></button></a>';
 				?>
