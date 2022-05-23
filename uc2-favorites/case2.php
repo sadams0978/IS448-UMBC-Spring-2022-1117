@@ -1,4 +1,6 @@
-
+<?php
+    	include('../db_connection.php');
+?>
 <!doctype html>
 <html lang ="en">
 	<head>
@@ -40,7 +42,11 @@
 	if (!empty($_SESSION['year'])) {
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
-	
+		
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
+	$result = mysqli_query($db, $constructed_query);
+	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+	}
 	?>
     	
 	<!-- favorites section -->
@@ -145,7 +151,7 @@
 		<?php
 			$total = 0;
 			if(!empty($_SESSION['favorites'])){
-			include('../db_connection.php');
+			
 			$index = 0;
 			if(!isset($_SESSION['qty_array'])){
  				$_SESSION['qty_array'] = array_fill(0, count($_SESSION['favorites']), 1);
