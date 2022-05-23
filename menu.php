@@ -28,6 +28,6 @@
 			<li><a href="../uc3-purchasing/card-details-Andrew-part3.php">Purchasing</a></li>
 			<li id="adminLink"><a href="../admin">Admin</a></li>
 			<li><a href="../uc5-login/logout.php">Logout</a></li>
-  			<div class="search"><li><input type="text" name="Search" /> <button type="submit">Search</button></li></div>
+  			 <!--<div class="search"><li><input type="text" name="Search" /> <button type="submit">Search</button></li></div> -->
 		</ul>
 	</div>
