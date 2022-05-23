@@ -42,16 +42,18 @@
 	if (!empty($_SESSION['year'])) {
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
-	
+	?>
+	<?php
 	$c_ID=$_GET['C_ID'];
 	
 	if(!isset($_SESSION['favorites'])){
 		$favoritesArr = array();
 		$_SESSION['favorites'] = $favoritesArr;
-	
+	}
 	
 	array_push($_SESSION['favorites'],$c_ID);
-		
+	?>
+	<?php
 	if(isset($_SESSION['favorites'])){
 		foreach($_SESSION['favorites'] as $item){
 			$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
@@ -182,7 +184,6 @@
 			}
 	}else{
 		echo "No Favorites Added";	
-	}
 	}
 		?>
 
