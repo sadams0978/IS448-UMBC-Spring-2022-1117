@@ -161,7 +161,7 @@
 		<!-- favorites button -->
 		<?php
 		$favcard['C_ID']=$card[$i]['C_ID'];
-		echo '<a href = "../uc2-favorites/case2.php?C_ID='.$favcard['C_ID'].'"><i class = "fa-solid fa-heart" style = "color:red" width = "10" height = "10"></i></a>';
+		echo '<a href = "../uc2-favorites/case2.php?C_ID='.$favcard['C_ID'].'"><button class = "fa-solid fa-heart" style = "color:red"></button></a>';
 		?>
 
 		<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card[$i]['C_NAME']) . '\n' . 'Card Description: ' . ($card[$i]['C_DESC']) . '\n' . 'Card Quantity: ' . ($card[$i]['C_QUANTITY']) . '\n' . 'Card Category: ' . ($card[$i]['C_CATEG']) . '\n' . 'Card Condition: ' . ($card[$i]['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card[$i]['C_FINISH']) . '\n' . 'Card Composition: ' .($card[$i]['C_COMP']) . '\n' . 'Card Year: ' .($card[$i]['C_YEAR']) . '\n' . 'Card Price: ' . ($card[$i]['PRICE'])?>')">Card Details</button>
