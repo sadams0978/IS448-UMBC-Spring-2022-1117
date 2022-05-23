@@ -57,8 +57,8 @@
 			$sql = "SELECT * FROM STOCK WHERE C_ID=".$item;
 			$result = mysqli_query($db,$sql);
 			$card = mysqli_fetch_array($result);
-		}
-	}
+		
+	
 	
 	?>
     	
@@ -183,6 +183,12 @@
 			</ul>
 
 		</div>
+		<?php
+			}
+	}else{
+		echo "No Favorites Added";	
+	}
+		?>
 
 		<p class = "spacer"></p>
 		<div class = "footer">
