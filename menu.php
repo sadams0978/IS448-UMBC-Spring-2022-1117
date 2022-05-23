@@ -8,6 +8,16 @@
 		header('Location: '. $login); 
 	}
 	echo ("Welcome, " . $_SESSION['email']); 
+	
+	if ($_SESSION['group'] == 'user') {
+	 ?>
+		<style type="text/css">
+			#adminLink {
+			display:none;
+				} </style>
+	<?php
+  	}
+	
 	?> 
 	<a href="../uc4-Seller-listing/usecase4.php"> <i class="fa-solid fa-cart-shopping"></i> </a> </p>
 	<!--link to shopping cart and sign in pages-->
