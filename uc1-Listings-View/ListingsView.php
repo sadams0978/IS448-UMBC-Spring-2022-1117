@@ -135,15 +135,6 @@
             echo "<br>";
             echo "Year: " . $_SESSION['year'];
         ?>
-	<br>
-	<?php
-	if (isset($_SESSION['message'])){
-	?>
-		<?php echo $_SESSION['message']; ?>
-	<?php
-	unset($_SESSION['message']);
-	}
-	?>
 	</div>
     <!--FILTER Section Over--> 
     
