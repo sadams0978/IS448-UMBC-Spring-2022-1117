@@ -41,5 +41,6 @@ li.show {
 
 a {
   backgrund-color: antiquewhite;
-  border: 0;
+  border: 0px;
+  border-radius: 0px;
 }
