@@ -161,7 +161,7 @@
 		<!-- favorites button -->
 		<?php
 		$favcard['C_ID']=$card[$i]['C_ID'];
-		echo '<a href = "../uc2-favorites/case2.php?C_ID='.$favcard['C_ID'].'"><i class = "fa-solid fa-heart" style = "color:red"></i></a>';
+		echo '<a href = "../uc1-Listings-View/ListingsView.php?C_ID='.$favcard['C_ID'].'"><i class = "fa-solid fa-heart" style = "color:red"></i></a>';
 			
 // 		$C_ID=$_GET['C_ID'];
 			
