@@ -175,7 +175,7 @@
 						?>
 						<br>
 						
-						<a href="delete_card.php?C_ID=<?php echo $card1['C_ID']; ?>&index=<?php echo $index; ?>"><i class="fa-solid fa-trash-can"></i></a>
+						<a href="delete_card.php?C_ID=<?php echo $card1['C_ID']; ?>&index=<?php echo $index; ?>" class="fa-solid fa-trash-can"></a>
 						
 						<input type="hidden" name="indexes[]" value="<?php echo $index; ?>">
 						
