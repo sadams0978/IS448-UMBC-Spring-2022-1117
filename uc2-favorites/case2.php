@@ -163,7 +163,7 @@
 				?>
 				<br>
 				<?php
-				echo ($card[$i]['C_NAME']);
+				echo ($_SESSION['favorites'][$i]['C_NAME']);
 				?>
 				<br>
 				<?php
