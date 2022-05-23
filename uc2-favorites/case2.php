@@ -145,10 +145,6 @@
             echo "<br>";
             echo "Year: " . $_SESSION['year'];
         ?>
-	
-	<?php
-	echo "test test test";		
-	?>
 	</div>
 
 		<div class = "cardsContainer">
