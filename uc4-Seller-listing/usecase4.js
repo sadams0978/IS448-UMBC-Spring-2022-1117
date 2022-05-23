@@ -161,3 +161,5 @@ function displayResult(ajax){
 
 function displayFailureMessage(){
 	alert('ajax request failed');
+
+}
