@@ -56,7 +56,7 @@
 		foreach($_SESSION['favorites'] as $item){
 			$sql = "SELECT * FROM STOCK WHERE C_ID=".$item;
 			$result = mysqli_query($db,$sql);
-			$card = mysqli_fetch_array($result);
+			while($card = mysqli_fetch_array($result)){
 		
 	
 	
@@ -184,6 +184,7 @@
 
 		</div>
 		<?php
+				}
 			}
 	}else{
 		echo "No Favorites Added";	
