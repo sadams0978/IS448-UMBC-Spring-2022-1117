@@ -50,6 +50,26 @@ if (empty($password_verify) or empty($password)) {
      die;
     }
 
+
+
+	$date1 = date($dob);
+	$date2 = date("YY-MM-DD");
+  	$diff = abs($date2 - $date1);
+
+	$years = floor($diff / (365*60*60*24));
+	if ($years < 18 ) {
+	echo ("You need to be 18 years old to create an account. Please try again later. ");	
+	}
+
+
+  	$diff = abs($date2 - $date1);
+
+
+	$interval = date_diff($date1,$date2);
+	echo $interval->format('%R%y years %m months');
+
+	
+
 	include('../db_connection.php');
 
      //Hashing our new password
