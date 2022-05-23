@@ -164,6 +164,10 @@
 				?>
 				<br>
 				<?php
+				echo ($card['PRICE']);	
+				?>
+				<br>
+				<?php
 				echo "ID: " . ($c_ID);
 				?>
 				<br>
