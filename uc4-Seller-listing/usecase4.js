@@ -15,7 +15,7 @@ function pageLoad(){
 	document.getElementById("year").onfocusout = checkForm; 
 
 
-	$("lookup").onfocusout = showDefinition;
+	$("condition").onfocusout = showDefinition;
 
 	//to test if placeholders are stored into vars
 	//document.getElementById("category").onblur = checkCat; 
