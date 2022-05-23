@@ -39,3 +39,11 @@ li.show {
   border-color: red;
 }
 
+.fa-trash-can {
+  color: black;
+  background: none;
+}
+
+.fa:hover {
+  opacity: 0.7;	
+}
