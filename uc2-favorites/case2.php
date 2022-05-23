@@ -48,13 +48,13 @@
 	if(!isset($_SESSION['favorites'])){
 		$favoritesArr = array();
 		$_SESSION['favorites'] = $favoritesArr;
-	}
+	
 	
 	array_push($_SESSION['favorites'],$c_ID);
 		
 	if(isset($_SESSION['favorites'])){
 		foreach($_SESSION['favorites'] as $item){
-			$sql = "SELECT * FROM STOCK WHERE C_ID=".$item;
+			$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
 			$result = mysqli_query($db,$sql);
 			$card = mysqli_fetch_array($result);
 		
@@ -182,6 +182,7 @@
 			}
 	}else{
 		echo "No Favorites Added";	
+	}
 	}
 		?>
 
