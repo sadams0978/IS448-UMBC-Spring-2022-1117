@@ -43,8 +43,6 @@
 	}
 	
 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
-	$query = $db->query($sql);
-	$card1 = $query->fetch_assoc();
 	?>
     	
 	<!-- favorites section -->
