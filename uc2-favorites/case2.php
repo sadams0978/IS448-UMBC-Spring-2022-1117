@@ -170,7 +170,6 @@
 			'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
 				
 		</section>
-		<?php } ?>
 	</div>
 		
 		<p class = "spacer"></p>
@@ -179,5 +178,6 @@
 			Made By: Dylan De Leon
 			</p>
 		</div>
+	<?php } ?>
 	</body>
 </html>
