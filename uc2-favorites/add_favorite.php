@@ -4,7 +4,7 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset = "utf-8" http-equiv="refresh" content="1;url=../uc1-Listings-View/ListingsView.php"/>
+		<meta charset = "utf-8">
 		<link rel = "stylesheet" type = "text/css" href = "../root.css"/>
 		<link rel = "stylesheet" type = "text/css" href = "uc2-favorites.css"/>
 		<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
@@ -28,6 +28,7 @@
     array_push($_SESSION['favorites'],$C_ID);
     ?>
   
-    
+  $refresh = "../uc1-Listings-View/ListingsView.php";
+  header("Refresh:0; url=$refresh");  
   </body>
 </html>
