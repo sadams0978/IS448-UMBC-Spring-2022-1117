@@ -58,16 +58,15 @@ function checkForm() {
 
 
 	let i = 0; 
-	do {
+	while (i < 1) {
 
 		if(card_year == ""){
 		alert("You did not enter a card year. Please enter one now.");
 		document.getElementById("year").focus();
 		return false;
-  		}
+  	}
   		i++;
 	}
-		while (i < 2);
 
 	
 
