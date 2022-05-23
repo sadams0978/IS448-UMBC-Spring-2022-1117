@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="../root.css"/>
     <link rel="stylesheet" type="text/css" href="ListingsView.css"/>
     <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
-    <!-- <script type = "text/javascript" src = "../uc2-favorites/uc2-js.js"></script> -->
 
     <title>Card Listings</title>
 </head>
@@ -135,6 +134,17 @@
             echo "<br>";
             echo "Year: " . $_SESSION['year'];
         ?>
+	<!-- message pop up for adding to favorites by Dylan -->
+	<?php
+		if(isset($_SESSION['message'])){
+			?>
+			<div class="alert alert-info text-center">
+				<?php echo $_SESSION['message']; ?>
+			</div>
+			<?php
+			unset($_SESSION['message']);
+		}
+		?>
 	</div>
     <!--FILTER Section Over--> 
     
