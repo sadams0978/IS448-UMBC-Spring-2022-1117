@@ -50,8 +50,8 @@
 		
 	array_push($_SESSION['favorites'],$c_ID);
 		
-	foreach($_SESSION['favorites'] as $item){
-		$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year".$item;
+	
+		$constructed_query = "SELECT * FROM STOCK WHERE C_ID = $c_ID $category $condition $finish $composition $year";
 		$result = mysqli_query($db, $constructed_query);
 
 		if(!$result){
@@ -60,7 +60,7 @@
 		}
 
 		$card = mysqli_fetch_array($result);
-	}
+	
 	?>
     	
 	<!-- favorites section -->
