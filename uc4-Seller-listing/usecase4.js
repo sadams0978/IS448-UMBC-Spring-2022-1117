@@ -15,7 +15,10 @@ function pageLoad(){
 	document.getElementById("year").onfocusout = checkYear; 
 
 
-	$("condition").onfocusout = showDefinition;
+	//$("condition").onfocusout = showDefinition;
+
+	$("psa_grade").onclick = showDefinition;
+
 
 	//to test if placeholders are stored into vars
 	//document.getElementById("category").onblur = checkCat; 
@@ -94,7 +97,7 @@ function checkYear() {
 
 
 function showDefinition(){
-	//retrieve value from the 'term' textbox
+	//retrieve value from the 'condition' textbox
 	var searchTerm = $("condition").value;
 					//= document.getElementById("condition").value;
 	//create a new Ajax request with URL pointing to urban.php, and query-string-parameter-name is 'parameter1' and query-string-parameter-value being the value that

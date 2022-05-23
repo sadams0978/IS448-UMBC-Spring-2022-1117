@@ -54,9 +54,10 @@ include('../menu.php');
 
         <br/> 
       
+
       <label for ="condition"> Condition: </label>
         <input type="text" name="condition" id= "condition" size ="16" placeholder="Condition" > 
-
+        <button id="psa_grade">Find PSA Grade</button>
 
       <p> PSA Grade: </p>
       <div id="result">
