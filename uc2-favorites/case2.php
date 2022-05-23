@@ -136,8 +136,8 @@
             echo "Year: " . $_SESSION['year'];
         ?>
 	</div>
-		<div class = "container">
-			<ul class = "cards">
+		<div class = "cards">
+			<ul class = "display">
 				<li>
 				<?php
 				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
