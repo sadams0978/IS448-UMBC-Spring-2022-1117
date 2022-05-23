@@ -152,7 +152,7 @@
 				?>
 				<br>
 				<?php
-				echo "ID: " . ($card['C_ID']);
+				echo "ID: " . ($c_ID);
 				?>
 				<br>
 				<!-- button to remove card from favorites -->
