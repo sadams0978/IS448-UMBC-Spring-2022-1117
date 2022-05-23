@@ -116,6 +116,9 @@ if (empty($password_verify) or empty($password)) {
   die();
 
 ?>
+	
+	
+	<h3> <a href="index.php"> Click Here to sign in </a> </h3>
 	    
  </div>
 
