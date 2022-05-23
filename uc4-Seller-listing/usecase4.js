@@ -2,7 +2,7 @@
 
 window.onload = pageLoad; 
 function pageLoad(){
-	
+	//test
 
 
 	document.getElementById("biggerTextB").onclick=increaseTextSize;
