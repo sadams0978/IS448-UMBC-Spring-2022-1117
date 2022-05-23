@@ -53,14 +53,9 @@ if (empty($password_verify) or empty($password)) {
 
 	//checking that the user is 18 years old
 
-	$date1 = date($dob);
-	$date2 = date("Y/m/d");
-  	$interval = date_diff($date1, $date2);
-
-	$interval = format($interval, %y);
-
-	if ($interval < 18 ) {
-	echo ("You need to be 18 years old to create an account. Please try again later. ");	
+	if (time() < strtotime('+18 years', strtotime($dob))) {
+   		echo ("You need to be at least 18 years old to create an account");
+   	exit;
 	}
 
 
