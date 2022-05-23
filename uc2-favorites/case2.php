@@ -54,8 +54,6 @@
 // 	$result = mysqli_query($db, $constructed_query);
 // 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 // 	}
-		}
-	}
 	?>
     	
 	<!-- favorites section -->
@@ -180,6 +178,7 @@
 			Made By: Dylan De Leon
 			</p>
 		</div>
-	<?php } ?>
+	<?php }
+	} ?>
 	</body>
 </html>
