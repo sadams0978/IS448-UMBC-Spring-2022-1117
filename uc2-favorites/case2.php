@@ -43,10 +43,10 @@
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 	
-// 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
-// 	$result = mysqli_query($db, $constructed_query);
-// 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
-// 	}
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
+	$result = mysqli_query($db, $constructed_query);
+	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+	}
 	?>
     	
 	<!-- favorites section -->
@@ -138,18 +138,6 @@
 	</div>
 		<div class = "cardsContainer">
 			<ul class = "cards">
-				<?php
-				include('../db_connection.php');
-				if(isset($_SESSION['favorites'])){
-				?>
-					<?php
-					foreach($_SESSION['favorites'] as $item){
-					?>
-						<?php
-						$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
-						$result1 = mysqli_query($db,$sql);
-						$card1 = mysqli_fetch_array($result1);
-						?>
 				<li>
 				<?php
 				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
@@ -177,12 +165,6 @@
 				'\n' . 'Card Composition: ' . ($card1['C_COMP']) . '\n' . 'Card Year: ' . ($card1['C_YEAR']) . '\n' . 'Card Price: ' . ($card1['PRICE'])?>')">Card Details</button>
 								
 				</li>
-				<?php
-				}
-				?>
-				<?php
-				}
-				?>
 			</ul>
 		</div>
 		
