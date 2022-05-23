@@ -42,11 +42,6 @@
 	if (!empty($_SESSION['year'])) {
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
-		
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
-	$result = mysqli_query($db, $constructed_query);
-	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
-	}
 	?>
     	
 	<!-- favorites section -->
