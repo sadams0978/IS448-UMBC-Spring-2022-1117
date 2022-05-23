@@ -140,7 +140,7 @@
 	<?php
 	if(isset($_SESSION['favorites'])){
 		foreach($_SESSION['favorites'] as $item){
-			$sql = "SELECT * FROM STOCK WHERE C_ID= '$item'";
+			$sql = "SELECT * FROM STOCK WHERE C_ID=".$item;
 			$result1 = mysqli_query($db,$sql);
 			
 	?>
