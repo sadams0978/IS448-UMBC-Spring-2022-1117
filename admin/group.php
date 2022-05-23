@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang ="en">
+	
+	
+<head>
+	
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../root.css"/>
+	<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+	<script src="delete.js"></script>
+
+    <title>Admin</title>
+</head>
+<body>
+	
 <?php 
 
 //Only Authorized Users can access this admin page
@@ -16,7 +32,7 @@
 	changeGroup();	
 	
 	} else {
-     header('HTTP/1.0 401 Unauthorized');
+   	echo ("Unauthorized, please try again!");
 	die;
       
     }
@@ -35,3 +51,10 @@ function changeGroup() {
   
   
 }
+	
+	
+	?>
+	
+</body>
+</html>
+	
