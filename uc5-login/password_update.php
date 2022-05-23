@@ -1,4 +1,23 @@
-      <?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Create a New User </title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css" >
+  <link rel="icon" type="image/x-icon" href="../favicon.png">
+  <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	
+	
+    <div class="Login_Box">
+    <h1> Error has been detected, please verify that you filled out all of the forms correctly. </h1>
+	    
+
+
+<?php
       $email = htmlspecialchars($_POST['email']);
       $old_password = htmlspecialchars($_POST['old_password']);
       $password = htmlspecialchars($_POST['password']);
@@ -27,7 +46,7 @@
       $passwords_match = true;
       
     } else {
-    echo ("Your Passwords don't match, please try again. " );
+    echo ("<h3> Your Passwords don't match, please try again. </h3>" );
        die;
     }
           
@@ -41,7 +60,7 @@
 
 //If it's not meeting minimum requirements, alert the user of the requirements
     if(!$min_length || !$contains_uppercase || !$contains_digit || !$contains_special_char) {
-    echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
+    echo (" <h3> Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character </h3> ");
      die;
     }
 
@@ -74,14 +93,14 @@
 
        //Updates Password after verifiying the old password is right
       if (mysqli_query($db, $update)) {
-      echo "We changed your password.";
+      echo " <h3> We changed your password. </h3> ";
       } else {
-  echo "We were unable to change your password. " . mysqli_error($db);
+  echo "<h3> We were unable to change your password. </h3>" . mysqli_error($db);
 }   
              
         
         
-  }  else echo ("You are not logged in. ");
+  }  else echo (" <h3> You are not logged in. </h3> ");
    
   }
 
@@ -91,3 +110,9 @@
   die();
 
 ?>
+	    
+
+</div>
+
+</body>
+</html>
