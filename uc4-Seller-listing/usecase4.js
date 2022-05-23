@@ -55,11 +55,19 @@ function checkForm() {
 	}
 
 	*/
-	if(card_year == ""){
+
+
+	let i = 0; 
+	do {
+
+		if(card_year == ""){
 		alert("You did not enter a card year. Please enter one now.");
 		document.getElementById("year").focus();
 		return false;
+  		
+  		i++;
 	}
+		while (i < 2);
 
 	
 
@@ -77,14 +85,22 @@ function checkForm() {
 	*/ 
 
 
-//checks and alerts user to enter a year as 4 digits
-	var card_year_pattern = /\d{4}/; 
-	var card_year_pattern_result = card_year_pattern.test(card_year); 
-	if (card_year_pattern_result == false){
-		alert("The year you entered (" + card_year + ") is not valid. Please enter a four digit year (example: 1999)  ");
-		document.getElementById("year").focus(); 
-		return false; 
+
+	var x = 0; 
+	while (x < 1) {
+  		
+		//checks and alerts user to enter a year as 4 digits
+		var card_year_pattern = /\d{4}/; 
+		var card_year_pattern_result = card_year_pattern.test(card_year); 
+		if (card_year_pattern_result == false){
+			alert("The year you entered (" + card_year + ") is not valid. Please enter a four digit year (example: 1999)  ");
+			document.getElementById("year").focus(); 
+			return false; 
+		}
+  		x++;
 	}
+
+
 
 	
 
