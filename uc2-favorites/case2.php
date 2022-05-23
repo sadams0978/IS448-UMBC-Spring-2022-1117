@@ -159,7 +159,7 @@
 						?>
 						<br>
 						
-						<a href = "delete_card.php?C_ID=<?php echo $card1['C_ID']; ?>"> <i class="fa-solid fa-trash-can"></i> </a>
+						<a href = "delete_card.php?C_ID=<?php echo $card1['C_ID']; ?>"> <i class="fa-regular fa-trash-can" style="color:black"></i> </a>
 						
 						<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card1['C_NAME']) . '\n' . 'Card Description: ' . ($card1['C_DESC']) . '\n' . 'Card Quantity: ' . ($card1['C_QUANTITY']) .
 						'\n' . 'Card Category: ' . ($card1['C_CATEG']) . '\n' . 'Card Condition: ' . ($card1['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card1['C_FINISH']) . 
