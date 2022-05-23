@@ -37,11 +37,18 @@ $price = $card['PRICE'];
 <link rel="stylesheet" type="text/css" href="../root.css"/>
 <link rel="stylesheet" type="text/css" href="Andrew-part3.css"/>
 <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="Andrew-part3-js.js"></script>
 	
 <title><?php echo "$name Description"; ?></title>
 <!--get name of card from sql -->
 </head>
 <body>
+	
+<div id="c_id" style="display: none"> // echo to send to javascript
+	<?php 
+		echo htmlspecialchars($c_id);
+	?>	
+</div>
 
 <?php
 // Includes our menu bar, instead of copying and pasting through the pages
@@ -50,7 +57,11 @@ include('../menu.php');
 	
 
 <div class="left">
-	<p class="card"><img src="../uc2-favorites/blank-card.jpg" alt="Playing Card"  width = "300" height = "400"/></p>
+	<p class="card">
+		<figure class= "zoom" onMouseMove="zoom(event)">
+		<img src="../uc2-favorites/blank-card.jpg" alt="Playing Card"/>
+		</figure>
+	</p>
 </div>	
 
 <div class="right">
