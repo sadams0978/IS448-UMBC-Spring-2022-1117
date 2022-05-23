@@ -57,7 +57,7 @@ function checkForm() {
 	*/
 
 
-	for (let i = 0; i < 2; i++) {
+	//for (let i = 0; i < 2; i++) {
 
 		if(card_year == ""){
 		alert("You did not enter a card year. Please enter one now.");
@@ -65,7 +65,7 @@ function checkForm() {
 		return false;
   		}
  
-	}
+	//}
 
 	
 
@@ -84,7 +84,7 @@ function checkForm() {
 
 
 
-	for (let i = 0; i < 2; i++) {
+	//for (let i = 0; i < 2; i++) {
   		
 		//checks and alerts user to enter a year as 4 digits
 		var card_year_pattern = /\d{4}/; 
@@ -94,7 +94,7 @@ function checkForm() {
 			document.getElementById("year").focus(); 
 			return false; 
 		}
-	}
+	//}
 
 
 
