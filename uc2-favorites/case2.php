@@ -136,7 +136,7 @@
             echo "Year: " . $_SESSION['year'];
         ?>
 	</div>
-		<div class = "cards">
+		<div class = "cardsContainer">
 			<ul class = "display">
 				<li>
 				<?php
