@@ -85,7 +85,13 @@ function checkForm() {
 
 
 
-  		
+  		if (card_year >= 2021){
+  			alert("The year your entered (" + card_year + ") is not valid. Please enter a valid year (2021 or earlier ) ");
+			document.getElementById("year").focus(); 
+			return false; 
+
+  		}
+
 		//checks and alerts user to enter a year as 4 digits
 		var card_year_pattern = /\d{4}/; 
 		var card_year_pattern_result = card_year_pattern.test(card_year); 
