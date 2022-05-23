@@ -190,7 +190,7 @@
 			else{
 			    ?>
 			    <ul class = "display">
-				    <li>No Cards In Favorites</li>
+				    <h1>No Cards In Favorites</h1>
 			    </ul>
 			    <?php
 			}
