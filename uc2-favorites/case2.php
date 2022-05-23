@@ -158,7 +158,7 @@
 				?>
 				<br>
 				<?php
-				echo ($card[$i]['C_NAME']);
+				echo ($card['C_NAME']);
 				?>
 				<br>
 				<?php
