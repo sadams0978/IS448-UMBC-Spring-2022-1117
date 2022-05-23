@@ -1,8 +1,8 @@
 "use strict";
-
+/*
 window.onload = pageLoad; 
 function pageLoad(){
-	
+*/	
 
 
 	document.getElementById("biggerTextB").onclick=increaseTextSize;
@@ -14,9 +14,9 @@ function pageLoad(){
 
 	//to test if placeholders are stored into vars
 	//document.getElementById("category").onblur = checkCat; 
-
+/*
 }
-
+*/
 //modifies the text size within the text box to increase 
 function increaseTextSize() { 
 	var tarea = document.getElementById("description");
