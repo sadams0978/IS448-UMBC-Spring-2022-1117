@@ -138,8 +138,13 @@
 	</div>
 	<div class = "cardsContainer">
 		<?php
+			$total = 0;
 			if(!empty($_SESSION['favorites'])){
 			include('../db_connection.php');
+			$index = 0;
+			if(!isset($_SESSION['qty_array'])){
+ 				$_SESSION['qty_array'] = array_fill(0, count($_SESSION['favorites']), 1);
+ 			}
 			$sql = "SELECT * FROM STOCK WHERE C_ID IN (".implode(',',$_SESSION['favorites']).")";
 			$query = $db->query($sql);
 				while($card1 = $query->fetch_assoc()){
@@ -159,7 +164,7 @@
 						?>
 						<br>
 						
-						<a href = "delete_card.php?C_ID=<?php echo $card1['C_ID']; ?>"> <i class="fa-regular fa-trash-can" style="color:black"></i> </a>
+						<a href = "delete_card.php?C_ID=<?php echo $card1['C_ID']; ?>&index=<?php echo $index; ?>"> <i class="fa-regular fa-trash-can" style="color:black"></i> </a>
 						
 						<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card1['C_NAME']) . '\n' . 'Card Description: ' . ($card1['C_DESC']) . '\n' . 'Card Quantity: ' . ($card1['C_QUANTITY']) .
 						'\n' . 'Card Category: ' . ($card1['C_CATEG']) . '\n' . 'Card Condition: ' . ($card1['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card1['C_FINISH']) . 
