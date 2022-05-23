@@ -11,8 +11,8 @@ function pageLoad(){
 	//document.getElementById("submitB").onclick = checkForm; 
 	//document.getElementById("year").onblur = checkForm; 
 
-	document.getElementById("card_name").onfocusout = checkForm; 
-	document.getElementById("year").onfocusout = checkForm; 
+	document.getElementById("card_name").onfocusout = checkName; 
+	document.getElementById("year").onfocusout = checkYear; 
 
 
 	$("condition").onfocusout = showDefinition;
