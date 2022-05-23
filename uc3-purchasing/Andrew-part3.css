@@ -38,3 +38,21 @@
 .titles{
 	font font-weight: bold;
 }
+
+figure.zoom{
+	height: 400px;
+	width: 300px;
+	overflow: hidden;
+	cursor: zoom-in;
+}
+
+figure.zoom img {
+	transition: opacity 0.5s;
+	display: block;
+	width: 100%;
+}
+
+figure.zoom img:hover {
+	opacity: 0;
+}
+
