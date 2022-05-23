@@ -1,4 +1,31 @@
-       <?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Create a New User </title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css" >
+  <link rel="icon" type="image/x-icon" href="../favicon.png">
+  <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	
+	
+    <div class="Login_Box">
+    <h1> An Error has been detected, please verify that you filled out all of the forms correctly. </h1>
+  
+
+
+
+
+
+
+
+
+
+
+<?php
       
       $first_name = htmlspecialchars($_POST['first_name']);
       $last_name = htmlspecialchars($_POST['last_name']);
@@ -30,7 +57,7 @@
       $passwords_match = true;
       
     } else {
-    echo ("Your Passwords don't match, please try again. " );
+    echo ("<h3> Your Passwords don't match, please try again. </h3>" );
        die;
     }
           
@@ -46,7 +73,7 @@ if (empty($password_verify) or empty($password)) {
 
 //If it's not meeting minimum requirements, alert the user of the requirements
     if(!$min_length || !$contains_uppercase || !$contains_digit || !$contains_special_char) {
-    echo ('Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.');
+    echo (" <h3> Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character. </h3>");
      die;
     }
 
@@ -54,7 +81,7 @@ if (empty($password_verify) or empty($password)) {
 	//checking that the user is 18 years old
 
 	if (time() < strtotime('+18 years', strtotime($dob))) {
-   		echo ("You need to be at least 18 years old to create an account");
+   		echo (" <h3> You need to be at least 18 years old to create an account </h3> ");
    	exit;
 	}
 
@@ -77,7 +104,7 @@ if (empty($password_verify) or empty($password)) {
 	$email_result = mysqli_query($db,$email_verification);
 	$email_rows=mysqli_num_rows($email_result);
 	if($email_rows !== 0) {
-    	echo ("We already have a user with the e-mail address " . $email . ", please try again later.");
+    	echo (" <h3> We already have a user with the e-mail address " . $email . ", please try again later. </h3> ");
         die;
 	
 	}
@@ -94,7 +121,7 @@ if (empty($password_verify) or empty($password)) {
           
           
     } else {
-  echo "Error: There was an issue with creating the new user, please try again later. ";
+  echo " <h3> Error: There was an issue with creating the new user, please try again later. </h3> ";
 }
 
 
@@ -102,3 +129,8 @@ if (empty($password_verify) or empty($password)) {
   die();
 
 ?>
+	    
+ </div>
+
+</body>
+</html>
