@@ -10,20 +10,7 @@
 
 <body>
 
-	
-	
-    <div class="Login_Box">
-    <h1> An Error has been detected, please verify that you filled out all of the forms correctly. </h1>
-  
-
-
-
-
-
-
-
-
-
+<div class="Login_Box">
 
 <?php
       
