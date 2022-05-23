@@ -17,11 +17,6 @@
         <?php
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
-	if(isset($_SESSION['favorites'])){
-		foreach($_SESSION['favorites'] as $item){
-		$constructed_query = 'SELECT * FROM STOCK WHERE C_ID ='.$item;
-		$result = mysqli_query($db,$constructed_query);
-		$card = mysqli_fetch_array($result);
 		
 	$_SESSION['category'] = $_POST["category"];
 	$_SESSION['condition'] = $_POST["condition"];
@@ -49,11 +44,12 @@
 	}
 	
 	
-		
-// 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
-// 	$result = mysqli_query($db, $constructed_query);
-// 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
-// 	}
+	if (!empty($_SESSION['favorites'])){
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID IN (".implode(',',$_SESSION['favorites']).")";
+	$result = mysqli_query($db, $constructed_query);
+	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+	}
+	}
 	?>
     	
 	<!-- favorites section -->
@@ -178,7 +174,5 @@
 			Made By: Dylan De Leon
 			</p>
 		</div>
-	<?php }
-	} ?>
 	</body>
 </html>
