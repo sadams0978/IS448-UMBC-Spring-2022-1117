@@ -1,33 +1,3 @@
-<?php
-
-	include('../db_connection.php');
-		//$c_id = 1;
-// 	$C_ID = $_GET['C_ID'];
-
-// 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID= 'C_ID'";
-
-// 	$result = mysqli_query($db, $constructed_query);
-
-// 	if(!$result){
-// 		$error = mysqli_error($db);
-// 		exit;
-// 	}
-
-// 	$card = mysqli_fetch_array($result);
-
-// 	$name = $card['C_NAME'];
-// 	$description = $card['C_DESC'];
-// 	$quantity = $card['C_QUANTITY'];
-// 	$categ = $card['C_CATEG'];
-// 	$condition = $card['C_CONDITION'];
-// 	$finish = $card['C_FINISH'];
-// 	$comp = $card['C_COMP'];
-// 	$year = $card['C_YEAR'];
-// 	$price = $card['PRICE'];
-
-?>
-
-
 <!doctype html>
 <html>
 	<head>
@@ -44,56 +14,16 @@
         <?php
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
-	
-	//variables
-	// $cname = $_POST[''];
-	// $cdescription = $_POST[''];
-	// $ccategory = $_POST[''];
-	// $ccondition = $_POST[''];
-	// $cfinish = $_POST[''];
-	// $ccomposition = $_POST[''];
-	// $cyear = $_POST[''];
-	// $cprice = $_POST[''];
-	$c_ID = $_POST['c_id'];
-	
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID = 'c_ID'";
-	
-	$result = mysqli_query($db, $constructed_query);
-	
-	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+	include('../db_connection.php');
+	?>
+	<?php
+	if(isset($_SESSION['favorites'])){
+		foreach($_SESSION['favorites'] as $item){
+			$sql = 'SELECT * FROM STOCK WHERE C_ID ='.$item;
+			$result = mysqli_query($db,$sql);
+			$card = mysqli_fetch_array($result);
+		}
 	}
-	
-	// $_SESSION['category'] = $_POST["category"];
-	// $_SESSION['condition'] = $_POST["condition"];
-	// $_SESSION['finish'] = $_POST["finish"];
-	// $_SESSION['composition'] = $_POST["composition"];
-	// $_SESSION['year'] = $_POST["year"];
-	
-	// if (!empty($_SESSION['category'])) {
-		// $category = "AND C_CATEG = '$_SESSION[category]'";
-	// }
-	// if (!empty($_SESSION['condition'])) {
-		// $condition = "AND C_CONDITION = '$_SESSION[condition]'";
-	// }
-
-	// if (!empty($_SESSION['finish'])) {
-		// $finish = "AND C_FINISH = '$_SESSION[finish]'";
-	// }
-
-	// if (!empty($_SESSION['composition'])) {
-		// $composition = "AND C_COMP = '$_SESSION[composition]'";
-	// }
-
-	// if (!empty($_SESSION['year'])) {
-		// $year = "AND C_YEAR = '$_SESSION[year]'";
-	// }
-
-	// $C_ID=$_GET['C_ID'];
-		
-	// $constructed_query = "SELECT * FROM STOCK WHERE C_ID = 'C_ID' $category $condition $finish $composition $year";
-	// $result = mysqli_query($db, $constructed_query);
-	// for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
-	// }
 	?>
     	
 	<!-- favorites section -->
@@ -197,7 +127,7 @@
 				?>
 				<br>
 				<?php
-				echo "ID: " . ($c_ID);
+				echo "ID: " . ($card['C_ID']);
 				?>
 				<br>
 				<!-- button to remove card from favorites -->
