@@ -139,6 +139,7 @@
 		<div class = "cardsContainer">
 			<ul class = "cards">
 				<?php
+				include('../db_connection.php');
 				if(isset($_SESSION['favorites'])){
 				?>
 					<?php
@@ -177,7 +178,7 @@
 								
 				</li>
 				<?php
-					}
+				}
 				?>
 				<?php
 				}
