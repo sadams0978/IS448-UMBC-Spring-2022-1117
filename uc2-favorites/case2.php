@@ -167,7 +167,6 @@
 						<a href = "delete_card.php?C_ID=<?php echo $card1['C_ID']; ?>&index=<?php echo $index; ?>"> <i class="fa-regular fa-trash-can" style="color:black"></i> </a>
 						
 						<input type="hidden" name="indexes[]" value="<?php echo $index; ?>">
-						<input type="text" class="form-control" value="<?php echo $_SESSION['qty_array'][$index]; ?>" name="qty_<?php echo $index; ?>">
 						
 						<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card1['C_NAME']) . '\n' . 'Card Description: ' . ($card1['C_DESC']) . '\n' . 'Card Quantity: ' . ($card1['C_QUANTITY']) .
 						'\n' . 'Card Category: ' . ($card1['C_CATEG']) . '\n' . 'Card Condition: ' . ($card1['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card1['C_FINISH']) . 
