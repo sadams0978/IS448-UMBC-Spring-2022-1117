@@ -154,7 +154,7 @@
 			
 			<ul class = "cards">	
 				<?php
-				while($card = mysqli_fetch_array($result)){
+				for($i = 0; $i < count($card); $i++){
 				?>
 				<li>
 				<?php
@@ -162,7 +162,7 @@
 				?>
 				<br>
 				<?php
-				echo ($card['C_NAME']);
+				echo ($card[$i]['C_NAME']);
 				?>
 				<br>
 				<?php
