@@ -43,23 +43,13 @@
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 		
-	$c_ID=$_GET['C_ID'];
-		
-	$favoritesArr = array();
-	$_SESSION['favorites'] = $favoritesArr;
-		
-	array_push($_SESSION['favorites'],$c_ID);
-		
-	
-		$constructed_query = "SELECT * FROM STOCK WHERE C_ID = $c_ID $category $condition $finish $composition $year";
-		$result = mysqli_query($db, $constructed_query);
-
-		if(!$result){
-			$error = mysqli_error($db);
-			exit;
+	if(isset($_SESSION['favorites'])){
+		foreach($_SESSIONp['favorites'] as $item){
+			$sql = "SELECT * FROM STOCK WHERE C_ID=".$item;
+			$result = mysqli_query($db,$sql);
+			$card = mysqli_fetch_array($result);
 		}
-
-		$card = mysqli_fetch_array($result);
+	}
 	
 	?>
     	
