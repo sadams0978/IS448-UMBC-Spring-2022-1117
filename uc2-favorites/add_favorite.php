@@ -24,6 +24,7 @@
 		}
 	
 		array_push($_SESSION['favorites'],$C_ID);
+		echo ($_SESSION['favorites']['C_ID']);
 	?>
 	
 </body>
