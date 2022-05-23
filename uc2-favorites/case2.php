@@ -43,13 +43,6 @@
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 		
-// 	if(isset($_SESSION['favorites'])){
-// 		foreach($_SESSION['favorites'] as $item){
-// 			$sql = 'SELECT * FROM STOCK WHERE C_ID ='.$item;
-// 			$result = mysqli_query($db,$sql);
-// 			$card = mysqli_fetch_array($result);
-// 		}
-// 	}
 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
 	$result = mysqli_query($db, $constructed_query);
 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
@@ -145,6 +138,13 @@
 	</div>
 	
 		<div class = "cardsContainer">
+			<?php
+			if(isset($_SESSION['favorites'])){
+			foreach($_SESSION['favorites'] as $item){
+				$sql = 'SELECT * FROM STOCK WHERE C_ID ='.$item;
+				$result = mysqli_query($db,$sql);
+				$card = mysqli_fetch_array($result);
+			?>
 			<ul class = "cards">
 				
 				<li>
@@ -173,6 +173,12 @@
 								
 				</li>
 			</ul>
+			<?php
+				}
+			}else {
+				echo 'There have been no Favorite cards added';	
+			}
+			?>
 		</div>
 
 		<div class = "footer">
