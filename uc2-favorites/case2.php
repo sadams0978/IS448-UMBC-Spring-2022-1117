@@ -153,21 +153,18 @@
 
 		<div class = "cardsContainer">
 			
-			<ul class = "cards">
-				<?php
-				for($i = 0; $i < count($_SESSION['favorites']); $i++){
-				?>	
+			<ul class = "cards">	
 				<li>
 				<?php
 				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
 				?>
 				<br>
 				<?php
-				echo ($_SESSION['favorites'][$i]['C_NAME']);
+				echo ($card['C_NAME']);
 				?>
 				<br>
 				<?php
-				echo "Price: " . ($card[$i]['PRICE']);	
+				echo "Price: " . ($card['PRICE']);	
 				?>
 				<br>
 				<?php
@@ -184,9 +181,6 @@
 				'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
 								
 				</li>
-				<?php
-					}
-				?>
 			</ul>
 
 		</div>
