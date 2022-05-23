@@ -138,7 +138,7 @@
 	</div>
 	
 		<div class = "cardsContainer">
-			<?php
+<!-- 			<?php
 			$C_ID=$_POST['C_ID'];
 			
 			if(!isset($_SESSION['favorites'])){
@@ -147,7 +147,7 @@
 			}
 
 			array_push($_SESSION['favorites'],$C_ID);
-			?>
+			?> -->
 			
 			<?php
 			if(isset($_SESSION['favorites'])){
