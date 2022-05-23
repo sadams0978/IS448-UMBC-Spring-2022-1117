@@ -161,7 +161,7 @@
 		<!-- favorites button -->
 		<?php
 		$favcard['C_ID']=$card[$i]['C_ID'];
-		echo '<a href = "../uc2-favorites/add_favorite.php?C_ID='.$favcard['C_ID'].'"><i class = "fa-solid fa-heart" style = "color:red"></i></a>';
+		echo '<a href = "../uc2-favorites/case2.php?C_ID='.$favcard['C_ID'].'"><i class = "fa-solid fa-heart" style = "color:red"></i></a>';
 			
 // 		$C_ID=$_GET['C_ID'];
 			
@@ -180,20 +180,7 @@
 		?>
 		</ul>
 	</div>
-	<?php
-		if(isset($_SESSION['message'])){
-		?>
-		<div class="cards">
-			<div class="col-sm-6 col-sm-offset-6">
-				<div class="alert alert-info text-center">
-					<?php echo $_SESSION['message']?>
-				</div>
-			</div>
-		</div>
-		<?php
-		unset($_SESSION['message']);
-		}
-		?>
+	
     <!--CARD DISPLAY Section Over--> 
 
 
