@@ -151,11 +151,7 @@
 	</div>
 
 		<div class = "cardsContainer">
-			
 			<ul class = "cards">	
-				<?php
-				for($i = 0; $i < count($card); $i++){
-				?>
 				<li>
 				<?php
 				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
@@ -183,9 +179,6 @@
 				'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
 								
 				</li>
-				<?php
-					}
-			?>
 			</ul>
 
 		</div>
