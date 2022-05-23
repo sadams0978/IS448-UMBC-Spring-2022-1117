@@ -145,6 +145,8 @@
 				$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
 				$result1 = mysqli_query($db,$sql);
 				$card1 = mysqli_fetch_array($result1);
+			}
+		}
 		?>
 		<section>
 			<img src='blank-card.jpg' width = '150' height = '250'/>
@@ -161,11 +163,6 @@
 			echo ($card1['C_ID']);	
 			?>
 		</section>
-		<?php
-			}
-		}
-		mysqli_close($db);
-		?>
 	</div>
 		
 		<p class = "spacer"></p>
