@@ -42,6 +42,15 @@
 	if (!empty($_SESSION['year'])) {
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
+	
+	$C_ID=$_GET['C_ID'];
+	
+	if(!isset($_SESSION['favorites'])){
+		$favoritesArr = array();
+		$_SESSION['favorites'] = $favoritesArr;
+	}
+	
+	array_push($_SESSION['favorites'],$C_ID);
 		
 	if(isset($_SESSION['favorites'])){
 		foreach($_SESSION['favorites'] as $item){
