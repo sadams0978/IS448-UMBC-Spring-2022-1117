@@ -52,8 +52,6 @@
       
      </form>
   </div>
-  
-    <script src="verify.js"></script>
 
 </body>
 </html>
