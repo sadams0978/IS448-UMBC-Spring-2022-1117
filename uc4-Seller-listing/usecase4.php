@@ -58,10 +58,10 @@ include('../menu.php');
       <label for="condition"> Condition:</label> <!--from sql & php-->
         <select name= "condition" id="condition"> 
           <option value="" disabled selected>Select your option</option>
-          <option value=”1”>Poor</option>
-          <option value=”2”>Average</option>
-          <option value=”3”>Great</option>
-          <option value=”4”>Mint</option>
+          <option value=”1”>GEM MINT</option>
+          <option value=”2”>MINT</option>
+          <option value=”3”>NEAR MINT-MINT</option>
+          <!--option value=”4”>Mint</option-->
         </select>
 
       <p> PSA Grade: </p>
