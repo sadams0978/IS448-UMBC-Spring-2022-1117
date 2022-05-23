@@ -47,8 +47,13 @@
 			
 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID = '$c_ID'";
 	$result = mysqli_query($db, $constructed_query);
-	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+	
+	if(!$result){
+		$error = mysqli_error($db);
+		exit;
 	}
+
+	$card = mysqli_fetch_array($result);
 	?>
     	
 	<!-- favorites section -->
@@ -148,7 +153,7 @@
 				?>
 				<br>
 				<?php
-				echo ($card[$c_ID]['C_NAME']);
+				echo ($card['C_NAME']);
 				?>
 				<br>
 				<?php
