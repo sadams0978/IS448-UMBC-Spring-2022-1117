@@ -1,4 +1,6 @@
-
+<?php
+    	include('../db_connection.php');
+?>
 <!doctype html>
 <html lang ="en">
 	<head>
@@ -15,7 +17,6 @@
         <?php
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
-	include('../db_connection.php');
 		
 	$_SESSION['category'] = $_POST["category"];
 	$_SESSION['condition'] = $_POST["condition"];
@@ -42,6 +43,11 @@
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 	
+		
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
+	$result = mysqli_query($db, $sql);
+	for ($card1 = array (); $row = $result->fetch_assoc(); $card1[] = $row){
+	}
 	?>
     	
 	<!-- favorites section -->
