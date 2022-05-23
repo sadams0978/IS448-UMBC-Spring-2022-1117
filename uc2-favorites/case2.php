@@ -189,8 +189,5 @@
 			}	//end if
 			mysqli_close($db);
 		?>
-	
 	</body>
-	
-	
 </html>
