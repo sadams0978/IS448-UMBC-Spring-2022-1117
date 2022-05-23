@@ -84,7 +84,7 @@ function checkForm() {
 
 function showDefinition(){
 	//retrieve value from the 'term' textbox
-	var searchTerm = $("term").value;
+	var searchTerm = $("condition").value;
 					//= document.getElementById("term").value;
 	//create a new Ajax request with URL pointing to urban.php, and query-string-parameter-name is 'parameter1' and query-string-parameter-value being the value that
 	//was retrieved from the 'term' textbox above
