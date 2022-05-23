@@ -178,6 +178,20 @@
 			}
 		?>
 	</div>
+	
+	<!-- alert message display -->
+	<div class = "cardsContainer">
+		<?php
+		if(isset($_SESSION['message'])){
+			?>
+			<div class="alert alert-info text-center">
+				<?php echo $_SESSION['message']; ?>
+			</div>
+			<?php
+			unset($_SESSION['message']);
+		}
+		?>
+	</div>
 		
 		<p class = "spacer"></p>
 		<div class = "footer">
