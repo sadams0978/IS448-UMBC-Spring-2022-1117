@@ -14,38 +14,6 @@
         
 	// Includes our menu bar, instead of copying and pasting through the pages
 	<?php include('../menu.php'); ?>
-	
-	<div class = "cardsContainer">
-	<ul class = "cards">
-		<li>
-		<?php
-		echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
-		?>
-		<br>
-		<?php
-		echo ($card1['C_NAME']);
-		?>
-		<br>
-		<?php
-		echo "Price: " . ($card1['PRICE']);	
-		?>
-		<br>
-		<?php
-		echo ($card1['C_ID']);	
-		?>
-		<br>
-		<!-- button to remove card from favorites -->	
-		<?php
-		echo '<a href = "../uc1-Listings-View/ListingsView.php"><button class = "fa-regular fa-heart" style = "color:red"></button></a>';
-		?>
-				
-		<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card1['C_NAME']) . '\n' . 'Card Description: ' . ($card1['C_DESC']) . '\n' . 'Card Quantity: ' . ($card1['C_QUANTITY']) .
-		'\n' . 'Card Category: ' . ($card1['C_CATEG']) . '\n' . 'Card Condition: ' . ($card1['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card1['C_FINISH']) . 
-		'\n' . 'Card Composition: ' . ($card1['C_COMP']) . '\n' . 'Card Year: ' . ($card1['C_YEAR']) . '\n' . 'Card Price: ' . ($card1['PRICE'])?>')">Card Details</button>
-				
-		</li>
-	</ul>
-	</div>	
 		
 	<?php
 	$_SESSION['category'] = $_POST["category"];
@@ -165,6 +133,38 @@
             echo "<br>";
             echo "Year: " . $_SESSION['year'];
         ?>
+	</div>	
+
+	<div class = "cardsContainer">
+	<ul class = "cards">
+		<li>
+		<?php
+		echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
+		?>
+		<br>
+		<?php
+		echo ($card1['C_NAME']);
+		?>
+		<br>
+		<?php
+		echo "Price: " . ($card1['PRICE']);	
+		?>
+		<br>
+		<?php
+		echo ($card1['C_ID']);	
+		?>
+		<br>
+		<!-- button to remove card from favorites -->	
+		<?php
+		echo '<a href = "../uc1-Listings-View/ListingsView.php"><button class = "fa-regular fa-heart" style = "color:red"></button></a>';
+		?>
+				
+		<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card1['C_NAME']) . '\n' . 'Card Description: ' . ($card1['C_DESC']) . '\n' . 'Card Quantity: ' . ($card1['C_QUANTITY']) .
+		'\n' . 'Card Category: ' . ($card1['C_CATEG']) . '\n' . 'Card Condition: ' . ($card1['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card1['C_FINISH']) . 
+		'\n' . 'Card Composition: ' . ($card1['C_COMP']) . '\n' . 'Card Year: ' . ($card1['C_YEAR']) . '\n' . 'Card Price: ' . ($card1['PRICE'])?>')">Card Details</button>
+				
+		</li>
+	</ul>
 	</div>	
 
 		<p class = "spacer"></p>
