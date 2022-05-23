@@ -53,7 +53,7 @@
 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID =".$item;
 	$result = mysqli_query($db,$constructed_query);
 	$card = mysqli_fetch_array($result);
-	}
+	
 	?>
     	
 	<!-- favorites section -->
@@ -170,6 +170,7 @@
 			'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
 				
 		</section>
+		<?php } ?>
 	</div>
 		
 		<p class = "spacer"></p>
