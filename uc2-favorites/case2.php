@@ -139,14 +139,16 @@
 	
 		<div class = "cardsContainer">
 			
-<!-- 			$C_ID=$_POST['C_ID'];
+			<?php
+			$C_ID=$_GET['C_ID'];
 			
 			if(!isset($_SESSION['favorites'])){
 				$favoritesArr = array();
 				$_SESSION['favorites'] = $favoritesArr;
 			}
 
-			array_push($_SESSION['favorites'],$C_ID); -->
+			array_push($_SESSION['favorites'],$C_ID);
+			?>
 			
 			
 			<?php
