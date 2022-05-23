@@ -64,7 +64,7 @@ function checkForm() {
 		alert("You did not enter a card year. Please enter one now.");
 		document.getElementById("year").focus();
 		return false;
-  		
+  		}
   		i++;
 	}
 		while (i < 2);
