@@ -19,14 +19,17 @@ function pageLoad(){
 
 //modifies the text size within the text box to increase 
 function increaseTextSize() { 
-	var tarea = document.getElementById("description");
+	var tarea = document.getElementById("description").value;
 	tarea.style.fontSize = "24pt";
+	alert("Incrased size");
+
 }
 
 //modifies the text size within the text box to decrease 
 function decreaseTextSize() { 
-	var tarea = document.getElementById("description");
+	var tarea = document.getElementById("description").value;
 	tarea.style.fontSize = "10pt"; 
+	alert("Decreased size");
 }
 
 
