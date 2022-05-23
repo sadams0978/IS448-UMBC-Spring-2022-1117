@@ -155,6 +155,7 @@
 			<ul class = "cards">	
 				<?php
 				while($card = mysqli_fetch_array($result)){
+				?>
 				<li>
 				<?php
 				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
