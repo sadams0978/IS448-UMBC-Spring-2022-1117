@@ -135,10 +135,6 @@
             echo "<br>";
             echo "Year: " . $_SESSION['year'];
         ?>
-	<br>
-	<?php
-	echo "TEst test test";
-	?>
 	</div>
     <!--FILTER Section Over--> 
     
