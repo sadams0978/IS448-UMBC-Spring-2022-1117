@@ -46,7 +46,7 @@
 		
 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
 	$result = mysqli_query($db, $sql);
-	for ($card1 = array (); $row = $result->fetch_assoc(); $card1[] = $row){
+	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
 	?>
     	
