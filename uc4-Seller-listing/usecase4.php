@@ -64,7 +64,11 @@ include('../menu.php');
           <option value=”4”>Mint</option>
         </select>
 
-      
+      <p> PSA Grade: </p>
+      <div id="result">
+            <!-- psa grade will appear here -->
+           
+        </div>
       
 
       <!--Enter card finish dropdown--> 
