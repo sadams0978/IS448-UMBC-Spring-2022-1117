@@ -43,9 +43,13 @@
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 	
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
-	$result = mysqli_query($db, $constructed_query);
-	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+	if(isset($_SESSION['favorites'])){
+		foreach($_SESSION['favorites'] as $item){
+			$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year AND C_ID=".$item;
+			$result = mysqli_query($db, $constructed_query);
+			for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+			}
+		}
 	}
 	?>
     	
@@ -144,15 +148,15 @@
 				?>
 				<br>
 				<?php
-				echo ($card1['C_NAME']);
+				echo ($card['C_NAME']);
 				?>
 				<br>
 				<?php
-				echo "Price: " . ($card1['PRICE']);	
+				echo "Price: " . ($card['PRICE']);	
 				?>
 				<br>
 				<?php
-				echo ($card1['C_ID']);	
+				echo ($card['C_ID']);	
 				?>
 				<br>
 				<!-- button to remove card from favorites -->	
@@ -160,9 +164,9 @@
 				echo '<a href = "../uc1-Listings-View/ListingsView.php"><button class = "fa-regular fa-heart" style = "color:red"></button></a>';
 				?>
 				
-				<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card1['C_NAME']) . '\n' . 'Card Description: ' . ($card1['C_DESC']) . '\n' . 'Card Quantity: ' . ($card1['C_QUANTITY']) .
-				'\n' . 'Card Category: ' . ($card1['C_CATEG']) . '\n' . 'Card Condition: ' . ($card1['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card1['C_FINISH']) . 
-				'\n' . 'Card Composition: ' . ($card1['C_COMP']) . '\n' . 'Card Year: ' . ($card1['C_YEAR']) . '\n' . 'Card Price: ' . ($card1['PRICE'])?>')">Card Details</button>
+				<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card['C_NAME']) . '\n' . 'Card Description: ' . ($card['C_DESC']) . '\n' . 'Card Quantity: ' . ($card['C_QUANTITY']) .
+				'\n' . 'Card Category: ' . ($card['C_CATEG']) . '\n' . 'Card Condition: ' . ($card['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card['C_FINISH']) . 
+				'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
 								
 				</li>
 			</ul>
