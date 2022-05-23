@@ -41,6 +41,7 @@
     	<button type="button" tabindex="-1" onclick="visibility(password_verify)"> <i class="fa-solid fa-eye"></i> </button>
 	  
 	  <p style="font-size:8pt;"> By Continuing you agree to our Terms and Conditions and Privacy Policy </p> 
+	  <p style="font-size:8pt;"> Only users 18 years old or older, may create an account.  </p> 
 	<br>
 	  <button type="submit" id="submit_button" > <i class="fa-solid fa-arrow-right"></i> Submit </button>
     
