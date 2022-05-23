@@ -147,16 +147,14 @@
 				$card1 = mysqli_fetch_array($result1);
 		?>
 		<section>
-			<?php
-			echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
-			?>
+			<img src='blank-card.jpg' width = '150' height = '250'/>
 			<br>
 			<?php
 			echo $card1['C_NAME'];	
 			?>
 			<br>
 			<?php
-			echo $card['PRICE'];	
+			echo "Price: " . ($card1['PRICE']);	
 			?>
 			<br>
 			<?php
