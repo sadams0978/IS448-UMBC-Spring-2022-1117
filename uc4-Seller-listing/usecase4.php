@@ -95,7 +95,7 @@ include('../menu.php');
       <!--Enter card year text box--> 
     
         <label for ="year"> Year </label>
-        <input type="text" name="year" id= "year" size ="4" placeholder="Year" minlength="4" maxlength ="4" > <!--ensures that a year in four digit form e.g. 1999 is entered--> 
+        <input type="text" name="year" id= "year" size ="4" placeholder="Year"> <!--minlength="4" maxlength ="4" > ensures that a year in four digit form e.g. 1999 is entered--> 
       
 
     </div>
@@ -137,7 +137,7 @@ include('../menu.php');
       <p><button type="submit">Post listing</button> </p>
       --> 
 
-    <input type = "submit" value = "Post Listing"/>
+    <input type = "submit" value = "Post Listing" name = "submit" id = "submitB" />
     </div>
 
   </div>
