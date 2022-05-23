@@ -43,11 +43,11 @@
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 	
-	foreach($_SESSION['favorites'] as $item){
-		$constructed_query = 'SELECT * FROM STOCK WHERE C_ID='.$item;
-		$result = mysqli_query($db, $constructed_query);
-		for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
-		}
+	
+		
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
+	$result = mysqli_query($db, $constructed_query);
+	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
 	?>
     	
@@ -138,37 +138,37 @@
             echo "Year: " . $_SESSION['year'];
         ?>
 	</div>
-		<div class = "cardsContainer">
-			<ul class = "display">
-				<li>
-				<?php
-				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
-				?>
-				<br>
-				<?php
-				echo ($card['C_NAME']);
-				?>
-				<br>
-				<?php
-				echo "Price: " . ($card['PRICE']);	
-				?>
-				<br>
-				<?php
-				echo ($card['C_ID']);	
-				?>
-				<br>
-				<!-- button to remove card from favorites -->	
-				<?php
-				echo '<a href = "../uc1-Listings-View/ListingsView.php"><button class = "fa-regular fa-heart" style = "color:red"></button></a>';
-				?>
-				
-				<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card['C_NAME']) . '\n' . 'Card Description: ' . ($card['C_DESC']) . '\n' . 'Card Quantity: ' . ($card['C_QUANTITY']) .
-				'\n' . 'Card Category: ' . ($card['C_CATEG']) . '\n' . 'Card Condition: ' . ($card['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card['C_FINISH']) . 
-				'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
-								
-				</li>
-			</ul>
-		</div>
+	<div class = "cardsContainer">
+		<?php
+		if(isset($_SESSION['favorites'])){
+			foreach($_SESSION['favorites'] as $item){
+				$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
+				$result1 = mysqli_query($db,$sql);
+				$card1 = mysqli_fetch_array($result1);
+		?>
+		<section>
+			<?php
+			echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
+			?>
+			<br>
+			<?php
+			echo $card1['C_NAME'];	
+			?>
+			<br>
+			<?php
+			echo $card['PRICE'];	
+			?>
+			<br>
+			<?php
+			echo ($card1['C_ID']);	
+			?>
+		</section>
+		<?php
+			}
+		}
+		mysqli_close($db);
+		?>
+	</div>
 		
 		<p class = "spacer"></p>
 		<div class = "footer">
