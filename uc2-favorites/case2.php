@@ -138,14 +138,14 @@
 	</div>
 	
 		<?php
-			$C_ID=$_GET['C_ID'];
+			$c_ID=$_GET['C_ID'];
 			
 			if(!isset($_SESSION['favorites'])){
 				$favoritesArr = array();
 				$_SESSION['favorites'] = $favoritesArr;
 			}
 
-			array_push($_SESSION['favorites'],$C_ID);
+			array_push($_SESSION['favorites'],$c_ID);
 			?>
 			
 			
