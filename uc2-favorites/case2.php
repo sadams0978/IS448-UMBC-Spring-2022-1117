@@ -4,7 +4,7 @@
 <!doctype html>
 <html>
 	<head>
-		<meta name = "viewport">
+		<meta charset="utf-8">
 		<link rel = "stylesheet" type = "text/css" href = "../root.css"/>
 		<link rel = "stylesheet" type = "text/css" href = "uc2-favorites.css"/>
 		<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
@@ -176,11 +176,7 @@
 				</li>
 			</ul>
 		</div>
-		<?php
-				}	//end for each
-			}	//end if
-			mysqli_close($db);
-		?>
+		
 
 		<p class = "spacer"></p>
 		<div class = "footer">
@@ -188,6 +184,11 @@
 			Made By: Dylan De Leon
 			</p>
 		</div>
+		<?php
+				}	//end for each
+			}	//end if
+			mysqli_close($db);
+		?>
 	
 	</body>
 	
