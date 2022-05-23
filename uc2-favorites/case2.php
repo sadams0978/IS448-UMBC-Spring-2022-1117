@@ -56,7 +56,7 @@
 		foreach($_SESSION['favorites'] as $item){
 			$sql = "SELECT * FROM STOCK WHERE C_ID=".$item;
 			$result = mysqli_query($db,$sql);
-			while($card = mysqli_fetch_array($result)){
+			$card = mysqli_fetch_array($result);
 		
 	
 	
@@ -153,6 +153,8 @@
 		<div class = "cardsContainer">
 			
 			<ul class = "cards">	
+				<?php
+				while($card = mysqli_fetch_array($result)){
 				<li>
 				<?php
 				echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
@@ -180,11 +182,13 @@
 				'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
 								
 				</li>
+				<?php
+					}
+			?>
 			</ul>
 
 		</div>
 		<?php
-				}
 			}
 	}else{
 		echo "No Favorites Added";	
