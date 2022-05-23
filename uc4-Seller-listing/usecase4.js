@@ -9,7 +9,7 @@ function pageLoad(){
 	document.getElementById("smallerTextB").onclick=decreaseTextSize;
 
 	//document.getElementById("submitB").onclick = checkForm; 
-	document.getElementById("year").onblur = checkForm; 
+	//document.getElementById("year").onblur = checkForm; 
 
 
 	//to test if placeholders are stored into vars
