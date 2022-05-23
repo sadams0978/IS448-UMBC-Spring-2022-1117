@@ -136,15 +136,6 @@
             echo "Year: " . $_SESSION['year'];
         ?>
 	</div>
-
-		<?php
-			if(isset($_SESSION['favorites'])){
-				foreach($_SESSION['favorites'] as $item){
-					$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
-					$result1 = mysqli_query($db,$sql);
-					$card1 = mysqli_fetch_array($result1);
-			
-		?>
 		<div class = "cardsContainer">
 			<ul class = "cards">
 				<li>
@@ -184,10 +175,5 @@
 			Made By: Dylan De Leon
 			</p>
 		</div>
-		<?php
-				}	//end for each
-			}	//end if
-			mysqli_close($db);
-		?>
 	</body>
 </html>
