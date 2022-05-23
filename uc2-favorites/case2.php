@@ -150,7 +150,7 @@
 				while($card1 = $query->fetch_assoc()){
 					?>
 					<ul class = "display">
-					<li>
+					<li class = "show">
 						<?php
 						echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
 						?>
