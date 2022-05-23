@@ -13,7 +13,6 @@
 	
 	
     <div class="Login_Box">
-    <h1> Error has been detected, please verify that you filled out all of the forms correctly. </h1>
 	    
 
 
