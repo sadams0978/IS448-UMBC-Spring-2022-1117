@@ -48,6 +48,7 @@
 		$result = mysqli_query($db, $constructed_query);
 		for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 		}
+	}
 	?>
     	
 	<!-- favorites section -->
@@ -166,9 +167,6 @@
 				'\n' . 'Card Composition: ' . ($card['C_COMP']) . '\n' . 'Card Year: ' . ($card['C_YEAR']) . '\n' . 'Card Price: ' . ($card['PRICE'])?>')">Card Details</button>
 								
 				</li>
-				<?php
-				}
-				?>
 			</ul>
 		</div>
 		
