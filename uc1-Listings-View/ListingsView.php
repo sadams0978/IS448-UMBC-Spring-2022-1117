@@ -160,6 +160,12 @@
 		
 		<!-- favorites button -->
 		<?php
+		if(isset($_SESSION['message'])){
+		?>
+		<?php echo $_SESSION['message']?>
+		<?php
+		unset($_SESSION['message']);
+		?>
 		$favcard['C_ID']=$card[$i]['C_ID'];
 		echo '<a href = "../uc2-favorites/add_favorite.php?C_ID='.$favcard['C_ID'].'"><i class = "fa-solid fa-heart" style = "color:red"></i></a>';
 			
