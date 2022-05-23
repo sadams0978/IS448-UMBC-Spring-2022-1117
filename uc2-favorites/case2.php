@@ -139,9 +139,11 @@
         ?>
 	</div>
 	<div class = "cardsContainer">
+		<?php
 		$sql = "SELECT * FROM STOCK WHERE C_ID IN (".implode(',',$_SESSION['favorites']).")";
 		$result1 = mysqli_query($db,$sql);
 		$card1 = mysqli_fetch_array($result1);
+		?>
 		
 		<section>
 			<img src='blank-card.jpg' width = '150' height = '250'/>
