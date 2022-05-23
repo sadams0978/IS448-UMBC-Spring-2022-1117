@@ -192,6 +192,7 @@
 			?>
 		</div>
 
+		<p class = "spacer"></p>
 		<div class = "footer">
 			<p>
 			Made By: Dylan De Leon
