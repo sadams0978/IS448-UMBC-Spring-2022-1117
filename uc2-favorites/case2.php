@@ -137,15 +137,15 @@
         ?>
 	</div>
 
-		<div class = "cardsContainer">
-			<?php
-				if(isset($_SESSION['favorites'])){
-					foreach($_SESSION['favorites'] as $item){
-						$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
-						$result1 = mysqli_query($db,$sql);
-						$card1 = mysqli_fetch_array($result1);
+		<?php
+			if(isset($_SESSION['favorites'])){
+				foreach($_SESSION['favorites'] as $item){
+					$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
+					$result1 = mysqli_query($db,$sql);
+					$card1 = mysqli_fetch_array($result1);
 			
-			?>
+		?>
+		<div class = "cardsContainer">
 			<ul class = "cards">
 				<li>
 				<?php
@@ -175,16 +175,12 @@
 								
 				</li>
 			</ul>
-			<?php
-		}	//end for each
-	}	//end if
-	else{
-		echo 'There have been no favorite cards added';
-	}
-	mysqli_close($db);
-		?>
-
 		</div>
+		<?php
+				}	//end for each
+			}	//end if
+			mysqli_close($db);
+		?>
 
 		<p class = "spacer"></p>
 		<div class = "footer">
