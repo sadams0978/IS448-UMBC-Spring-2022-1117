@@ -34,7 +34,7 @@ function checkForm() {
 
 	//alert("check form beginning ran successfully");
 	//var card_name = document.getElementById("card_name"); 
-	var card_year = document.getElementById("year");
+	var card_year = document.getElementById("year").value;
 	//var card_category = document.getElementById("category");
 	//alert("check form end ran successfully");
 
@@ -79,8 +79,8 @@ function checkForm() {
 		document.getElementById("year").focus(); 
 		return false; 
 	}
-
-	*/
+*/
+	
 
 }
 
