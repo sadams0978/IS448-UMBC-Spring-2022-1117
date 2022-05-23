@@ -51,7 +51,7 @@
 	array_push($_SESSION['favorites'],$c_ID);
 		
 	foreach($_SESSION['favorites'] as $item){
-		$constructed_query = "SELECT * FROM STOCK WHERE C_ID =".$item;
+		$constructed_query = "SELECT * FROM STOCK WHERE C_ID = $category $condition $finish $composition $year".$item;
 		$result = mysqli_query($db, $constructed_query);
 
 		if(!$result){
