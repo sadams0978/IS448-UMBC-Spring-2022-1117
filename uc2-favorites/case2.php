@@ -17,7 +17,12 @@
         <?php
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
-	
+	if(isset($_SESSION['favorites'])){
+		foreach($_SESSION['favorites'] as $item){
+		$constructed_query = 'SELECT * FROM STOCK WHERE C_ID ='.$item;
+		$result = mysqli_query($db,$constructed_query);
+		$card = mysqli_fetch_array($result);
+		
 	$_SESSION['category'] = $_POST["category"];
 	$_SESSION['condition'] = $_POST["condition"];
 	$_SESSION['finish'] = $_POST["finish"];
@@ -49,11 +54,8 @@
 // 	$result = mysqli_query($db, $constructed_query);
 // 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 // 	}
-	foreach($_SESSION['favorites'] as $item){
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID =".$item;
-	$result = mysqli_query($db,$constructed_query);
-	$card = mysqli_fetch_array($result);
-	
+		}
+	}
 	?>
     	
 	<!-- favorites section -->
