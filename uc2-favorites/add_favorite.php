@@ -1,4 +1,5 @@
 <?php
+  include('../db_connection.php');
   session_start();
 
   if(!in_array($_GET['C_ID'], $_SESSION['favorites'])){
