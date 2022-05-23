@@ -14,7 +14,7 @@
 	<?php
 	include('../menu.php');
 	?>
-	Added To Favorites
+	<h1>Added To Favorites</h1>
 	<?php
 		$C_ID = $_GET['C_ID'];
 	
