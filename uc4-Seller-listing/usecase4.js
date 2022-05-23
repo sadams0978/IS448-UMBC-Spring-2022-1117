@@ -11,7 +11,7 @@ function pageLoad(){
 	//document.getElementById("submitB").onclick = checkForm; 
 	//document.getElementById("year").onblur = checkForm; 
 
-	document.getElementById("year").onblur = checkForm; 
+	document.getElementById("year").onclick = checkForm; 
 
 
 
