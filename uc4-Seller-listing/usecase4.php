@@ -7,8 +7,8 @@
 <link rel="stylesheet" type="text/css" href="root.css"/>
 <link rel="stylesheet" type="text/css" href="usecase4.css"/>
 <script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
-<script type="text/javascript" src="usecase4.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.3.0/prototype.js"></script>
+<script type="text/javascript" src="usecase4.js"></script>
 	
 <title>Post Listing</title>
 
@@ -54,7 +54,7 @@ include('../menu.php');
 
         <br/> 
       
-      <label for ="condition"> Card Name: </label>
+      <label for ="condition"> Condition: </label>
         <input type="text" name="condition" id= "condition" size ="16" placeholder="Condition" > 
 
 

@@ -38,11 +38,10 @@ function decreaseTextSize() {
 }
 
 
-function checkForm() {
+function checkName() {
 
 	//alert("check form beginning ran successfully");
 	var card_name = document.getElementById("card_name").value; 
-	var card_year = document.getElementById("year").value;
 	//var card_category = document.getElementById("category");
 	//alert("check form end ran successfully");
 
@@ -53,6 +52,17 @@ function checkForm() {
 		document.getElementById("year").focus();
 		return false; 
 	}
+
+}
+
+
+function checkYear() {
+
+	//alert("check form beginning ran successfully");
+	var card_year = document.getElementById("year").value;
+	//var card_category = document.getElementById("category");
+	//alert("check form end ran successfully");
+
 
 	if(card_year == ""){
 		alert("You did not enter a card year. Please enter one now.");
@@ -82,12 +92,13 @@ function checkForm() {
 
 
 
+
 function showDefinition(){
 	//retrieve value from the 'term' textbox
 	var searchTerm = $("condition").value;
-					//= document.getElementById("term").value;
+					//= document.getElementById("condition").value;
 	//create a new Ajax request with URL pointing to urban.php, and query-string-parameter-name is 'parameter1' and query-string-parameter-value being the value that
-	//was retrieved from the 'term' textbox above
+	//was retrieved from the 'condition' textbox above
 	//on request success, you want the displayResult function to be invoked
 	
 	
