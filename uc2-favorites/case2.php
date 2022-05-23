@@ -162,6 +162,10 @@
 				echo "Price: " . ($card1['PRICE']);	
 				?>
 				<br>
+				<?php
+				echo $C_ID;	
+				?>
+				<br>
 				<!-- button to remove card from favorites -->	
 				<?php
 				echo '<a href = "../uc1-Listings-View/ListingsView.php"><button class = "fa-regular fa-heart" style = "color:red"></button></a>';
