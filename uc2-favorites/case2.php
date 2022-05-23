@@ -42,7 +42,6 @@
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 	
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
 	?>
     	
 	<!-- favorites section -->
