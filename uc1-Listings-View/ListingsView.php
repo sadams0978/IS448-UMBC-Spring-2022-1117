@@ -179,14 +179,21 @@
 		}
 		?>
 		</ul>
-		<?php
+	</div>
+	<?php
 		if(isset($_SESSION['message'])){
 		?>
-		<?php echo $_SESSION['message']?>
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-6">
+				<div class="alert alert-info text-center">
+					<?php echo $_SESSION['message']?>
+				</div>
+			</div>
+		</div>
 		<?php
 		unset($_SESSION['message']);
+		}
 		?>
-	</div>
     <!--CARD DISPLAY Section Over--> 
 
 
