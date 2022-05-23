@@ -138,25 +138,7 @@
 	</div>
 
 		<div class = "cardsContainer">
-			<?php
-			$c_ID=$_GET['C_ID'];
 			
-			if(!isset($_SESSION['favorites'])){
-				$favoritesArr = array();
-				$_SESSION['favorites'] = $favoritesArr;
-			}
-
-			array_push($_SESSION['favorites'],$c_ID);
-			?>
-			
-			
-			<?php
-			if(isset($_SESSION['favorites'])){
-			foreach($_SESSION['favorites'] as $item){
-				$sql = 'SELECT * FROM STOCK WHERE C_ID ='.$item;
-				$result = mysqli_query($db,$sql);
-				$card = mysqli_fetch_array($result);
-			?>
 			<ul class = "cards">
 				<li>
 				<?php
@@ -184,12 +166,7 @@
 								
 				</li>
 			</ul>
-			<?php
-				}
-			}else {
-				echo 'There have been no Favorite cards added';	
-			}
-			?>
+
 		</div>
 
 		<p class = "spacer"></p>
