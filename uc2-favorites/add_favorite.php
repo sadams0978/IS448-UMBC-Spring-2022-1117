@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	include('../menu.php');
   $addFav = "../uc1-Listings-View/ListingsView.php";
 	//check if card is already in favorites
 	if(!in_array($_GET['C_ID'], $_SESSION['favorites'])){
