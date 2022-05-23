@@ -49,7 +49,8 @@
 // 	$result = mysqli_query($db, $constructed_query);
 // 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 // 	}
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID IN (".implode(',',$_SESSION['favorites']).")";
+	$_SESSION['favorites'][$c_ID] = $_GET['C_ID'];
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID = '$c_ID'";
 	$result = mysqli_query($db,$constructed_query);
 	$card = mysqli_fetch_array($result);
 		
