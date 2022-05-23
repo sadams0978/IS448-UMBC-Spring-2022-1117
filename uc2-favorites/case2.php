@@ -45,10 +45,14 @@
 	
 	
 		
-	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
-	$result = mysqli_query($db, $constructed_query);
-	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
-	}
+// 	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
+// 	$result = mysqli_query($db, $constructed_query);
+// 	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
+// 	}
+	$sql = "SELECT * FROM STOCK WHERE C_ID IN (".implode(',',$_SESSION['favorites']).")";
+	$result1 = mysqli_query($db,$sql);
+	$card1 = mysqli_fetch_array($result1);
+		
 	?>
     	
 	<!-- favorites section -->
@@ -139,11 +143,6 @@
         ?>
 	</div>
 	<div class = "cardsContainer">
-		<?php
-		$sql = "SELECT * FROM STOCK WHERE C_ID IN (".implode(',',$_SESSION['favorites']).")";
-		$result1 = mysqli_query($db,$sql);
-		$card1 = mysqli_fetch_array($result1);
-		?>
 		
 		<section>
 			<img src='blank-card.jpg' width = '150' height = '250'/>
