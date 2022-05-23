@@ -137,9 +137,7 @@
         ?>
 	</div>
 	
-		<div class = "cardsContainer">
-			Hello
-			<?php
+		<?php
 			$C_ID=$_GET['C_ID'];
 			
 			if(!isset($_SESSION['favorites'])){
@@ -158,6 +156,7 @@
 				$result = mysqli_query($db,$sql);
 				$card = mysqli_fetch_array($result);
 			?>
+		<div class = "cardsContainer">
 			<ul class = "cards">
 				
 				<li>
