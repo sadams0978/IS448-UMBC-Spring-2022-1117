@@ -158,13 +158,9 @@
 						echo "Price: " . ($card1['PRICE']);	
 						?>
 						<br>
-						<?php
-						echo ($card1['C_ID']);	
-						?>
-						<br>
-						<?php
-						echo '<a href = "../uc1-Listings-View/ListingsView.php"><button class = "fa-regular fa-heart" style = "color:red"></button></a>';
-						?>
+						
+						<a href = "delete_card.php?C_ID=<?php echo $card1['C_ID']; ?>" class="fa-solid fa-trash-can"></a>
+						
 						<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card1['C_NAME']) . '\n' . 'Card Description: ' . ($card1['C_DESC']) . '\n' . 'Card Quantity: ' . ($card1['C_QUANTITY']) .
 						'\n' . 'Card Category: ' . ($card1['C_CATEG']) . '\n' . 'Card Condition: ' . ($card1['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card1['C_FINISH']) . 
 						'\n' . 'Card Composition: ' . ($card1['C_COMP']) . '\n' . 'Card Year: ' . ($card1['C_YEAR']) . '\n' . 'Card Price: ' . ($card1['PRICE'])?>')">Card Details</button>
