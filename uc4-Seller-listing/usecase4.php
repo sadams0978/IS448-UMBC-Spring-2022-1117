@@ -57,13 +57,7 @@ include('../menu.php');
 
       <label for ="condition"> Condition: </label>
         <input type="text" name="condition" id= "condition" size ="16" placeholder="Condition" > 
-        <button id="psa_grade">Find PSA Grade</button>
-
-      <p> PSA Grade: </p>
-      <div id="result">
-            <!-- psa grade will appear here -->
-           
-        </div>
+        
       
 
       <!--Enter card finish dropdown--> 
@@ -143,7 +137,17 @@ include('../menu.php');
 
 </form>
 
-<div class="footer">
+<div class = "cardDetailsContainer">
+  <button id="psa_grade">Find PSA Grade</button>
+
+        <p> PSA Grade: </p>
+        <div id="result">
+              <!-- psa grade will appear here -->
+             
+          </div>
+
+  <div class="footer">
+</div>
 
 	<p> 
 		Shaheen Reid wrote this file
