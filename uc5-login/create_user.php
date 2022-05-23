@@ -44,7 +44,7 @@
       $passwords_match = true;
       
     } else {
-    echo ("<h3> Your Passwords don't match, please try again. </h3>" );
+    echo ("<h1> Your Passwords don't match, please try again. </h1>" );
        die;
     }
           
@@ -68,7 +68,7 @@ if (empty($password_verify) or empty($password)) {
 	//checking that the user is 18 years old
 
 	if (time() < strtotime('+18 years', strtotime($dob))) {
-   		echo (" <h3> You need to be at least 18 years old to create an account </h3> ");
+   		echo ("<h1> You need to be at least 18 years old to create an account </h1> ");
    	exit;
 	}
 
@@ -91,7 +91,7 @@ if (empty($password_verify) or empty($password)) {
 	$email_result = mysqli_query($db,$email_verification);
 	$email_rows=mysqli_num_rows($email_result);
 	if($email_rows !== 0) {
-    	echo (" <h3> We already have a user with the e-mail address " . $email . ", please try again later. </h3> ");
+    	echo ("<h1> We already have a user with the e-mail address " . $email . ", please try again later. </h1> ");
         die;
 	
 	}
@@ -108,7 +108,7 @@ if (empty($password_verify) or empty($password)) {
           
           
     } else {
-  echo " <h3> Error: There was an issue with creating the new user, please try again later. </h3> ";
+  echo " <h1> Error: There was an issue with creating the new user, please try again later. </h1> ";
 }
 
 
