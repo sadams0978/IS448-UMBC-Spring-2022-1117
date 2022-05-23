@@ -201,9 +201,10 @@
 				?>
 				<br>
 				<!-- button to remove card from favorites -->
-				<a href="../uc1-Listings-View/ListingsView.php"> <i class="fa-solid fa-heart"></i> </a>
+				
+					
 				<?php
-				echo '<button type = "button" href = "../uc1-Listings-View/ListingsView.php">Favorite</button>';	
+				echo '<a href = "../uc1-Listings-View/ListingsView.php"><button class = "fa-regular fa-heart" style = "color:red"></button></a>';
 				?>
 				
 				<button type= "button" onclick="alert('<?php echo 'Card Name: ' . ($card['C_NAME']) . '\n' . 'Card Description: ' . ($card['C_DESC']) . '\n' . 'Card Quantity: ' . ($card['C_QUANTITY']) .
