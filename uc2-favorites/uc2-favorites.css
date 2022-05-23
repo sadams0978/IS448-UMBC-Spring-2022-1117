@@ -14,7 +14,7 @@ ul.display {
 	background-color: antiquewhite;
 }
 
-li {
+li.show {
 	margin-top: 2px;
 	margin-bottom: 2px;
 	
