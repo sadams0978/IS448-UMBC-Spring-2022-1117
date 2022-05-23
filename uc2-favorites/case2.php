@@ -43,20 +43,10 @@
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
 	
-	$c_ID=$_GET['C_ID'];
-	
-	if(!isset($_SESSION['favorites'])){
-		$favoritesArr = array();
-		$_SESSION['favorites'] = $favoritesArr;
+	$constructed_query = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year";
+	$result = mysqli_query($db, $constructed_query);
+	for ($card = array (); $row = $result->fetch_assoc(); $card[] = $row){
 	}
-	
-	array_push($_SESSION['favorites'],$c_ID);
-	
-	if(isset($_SESSION['favorites'])){
-		foreach($_SESSION['favorites'] as $item){
-			$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
-			$result = mysqli_query($db,$sql);
-			$card = mysqli_fetch_array($result);
 	?>
     	
 	<!-- favorites section -->
@@ -146,7 +136,14 @@
             echo "Year: " . $_SESSION['year'];
         ?>
 	</div>
-
+	
+	<?php
+	if(isset($_SESSION['favorites'])){
+		foreach($_SESSION['favorites'] as $item){
+			$sql = 'SELECT * FROM STOCK WHERE C_ID='.$item;
+			$result1 = mysqli_query($db,$sql);
+			$card = mysqli_fetch_array($result1);
+	?>
 		<div class = "cardsContainer">
 			<ul class = "cards">	
 				<li>
@@ -176,10 +173,12 @@
 
 		</div>
 		<?php
-			}
-	}else{
-		echo "No Favorites Added";	
+		}	//end for each
+	}	//end if
+	else{
+		echo 'There have been no favorite cards added';
 	}
+	mysqli_close($db);
 		?>
 
 		<p class = "spacer"></p>
