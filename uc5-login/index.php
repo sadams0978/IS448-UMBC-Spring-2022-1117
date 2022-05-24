@@ -49,20 +49,20 @@
 
 </div>
 	
-
-
-	<?php 
- session_start();
-//Variables 
- $email = htmlspecialchars($_POST['email']);
- $password = htmlspecialchars($_POST['password']);
- $login = "index.php";
- $homepage = "../uc1-Listings-View/ListingsView.php";
+	<?php  
  //Checking to see if the e-mail or password is empty and exiting
-if (empty($email) or empty($password)) {
+if (empty($_POST['email']) or empty($_POST['password'])) {
         die;
 }
 
+	
+	session_start();
+	//Variables 
+ 	$email = htmlspecialchars($_POST['email']);
+	 $password = htmlspecialchars($_POST['password']);
+	 $login = "index.php";
+ 	$homepage = "../uc1-Listings-View/ListingsView.php";
+	
 	include('../db_connection.php');
 
 
