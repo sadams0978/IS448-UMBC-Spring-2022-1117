@@ -20,7 +20,9 @@ $arr = array(
 /* Ajax attempt 2 popcorn */ 
 //retrieve value of get parameter
   $condition = $_GET["condition"];
-  
+//Uppercases the condition to match against array
+$condition = strtoupper($condition);
+
   //check if zip value exists in array above, and retrieve the city, state values corresponding to the matching zip value
   if (array_key_exists($condition, $arr))
     echo $arr[$condition];
