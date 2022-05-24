@@ -42,6 +42,23 @@
 	if (!empty($_SESSION['year'])) {
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
+		
+	if(!empty($_SESSION['favorites'])){
+			
+	$index = 0;
+	if(!isset($_SESSION['qty_array'])){
+ 		$_SESSION['qty_array'] = array_fill(0, count($_SESSION['favorites']), 1);
+ 	}
+	$sql = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year AND C_ID IN (".implode(',',$_SESSION['favorites']).")";
+	$query = $db->query($sql);
+	}
+	else{
+		?>
+		<ul class = "display">
+			<h1>No Cards In Favorites</h1>
+		</ul>
+		<?php
+	}
 	?>
     	
 	<!-- favorites section -->
@@ -145,14 +162,6 @@
 	<div class = "cardsContainer">
 		<?php
 			$total = 0;
-			if(!empty($_SESSION['favorites'])){
-			
-			$index = 0;
-			if(!isset($_SESSION['qty_array'])){
- 				$_SESSION['qty_array'] = array_fill(0, count($_SESSION['favorites']), 1);
- 			}
-			$sql = "SELECT * FROM STOCK WHERE C_ID IN (".implode(',',$_SESSION['favorites']).")";
-			$query = $db->query($sql);
 				while($card1 = $query->fetch_assoc()){
 					?>
 					<ul class = "display">
@@ -181,14 +190,6 @@
 					</ul>
 					<?php
 				}
-			}
-			else{
-			    ?>
-			    <ul class = "display">
-				    <h1>No Cards In Favorites</h1>
-			    </ul>
-			    <?php
-			}
 		?>
 	</div>
 		
