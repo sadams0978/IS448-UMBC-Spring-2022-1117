@@ -1,3 +1,4 @@
+<!-- Author: Dylan De Leon -->
 <?php
     	include('../db_connection.php');
 ?>
