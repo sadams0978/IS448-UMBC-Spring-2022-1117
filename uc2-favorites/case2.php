@@ -177,18 +177,14 @@
 						'\n' . 'Card Category: ' . ($card1['C_CATEG']) . '\n' . 'Card Condition: ' . ($card1['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card1['C_FINISH']) . 
 						'\n' . 'Card Composition: ' . ($card1['C_COMP']) . '\n' . 'Card Year: ' . ($card1['C_YEAR']) . '\n' . 'Card Price: ' . ($card1['PRICE'])?>')">Card Details</button>
 					</li>
-					</ul>
 					<?php
+				}if(empty($_SESSION['favorites'])){
+					?>
+					<ul class = "display">
+					    <h1>No Cards In Favorites</h1>
+				        </ul>
+				        <?php
 				}
-		?>
-	</div>
-	<div class = "cardsContainer">
-		<?php
-		if(empty($_SESSION['favorites'])){
-		?>
-			<?php echo "<h1>No Favorited Cards</h1>"; ?>
-		<?php
-		}
 		?>
 	</div>
 		
