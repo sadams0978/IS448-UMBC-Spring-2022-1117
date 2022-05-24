@@ -165,7 +165,7 @@
 					<ul class = "display">
 					<li class = "show">
 						
-						echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
+						<img src='blank-card.jpg' width = '150' height = '250'/>
 					
 						<br>
 						<?php
