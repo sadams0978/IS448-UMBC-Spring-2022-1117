@@ -164,9 +164,9 @@
 					?>
 					<ul class = "display">
 					<li class = "show">
-						
+						<figure class = "zoom" onMouseMove = "zoom(event)">
 						<img src='blank-card.jpg' width = '150' height = '250'/>
-					
+						</figure>
 						<br>
 						<?php
 						echo ($card1['C_NAME']);
