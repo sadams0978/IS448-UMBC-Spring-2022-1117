@@ -169,7 +169,7 @@
 		?>
 		<br>
 		
-		<!-- favorites button -->
+		<!-- favorites button by Dylan -->
 		<?php $favcard['C_ID']=$card[$i]['C_ID']; ?>
 		<a href = "../uc2-favorites/add_favorite.php?C_ID=<?php echo $favcard['C_ID']; ?>" type = "button" class = "fa-solid fa-heart" style = "color:red"></a>
 
