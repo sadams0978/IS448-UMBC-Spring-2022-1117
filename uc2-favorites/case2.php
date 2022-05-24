@@ -185,7 +185,9 @@
 	<div class = "cardsContainer">
 		<?php
 		if(empty($_SESSION['favorites'])){
-			echo "<h1>No Favorited Cards</h1>";
+		?>
+			<?php echo "<h1>No Favorited Cards</h1>"; ?>
+		<?php
 		}
 		?>
 	</div>
