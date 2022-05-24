@@ -1,7 +1,5 @@
 <?php
 	session_start();
-?>
-<?php
 	//check if card in favorites
 	if(!in_array($_GET['C_ID'], $_SESSION['favorites'])){
 		array_push($_SESSION['favorites'], $_GET['C_ID']);
