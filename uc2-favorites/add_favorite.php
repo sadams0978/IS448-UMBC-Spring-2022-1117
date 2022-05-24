@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include('../db_connection.php');
 	//check if card in favorites
 	if(!in_array($_GET['C_ID'], $_SESSION['favorites'])){
