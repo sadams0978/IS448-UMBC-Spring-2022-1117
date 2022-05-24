@@ -52,13 +52,6 @@
 	$sql = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year AND C_ID IN (".implode(',',$_SESSION['favorites']).")";
 	$query = $db->query($sql);
 	}
-	else{
-		?>
-		<ul class = "display">
-			<h1>No Cards In Favorites</h1>
-		</ul>
-		<?php
-	}
 	?>
     	
 	<!-- favorites section -->
@@ -159,6 +152,7 @@
 		}
 	?>
 	</div>
+	<h1>No Favorited Cards</h1>
 	<div class = "cardsContainer">
 		<?php
 			$total = 0;
