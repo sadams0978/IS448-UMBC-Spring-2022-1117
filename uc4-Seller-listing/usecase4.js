@@ -138,7 +138,7 @@ function displayGrade(ajax){
       //var place = result.split(',');
  
 
-      $("psa_grade").value = place[0];
+      $("psa_grade").value = result;
       //$("state").value = place[1];
 }
 
