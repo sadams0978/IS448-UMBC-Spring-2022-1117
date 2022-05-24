@@ -120,6 +120,8 @@ function getGrade(){
     method: "get", 
     parameters: {condition:valueOfCondition},
     onSuccess: displayGrade
+    onFailure: displayFailureMessage
+
   } );
 }
 
@@ -137,6 +139,11 @@ function displayGrade(ajax){
 
       $("psa_grade").value = place[0];
       //$("state").value = place[1];
+}
+
+function displayFailureMessage(){
+	alert('ajax request failed');
+
 }
 
 
