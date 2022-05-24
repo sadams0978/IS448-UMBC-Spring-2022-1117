@@ -47,7 +47,7 @@
 			if(!isset($_SESSION['qty_array'])){
  				$_SESSION['qty_array'] = array_fill(0, count($_SESSION['favorites']), 1);
  			}
-			$sql = "SELECT * FROM STOCK WHERE C_ID IN (".implode(',',$_SESSION['favorites']).")";
+			$sql = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year AND C_ID IN (".implode(',',$_SESSION['favorites']).")";
 			$query = $db->query($sql);
 			}
 			else{
