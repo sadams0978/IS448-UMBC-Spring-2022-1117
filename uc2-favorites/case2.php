@@ -18,30 +18,6 @@
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
 		
-	$_SESSION['category'] = $_POST["category"];
-	$_SESSION['condition'] = $_POST["condition"];
-	$_SESSION['finish'] = $_POST["finish"];
-	$_SESSION['composition'] = $_POST["composition"];
-	$_SESSION['year'] = $_POST["year"];
-	
-	if (!empty($_SESSION['category'])) {
-		$category = "AND C_CATEG = '$_SESSION[category]'";
-	}
-	if (!empty($_SESSION['condition'])) {
-		$condition = "AND C_CONDITION = '$_SESSION[condition]'";
-	}
-
-	if (!empty($_SESSION['finish'])) {
-		$finish = "AND C_FINISH = '$_SESSION[finish]'";
-	}
-
-	if (!empty($_SESSION['composition'])) {
-		$composition = "AND C_COMP = '$_SESSION[composition]'";
-	}
-
-	if (!empty($_SESSION['year'])) {
-		$year = "AND C_YEAR = '$_SESSION[year]'";
-	}
 	?>
     	
 	<!-- favorites section -->
@@ -146,7 +122,30 @@
 		<?php
 			$total = 0;
 			if(!empty($_SESSION['favorites'])){
-			
+			$_SESSION['category'] = $_POST["category"];
+			$_SESSION['condition'] = $_POST["condition"];
+			$_SESSION['finish'] = $_POST["finish"];
+			$_SESSION['composition'] = $_POST["composition"];
+			$_SESSION['year'] = $_POST["year"];
+
+			if (!empty($_SESSION['category'])) {
+				$category = "AND C_CATEG = '$_SESSION[category]'";
+			}
+			if (!empty($_SESSION['condition'])) {
+				$condition = "AND C_CONDITION = '$_SESSION[condition]'";
+			}
+
+			if (!empty($_SESSION['finish'])) {
+				$finish = "AND C_FINISH = '$_SESSION[finish]'";
+			}
+
+			if (!empty($_SESSION['composition'])) {
+				$composition = "AND C_COMP = '$_SESSION[composition]'";
+			}
+
+			if (!empty($_SESSION['year'])) {
+				$year = "AND C_YEAR = '$_SESSION[year]'";
+			}
 			$index = 0;
 			if(!isset($_SESSION['qty_array'])){
  				$_SESSION['qty_array'] = array_fill(0, count($_SESSION['favorites']), 1);
