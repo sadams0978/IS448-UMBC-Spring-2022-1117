@@ -17,12 +17,13 @@
         <?php
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
+		
 	$_SESSION['category'] = $_POST["category"];
 	$_SESSION['condition'] = $_POST["condition"];
 	$_SESSION['finish'] = $_POST["finish"];
 	$_SESSION['composition'] = $_POST["composition"];
 	$_SESSION['year'] = $_POST["year"];
-
+	
 	if (!empty($_SESSION['category'])) {
 		$category = "AND C_CATEG = '$_SESSION[category]'";
 	}
@@ -41,21 +42,6 @@
 	if (!empty($_SESSION['year'])) {
 		$year = "AND C_YEAR = '$_SESSION[year]'";
 	}
-			$total = 0;
-			if(!empty($_SESSION['favorites'])){
-			$index = 0;
-			if(!isset($_SESSION['qty_array'])){
- 				$_SESSION['qty_array'] = array_fill(0, count($_SESSION['favorites']), 1);
- 			}
-			$sql = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year AND C_ID IN (".implode(',',$_SESSION['favorites']).")";
-			$query = $db->query($sql);
-			}else{
-			    ?>
-			    <ul class = "display">
-				    <h1>No Cards In Favorites</h1>
-			    </ul>
-			    <?php
-			}
 	?>
     	
 	<!-- favorites section -->
@@ -158,6 +144,15 @@
 	</div>
 	<div class = "cardsContainer">
 		<?php
+			$total = 0;
+			if(!empty($_SESSION['favorites'])){
+			
+			$index = 0;
+			if(!isset($_SESSION['qty_array'])){
+ 				$_SESSION['qty_array'] = array_fill(0, count($_SESSION['favorites']), 1);
+ 			}
+			$sql = "SELECT * FROM STOCK WHERE C_ID IN (".implode(',',$_SESSION['favorites']).")";
+			$query = $db->query($sql);
 				while($card1 = $query->fetch_assoc()){
 					?>
 					<ul class = "display">
@@ -183,8 +178,17 @@
 						'\n' . 'Card Category: ' . ($card1['C_CATEG']) . '\n' . 'Card Condition: ' . ($card1['C_CONDITION']) . '\n' . 'Card Finish: ' . ($card1['C_FINISH']) . 
 						'\n' . 'Card Composition: ' . ($card1['C_COMP']) . '\n' . 'Card Year: ' . ($card1['C_YEAR']) . '\n' . 'Card Price: ' . ($card1['PRICE'])?>')">Card Details</button>
 					</li>
+					</ul>
 					<?php
 				}
+			}
+			else{
+			    ?>
+			    <ul class = "display">
+				    <h1>No Cards In Favorites</h1>
+			    </ul>
+			    <?php
+			}
 		?>
 	</div>
 		
