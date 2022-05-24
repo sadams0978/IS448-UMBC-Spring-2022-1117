@@ -133,6 +133,7 @@ function getGrade(){
 //and populates the values  of the city and state textboxes with the split values
 function displayGrade(ajax){
       var result = ajax.responseText;
+	console.log(result);
 	  //Annapolis, MD
       //var place = result.split(',');
  
