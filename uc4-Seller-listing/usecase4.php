@@ -58,8 +58,11 @@ include('../menu.php');
       <label for ="condition"> Condition: </label>
         <input type="text" name="condition" id= "condition" size ="16" placeholder="Condition" > 
         
+      <label for = "psa_grade"> PSA Grade: </label>
+        <input type="text" name="psa_grade" id= "psa_grade" size ="16" placeholder="PSA Grade" > 
 
-
+        
+      
       
 
       <!--Enter card finish dropdown--> 
@@ -140,7 +143,7 @@ include('../menu.php');
 </form>
 
 
-<div class = "right">
+<!--div class = "right">
   <div class = "cardDetailsContainer">
     <button id="psa_grade">Find PSA Grade</button>
 
@@ -150,7 +153,7 @@ include('../menu.php');
                
             </div>
   </div>
-</div>
+</div-->
 
   <div class="footer">
 

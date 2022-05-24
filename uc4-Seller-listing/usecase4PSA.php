@@ -17,12 +17,24 @@ $arr = array(
 	
 );
 
+/* Ajax attempt 2 popcorn */ 
+//retrieve value of get parameter
+  $condition = $_GET["condition"];
+  
+  //check if zip value exists in array above, and retrieve the city, state values corresponding to the matching zip value
+  if (array_key_exists($condition, $arr))
+    echo $arr[$condition];
+  else
+	//if doesn't exist, just give an error message
+    echo "no matching entry, no matching entry";
+
 	//urban.php?parameter1=xml
+
 
 
 //get the parameter1 parameter from URL and store in the local variable $q
 
-
+/* ajax attempt 1 urban
 $q=$_GET["parameter1"];
 
 
@@ -49,4 +61,7 @@ if (strlen($uppercaseString) > 0)
 
 //output the response
 echo "$result";
+
+*/
+
 ?>

@@ -15,9 +15,15 @@ function pageLoad(){
 	document.getElementById("year").onfocusout = checkYear; 
 
 
+	/* ajax attemp1 urban 
 	//$("condition").onfocusout = showDefinition;
 
 	$("psa_grade").onclick = showDefinition;
+	*/ 
+
+
+   $("condition").onblur = getGrade; //when the user clicks off of the condition, the event handler is run
+
 
 
 	//to test if placeholders are stored into vars
@@ -96,6 +102,46 @@ function checkYear() {
 
 
 
+/* Ajax attempt 2 popcorn */ 
+
+//  Ajax JavaScript code for the popcornA.html document
+// function getPlace
+//  parameter: zip
+function getGrade(){
+
+    var valueOfCondition = $("condition").value;
+
+	//create a new Ajax request to the URL getCityState.php
+	//query-string-parameter-name is zip
+	//query-string-parameter-value is the parameter that was sent to this function, i.e., the zip code value that the user entered
+	//on the successful processing of the Ajax request, we want the displayCityState function to be invoked
+  new Ajax.Request( "usecase4PSA.php", 
+  { 
+    method: "get", 
+    parameters: {condition:valueOfCondition},
+    onSuccess: displayGrade
+  } );
+}
+
+  //getCityState.php?zip=21044
+
+//displayCityState is the function that is to be executed when the Ajax request is successful
+//IMPORTANT: The variable ajax MUST be in the parameter list of this function
+//this function, retrieves the response sent by the PHP program above,  splits the response at the  comma-space character
+//and populates the values  of the city and state textboxes with the split values
+function displayGrade(ajax){
+      var result = ajax.responseText;
+	  //Annapolis, MD
+      //var place = result.split(',');
+ 
+
+      $("psa_grade").value = place[0];
+      //$("state").value = place[1];
+}
+
+
+
+/* Ajax attempt 1 urban 
 function showDefinition(){
 	//retrieve value from the 'condition' textbox
 	var searchTerm = $("condition").value;
@@ -123,6 +169,8 @@ function showDefinition(){
 the response from the server, after the request is processed completely is
 displayed as the value of the div-element with the id 'result'
 */
+
+/*
 //note: ajax MUST be in the parameter list of this function always
 function displayResult(ajax){
 	//document.getElemenyById("result").innerHTML = ajax.responseText;
@@ -136,3 +184,5 @@ function displayFailureMessage(){
 	alert('ajax request failed');
 
 }
+
+*/
