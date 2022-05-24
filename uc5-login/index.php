@@ -7,6 +7,7 @@
 	<meta charset="UTF-8">
 	<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
 	<script src="email.js"></script>
+	<script src="visable.js"></script>
 
 </head>
 
