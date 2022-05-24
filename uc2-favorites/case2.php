@@ -184,12 +184,8 @@
 	</div>
 	<div class = "cardsContainer">
 		<?php
-		if($_SESSION['favorites'] = ""){
-		?>
-		<ul class = "display">
-			<h1>No Cards In Favorites</h1>
-		</ul>
-		<?php
+		if(empty($_SESSION['favorites'])){
+			echo "<h1>No Favorited Cards</h1>";
 		}
 		?>
 	</div>
