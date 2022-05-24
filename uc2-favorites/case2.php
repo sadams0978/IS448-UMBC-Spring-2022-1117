@@ -55,7 +55,7 @@
 		?>
 		<li class = "show">
 			<h1>No Cards In Favorites</h1>
-		</lil>
+		</li>
 		<?php
 	}
 	?>
