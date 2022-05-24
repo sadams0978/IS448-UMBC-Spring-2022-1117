@@ -8,6 +8,7 @@
 		<link rel = "stylesheet" type = "text/css" href = "../root.css"/>
 		<link rel = "stylesheet" type = "text/css" href = "uc2-favorites.css"/>
 		<script src="https://kit.fontawesome.com/be0f7619b0.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="uc2-favorites-js.js"></script>
 		
 		<title> Favorites </title>
 	</head>
@@ -163,9 +164,9 @@
 					?>
 					<ul class = "display">
 					<li class = "show">
-						<?php
+						
 						echo ("<img src='blank-card.jpg' width = '150' height = '250'/>");
-						?>
+					
 						<br>
 						<?php
 						echo ($card1['C_NAME']);
