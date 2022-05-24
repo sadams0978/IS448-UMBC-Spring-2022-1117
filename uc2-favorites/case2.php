@@ -53,9 +53,7 @@
 	$query = $db->query($sql);
 	}else{
 		?>
-		<li class = "show">
-			<h1>No Cards In Favorites</h1>
-		</li>
+		<h1>No Cards In Favorites</h1>
 		<?php
 	}
 	?>
