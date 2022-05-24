@@ -49,6 +49,12 @@
  			}
 			$sql = "SELECT * FROM STOCK WHERE C_ID < 1000 $category $condition $finish $composition $year AND C_ID IN (".implode(',',$_SESSION['favorites']).")";
 			$query = $db->query($sql);
+			}else{
+			    ?>
+			    <ul class = "display">
+				    <h1>No Cards In Favorites</h1>
+			    </ul>
+			    <?php
 			}
 	?>
     	
@@ -178,15 +184,6 @@
 						'\n' . 'Card Composition: ' . ($card1['C_COMP']) . '\n' . 'Card Year: ' . ($card1['C_YEAR']) . '\n' . 'Card Price: ' . ($card1['PRICE'])?>')">Card Details</button>
 					</li>
 					<?php
-				}
-				?>
-				<?php
-				if(empty($_SESSION['favorites'])){
-					?>
-					<ul class = "display">
-					    <h1>No Cards In Favorites</h1>
-				        </ul>
-				        <?php
 				}
 		?>
 	</div>
