@@ -18,6 +18,11 @@
 	<?php
 	// Includes our menu bar, instead of copying and pasting through the pages
 	include('../menu.php');
+	if(!isset($_SESSION['favorites'])){
+		$_SESSION['favorites'] = array();
+	}
+	unset($_SESSION['qty_array']);
+	
 	$_SESSION['category'] = $_POST["category"];
 	$_SESSION['condition'] = $_POST["condition"];
 	$_SESSION['finish'] = $_POST["finish"];
