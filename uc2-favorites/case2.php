@@ -53,11 +53,8 @@
 	$query = $db->query($sql);
 	}
 	else{
-		?>
-		<ul class = "display">
-			<h1>No Cards In Favorites</h1>
-		</ul>
-		<?php
+		echo "<h1>No Cards In Favorites</h1>";
+		
 	}
 	?>
     	
