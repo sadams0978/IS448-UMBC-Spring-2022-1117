@@ -119,7 +119,7 @@ function getGrade(){
   { 
     method: "get", 
     parameters: {condition:valueOfCondition},
-    onSuccess: displayGrade
+    onSuccess: displayGrade,
     onFailure: displayFailureMessage
 
   } );
